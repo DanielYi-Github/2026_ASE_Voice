@@ -180,7 +180,13 @@ const translations = {
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-    const [lang, setLang] = useState('zh');
+    const [lang, setLang] = useState(() => {
+        if (typeof window !== 'undefined' && navigator.language) {
+            const browserLang = navigator.language.toLowerCase();
+            return browserLang.includes('zh') ? 'zh' : 'en';
+        }
+        return 'zh';
+    });
 
     const toggleLanguage = () => {
         setLang(prev => prev === 'zh' ? 'en' : 'zh');
