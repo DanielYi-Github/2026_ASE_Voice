@@ -1,0 +1,72 @@
+import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { Play } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const videos = [
+    { year: "2022", title: "第一屆 決賽", url: "https://www.youtube.com/embed/3aPvPPvMA9s" },
+    { year: "2023", title: "第二屆 決賽", url: "https://www.youtube.com/embed/mU9gdHJlpGQ" },
+    { year: "2024", title: "第三屆 決賽", url: "https://www.youtube.com/embed/3O52Vo_H5XQ" },
+    { year: "2025", title: "第四屆 決賽", url: "https://www.youtube.com/embed/CxSdfx_eOPQ" }
+];
+
+const PastHighlights = () => {
+    const { t } = useLanguage();
+
+    return (
+        <section className="section-padding bg-secondary text-white border-b-4 border-dark" id="highlights">
+            <div className="container mx-auto max-w-6xl">
+                <div className="flex flex-col items-center mb-16">
+                    <motion.div
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="flex items-center gap-4 bg-white text-dark px-8 py-4 border-4 border-dark shadow-brutal transform -rotate-2"
+                    >
+                        <Play size={40} className="text-secondary fill-secondary" />
+                        <h2 className="text-4xl md:text-5xl font-heading font-black tracking-wide">
+                            {t.highlights.title}
+                        </h2>
+                    </motion.div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    {videos.map((video, index) => (
+                        <motion.div
+                            key={video.year}
+                            initial={{ y: 50, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="group relative"
+                        >
+                            <div className="absolute inset-0 bg-dark transform translate-x-3 translate-y-3 border-4 border-dark"></div>
+                            <div className="relative bg-light border-4 border-dark overflow-hidden flex flex-col h-full transform transition-transform group-hover:-translate-y-2 group-hover:-translate-x-2">
+
+                                {/* Video Header Strip */}
+                                <div className="bg-primary text-dark font-heading font-bold px-4 py-2 border-b-4 border-dark flex justify-between items-center">
+                                    <span className="text-2xl">{video.year}</span>
+                                    <span className="uppercase text-sm tracking-widest">{video.title}</span>
+                                </div>
+
+                                {/* 16:9 Video Container */}
+                                <div className="relative w-full pt-[56.25%] bg-black">
+                                    <iframe
+                                        className="absolute inset-0 w-full h-full"
+                                        src={video.url}
+                                        title={`${video.year} ASE Voice Highlight`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default PastHighlights;

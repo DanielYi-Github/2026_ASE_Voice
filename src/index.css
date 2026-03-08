@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Oswald:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #F5B841;
+  --color-secondary: #E32626;
+  --color-dark: #1A1A1A;
+  --color-light: #F6E9D8;
+
+  --font-heading: "Oswald", "Noto Sans TC", sans-serif;
+  --font-body: "Inter", "Noto Sans TC", sans-serif;
+
+  --shadow-brutal: 6px 6px 0px 0px rgba(26, 26, 26, 1);
+  --shadow-brutal-lg: 10px 10px 0px 0px rgba(26, 26, 26, 1);
+  --shadow-brutal-active: 2px 2px 0px 0px rgba(26, 26, 26, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+}
+
+@layer components {
+
+  /* Brutalist button style */
+  .btn-brutal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition-property: all;
+    transition-duration: 200ms;
+    border: 4px solid var(--color-dark);
+    box-shadow: var(--shadow-brutal);
+    outline: 2px solid transparent;
+  }
+
+  .btn-brutal:active {
+    transform: translate(0.25rem, 0.25rem);
+    box-shadow: var(--shadow-brutal-active);
+  }
+
+  .btn-primary {
+    background-color: var(--color-secondary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #b91c1c;
+  }
+
+  .btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+  }
+
+  .btn-secondary:hover {
+    background-color: #facc15;
+  }
+
+  .btn-outline {
+    background-color: white;
+    color: var(--color-dark);
+  }
+
+  .btn-outline:hover {
+    background-color: #f3f4f6;
+  }
+
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+/* Halftone/Retro pattern for the hero background */
+.bg-halftone {
+  background-color: var(--color-primary);
+  background-image: radial-gradient(var(--color-dark) 2px, transparent 2px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Sunburst/Radiant rays background for the hero */
+.bg-sunburst {
+  background: repeating-conic-gradient(from 0deg,
+      var(--color-primary) 0deg 15deg,
+      #F8C666 15deg 30deg);
+}
