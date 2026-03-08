@@ -4,7 +4,7 @@ const translations = {
     zh: {
         nav: { register: "即刻報名" },
         hero: {
-            titleLine1: "第五屆",
+            titleLine1: "首屆",
             titleLine2: "日月光",
             titleLine3: "好聲音",
             subtitle: "開放集團全台同仁報名",
@@ -51,7 +51,7 @@ const translations = {
                 foreign: "外語組獎項"
             },
             rulesAndObligations: "權利與義務 / 注意事項",
-            rulesDesc: "【著作權與合法性擔保】影片中嚴禁使用未經授權之商業 MV、伴奏。決賽演出若含大會指導之改編，版權歸主辦方所有。\n【肖像權授權】參賽者同意授權主辦方於活動期間錄影攝影，並同意永久無償授權內部平台(如GoTube)或外宣使用其肖像與聲音。\n【個資聲明】參賽者報名即同意個資於活動特定目的內合理使用。\n【公平性與違規】若查出冒名頂替、代唱、清唱過度後製，將立即取消資格。若已頒獎將追回全數獎金與獎盃。\n【不可抗力】若遇天災或疫情，主辦單位保留修改、變更、暫停延遲活動的最終權利。",
+            rulesDesc: "【著作權與合法性擔保】影片中嚴禁使用未經授權之商業 MV、伴奏。決賽演出若含大會指導之改編，版權歸主辦方所有。\n【肖像權授權】參賽者同意授權主辦方於活動期間錄影攝影，並同意永久無償授權內部平台(如GoTube)或外宣使用其肖像與聲音。\n【個資聲明】參賽者報名即同意個資於活動特定目的內合理使用。\n【公平性與違規】若查出冒名頂替、代唱、清唱過度後製，將立即取消資格。若已頒獎將追回全數獎金與獎盃。\n【不可抗力】若遇天災或疫情，主辦單位保留修改、變更、暫停延遲活動之最終權利。",
             prizesList: [
                 { title: "冠軍 (1名)", amount: "NT$ 20,000", extra: "獎盃乙座" },
                 { title: "亞軍 (1名)", amount: "NT$ 15,000", extra: "獎盃乙座" },
@@ -71,7 +71,7 @@ const translations = {
     en: {
         nav: { register: "Register" },
         hero: {
-            titleLine1: "THE 5TH",
+            titleLine1: "THE 1ST",
             titleLine2: "ASE",
             titleLine3: "VOICE",
             subtitle: "Open for Registration Worldwide",

@@ -115,7 +115,72 @@
 
 /* Sunburst/Radiant rays background for the hero */
 .bg-sunburst {
-  background: repeating-conic-gradient(from 0deg,
-      var(--color-primary) 0deg 15deg,
-      #F8C666 15deg 30deg);
+  background: repeating-conic-gradient(var(--color-primary) 0 15deg,
+      #f4c462 15deg 30deg);
+}
+
+/* Custom Glow Effect for CTA */
+.glow-breathing {
+  box-shadow: 0 0 15px rgba(227, 38, 38, 0.4), 0 0 30px rgba(227, 38, 38, 0.2);
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(227, 38, 38, 0.4), 0 0 30px rgba(227, 38, 38, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(245, 184, 65, 0.8), 0 0 50px rgba(245, 184, 65, 0.5);
+    border-color: var(--color-primary);
+  }
+}
+
+/* Waveform Animation Setup */
+.waveform-bar {
+  animation: soundwave 1.5s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.5s;
+}
+
+.delay-4 {
+  animation-delay: 0.2s;
+}
+
+.delay-5 {
+  animation-delay: 0.4s;
+}
+
+
+@keyframes soundwave {
+  0% {
+    transform: scaleY(0.2);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
