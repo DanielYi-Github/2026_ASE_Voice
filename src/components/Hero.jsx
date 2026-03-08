@@ -30,29 +30,55 @@ const Hero = () => {
                     </svg>
                 </motion.div>
 
-                {/* Floating 3D Music Notes */}
+                {/* Floating 3D Music Notes & Staffs */}
                 {[
-                    { top: '10%', left: '15%', size: 64, dur: 6, delay: 0 },
-                    { top: '25%', left: '40%', size: 48, dur: 4.5, delay: 0.5 },
-                    { top: '15%', left: '60%', size: 72, dur: 5.5, delay: 1.2 },
-                    { top: '40%', left: '20%', size: 56, dur: 7, delay: 2 },
-                    { top: '30%', left: '80%', size: 84, dur: 8, delay: 0.8 },
-                    { top: '55%', left: '10%', size: 40, dur: 5, delay: 1.5 },
-                    { top: '65%', left: '65%', size: 96, dur: 9, delay: 0.2 },
+                    { type: 'double', top: '10%', left: '15%', size: 64, dur: 6, delay: 0 },
+                    { type: 'single', top: '22%', left: '45%', size: 48, dur: 4.5, delay: 0.5 },
+                    { type: 'staff', top: '15%', left: '30%', size: 100, dur: 7, delay: 1.2 },
+                    { type: 'double', top: '40%', left: '12%', size: 56, dur: 7, delay: 2 },
+                    { type: 'single', top: '8%', left: '75%', size: 60, dur: 8, delay: 0.8 },      // Top Right
+                    { type: 'staff', top: '55%', left: '8%', size: 120, dur: 8.5, delay: 1.5 },
+                    { type: 'double', top: '65%', left: '40%', size: 96, dur: 9, delay: 0.2 },
+                    { type: 'single', top: '75%', left: '15%', size: 50, dur: 5, delay: 1.0 },
+                    { type: 'double', top: '80%', left: '32%', size: 70, dur: 6.5, delay: 0.7 },
+                    { type: 'staff', top: '18%', left: '60%', size: 140, dur: 10, delay: 0 },      // Center Right
+                    { type: 'single', top: '35%', left: '25%', size: 42, dur: 5.5, delay: 0.3 },
+                    { type: 'double', top: '50%', left: '5%', size: 60, dur: 6, delay: 1.8 },
+                    { type: 'double', top: '25%', left: '85%', size: 52, dur: 7.5, delay: 1.1 },   // Far Top Right
+                    { type: 'staff', top: '35%', left: '55%', size: 90, dur: 6.5, delay: 0.4 },    // Near Mic Left Edge
+                    { type: 'single', top: '45%', left: '88%', size: 46, dur: 5, delay: 0.9 },     // Mid Right Edge
                 ].map((note, i) => (
                     <motion.div
                         key={i}
                         animate={{ y: [-20, 20, -20], rotate: [-15, 15, -15] }}
                         transition={{ duration: note.dur, repeat: Infinity, ease: "easeInOut", delay: note.delay }}
-                        className="absolute opacity-80"
+                        className="absolute opacity-80 z-20"
                         style={{ top: note.top, left: note.left }}
                     >
-                        {/* 3D Drop Shadow effect inside SVG */}
-                        <svg width={note.size} height={note.size} viewBox="0 0 24 24" className="drop-shadow-[3px_3px_0_rgba(26,26,26,0.8)]">
-                            <path d="M9 18V5l12-2v13" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                            <circle cx="6" cy="18" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
-                            <circle cx="18" cy="16" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
-                        </svg>
+                        {/* 3D Drop Shadow effect inside SVG based on type */}
+                        {note.type === 'double' && (
+                            <svg width={note.size} height={note.size} viewBox="0 0 24 24" className="drop-shadow-[3px_3px_0_rgba(26,26,26,0.8)] overflow-visible">
+                                <path d="M9 18V5l12-2v13" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                <circle cx="6" cy="18" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
+                                <circle cx="18" cy="16" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
+                            </svg>
+                        )}
+                        {note.type === 'single' && (
+                            <svg width={note.size} height={note.size} viewBox="0 0 24 24" className="drop-shadow-[3px_3px_0_rgba(26,26,26,0.8)] overflow-visible">
+                                <path d="M9 18V5" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M9 5c3 0 7 2 7 6" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                <circle cx="6" cy="18" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
+                            </svg>
+                        )}
+                        {note.type === 'staff' && (
+                            <svg width={note.size} height={note.size * 0.5} viewBox="0 0 100 50" className="drop-shadow-[3px_3px_0_rgba(26,26,26,0.8)] overflow-visible">
+                                <path d="M 0 10 Q 25 2 50 10 T 100 10 M 0 18 Q 25 10 50 18 T 100 18 M 0 26 Q 25 18 50 26 T 100 26 M 0 34 Q 25 26 50 34 T 100 34 M 0 42 Q 25 34 50 42 T 100 42" fill="none" stroke="#FFFFFF" strokeWidth="1.5" />
+                                <ellipse cx="30" cy="26" rx="4" ry="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="1.5" transform="rotate(-20 30 26)"></ellipse>
+                                <path d="M 33 26 V 5" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"></path>
+                                <ellipse cx="65" cy="18" rx="4" ry="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="1.5" transform="rotate(-20 65 18)"></ellipse>
+                                <path d="M 68 18 V -3" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"></path>
+                            </svg>
+                        )}
                     </motion.div>
                 ))}
             </div>
