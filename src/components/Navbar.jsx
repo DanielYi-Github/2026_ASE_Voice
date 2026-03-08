@@ -8,10 +8,10 @@ const Navbar = () => {
     return (
         <nav className="fixed w-full top-0 z-50 bg-white border-b-4 border-dark flex justify-between items-center px-4 md:px-8 py-3">
             <div className="flex items-center gap-2">
-                <div className="font-heading font-black text-lg md:text-2xl tracking-tighter flex items-center flex-wrap gap-x-1">
+                <div className="font-heading font-black text-xl md:text-3xl tracking-tighter flex items-center flex-wrap gap-x-1">
                     <span className="text-dark">2026</span>
                     <span className="text-secondary ml-1">ASE</span> VOICE
-                    <span className="text-dark text-base md:text-lg ml-1 md:ml-2 font-body font-bold hidden sm:inline">{t.nav.title}</span>
+                    <span className="text-dark ml-2 md:ml-3 hidden sm:inline">{t.nav.title}</span>
                 </div>
             </div>
 

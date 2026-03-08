@@ -4,7 +4,7 @@ const translations = {
     zh: {
         nav: {
             register: "即刻報名",
-            title: "日月光集團好聲音",
+            title: "全國性日月光集團歌唱比賽",
             langSwitch: "EN"
         },
         hero: {
@@ -97,10 +97,10 @@ const translations = {
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
             titleLine1: "THE 5TH",
-            titleLine2: "ASE",
-            titleLine2En: "",
-            titleLine3: "VOICE",
-            titleLine3En: "",
+            titleLine2: "日月光",
+            titleLine2En: "ASE",
+            titleLine3: "好聲音",
+            titleLine3En: "VOICE",
             subtitle: "First Nationwide Corporate Singing Competition",
             registerBtn: "REGISTER NOW",
             registerPrefix: "Online registration only. ",

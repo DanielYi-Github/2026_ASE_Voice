@@ -32,7 +32,7 @@ const InfoSection = () => {
                 <path d="M50,0 L90,50 L10,100 L90,150 L10,200 L90,250 L10,300 L90,350 L10,400 L90,450 L10,500 L90,550 L10,600 L90,650 L10,700 L90,750 L10,800 L90,850 L10,900 L90,950 L50,1000" />
             </svg>
 
-            <div className="container mx-auto max-w-7xl relative z-10 px-4">
+            <div className="container mx-auto max-w-[100rem] relative z-10 px-4 md:px-8 lg:px-12">
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}

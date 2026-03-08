@@ -71,17 +71,17 @@ const Hero = () => {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8 bg-white/95 backdrop-blur-md px-6 py-3 border-[3px] border-dark rounded-xl shadow-[6px_6px_0_0_rgba(26,26,26,1)] self-center md:self-start"
+                        className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 mb-8 bg-white px-6 py-4 border-[3px] border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] rounded-none self-center md:self-start"
                     >
-                        <div className="flex items-center gap-3">
-                            <span className="font-heading font-black text-secondary tracking-wider text-sm md:text-lg">ASE</span>
-                            <div className="w-1.5 h-1.5 rounded-full bg-dark"></div>
-                            <span className="font-heading font-black text-blue-600 tracking-wider text-sm md:text-lg">SPIL</span>
-                            <div className="w-1.5 h-1.5 rounded-full bg-dark"></div>
-                            <span className="font-heading font-black text-green-600 tracking-wider text-sm md:text-lg">USI</span>
+                        <div className="flex items-center gap-3 pb-2 md:pb-0 md:pr-5 border-b-2 md:border-b-0 md:border-r-2 border-dark/20">
+                            <span className="font-heading font-black text-secondary tracking-wider text-xl md:text-2xl">ASE</span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-dark/40"></div>
+                            <span className="font-heading font-black text-blue-600 tracking-wider text-xl md:text-2xl">SPIL</span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-dark/40"></div>
+                            <span className="font-heading font-black text-green-600 tracking-wider text-xl md:text-2xl">USI</span>
                         </div>
-                        <div className="w-full md:w-auto text-center border-t-2 md:border-t-0 md:border-l-2 border-dark/20 pt-2 md:pt-0 md:pl-4">
-                            <span className="font-body font-bold text-xs md:text-sm text-dark/80 bg-primary/20 px-2 py-1 rounded">
+                        <div className="pt-2 md:pt-0 md:pl-2">
+                            <span className="font-heading font-black text-xl md:text-2xl text-dark tracking-wide">
                                 {t.hero.brandNote}
                             </span>
                         </div>
@@ -164,11 +164,10 @@ const Hero = () => {
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.9, delay: 0.3, type: "spring", stiffness: 40 }}
-                    className="absolute bottom-0 right-[-10vw] md:right-[-5vw] lg:right-10 2xl:right-32 z-30 pointer-events-none mx-auto md:mx-0 w-[120vw] md:w-auto origin-bottom flex justify-center md:justify-end mix-blend-multiply"
+                    className="absolute bottom-0 right-[-10vw] md:right-[-5vw] lg:right-10 2xl:right-32 z-30 pointer-events-none mx-auto md:mx-0 w-[120vw] md:w-auto origin-bottom flex justify-center md:justify-end mix-blend-multiply translate-x-8 md:translate-x-32 lg:translate-x-48 2xl:translate-x-64"
                     style={{ height: '65vh' }}
                 >
                     <img
-                        style={{ marginLeft: '200px' }}
                         src="/pure-mic.png"
                         alt="ASE Voice Retro Microphone Pop Art"
                         className="w-auto h-full max-h-[100%] max-w-[150vw] md:max-w-none object-contain object-bottom"
