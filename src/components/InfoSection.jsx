@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Trophy, CalendarCheck, Users, RadioReceiver, ShieldAlert, Medal, Gem } from 'lucide-react';
+import { Trophy, CalendarCheck, Users, Mic2, ShieldAlert, Medal, Gem, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const InfoSection = () => {
@@ -54,15 +54,15 @@ const InfoSection = () => {
                         initial={{ y: 30, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
-                        className="bg-gradient-to-br from-blue-50 to-indigo-100 border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 transform -rotate-1"
+                        className="bg-gradient-to-br from-blue-50 to-cyan-100 border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 transform -rotate-1"
                     >
-                        <div className="flex items-center gap-4 mb-6 border-b-[4px] border-indigo-300 pb-5">
-                            <div className="bg-indigo-500 p-3 rounded-full text-white shadow-brutal border-2 border-dark">
-                                <RadioReceiver size={36} />
+                        <div className="flex items-center gap-4 mb-6 border-b-[4px] border-cyan-300 pb-5">
+                            <div className="bg-cyan-500 p-3 rounded-full text-white shadow-brutal border-2 border-dark">
+                                <Mic2 size={36} />
                             </div>
-                            <h3 className="text-3xl font-heading font-black text-indigo-950 uppercase">{t.info.purpose}</h3>
+                            <h3 className="text-3xl font-heading font-black text-cyan-950 uppercase">{t.info.purpose}</h3>
                         </div>
-                        <p className="font-body text-indigo-950 text-lg md:text-xl leading-[1.8] text-justify font-bold">
+                        <p className="font-body text-cyan-950 text-xl md:text-2xl leading-[1.9] text-justify font-bold tracking-wide">
                             {t.info.purposeDesc}
                         </p>
                     </motion.div>
@@ -76,11 +76,11 @@ const InfoSection = () => {
                     >
                         <div className="flex items-center gap-4 mb-6 border-b-[4px] border-dark pb-5">
                             <div className="bg-white p-3 border-4 border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)]">
-                                <Users className="text-dark" size={32} />
+                                <Star className="text-dark" size={32} />
                             </div>
                             <h3 className="text-3xl lg:text-4xl font-heading font-black uppercase text-dark tracking-tight">{t.info.groups}</h3>
                         </div>
-                        <div className="bg-white text-dark p-6 lg:p-8 border-4 border-dark font-body font-bold whitespace-pre-line text-lg md:text-xl leading-[1.8] shadow-inner">
+                        <div className="bg-white text-dark p-6 lg:p-8 border-4 border-dark font-body font-bold whitespace-pre-line text-xl md:text-2xl leading-[1.9] shadow-inner tracking-wide">
                             {t.info.groupsDesc}
                         </div>
                     </motion.div>

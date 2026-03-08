@@ -2,13 +2,21 @@ import React, { createContext, useContext, useState } from 'react';
 
 const translations = {
     zh: {
-        nav: { register: "即刻報名" },
+        nav: {
+            register: "即刻報名",
+            title: "日月光集團好聲音",
+            langSwitch: "EN"
+        },
         hero: {
+            brandNote: "日月光投控集團成員共同參與",
             titleLine1: "第五屆",
             titleLine2: "日月光",
+            titleLine2En: "ASE",
             titleLine3: "好聲音",
+            titleLine3En: "VOICE",
             subtitle: "首次全國性開放集團同仁報名",
             registerBtn: "即刻報名",
+            registerPrefix: "活動採線上報名，",
             registerNote: "* 註：需使用 Google 帳號進行登入",
         },
         info: {
@@ -60,22 +68,42 @@ const translations = {
             ]
         },
         highlights: {
-            title: "歷屆精彩回顧"
+            title: "歷屆精彩回顧",
+            videos: [
+                { year: "2022", title: "第一屆 決賽" },
+                { year: "2023", title: "第二屆 決賽" },
+                { year: "2024", title: "第三屆 決賽" },
+                { year: "2025", title: "第四屆 決賽" }
+            ]
         },
         footer: {
             organizer: "主辦單位：日月光文教基金會、日月光集團聯合職工福利委員會\n協辦單位：日月光半導體製造股份有限公司中壢分公司、矽品精密工業股份有限公司、環旭電子股份有限公司",
             rights: "決賽評比由專業評審團裁定。評審團決議一經公告即為最終結果，基於對音樂尊重，任何人均不得異議。主辦單位保留修正、終止或解釋本活動之最終權利。",
-            contact: "聯絡窗口 (比賽期間可諮詢各區窗口)"
+            contactTitle: "聯絡窗口 (比賽期間可諮詢各區窗口)",
+            contacts: [
+                "日月光高雄廠：Daniel 0919635167",
+                "日月光中壢廠：(請洽各廠服務代表)",
+                "矽品精密工業：(請洽各廠服務代表)",
+                "環旭電子：(請洽各廠服務代表)"
+            ]
         }
     },
     en: {
-        nav: { register: "Register" },
+        nav: {
+            register: "Register",
+            title: "ASE VOICE",
+            langSwitch: "中文"
+        },
         hero: {
+            brandNote: "Joint Participation by ASE Holdings Members",
             titleLine1: "THE 5TH",
             titleLine2: "ASE",
+            titleLine2En: "",
             titleLine3: "VOICE",
+            titleLine3En: "",
             subtitle: "First Nationwide Corporate Singing Competition",
             registerBtn: "REGISTER NOW",
+            registerPrefix: "Online registration only. ",
             registerNote: "* Note: Google account login required",
         },
         info: {
@@ -127,12 +155,24 @@ const translations = {
             ]
         },
         highlights: {
-            title: "Past Highlights"
+            title: "Past Highlights",
+            videos: [
+                { year: "2022", title: "1st Ed. Finals" },
+                { year: "2023", title: "2nd Ed. Finals" },
+                { year: "2024", title: "3rd Ed. Finals" },
+                { year: "2025", title: "4th Ed. Finals" }
+            ]
         },
         footer: {
             organizer: "Organizers: ASE Educational Foundation, ASE Group Joint Welfare Committee\nCo-organizers: ASE Chungli, SPIL, USI",
             rights: "The judge's panel's decision is final upon announcement. Subject to music professionalism rulings. The organizer reserves the right to modify, suspend, or interpret this event.",
-            contact: "Contact (Please reach out to regional reps)"
+            contactTitle: "Contacts (Reach out to regional reps)",
+            contacts: [
+                "ASE Kaohsiung: Daniel 0919635167",
+                "ASE Chungli: (Contact local rep)",
+                "SPIL: (Contact local rep)",
+                "USI: (Contact local rep)"
+            ]
         }
     }
 };

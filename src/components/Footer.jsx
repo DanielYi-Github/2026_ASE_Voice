@@ -17,22 +17,14 @@ const Footer = () => {
                     </div>
 
                     <div className="bg-white/10 p-6 border-l-4 border-primary">
-                        <h3 className="font-heading font-bold text-xl mb-4 text-primary">{t.footer.contact}</h3>
-                        {lang === 'zh' ? (
-                            <ul className="space-y-2 font-body text-sm text-gray-300">
-                                <li className="flex items-center gap-2"><Phone size={16} /> 日月光高雄廠：Daniel 0919635167</li>
-                                <li className="flex items-center gap-2 text-gray-500">日月光中壢廠：(請洽各廠服務代表)</li>
-                                <li className="flex items-center gap-2 text-gray-500">矽品精密工業：(請洽各廠服務代表)</li>
-                                <li className="flex items-center gap-2 text-gray-500">環旭電子：(請洽各廠服務代表)</li>
-                            </ul>
-                        ) : (
-                            <ul className="space-y-2 font-body text-sm text-gray-300">
-                                <li className="flex items-center gap-2"><Phone size={16} /> ASE Kaohsiung: Daniel 0919635167</li>
-                                <li className="flex items-center gap-2 text-gray-500">ASE Chungli: (Contact local rep)</li>
-                                <li className="flex items-center gap-2 text-gray-500">SPIL: (Contact local rep)</li>
-                                <li className="flex items-center gap-2 text-gray-500">USI: (Contact local rep)</li>
-                            </ul>
-                        )}
+                        <h3 className="font-heading font-bold text-xl mb-4 text-primary">{t.footer.contactTitle}</h3>
+                        <ul className="space-y-2 font-body text-sm text-gray-300">
+                            {t.footer.contacts.map((contact, i) => (
+                                <li key={i} className={`flex items-center gap-2 ${i > 0 ? 'text-gray-500' : ''}`}>
+                                    {i === 0 && <Phone size={16} />} {contact}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
 

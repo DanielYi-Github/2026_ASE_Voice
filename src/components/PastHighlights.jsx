@@ -3,15 +3,16 @@ import { useLanguage } from '../context/LanguageContext';
 import { Play } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const videos = [
-    { year: "2022", title: "第一屆 決賽", url: "https://www.youtube.com/embed/3aPvPPvMA9s" },
-    { year: "2023", title: "第二屆 決賽", url: "https://www.youtube.com/embed/mU9gdHJlpGQ" },
-    { year: "2024", title: "第三屆 決賽", url: "https://www.youtube.com/embed/3O52Vo_H5XQ" },
-    { year: "2025", title: "第四屆 決賽", url: "https://www.youtube.com/embed/CxSdfx_eOPQ" }
+const videoUrls = [
+    "https://www.youtube.com/embed/3aPvPPvMA9s",
+    "https://www.youtube.com/embed/mU9gdHJlpGQ",
+    "https://www.youtube.com/embed/3O52Vo_H5XQ",
+    "https://www.youtube.com/embed/CxSdfx_eOPQ"
 ];
 
 const PastHighlights = () => {
     const { t } = useLanguage();
+    const videos = t.highlights.videos.map((v, i) => ({ ...v, url: videoUrls[i] }));
 
     return (
         <section className="section-padding bg-secondary text-white border-b-4 border-dark" id="highlights">

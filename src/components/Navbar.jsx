@@ -8,8 +8,10 @@ const Navbar = () => {
     return (
         <nav className="fixed w-full top-0 z-50 bg-white border-b-4 border-dark flex justify-between items-center px-4 md:px-8 py-3">
             <div className="flex items-center gap-2">
-                <div className="font-heading font-black text-2xl md:text-3xl tracking-tighter">
-                    <span className="text-secondary">ASE</span> VOICE
+                <div className="font-heading font-black text-lg md:text-2xl tracking-tighter flex items-center flex-wrap gap-x-1">
+                    <span className="text-dark">2026</span>
+                    <span className="text-secondary ml-1">ASE</span> VOICE
+                    <span className="text-dark text-base md:text-lg ml-1 md:ml-2 font-body font-bold hidden sm:inline">{t.nav.title}</span>
                 </div>
             </div>
 
@@ -19,7 +21,7 @@ const Navbar = () => {
                     className="flex items-center gap-2 font-body font-bold text-sm bg-light border-2 border-dark px-3 py-1 shadow-[2px_2px_0_0_rgba(26,26,26,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_rgba(26,26,26,1)] transition-all"
                 >
                     <Globe size={16} />
-                    {lang === 'zh' ? 'EN' : '中文'}
+                    {t.nav.langSwitch}
                 </button>
 
                 <a
