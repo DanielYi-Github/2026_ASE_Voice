@@ -194,7 +194,7 @@ const Hero = () => {
                     style={{ height: '65vh' }}
                 >
                     <img
-                        src="/pure-mic.png"
+                        src={`${import.meta.env.BASE_URL}pure-mic.png`}
                         alt="ASE Voice Retro Microphone Pop Art"
                         className="w-auto h-full max-h-[100%] max-w-[150vw] md:max-w-none object-contain object-bottom"
                     />
