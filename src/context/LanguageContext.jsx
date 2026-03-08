@@ -4,10 +4,10 @@ const translations = {
     zh: {
         nav: { register: "即刻報名" },
         hero: {
-            titleLine1: "首屆",
+            titleLine1: "第五屆",
             titleLine2: "日月光",
             titleLine3: "好聲音",
-            subtitle: "開放集團全台同仁報名",
+            subtitle: "首次全國性開放集團同仁報名",
             registerBtn: "即刻報名",
             registerNote: "* 註：需使用 Google 帳號進行登入",
         },
@@ -71,10 +71,10 @@ const translations = {
     en: {
         nav: { register: "Register" },
         hero: {
-            titleLine1: "THE 1ST",
+            titleLine1: "THE 5TH",
             titleLine2: "ASE",
             titleLine3: "VOICE",
-            subtitle: "Open for Registration Worldwide",
+            subtitle: "First Nationwide Corporate Singing Competition",
             registerBtn: "REGISTER NOW",
             registerNote: "* Note: Google account login required",
         },
