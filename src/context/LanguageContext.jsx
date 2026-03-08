@@ -12,58 +12,66 @@ const translations = {
             registerNote: "* 註：需使用 Google 帳號進行登入",
         },
         info: {
-            title: "活動資訊",
+            title: "活動資訊與規範",
+            purpose: "活動宗旨",
+            purposeDesc: "秉持日月光文教基金會「宏揚文化、發展社會教育、培養藝文人才」之宗旨，與集團「社會共融、價值共創」之永續理念。期望透過音樂的溫暖力量廣結善緣，為員工提供展現歌唱才華的舞台，藉由正當休閒娛樂活動倡導企業活力、增進同仁身心健康，並深化職場中的人際共融與企業向心力。",
             groups: "參賽資格與組別",
-            groupsDesc: "限日月光投控旗下事業體在職職員報名 (2024、2025年冠亞軍除外)。\n\n華語組：國台客粵等 (限額 200 組)\n外語組：英語與其他語言 (限額 200 組)",
+            groupsDesc: "【參賽資格】\n- 限日月光投資控股股份有限公司旗下之事業體在職職員均可報名參加。\n- 2025年冠亞軍及佳作選手與2024年冠亞軍，不得報名此屆賽事。\n\n【競賽組別】(本比賽均採個人賽)\n- 華語組：國語、台語、客家、粵語 (限額 200 組)\n- 外語組：英語與其他語言 (限額 200 組)",
             timeline: "完整賽制與時程",
             timelineItems: [
                 {
                     date: "6/1 - 6/21",
                     event: "初賽報名 (線上影片繳交)",
-                    details: "拍攝並上傳 60-90 秒「純清唱」自選曲影片 (含主副歌各一遍)。嚴禁後製修音，須露臉拍攝半身。"
+                    details: "【選曲規定】自選一首曲目，初、決賽皆為同一首，不得更改。\n【形式規定】採純清唱！嚴禁伴奏、擴音、伴唱或任何數位修音、人聲後製處理。\n【錄製規範】錄製自選曲之主歌、副歌各一遍。影片總時長限 60 至 90 秒。須正面拍攝，清晰露出臉部、嘴形、半身及腰部。"
                 },
                 {
                     date: "6/22 - 7/4",
-                    event: "線上初審",
-                    details: "由專業評審進行純線上評核。評分標準：歌唱技巧 40%, 發音咬字 20%, 節奏 20%, 感情 10%, 演繹風格 10%。"
+                    event: "線上初審評分",
+                    details: "由評審老師針對清唱影片進行線上評分，參賽者只需靜候結果。\n【評分準則】\n1. 歌唱技巧 (40%)：旋律難度、演唱技巧及方式\n2. 發音咬字 (20%)\n3. 節奏 (20%)\n4. 感情 (10%)\n5. 演繹風格 (10%)：演唱時的形象、表情、肢體語言"
                 },
                 {
                     date: "7/8",
                     event: "公告決賽名單",
-                    details: "華語組與外語組各取前 10 名，共 20 名晉級決賽。"
+                    details: "錄取名額：華語組與外語組各取前 10 名，共 20 名晉級決賽。"
                 },
                 {
                     date: "7/18 - 8/22",
                     event: "決賽培訓與樂團彩排",
-                    details: "主辦單位將於週末安排專業導師 1對1 指導及兩次樂團現場彩排。"
+                    details: "為主辦單位安排之專業指導，入圍者需配合出席，時間無法配合視同放棄：\n- 專業歌唱老師 1對1 個人指導一次 (依排定於高雄/台中進行)\n- 與伴奏樂隊進行兩次現場彩排 (依排定於高雄/台中進行)"
                 },
                 {
                     date: "9/11",
                     event: "活動總決賽 (現場演唱)",
-                    details: "地點：日月光高雄廠 K23 1F 國際會議廳。將由專業樂團現場伴奏，不提供提詞機。(15:00 - 17:00)"
+                    details: "時間：15:00 - 17:00\n地點：日月光高雄廠 K23 1F 國際會議廳 (楠梓區研發路 66 號)\n現場由主辦方安排專業樂團進行伴奏。比賽現場不提供提詞機，參賽者須背熟歌詞！"
                 }
             ],
-            prizes: "競賽獎項 (各組)",
+            prizes: "競賽獎項",
+            prizeCategories: {
+                mandarin: "華語組獎項",
+                foreign: "外語組獎項"
+            },
+            rulesAndObligations: "權利與義務 / 注意事項",
+            rulesDesc: "【著作權與合法性擔保】影片中嚴禁使用未經授權之商業 MV、伴奏。決賽演出若含大會指導之改編，版權歸主辦方所有。\n【肖像權授權】參賽者同意授權主辦方於活動期間錄影攝影，並同意永久無償授權內部平台(如GoTube)或外宣使用其肖像與聲音。\n【個資聲明】參賽者報名即同意個資於活動特定目的內合理使用。\n【公平性與違規】若查出冒名頂替、代唱、清唱過度後製，將立即取消資格。若已頒獎將追回全數獎金與獎盃。\n【不可抗力】若遇天災或疫情，主辦單位保留修改、變更、暫停延遲活動的最終權利。",
             prizesList: [
-                { title: "冠軍", amount: "NT$ 20,000", extra: "獎盃乙座" },
-                { title: "亞軍", amount: "NT$ 15,000", extra: "獎盃乙座" },
-                { title: "季軍", amount: "NT$ 10,000", extra: "獎盃乙座" },
-                { title: "佳作", amount: "NT$ 3,000", extra: "各組取8名" }
+                { title: "冠軍 (1名)", amount: "NT$ 20,000", extra: "獎盃乙座" },
+                { title: "亞軍 (1名)", amount: "NT$ 15,000", extra: "獎盃乙座" },
+                { title: "季軍 (1名)", amount: "NT$ 10,000", extra: "獎盃乙座" },
+                { title: "佳作 (8名)", amount: "NT$ 3,000", extra: "獎牌乙枚" }
             ]
         },
         highlights: {
             title: "歷屆精彩回顧"
         },
         footer: {
-            organizer: "主辦單位：日月光文教基金會、日月光集團聯合職工福利委員會\n協辦單位：日月光半島體中壢分公司、矽品精密、環旭電子",
-            rights: "主辦單位將保留修正、終止或解釋本活動之最終權利。",
-            contact: "聯絡窗口"
+            organizer: "主辦單位：日月光文教基金會、日月光集團聯合職工福利委員會\n協辦單位：日月光半導體製造股份有限公司中壢分公司、矽品精密工業股份有限公司、環旭電子股份有限公司",
+            rights: "決賽評比由專業評審團裁定。評審團決議一經公告即為最終結果，基於對音樂尊重，任何人均不得異議。主辦單位保留修正、終止或解釋本活動之最終權利。",
+            contact: "聯絡窗口 (比賽期間可諮詢各區窗口)"
         }
     },
     en: {
         nav: { register: "Register" },
         hero: {
-            titleLine1: "5TH",
+            titleLine1: "THE 5TH",
             titleLine2: "ASE",
             titleLine3: "VOICE",
             subtitle: "Open for Registration Worldwide",
@@ -71,52 +79,60 @@ const translations = {
             registerNote: "* Note: Google account login required",
         },
         info: {
-            title: "Competition Info",
-            groups: "Categories & Eligibility",
-            groupsDesc: "Open to current employees of ASE Technology Holding subsidiaries (excluding 2024/2025 Top 2).\n\nMandarin: (Max 200 entries)\nForeign Lang: (Max 200 entries)",
-            timeline: "Competition Rules & Timeline",
+            title: "Information & Rules",
+            purpose: "Event Purpose",
+            purposeDesc: "Upholding the ASE Educational Foundation's mission of promoting culture and cultivating artistic talents, alongside the Group's sustainability vision of 'Social Inclusion and Value Co-creation'. This event uses the warmth of music to build connections, providing employees a stage to showcase vocal talents, promoting healthy recreation, and strengthening corporate cohesion.",
+            groups: "Eligibility & Categories",
+            groupsDesc: "[Eligibility]\n- Open to current employees of ASE Technology Holding subsidiaries.\n- 2024/2025 Champions and Runners-up (and 2025 Merit winners) may not participate.\n\n[Categories] (Individual entries only)\n- Mandarin Group: Mandarin, Taiwanese, Hakka, Cantonese (Limit: 200 entries)\n- Foreign Language Group: English & Others (Limit: 200 entries)",
+            timeline: "Competition Formats & Timeline",
             timelineItems: [
                 {
                     date: "Jun 1 - Jun 21",
                     event: "Online Audition (Video Submission)",
-                    details: "Upload a 60-90s a cappella video of a song of your choice. No background music or vocal effects allowed. Must show face/upper body clearly."
+                    details: "[Song] One selected song for both Audition & Finals. No mid-competition changes allowed.\n[Format] A Cappella ONLY! No instrumental backing, vocal effects, or post-production audio tuning.\n[Video] Record one Verse and one Chorus. Total length: 60-90 seconds. Must shoot clearly showing face, mouth, and upper body from the waist up."
                 },
                 {
                     date: "Jun 22 - Jul 4",
                     event: "Online Judging",
-                    details: "Professional judging based on: Vocal skills 40%, Pronunciation 20%, Rhythm 20%, Emotion 10%, Style/Performance 10%."
+                    details: "Professional judges will review a cappella videos online.\n[Judging Criteria]\n1. Vocal Skills (40%): Melody difficulty, technique\n2. Pronunciation & Articulation (20%)\n3. Rhythm (20%)\n4. Emotion (10%)\n5. Performance Style (10%): Persona, expressions, body language"
                 },
                 {
                     date: "Jul 8",
                     event: "Finalists Announced",
-                    details: "Top 10 from each category (20 total) advance to the Grand Finals."
+                    details: "Quota: Top 10 from each category, totaling 20 finalists advancing to the Grand Finals."
                 },
                 {
                     date: "Jul 18 - Aug 22",
-                    event: "Training & Band Rehearsals",
-                    details: "1-on-1 vocal coaching and two live band rehearsals arranged on weekends."
+                    event: "Finals Training & Band Rehearsals",
+                    details: "Finalists MUST attend organized training:\n- One 1-on-1 session with a professional vocal coach (in Kaoshiung/Taichung)\n- Two organized live band rehearsals. Failure to attend forfeits the opportunity."
                 },
                 {
                     date: "Sep 11",
-                    event: "Grand Finals (Live Performance)",
-                    details: "Location: ASE Kaohsiung K23 1F. Live band accompaniment. No teleprompters allowed. (15:00 - 17:00)"
+                    event: "Grand Finals (Live)",
+                    details: "Time: 15:00 - 17:00\nLocation: ASE Kaohsiung K23 1F Int'l Conference Hall.\nLive band accompaniment will be provided. NO TELEPROMPTERS allowed. Memorize your lyrics!"
                 }
             ],
-            prizes: "Prizes (Per Category)",
+            prizes: "Prizes",
+            prizeCategories: {
+                mandarin: "Mandarin Category Prizes",
+                foreign: "Foreign Language Category Prizes"
+            },
+            rulesAndObligations: "Rights, Obligations & Notices",
+            rulesDesc: "[Copyright] Strict ban on unauthorized commercial MVs/backing tracks. Performance copyrights adapted with coach advice belong to organizers.\n[Portrait Rights] Participants authorize permanent, regional-free use of recordings and imaging for internal (e.g., GoTube) and external promo uses.\n[Data Privacy] Registration counts as consent to use personal data specifically for this event's operations.\n[Fairness] Identity fraud, lip-syncing, or vocal editing in auditions will result in immediate disqualification and prize revocation.\n[Force Majeure] Organizers reserve the right to suspend or modify the event due to unforeseen natural disasters or pandemics.",
             prizesList: [
-                { title: "Champion", amount: "NT$ 20,000", extra: "+ Trophy" },
-                { title: "Runner-up", amount: "NT$ 15,000", extra: "+ Trophy" },
-                { title: "3rd Place", amount: "NT$ 10,000", extra: "+ Trophy" },
-                { title: "Merit", amount: "NT$ 3,000", extra: "8 winners" }
+                { title: "Champion", amount: "NT$ 20,000", extra: "Trophy" },
+                { title: "Runner-up", amount: "NT$ 15,000", extra: "Trophy" },
+                { title: "3rd Place", amount: "NT$ 10,000", extra: "Trophy" },
+                { title: "Merit (8)", amount: "NT$ 3,000", extra: "Medal" }
             ]
         },
         highlights: {
             title: "Past Highlights"
         },
         footer: {
-            organizer: "Organizers: ASE Educational Foundation, ASE Group Joint Welfare Committee",
-            rights: "The organizer reserves the right to modify, suspend, or interpret this event.",
-            contact: "Contact Information"
+            organizer: "Organizers: ASE Educational Foundation, ASE Group Joint Welfare Committee\nCo-organizers: ASE Chungli, SPIL, USI",
+            rights: "The judge's panel's decision is final upon announcement. Subject to music professionalism rulings. The organizer reserves the right to modify, suspend, or interpret this event.",
+            contact: "Contact (Please reach out to regional reps)"
         }
     }
 };
