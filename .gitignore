@@ -1,5 +1,37 @@
-# Logs
-logs
+# ══════════════════════════════════════════════════════════
+# 🔒 .gitignore — 2026 ASE Voice 形象網站
+# 用途：阻擋不必要的檔案上傳到 GitHub，保護隱私與節省空間
+# ══════════════════════════════════════════════════════════
+
+# ── 套件依賴 ─────────────────────────────────────────────
+node_modules/
+
+# ── 編譯產出 ─────────────────────────────────────────────
+dist/
+dist-ssr/
+build/
+out/
+
+# ── 快取檔案 ─────────────────────────────────────────────
+.vite/
+.eslintcache
+*.tsbuildinfo
+.cache/
+
+# ── 測試覆蓋率 ───────────────────────────────────────────
+coverage/
+
+# ── 環境變數與機密金鑰 ──────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ── 日誌檔案 ─────────────────────────────────────────────
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,35 +39,54 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies & Build Outputs
-node_modules
-dist
-dist-ssr
-build/
-out/
+# ── 作業系統產物 ─────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
 
-# Environment Variables & Private Files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.pem
-*.key
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
 
-# Editor directories and OS files
+# Linux
+*~
+
+# ── 編輯器 / IDE ─────────────────────────────────────────
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/settings.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.Trashes
+*.sublime-workspace
+*.sublime-project
 
-# Caches
-.eslintcache
-.vite/
-coverage/
+# ── 非程式碼的文件檔案 ──────────────────────────────────
+# 比賽簡章等辦公文件不應上傳到程式碼 Repo
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+*.pdf
+
+# ── 非專案用途的圖片 ────────────────────────────────────
+# 排除通訊軟體截圖等非專案資源 (專案圖片放在 public/ 和 src/assets/)
+aTalk-*
+
+# ── 其他 ─────────────────────────────────────────────────
+*.local
+*.zip
+*.tar.gz
+*.rar
