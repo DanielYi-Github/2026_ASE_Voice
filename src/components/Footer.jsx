@@ -12,7 +12,7 @@ const Footer = () => {
 
                     <div className="max-w-md">
                         <h2 className="text-3xl font-heading font-black mb-4"><span className="text-primary">ASE</span> VOICE</h2>
-                        <p className="font-body text-gray-400 mb-2">{t.footer.organizer}</p>
+                        <p className="font-body text-gray-400 mb-2 whitespace-pre-line">{t.footer.organizer}</p>
                         <p className="font-body text-gray-500 text-sm">{t.footer.rights}</p>
                     </div>
 

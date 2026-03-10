@@ -164,7 +164,7 @@ const translations = {
             ]
         },
         footer: {
-            organizer: "Organizers: ASE Cultural & Educational Foundation, ASE Group Welfare Committee\nCo-organizers: Advanced Semiconductor Engineering, Inc., ASE Chungli, SPIL, USI",
+            organizer: "Organizers: ASE Cultural & Educational Foundation, ASE Group Welfare Committee\nCo-organizers: Advanced Semiconductor Engineering, Inc., Advanced Semiconductor Engineering, Inc., Chung-Li Branch, Siliconware Precision Industries Co., Ltd., Universal Scientific Industrial Co., Ltd.",
             rights: "The judge's panel's decision is final upon announcement. Subject to music professionalism rulings. The organizer reserves the right to modify, suspend, or interpret this event.",
             contactTitle: "Contacts (Reach out to regional reps)",
             contacts: [
