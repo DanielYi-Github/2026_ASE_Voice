@@ -193,11 +193,14 @@ const Hero = () => {
                     className="absolute bottom-0 right-[-10vw] md:right-[-5vw] lg:right-10 2xl:right-32 z-30 pointer-events-none mx-auto md:mx-0 w-[120vw] md:w-auto origin-bottom flex justify-center md:justify-end mix-blend-multiply translate-x-8 md:translate-x-32 lg:translate-x-48 2xl:translate-x-64"
                     style={{ height: '65vh' }}
                 >
-                    <img
-                        src={`${import.meta.env.BASE_URL}pure-mic.png`}
-                        alt="ASE Voice Retro Microphone Pop Art"
-                        className="w-auto h-full max-h-[100%] max-w-[150vw] md:max-w-none object-contain object-bottom"
-                    />
+                    <picture>
+                        <source srcSet={`${import.meta.env.BASE_URL}pure-mic.webp`} type="image/webp" />
+                        <img
+                            src={`${import.meta.env.BASE_URL}pure-mic.png`}
+                            alt="ASE Voice Retro Microphone Pop Art"
+                            className="w-auto h-full max-h-[100%] max-w-[150vw] md:max-w-none object-contain object-bottom"
+                        />
+                    </picture>
                 </motion.div>
 
             </div>

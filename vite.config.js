@@ -5,4 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/2026_ASE_Voice/', // GitHub Pages 子目錄部署路徑 (須與 Repo 名稱一致)
+  build: {
+    cssMinify: 'lightningcss',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'framer-motion': ['framer-motion'],
+        }
+      }
+    }
+  }
 })

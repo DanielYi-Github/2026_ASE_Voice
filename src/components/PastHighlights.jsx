@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Play } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const videoUrls = [
-    "https://www.youtube.com/embed/3aPvPPvMA9s",
-    "https://www.youtube.com/embed/mU9gdHJlpGQ",
-    "https://www.youtube.com/embed/3O52Vo_H5XQ",
-    "https://www.youtube.com/embed/CxSdfx_eOPQ"
+const videoIds = [
+    "3aPvPPvMA9s",
+    "mU9gdHJlpGQ",
+    "3O52Vo_H5XQ",
+    "CxSdfx_eOPQ"
 ];
 
 const PastHighlights = () => {
     const { t } = useLanguage();
-    const videos = t.highlights.videos.map((v, i) => ({ ...v, url: videoUrls[i] }));
+    const [loadedVideos, setLoadedVideos] = useState({});
+    const videos = t.highlights.videos.map((v, i) => ({ ...v, id: videoIds[i] }));
+
+    const handlePlay = (videoId) => {
+        setLoadedVideos(prev => ({ ...prev, [videoId]: true }));
+    };
 
     return (
         <section className="section-padding bg-secondary text-white border-b-4 border-dark" id="highlights">
@@ -50,16 +55,35 @@ const PastHighlights = () => {
                                     <span className="uppercase text-sm tracking-widest">{video.title}</span>
                                 </div>
 
-                                {/* 16:9 Video Container */}
+                                {/* 16:9 Video Container - Facade Pattern */}
                                 <div className="relative w-full pt-[56.25%] bg-black">
-                                    <iframe
-                                        className="absolute inset-0 w-full h-full"
-                                        src={video.url}
-                                        title={`${video.year} ASE Voice Highlight`}
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                    ></iframe>
+                                    {loadedVideos[video.id] ? (
+                                        <iframe
+                                            className="absolute inset-0 w-full h-full"
+                                            src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                                            title={`${video.year} ASE Voice Highlight`}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    ) : (
+                                        <button
+                                            onClick={() => handlePlay(video.id)}
+                                            className="absolute inset-0 w-full h-full cursor-pointer group/play flex items-center justify-center bg-black"
+                                            aria-label={`Play ${video.title}`}
+                                        >
+                                            <img
+                                                src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                                                alt={`${video.year} ${video.title}`}
+                                                className="absolute inset-0 w-full h-full object-cover"
+                                                loading="lazy"
+                                            />
+                                            {/* Play button overlay */}
+                                            <div className="relative z-10 w-16 h-16 md:w-20 md:h-20 bg-secondary/90 border-4 border-white rounded-full flex items-center justify-center shadow-brutal transition-transform group-hover/play:scale-110">
+                                                <Play size={32} className="text-white fill-white ml-1" />
+                                            </div>
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>
