@@ -91,7 +91,7 @@ const translations = {
     en: {
         nav: {
             register: "Register",
-            title: "ASE VOICE",
+            title: "Singing Competition",
             langSwitch: "中文"
         },
         hero: {
