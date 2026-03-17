@@ -18,10 +18,16 @@ const Footer = () => {
 
                     <div className="bg-white/10 p-6 border-l-4 border-primary">
                         <h3 className="font-heading font-bold text-xl mb-4 text-primary">{t.footer.contactTitle}</h3>
-                        <ul className="space-y-2 font-body text-sm text-gray-300">
+                        <ul className="space-y-3 font-body text-sm text-gray-300">
+                            {t.footer.qaEmail && (
+                                <li className="flex items-center gap-2">
+                                    <Mail size={16} className="text-primary" /> {t.footer.qaEmail}
+                                </li>
+                            )}
                             {t.footer.contacts.map((contact, i) => (
-                                <li key={i} className={`flex items-center gap-2 ${i > 0 ? 'text-gray-500' : ''}`}>
-                                    {i === 0 && <Phone size={16} />} {contact}
+                                <li key={i} className="flex items-start gap-2">
+                                    <Phone size={16} className="mt-0.5 shrink-0 text-primary" /> 
+                                    <span>{contact}</span>
                                 </li>
                             ))}
                         </ul>

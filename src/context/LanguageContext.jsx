@@ -80,11 +80,12 @@ const translations = {
             organizer: "主辦單位：日月光文教基金會、日月光集團聯合職工福利委員會\n協辦單位：日月光半導體製造股份有限公司、日月光半導體製造股份有限公司中壢分公司、矽品精密工業股份有限公司、環旭電子股份有限公司",
             rights: "決賽評比由專業評審團裁定。評審團決議一經公告即為最終結果，基於對音樂尊重，任何人均不得異議。主辦單位保留修正、終止或解釋本活動之最終權利。",
             contactTitle: "聯絡窗口 (比賽期間可諮詢各區窗口)",
+            qaEmail: "Ｑ＆Ａ信箱：tslin2014@gmail.com",
             contacts: [
-                "日月光高雄廠：Daniel 0919635167",
-                "日月光中壢廠：(請洽各廠服務代表)",
-                "矽品精密工業：(請洽各廠服務代表)",
-                "環旭電子：(請洽各廠服務代表)"
+                "日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: DanielLine)",
+                "日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID:roy_chin)",
+                "矽品精密工業：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
+                "環旭電子：黃詩婷 Aldis, 0963788631, aldis_huang@usiglobal.com（Line ID:catnow)"
             ]
         }
     },
@@ -167,11 +168,12 @@ const translations = {
             organizer: "Organizers: ASE Cultural & Educational Foundation, ASE Group Welfare Committee\nCo-organizers: Advanced Semiconductor Engineering, Inc., Advanced Semiconductor Engineering, Inc., Chung-Li Branch, Siliconware Precision Industries Co., Ltd., Universal Scientific Industrial Co., Ltd.",
             rights: "The judge's panel's decision is final upon announcement. Subject to music professionalism rulings. The organizer reserves the right to modify, suspend, or interpret this event.",
             contactTitle: "Contacts (Reach out to regional reps)",
+            qaEmail: "Q&A Email: tslin2014@gmail.com",
             contacts: [
-                "ASE Kaohsiung: Daniel 0919635167",
-                "ASE Chungli: (Contact local rep)",
-                "SPIL: (Contact local rep)",
-                "USI: (Contact local rep)"
+                "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: DanielLine)",
+                "ASE Chungli: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
+                "SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
+                "USI: Aldis Huang, 0963788631, aldis_huang@usiglobal.com (Line ID: catnow)"
             ]
         }
     }
