@@ -82,7 +82,7 @@ const translations = {
             contactTitle: "聯絡窗口 (比賽期間可諮詢各區窗口)",
             qaEmail: "Ｑ＆Ａ信箱：tslin2014@gmail.com",
             contacts: [
-                "日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: DanielLine)",
+                "日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID:roy_chin)",
                 "矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
                 "環旭電子：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com（Line ID:catnow)"
@@ -170,7 +170,7 @@ const translations = {
             contactTitle: "Contacts (Reach out to regional reps)",
             qaEmail: "Q&A Email: tslin2014@gmail.com",
             contacts: [
-                "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: DanielLine)",
+                "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "ASE Chungli: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
                 "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
