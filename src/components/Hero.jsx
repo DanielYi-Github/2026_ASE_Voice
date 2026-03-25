@@ -164,7 +164,7 @@ const Hero = () => {
                             <div className="absolute -inset-4 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-80 blur-2xl animate-pulse group-hover:opacity-100 transition-opacity duration-300"></div>
 
                             <a
-                                href="https://reurl.cc/qpzKog"
+                                href="https://forms.gle/3QtKcRBUpu835s5g9"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-10 sm:px-16 md:px-24 py-6 md:py-8 rounded-2xl border-[4px] border-white shadow-[0_10px_30px_rgba(0,195,255,0.6)] hover:shadow-[0_15px_50px_rgba(0,195,255,1)] hover:scale-105 transition-all duration-300 overflow-hidden"
