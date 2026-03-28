@@ -194,6 +194,103 @@ const translations = {
                 "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
             ]
         }
+    },
+    vi: {
+        nav: {
+            register: "Đăng ký",
+            title: "Giọng hát hay",
+            langSwitch: "VN"
+        },
+        hero: {
+            brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",
+            titleLine1: "LẦN THỨ 5",
+            titleLine2: "日月光",
+            titleLine2En: "ASE",
+            titleLine3: "Giọng hát hay",
+            titleLine3En: "VOICE",
+            subtitle: "Cuộc thi ca hát toàn quốc đầu tiên mở cho nhân viên tập đoàn",
+            registerBtn: "ĐĂNG KÝ NGAY",
+            registerPrefix: "Đăng ký trực tuyến. ",
+            registerNote: "* Lưu ý: Yêu cầu đăng nhập tài khoản Google",
+        },
+        info: {
+            title: "Hình thức & Tiêu chí",
+            purpose: "Mục đích",
+            purposeDesc: "Nêu cao tôn chỉ \"Hoằng dương văn hóa, Phát triển giáo dục xã hội, Bồi dưỡng nhân tài nghệ thuật\" của Quỹ Văn hóa và Giáo dục ASE, cùng với triết lý phát triển bền vững \"Hòa nhập xã hội, Cùng nhau sáng tạo giá trị\" của Tập đoàn. Cuộc thi này kỳ vọng thông qua sức mạnh ấm áp của âm nhạc để thúc đẩy giao lưu, tạo sân chơi cho nhân viên thể hiện tài năng ca hát. Qua các hoạt động giải trí lành mạnh để thể hiện sức sống của doanh nghiệp, nâng cao sức khỏe thể chất và tinh thần cho đồng nghiệp, cũng như làm sâu sắc thêm sự gắn kết nhân sự trong môi trường làm việc và tinh thần hướng về doanh nghiệp.",
+            groups: "Đối tượng & Bảng",
+            groupsDesc: "[Đối tượng tham gia]\n- Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị sự nghiệp trực thuộc Công ty Cổ phần Đầu tư Công nghiệp Công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia.\n- Quán quân, Á quân, và Thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay.\n\n[Bảng thi đấu] (hoàn toàn là thi đấu cá nhân)\n- Bảng Tiếng Hoa: Tiếng Phổ thông, Tiếng Đài Loan, Tiếng Khách Gia, Tiếng Quảng Đông (Giới hạn 200 lượt)\n- Bảng Ngoại ngữ: Tiếng Anh và các ngôn ngữ khác (Giới hạn 200 lượt)",
+            timeline: "Hình thức và Thời gian",
+            timelineItems: [
+                {
+                    date: "1/6 - 21/6",
+                    event: "Vòng Sơ loại trực tuyến (Nộp video)",
+                    details: (
+                        <span>
+                            [Quy định chọn bài] Tự chọn một bài, Vòng Sơ loại và Vòng Chung kết phải cùng một bài, không thay đổi.{'\n'}
+                            [Hình thức] Chỉ hát mộc (A Cappella)! Nghiêm cấm nhạc đệm, loa khuếch đại, hát nhép hoặc chỉnh âm kỹ thuật số.{'\n'}
+                            [Quy cách quay video] Hát phần verse và chorus. Độ dài từ 60 đến 90 giây. Quay góc chính diện thấy rõ mặt, khẩu hình và nửa thân trên.{'\n'}
+                            [Video mẫu]{'\n'}
+                            - Ví dụ tiếng Trung: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
+                            - Ví dụ tiếng Anh: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>
+                        </span>
+                    )
+                },
+                {
+                    date: "22/6 - 4/7",
+                    event: "Chấm điểm sơ loại",
+                    details: "Giám khảo sẽ chấm điểm trực tuyến dựa trên các video hát mộc.\n[Tiêu chí Chấm điểm]\n1. Kỹ năng thanh nhạc (40%): Độ khó của giai điệu, kỹ thuật\n2. Phát âm và nhả chữ (20%)\n3. Nhịp điệu (20%)\n4. Cảm xúc (10%)\n5. Phong cách trình diễn (10%): Hình ảnh, biểu cảm, ngôn ngữ cơ thể"
+                },
+                {
+                    date: "8/7",
+                    event: "Công bố danh sách Chung kết",
+                    details: "Tuyển chọn: Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn ra top 10 thí sinh đứng đầu, tổng cộng có 20 thí sinh được lọt vào Vòng Chung kết."
+                },
+                {
+                    date: "18/7 - 22/8",
+                    event: "Đào tạo & Tổng duyệt",
+                    details: "Thí sinh lọt vào Chung kết bắt buộc tham dự:\n- Hướng dẫn cá nhân 1 kèm 1 với giáo viên thanh nhạc (tại Cao Hùng/Đài Trung)\n- Tổng duyệt trực tiếp với ban nhạc hai lần (tại Cao Hùng/Đài Trung). Nếu không tham dự xem như từ bỏ quyền lợi."
+                },
+                {
+                    date: "11/9",
+                    event: "Vòng Chung kết (Trình diễn trực tiếp)",
+                    details: "Thời gian: 14:30 - 17:00\nĐịa điểm: Hội trường Quốc tế Tầng 1, K23, Nhà máy ASE Cao Hùng.\nĐơn vị tổ chức sẽ bố trí ban nhạc đệm trực tiếp. KHÔNG cung cấp máy nhắc chữ, thí sinh phải thuộc lòng lời bài hát!"
+                }
+            ],
+            prizes: "Cơ cấu Giải thưởng",
+            prizeCategories: {
+                mandarin: "Giải Bảng Tiếng Hoa",
+                foreign: "Giải Bảng Ngoại ngữ"
+            },
+            rulesAndObligations: "Quyền Lợi, Nghĩa Vụ & Lưu Ý",
+            rulesDesc: "[Bản quyền] Tuyệt đối nghiêm cấm sử dụng MV/nhạc đệm thương mại không được ủy quyền. Quyền tác giả cải biên tại Vòng Chung kết theo tư vấn của giáo viên thuộc Đơn vị Tổ chức.\n[Quyền Hình Ảnh] Thí sinh ủy quyền vô điều kiện trọn đời tài liệu ghi hình cho Đơn vị Quản lý để sử dụng cho nền tảng nội bộ (như GoTube) và quảng bá đối ngoại.\n[Bảo Vệ Thông Tin] Khi đăng ký, thí sinh đồng ý Đơn vị tổ chức sử dụng thông tin cá nhân trong phạm vi phục vụ hoạt động cuộc thi.\n[Tính công bằng] Nghiêm cấm các trường hợp nhờ người hát thay, hát nhép, hậu kỳ chỉnh sửa giọng; nếu phát hiện sau Lễ Trao Giải, sẽ lập tức thu hồi toàn bộ tiền thưởng và cúp.\n[Bất khả kháng] Trong các trường hợp thiên tai hay dịch bệnh, Ban tổ chức bảo lưu quyền thay đổi, tạm dừng hoặc hủy bỏ cuộc thi.",
+            prizesList: [
+                { title: "Quán quân (1)", amount: "NT$ 20,000", extra: "Cúp lưu niệm" },
+                { title: "Á quân (1)", amount: "NT$ 15,000", extra: "Cúp lưu niệm" },
+                { title: "Hạng ba (1)", amount: "NT$ 10,000", extra: "Cúp lưu niệm" },
+                { title: "Khuyến khích (7)", amount: "NT$ 3,000", extra: "Huy chương" }
+            ]
+        },
+        highlights: {
+            title: "Những Điểm Nhấn Nổi Bật",
+            videos: [
+                { year: "2022", title: "Lần 1 Chung kết" },
+                { year: "2023", title: "Lần 2 Chung kết" },
+                { year: "2024", title: "Lần 3 Chung kết" },
+                { year: "2025", title: "Lần 4 Chung kết" }
+            ]
+        },
+        footer: {
+            organizer: "Đơn vị tổ chức: Quỹ Văn hóa và Giáo dục ASE, Ủy ban Phúc lợi Liên hiệp Tập đoàn ASE\nĐơn vị đồng tổ chức: Công ty Cổ phần Chế tạo Bán dẫn ASE, Công ty Cổ phần Chế tạo Bán dẫn ASE - Chi nhánh Trung Lịch, Công ty Cổ phần Công nghiệp Chính xác Siliconware (SPIL), Công ty Cổ phần Điện tử Universal Scientific Industrial (USI)",
+            rights: "Số điểm Vòng Chung kết được quyết định bởi Ban giám khảo chuyên môn. Kết quả công bố là cuối cùng, dựa trên sự tôn trọng tính chuyên môn. Ban tổ chức có quyền điều chỉnh bổ sung, thay thế, tạm dừng cuộc thi.",
+            contactTitle: "Liên Hệ Chúng Tôi",
+            qaEmail: "Q&A Email: service@asevoice.org",
+            contacts: [
+                "Nhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
+                "Nhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
+                "Công ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
+                "Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+            ]
+        }
     }
 };
 
@@ -209,13 +306,23 @@ export const LanguageProvider = ({ children }) => {
     });
 
     const toggleLanguage = () => {
-        setLang(prev => prev === 'zh' ? 'en' : 'zh');
+        setLang(prev => {
+            if (prev === 'zh') return 'en';
+            if (prev === 'en') return 'vi';
+            return 'zh';
+        });
     };
 
-    const t = translations[lang];
+    const setLanguage = (newLang) => {
+        if (['zh', 'en', 'vi'].includes(newLang)) {
+            setLang(newLang);
+        }
+    };
+
+    const t = translations[lang] || translations['zh']; 
 
     return (
-        <LanguageContext.Provider value={{ lang, toggleLanguage, t }}>
+        <LanguageContext.Provider value={{ lang, toggleLanguage, setLanguage, t }}>
             {children}
         </LanguageContext.Provider>
     );
