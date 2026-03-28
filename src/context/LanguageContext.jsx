@@ -22,7 +22,7 @@ const translations = {
         info: {
             title: "活動資訊與規範",
             purpose: "活動宗旨",
-            purposeDesc: "秉持日月光文教基金會「宏揚文化、發展社會教育、培養藝文人才」之宗旨，與集團「社會共融、價值共創」之永續理念。期望透過音樂的溫暖力量廣結善緣，為員工提供展現歌唱才華的舞台，藉由正當休閒娛樂活動倡導企業活力、增進同仁身心健康，並深化職場中的人際共融與企業向心力。",
+            purposeDesc: "秉持日月光文教基金會「宏揚文化、發展社會教育、培養藝文人才」之宗旨，與集團「社會共融、價值共創」之永續理念。本比賽期望透過音樂的溫暖力量促進交流，為員工提供展現歌唱才華的舞台，藉由正當休閒娛樂活動展現企業活力、增進同仁身心健康，並深化職場中的人際共融與企業向心力。",
             groups: "參賽資格與組別",
             groupsDesc: "【參賽資格】\n- 限日月光投資控股股份有限公司旗下之事業體在職職員均可報名參加。\n- 2025年冠亞軍及佳作選手與2024年冠亞軍，不得報名此屆賽事。\n\n【競賽組別】(本比賽均採個人賽)\n- 華語組：國語、台語、客家、粵語 (限額 200 組)\n- 外語組：英語與其他語言 (限額 200 組)",
             timeline: "完整賽制與時程",
@@ -30,7 +30,16 @@ const translations = {
                 {
                     date: "6/1 - 6/21",
                     event: "初賽線上海選 (線上影片繳交)",
-                    details: "【選曲規定】自選一首曲目，初、決賽皆為同一首，不得更改。\n【形式規定】採純清唱！嚴禁伴奏、擴音、伴唱或任何數位修音、人聲後製處理。\n【錄製規範】錄製自選曲之主歌、副歌各一遍。影片總時長限 60 至 90 秒。須正面拍攝，清晰露出臉部、嘴形、半身及腰部。"
+                    details: (
+                        <span>
+                            【選曲規定】自選一首曲目，初、決賽皆為同一首，不得更改。{'\n'}
+                            【形式規定】採純清唱！嚴禁伴奏、擴音、伴唱或任何數位修音、人聲後製處理。{'\n'}
+                            【錄製規範】錄製自選曲之主歌、副歌各一遍。影片總時長限 60 至 90 秒。須正面拍攝，清晰露出臉部、嘴形、半身及腰部。{'\n'}
+                            【錄製範例】{'\n'}
+                            - 中文範例：<a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
+                            - 英文範例：<a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>
+                        </span>
+                    )
                 },
                 {
                     date: "6/22 - 7/4",
@@ -80,12 +89,12 @@ const translations = {
             organizer: "主辦單位：日月光文教基金會、日月光集團聯合職工福利委員會\n協辦單位：日月光半導體製造股份有限公司、日月光半導體製造股份有限公司中壢分公司、矽品精密工業股份有限公司、環旭電子股份有限公司",
             rights: "決賽評比由專業評審團裁定。評審團決議一經公告即為最終結果，基於對音樂尊重，任何人均不得異議。主辦單位保留修正、終止或解釋本活動之最終權利。",
             contactTitle: "聯絡窗口 (比賽期間可諮詢各區窗口)",
-            qaEmail: "Ｑ＆Ａ信箱：tslin2014@gmail.com",
+            qaEmail: "Q&A信箱：service@asevoice.org",
             contacts: [
                 "日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID:roy_chin)",
                 "矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "環旭電子：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com（Line ID:catnow)"
+                "環旭電子：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com ( Line ID: catnow )"
             ]
         }
     },
@@ -110,7 +119,7 @@ const translations = {
         info: {
             title: "Information & Rules",
             purpose: "Event Purpose",
-            purposeDesc: "Upholding the ASE Cultural & Educational Foundation's mission of promoting culture and cultivating artistic talents, alongside the Group's sustainability vision of 'Social Inclusion and Value Co-creation'. This event uses the warmth of music to build connections, providing employees a stage to showcase vocal talents, promoting healthy recreation, and strengthening corporate cohesion.",
+            purposeDesc: "In upholding the mission of the ASE Cultural & Educational Foundation — \"promoting culture, advancing social education, and nurturing artistic talent\" — and the Group's sustainability philosophy of \"social inclusion and shared value creation,\" this competition aims to foster communication through the warm power of music, provide employees with a stage to showcase their singing talents, demonstrate corporate vitality through wholesome recreational activities, promote the physical and mental well-being of employees, and deepen interpersonal inclusion and corporate cohesion in the workplace.",
             groups: "Eligibility & Categories",
             groupsDesc: "[Eligibility]\n- Open to current employees of ASE Technology Holding subsidiaries.\n- 2024/2025 Champions and Runners-up (and 2025 Merit winners) may not participate.\n\n[Categories] (Individual entries only)\n- Mandarin Group: Mandarin, Taiwanese, Hakka, Cantonese (Limit: 200 entries)\n- Foreign Language Group: English & Others (Limit: 200 entries)",
             timeline: "Competition Formats & Timeline",
@@ -118,7 +127,16 @@ const translations = {
                 {
                     date: "Jun 1 - Jun 21",
                     event: "Online preliminary audition (Video Submission)",
-                    details: "[Song] One selected song for both Audition & Finals. No mid-competition changes allowed.\n[Format] A Cappella ONLY! No instrumental backing, vocal effects, or post-production audio tuning.\n[Video] Record one Verse and one Chorus. Total length: 60-90 seconds. Must shoot clearly showing face, mouth, and upper body from the waist up."
+                    details: (
+                        <span>
+                            [Song] One selected song for both Audition & Finals. No mid-competition changes allowed.{'\n'}
+                            [Format] A Cappella ONLY! No instrumental backing, vocal effects, or post-production audio tuning.{'\n'}
+                            [Video] Record one Verse and one Chorus. Total length: 60-90 seconds. Must shoot clearly showing face, mouth, and upper body from the waist up.{'\n'}
+                            [Recording Examples]{'\n'}
+                            - Chinese Example: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
+                            - English Example: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>
+                        </span>
+                    )
                 },
                 {
                     date: "Jun 22 - Jul 4",
@@ -168,7 +186,7 @@ const translations = {
             organizer: "Organizers: ASE Cultural & Educational Foundation, ASE Group Welfare Committee\nCo-organizers: Advanced Semiconductor Engineering, Inc., Advanced Semiconductor Engineering, Inc., Chung-Li Branch, Siliconware Precision Industries Co., Ltd., Universal Scientific Industrial Co., Ltd.",
             rights: "The judge's panel's decision is final upon announcement. Subject to music professionalism rulings. The organizer reserves the right to modify, suspend, or interpret this event.",
             contactTitle: "Contacts (Reach out to regional reps)",
-            qaEmail: "Q&A Email: tslin2014@gmail.com",
+            qaEmail: "Q&A Email: service@asevoice.org",
             contacts: [
                 "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "ASE Chungli: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
