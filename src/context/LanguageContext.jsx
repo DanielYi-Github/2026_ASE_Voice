@@ -183,13 +183,13 @@ const translations = {
             ]
         },
         footer: {
-            organizer: "Organizers: ASE Cultural & Educational Foundation, ASE Group Welfare Committee\nCo-organizers: Advanced Semiconductor Engineering, Inc., Advanced Semiconductor Engineering, Inc., Chung-Li Branch, Siliconware Precision Industries Co., Ltd., Universal Scientific Industrial Co., Ltd.",
+            organizer: "Organizers: ASE Cultural & Educational Foundation, ASE Group Welfare Committee\nCo-organizers: Advanced Semiconductor Engineering, Inc., Advanced Semiconductor Engineering, Inc., ChungLi Branch, Siliconware Precision Industries Co., Ltd., Universal Scientific Industrial Co., Ltd.",
             rights: "The judge's panel's decision is final upon announcement. Subject to music professionalism rulings. The organizer reserves the right to modify, suspend, or interpret this event.",
             contactTitle: "Contacts (Reach out to regional reps)",
             qaEmail: "Q&A Email: service@asevoice.org",
             contacts: [
                 "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
-                "ASE Chungli: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
+                "ASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
                 "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
             ]
