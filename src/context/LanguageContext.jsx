@@ -54,7 +54,23 @@ const translations = {
                 {
                     date: "7/18 - 8/22",
                     event: "決賽培訓與樂團彩排",
-                    details: "為主辦單位安排之專業指導，入圍者需配合出席，時間無法配合視同放棄：\n- 專業歌唱老師 1對1 個人指導一次 (依排定於高雄/台中進行)\n- 與伴奏樂隊進行兩次現場彩排 (依排定於高雄/台中進行)"
+                    details: (
+                        <span>
+                            為主辦單位安排之專業指導，入圍者需配合出席。若時間無法配合，視為放棄指導機會，不得要求另行安排：{'\n'}
+                            - 專業歌唱老師 1對1 個人指導一次 (依排定時間於高雄/中部地區進行){'\n'}
+                            - 與伴奏樂隊進行兩次現場彩排 (依排定時間於高雄/中部地區進行){'\n'}
+                            {'\n'}
+                            【培訓與彩排日程】{'\n'}
+                            - 7/18(六) - 7/19(日)：歌唱老師個人指導（高雄場）{'\n'}
+                            - 7/25(六) - 7/26(日)：歌唱老師個人指導（中部場）{'\n'}
+                            - 8/1(六)、8/15(六)：樂團彩排（高雄場）{'\n'}
+                            - 8/8(六)、8/22(六)：樂團彩排（中部場）{'\n'}
+                            {'\n'}
+                            <span className="text-sm text-gray-500 mt-1 inline-block">
+                                * 註記：中部地區之培訓與彩排據點，將於初賽後視晉級選手之區域分佈情形（如北部選手比例）定案並公告。
+                            </span>
+                        </span>
+                    )
                 },
                 {
                     date: "9/11",
@@ -151,7 +167,23 @@ const translations = {
                 {
                     date: "Jul 18 - Aug 22",
                     event: "Finals Training & Band Rehearsals",
-                    details: "Finalists MUST attend organized training:\n- One 1-on-1 session with a professional vocal coach (in Kaohsiung/Taichung)\n- Two organized live band rehearsals (in Kaohsiung/Taichung). Failure to attend forfeits the opportunity."
+                    details: (
+                        <span>
+                            To help finalists improve their performance, professional coaching will be arranged. Finalists MUST attend. If unable to attend at the scheduled time, it shall be deemed as a voluntary waiver, and no rescheduling will be arranged:{'\n'}
+                            - One 1-on-1 session with a professional vocal coach (in Kaohsiung/Central Region){'\n'}
+                            - Two live rehearsals with the accompaniment band (in Kaohsiung/Central Region){'\n'}
+                            {'\n'}
+                            [Training & Rehearsal Schedule]{'\n'}
+                            - Jul 18(Sat) - Jul 19(Sun): Vocal Coaching (Kaohsiung){'\n'}
+                            - Jul 25(Sat) - Jul 26(Sun): Vocal Coaching (Central Region){'\n'}
+                            - Aug 1(Sat) & Aug 15(Sat): Band Rehearsals (Kaohsiung){'\n'}
+                            - Aug 8(Sat) & Aug 22(Sat): Band Rehearsals (Central Region){'\n'}
+                            {'\n'}
+                            <span className="text-sm text-gray-500 mt-1 inline-block">
+                                * Note: The specific locations for the Central Region will be finalized and announced after the preliminary results, based on the geographical distribution of the finalists.
+                            </span>
+                        </span>
+                    )
                 },
                 {
                     date: "Sep 11",
@@ -248,7 +280,23 @@ const translations = {
                 {
                     date: "18/7 - 22/8",
                     event: "Đào tạo & Tổng duyệt",
-                    details: "Thí sinh lọt vào Chung kết bắt buộc tham dự:\n- Hướng dẫn cá nhân 1 kèm 1 với giáo viên thanh nhạc (tại Cao Hùng/Đài Trung)\n- Tổng duyệt trực tiếp với ban nhạc hai lần (tại Cao Hùng/Đài Trung). Nếu không tham dự xem như từ bỏ quyền lợi."
+                    details: (
+                        <span>
+                            Nhằm hỗ trợ thí sinh nâng cao hiệu suất, sẽ có hướng dẫn chuyên nghiệp. Thí sinh bắt buộc tham dự. Nếu thời gian không phù hợp, xem như tự động từ bỏ cơ hội và không được yêu cầu sắp xếp bù giờ khác:{'\n'}
+                            - Hướng dẫn cá nhân 1 kèm 1 với giáo viên thanh nhạc (tại Cao Hùng/Khu vực Miền Trung){'\n'}
+                            - Tổng duyệt trực tiếp với ban nhạc hai lần (tại Cao Hùng/Khu vực Miền Trung){'\n'}
+                            {'\n'}
+                            [Lịch Đào tạo & Tổng duyệt]{'\n'}
+                            - 18/7(T7) - 19/7(CN): Hướng dẫn thanh nhạc (Cao Hùng){'\n'}
+                            - 25/7(T7) - 26/7(CN): Hướng dẫn thanh nhạc (Khu vực Miền Trung){'\n'}
+                            - 1/8(T7), 15/8(T7): Tổng duyệt ban nhạc (Cao Hùng){'\n'}
+                            - 8/8(T7), 22/8(T7): Tổng duyệt ban nhạc (Khu vực Miền Trung){'\n'}
+                            {'\n'}
+                            <span className="text-sm text-gray-500 mt-1 inline-block">
+                                * Lưu ý: Địa điểm tại khu vực Miền Trung sẽ được quyết định và thông báo sau vòng sơ loại, dựa trên sự phân bổ vùng miền của các thí sinh lọt vào chung kết.
+                            </span>
+                        </span>
+                    )
                 },
                 {
                     date: "11/9",
