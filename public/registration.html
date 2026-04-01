@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 ASE Voice - 報名系統</title>
     
-    <!-- 優化：提前建立與 Google 伺服器的連線，加速網頁解析 -->
     <link rel="preconnect" href="https://script.google.com">
     <link rel="preconnect" href="https://script.googleusercontent.com">
     
@@ -16,11 +15,10 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: #FFC107; /* 使用網站的品牌黃色作為基底色 */
+            background-color: #FFC107;
             font-family: 'Arial', sans-serif;
         }
 
-        /* 載入畫面的設計 (呼應形象網站的普普風與鮮豔色系) */
         #loader-container {
             position: absolute;
             top: 0;
@@ -40,9 +38,9 @@
             width: 60px;
             height: 60px;
             border: 6px solid rgba(26, 26, 26, 0.15);
-            border-top-color: #1A1A1A; /* 黑色強調 */
+            border-top-color: #1A1A1A;
             border-radius: 50%;
-            animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite; /* 彈性旋轉動畫 */
+            animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
             margin-bottom: 24px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
@@ -53,7 +51,7 @@
             font-weight: 900;
             letter-spacing: 3px;
             animation: pulse 1.5s ease-in-out infinite;
-            text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8); /* 增加立體感 */
+            text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
         }
 
         @keyframes spin {
@@ -66,7 +64,6 @@
             50% { opacity: 0.6; transform: scale(0.98); }
         }
 
-        /* Iframe 的漸顯動畫 */
         iframe {
             opacity: 0;
             transition: opacity 0.6s ease-in;
@@ -76,40 +73,66 @@
     </style>
 </head>
 <body>
-    <!-- 品牌風格的載入動畫 -->
     <div id="loader-container">
         <div class="loader"></div>
-        <div class="loading-text">表單載入中...</div>
+        <div class="loading-text" id="loading-text">表單載入中...</div>
     </div>
 
-    <!-- Iframe 容器 -->
     <div style="width: 100%; height: 100vh; overflow: hidden; background-color: white;">
         <iframe 
-            src="https://script.google.com/macros/s/AKfycbzFJFq-h-8StZcW9SWbkiLRAFkxyxg-3KSfIhYP7OFF8Bpwnm43Zp5infkRWhuI7yCy/exec" 
+            id="gscript-iframe"
+            src="" 
             style="width: 100%; height: calc(100vh + 40px); border: none; margin-top: -40px;"
             onload="hideLoader()">
         </iframe>
     </div>
 
     <script>
-        // 當 iframe 的資源真正讀取完畢時，觸發消影動畫
+        // 1. 解析網址帶來的語系參數 (例如 ?lang=en)
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'zh'; // 預設為繁體中文
+
+        // 2. 定義多語系字典
+        const i18n = {
+            'zh': {
+                title: '2026 ASE Voice - 報名系統',
+                loading: '表單載入中...',
+                htmlLang: 'zh-TW'
+            },
+            'en': {
+                title: '2026 ASE Voice - Registration',
+                loading: 'Loading Form...',
+                htmlLang: 'en'
+            },
+            'vi': {
+                title: '2026 ASE Voice - Đăng ký',
+                loading: 'Đang tải biểu mẫu...',
+                htmlLang: 'vi'
+            }
+        };
+
+        // 3. 套用對應的語系到載入畫面與 Meta
+        const currentLang = i18n[lang] || i18n['zh'];
+        document.title = currentLang.title;
+        document.documentElement.lang = currentLang.htmlLang;
+        document.getElementById('loading-text').textContent = currentLang.loading;
+
+        // 4. 將語系參數也一起傳給 Google Apps Script iframe
+        const iframe = document.getElementById('gscript-iframe');
+        const baseUrl = 'https://script.google.com/macros/s/AKfycbzFJFq-h-8StZcW9SWbkiLRAFkxyxg-3KSfIhYP7OFF8Bpwnm43Zp5infkRWhuI7yCy/exec';
+        iframe.src = baseUrl + '?lang=' + lang;
+
+        // --- 以下為原本的 Loader 隱藏邏輯 ---
         function hideLoader() {
             const loader = document.getElementById('loader-container');
-            const iframe = document.querySelector('iframe');
-            
-            // 淡出載入畫面
             loader.style.opacity = '0';
-            
-            // 淡入 Iframe 表單
             iframe.style.opacity = '1';
 
-            // 等待 CSS 動畫結束後，從視角中移除 loader 元素
             setTimeout(() => {
                 loader.style.display = 'none';
             }, 500);
         }
 
-        // 強制保險機制：萬一 Google 網路回應太慢 (超過 5.5 秒)，強制啟動表單避免卡在載入畫面
         setTimeout(() => {
             const loader = document.getElementById('loader-container');
             if (loader.style.display !== 'none') {

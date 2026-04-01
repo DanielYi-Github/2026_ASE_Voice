@@ -66,7 +66,7 @@ const Navbar = () => {
                 </div>
 
                 <a
-                    href={`${import.meta.env.BASE_URL}registration.html`}
+                    href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hidden md:inline-flex btn-brutal btn-primary px-4 py-2 text-sm"
