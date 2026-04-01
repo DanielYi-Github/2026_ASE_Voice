@@ -7,9 +7,9 @@ const Hero = () => {
 
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-start bg-[#FFC107] overflow-hidden pt-20 border-b-[6px] border-dark isolate">
-            {/* BACKGROUND LAYER: Radial Sunburst & Halftone */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[200vw] h-[200vw] rounded-full bg-sunburst opacity-80 pointer-events-none mix-blend-multiply z-[-2] origin-center animate-[spin_120s_linear_infinite]"></div>
-            <div className="absolute inset-0 bg-halftone opacity-10 pointer-events-none mix-blend-multiply z-[-1]"></div>
+            {/* BACKGROUND LAYER: Radial Sunburst & Halftone - 移除 mix-blend 以提升效能 */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[200vw] h-[200vw] rounded-full bg-sunburst opacity-80 pointer-events-none z-[-2] origin-center animate-[spin_120s_linear_infinite]"></div>
+            <div className="absolute inset-0 bg-halftone opacity-10 pointer-events-none z-[-1]"></div>
 
             {/* MIDDLE LAYER: Rich Music Particles & Waves */}
             <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
@@ -55,23 +55,23 @@ const Hero = () => {
                         className="absolute opacity-80 z-20"
                         style={{ top: note.top, left: note.left }}
                     >
-                        {/* 3D Drop Shadow effect inside SVG based on type */}
+                        {/* 移除 SVG 內部的高耗能 drop-shadow，改用純色確保 60fps 順暢運行 */}
                         {note.type === 'double' && (
-                            <svg width={note.size} height={note.size} viewBox="0 0 24 24" className="drop-shadow-[3px_3px_0_rgba(26,26,26,0.8)] overflow-visible">
+                            <svg width={note.size} height={note.size} viewBox="0 0 24 24" className="overflow-visible">
                                 <path d="M9 18V5l12-2v13" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                 <circle cx="6" cy="18" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
                                 <circle cx="18" cy="16" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
                             </svg>
                         )}
                         {note.type === 'single' && (
-                            <svg width={note.size} height={note.size} viewBox="0 0 24 24" className="drop-shadow-[3px_3px_0_rgba(26,26,26,0.8)] overflow-visible">
+                            <svg width={note.size} height={note.size} viewBox="0 0 24 24" className="overflow-visible">
                                 <path d="M9 18V5" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M9 5c3 0 7 2 7 6" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                 <circle cx="6" cy="18" r="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="2"></circle>
                             </svg>
                         )}
                         {note.type === 'staff' && (
-                            <svg width={note.size} height={note.size * 0.5} viewBox="0 0 100 50" className="drop-shadow-[3px_3px_0_rgba(26,26,26,0.8)] overflow-visible">
+                            <svg width={note.size} height={note.size * 0.5} viewBox="0 0 100 50" className="overflow-visible">
                                 <path d="M 0 10 Q 25 2 50 10 T 100 10 M 0 18 Q 25 10 50 18 T 100 18 M 0 26 Q 25 18 50 26 T 100 26 M 0 34 Q 25 26 50 34 T 100 34 M 0 42 Q 25 34 50 42 T 100 42" fill="none" stroke="#FFFFFF" strokeWidth="1.5" />
                                 <ellipse cx="30" cy="26" rx="4" ry="3" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="1.5" transform="rotate(-20 30 26)"></ellipse>
                                 <path d="M 33 26 V 5" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"></path>
@@ -120,7 +120,7 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="relative w-full"
                     >
-                        <div className="bg-dark/95 backdrop-blur-sm text-white pt-10 pb-10 px-6 md:px-10 transform -rotate-2 relative z-10 inline-block w-fit max-w-full text-center md:text-left shadow-[12px_12px_0_0_rgba(244,196,98,0.3)] border-4 border-white">
+                        <div className="bg-dark text-white pt-10 pb-10 px-6 md:px-10 transform -rotate-2 relative z-10 inline-block w-fit max-w-full text-center md:text-left shadow-[12px_12px_0_0_rgba(244,196,98,0.3)] border-4 border-white">
 
                             {/* Accent Ribbon */}
                             <div className="absolute -top-5 left-4 md:-left-6 bg-secondary text-white font-heading font-black text-sm md:text-lg py-2 px-6 transform -rotate-2 border-2 border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] z-20 whitespace-nowrap">
@@ -160,8 +160,8 @@ const Hero = () => {
                         className="mt-14 md:mt-20 flex flex-col items-center md:items-start gap-5 relative z-40 w-full"
                     >
                         <div className="group relative mx-auto md:mx-0 w-full max-w-[360px] md:max-w-max">
-                            {/* Intense Neon Blue Glow */}
-                            <div className="absolute -inset-4 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-80 blur-2xl animate-pulse group-hover:opacity-100 transition-opacity duration-300"></div>
+                            {/* 降低效能消耗的發光底座，移除 blur 與 pulse */}
+                            <div className="absolute -inset-2 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                             <a
                                 href={`${import.meta.env.BASE_URL}registration.html`}
@@ -179,7 +179,7 @@ const Hero = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className="text-center md:text-left font-body font-bold text-sm md:text-base text-white bg-dark/80 backdrop-blur-md px-5 py-2 border-l-4 border-[#00F0FF] mx-auto md:mx-0 shadow-lg">
+                        <div className="text-center md:text-left font-body font-bold text-sm md:text-base text-white bg-dark px-5 py-2 border-l-4 border-[#00F0FF] mx-auto md:mx-0 shadow-lg">
                             {t.hero.registerPrefix}{t.hero.registerNote}
                         </div>
                     </motion.div>
@@ -206,7 +206,7 @@ const Hero = () => {
             </div>
 
             {/* Subdued Bottom Waveform behind the microphone */}
-            <div className="absolute bottom-0 inset-x-0 h-16 md:h-24 flex items-end justify-between px-1 md:px-2 gap-0.5 md:gap-1 opacity-20 pointer-events-none z-20 mix-blend-overlay">
+            <div className="absolute bottom-0 inset-x-0 h-16 md:h-24 flex items-end justify-between px-1 md:px-2 gap-0.5 md:gap-1 opacity-20 pointer-events-none z-20">
                 {[...Array(50)].map((_, i) => (
                     <div
                         key={i}
