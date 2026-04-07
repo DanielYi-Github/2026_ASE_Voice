@@ -91,6 +91,10 @@
         // 1. 解析網址帶來的語系參數 (例如 ?lang=en)
         const urlParams = new URLSearchParams(window.location.search);
         const lang = urlParams.get('lang') || 'zh'; // 預設為繁體中文
+        const email = urlParams.get('email') || null;
+        const timestamp = urlParams.get('timestamp') || null;
+        const nonce = urlParams.get('nonce') || null;
+        const hash = urlParams.get('hash') || null;
 
         // 2. 定義多語系字典
         const i18n = {
@@ -119,8 +123,15 @@
 
         // 4. 將語系參數也一起傳給 Google Apps Script iframe
         const iframe = document.getElementById('gscript-iframe');
-        const baseUrl = 'https://script.google.com/macros/s/AKfycbzFJFq-h-8StZcW9SWbkiLRAFkxyxg-3KSfIhYP7OFF8Bpwnm43Zp5infkRWhuI7yCy/exec';
-        iframe.src = baseUrl + '?lang=' + lang;
+        let baseUrl = 'https://script.google.com/macros/s/AKfycbzFJFq-h-8StZcW9SWbkiLRAFkxyxg-3KSfIhYP7OFF8Bpwnm43Zp5infkRWhuI7yCy/exec';
+        // 開始拼接
+        baseUrl += '?lang=' + lang; // 第一個參數用 ?
+        if (email) baseUrl += '&email=' + encodeURIComponent(email);
+        if (timestamp) baseUrl += '&timestamp=' + timestamp;
+        if (nonce) baseUrl += '&nonce=' + nonce;
+        if (hash) baseUrl += '&hash=' + hash;
+        
+        iframe.src = baseUrl ;
 
         // --- 以下為原本的 Loader 隱藏邏輯 ---
         function hideLoader() {
