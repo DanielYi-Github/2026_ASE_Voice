@@ -123,7 +123,7 @@
 
         // 4. 將語系參數也一起傳給 Google Apps Script iframe
         const iframe = document.getElementById('gscript-iframe');
-        let baseUrl = 'https://script.google.com/macros/s/AKfycby6SE4ZJOmRKavgQHYj0L2nHX2XffCN_zCaDV610y8uZRoEIg3lXDYaSll4tePmJA1M/exec';
+        let baseUrl = 'https://script.google.com/macros/s/AKfycbwIB5zNO3lQBC7YBNu5Z4j0bUHAHogI8M1FxCz-O7vyK5rXnftjGq4MD5tm4qh85JiH/exec';
         // 開始拼接
         baseUrl += '?lang=' + lang; // 第一個參數用 ?
         if (email) baseUrl += '&email=' + encodeURIComponent(email);
