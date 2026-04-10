@@ -4,7 +4,7 @@ const translations = {
     zh: {
         nav: {
             register: "即刻報名",
-            title: "日月光集團歌唱比賽",
+            title: "日月光投控歌唱比賽",
             langSwitch: "EN"
         },
         hero: {
