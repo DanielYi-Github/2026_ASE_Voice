@@ -230,7 +230,7 @@ const translations = {
     vi: {
         nav: {
             register: "Đăng ký",
-            title: "Giọng hát hay",
+            title: "Cuộc thi Giọng hát hay",
             langSwitch: "VN"
         },
         hero: {
@@ -367,7 +367,7 @@ export const LanguageProvider = ({ children }) => {
         }
     };
 
-    const t = translations[lang] || translations['zh']; 
+    const t = translations[lang] || translations['zh'];
 
     return (
         <LanguageContext.Provider value={{ lang, toggleLanguage, setLanguage, t }}>
