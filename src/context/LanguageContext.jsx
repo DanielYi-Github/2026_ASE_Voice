@@ -21,6 +21,8 @@ const translations = {
         },
         info: {
             title: "活動資訊與規範",
+            downloadGuide: "下載活動簡章 (PDF)",
+            downloadFile: "2026日月光投控好聲音歌唱比賽簡章.pdf",
             purpose: "活動宗旨",
             purposeDesc: "秉持日月光文教基金會「宏揚文化、發展社會教育、培養藝文人才」之宗旨，與集團「社會共融、價值共創」之永續理念。本比賽期望透過音樂的溫暖力量促進交流，為員工提供展現歌唱才華的舞台，藉由正當休閒娛樂活動展現企業活力、增進同仁身心健康，並深化職場中的人際共融與企業向心力。",
             groups: "參賽資格與組別",
@@ -95,14 +97,35 @@ const translations = {
         highlights: {
             title: "歷屆精彩回顧",
             videos: [
-                { year: "2022", title: "第一屆 決賽" },
-                { year: "2023", title: "第二屆 決賽" },
+                { year: "2025", title: "第四屆 決賽" },
                 { year: "2024", title: "第三屆 決賽" },
-                { year: "2025", title: "第四屆 決賽" }
+                { year: "2023", title: "第二屆 決賽" },
+                { year: "2022", title: "第一屆 決賽" }
             ]
         },
         footer: {
-            organizer: "主辦單位：日月光文教基金會、日月光集團聯合職工福利委員會\n協辦單位：日月光半導體製造股份有限公司、日月光半導體製造股份有限公司中壢分公司、矽品精密工業股份有限公司、環旭電子股份有限公司",
+            organizer: [
+                {
+                    title: "主辦單位：",
+                    items: [
+                        "日月光文教基金會",
+                        "日月光集團聯合職工福利委員會"
+                    ]
+                },
+                {
+                    title: "協辦單位：",
+                    items: [
+                        "日月光半導體製造股份有限公司",
+                        "日月光半導體製造股份有限公司中壢分公司",
+                        "矽品精密工業股份有限公司",
+                        "環旭電子股份有限公司"
+                    ]
+                },
+                {
+                    title: "承辦單位：",
+                    items: ["日月光流行音樂歌唱社"]
+                }
+            ],
             rights: "決賽評比由專業評審團裁定。評審團決議一經公告即為最終結果，基於對音樂尊重，任何人均不得異議。主辦單位保留修正、終止或解釋本活動之最終權利。",
             contactTitle: "聯絡窗口 (比賽期間可諮詢各區窗口)",
             qaEmail: "Q&A信箱：service@asevoice.org",
@@ -134,6 +157,8 @@ const translations = {
         },
         info: {
             title: "Information & Rules",
+            downloadGuide: "Download Guidelines (PDF)",
+            downloadFile: "2026 ASE Voice Singing Competition Rules and Regulations.pdf",
             purpose: "Event Purpose",
             purposeDesc: "In upholding the mission of the ASE Cultural & Educational Foundation — \"promoting culture, advancing social education, and nurturing artistic talent\" — and the Group's sustainability philosophy of \"social inclusion and shared value creation,\" this competition aims to foster communication through the warm power of music, provide employees with a stage to showcase their singing talents, demonstrate corporate vitality through wholesome recreational activities, promote the physical and mental well-being of employees, and deepen interpersonal inclusion and corporate cohesion in the workplace.",
             groups: "Eligibility & Categories",
@@ -208,14 +233,35 @@ const translations = {
         highlights: {
             title: "Past Highlights",
             videos: [
-                { year: "2022", title: "1st Ed. Finals" },
-                { year: "2023", title: "2nd Ed. Finals" },
+                { year: "2025", title: "4th Ed. Finals" },
                 { year: "2024", title: "3rd Ed. Finals" },
-                { year: "2025", title: "4th Ed. Finals" }
+                { year: "2023", title: "2nd Ed. Finals" },
+                { year: "2022", title: "1st Ed. Finals" }
             ]
         },
         footer: {
-            organizer: "Organizers: ASE Cultural & Educational Foundation, ASE Group Welfare Committee\nCo-organizers: Advanced Semiconductor Engineering, Inc., Advanced Semiconductor Engineering, Inc., ChungLi Branch, Siliconware Precision Industries Co., Ltd., Universal Scientific Industrial Co., Ltd.",
+            organizer: [
+                {
+                    title: "Organizers:",
+                    items: [
+                        "ASE Cultural & Educational Foundation",
+                        "ASE Group Welfare Committee"
+                    ]
+                },
+                {
+                    title: "Co-organizers:",
+                    items: [
+                        "Advanced Semiconductor Engineering, Inc.",
+                        "Advanced Semiconductor Engineering, Inc., ChungLi Branch",
+                        "Siliconware Precision Industries Co., Ltd.",
+                        "Universal Scientific Industrial Co., Ltd."
+                    ]
+                },
+                {
+                    title: "Executive Organizer:",
+                    items: ["ASE Pop Music and Singing Club"]
+                }
+            ],
             rights: "The judge's panel's decision is final upon announcement. Subject to music professionalism rulings. The organizer reserves the right to modify, suspend, or interpret this event.",
             contactTitle: "Contacts (Reach out to regional reps)",
             qaEmail: "Q&A Email: service@asevoice.org",
@@ -247,6 +293,8 @@ const translations = {
         },
         info: {
             title: "Hình thức & Tiêu chí",
+            downloadGuide: "Tải xuống Thể lệ (PDF)",
+            downloadFile: "2026 ASE Voice - Thể lệ Cuộc thi Ca hát \"Giọng hát hay Tập đoàn ASE.pdf",
             purpose: "Mục đích",
             purposeDesc: "Nêu cao tôn chỉ \"Hoằng dương văn hóa, Phát triển giáo dục xã hội, Bồi dưỡng nhân tài nghệ thuật\" của Quỹ Văn hóa và Giáo dục ASE, cùng với triết lý phát triển bền vững \"Hòa nhập xã hội, Cùng nhau sáng tạo giá trị\" của Tập đoàn. Cuộc thi này kỳ vọng thông qua sức mạnh ấm áp của âm nhạc để thúc đẩy giao lưu, tạo sân chơi cho nhân viên thể hiện tài năng ca hát. Qua các hoạt động giải trí lành mạnh để thể hiện sức sống của doanh nghiệp, nâng cao sức khỏe thể chất và tinh thần cho đồng nghiệp, cũng như làm sâu sắc thêm sự gắn kết nhân sự trong môi trường làm việc và tinh thần hướng về doanh nghiệp.",
             groups: "Đối tượng & Bảng",
@@ -321,14 +369,35 @@ const translations = {
         highlights: {
             title: "Những Điểm Nhấn Nổi Bật",
             videos: [
-                { year: "2022", title: "Lần 1 Chung kết" },
-                { year: "2023", title: "Lần 2 Chung kết" },
+                { year: "2025", title: "Lần 4 Chung kết" },
                 { year: "2024", title: "Lần 3 Chung kết" },
-                { year: "2025", title: "Lần 4 Chung kết" }
+                { year: "2023", title: "Lần 2 Chung kết" },
+                { year: "2022", title: "Lần 1 Chung kết" }
             ]
         },
         footer: {
-            organizer: "Đơn vị tổ chức: Quỹ Văn hóa và Giáo dục ASE, Ủy ban Phúc lợi Liên hiệp Tập đoàn ASE\nĐơn vị đồng tổ chức: Công ty Cổ phần Chế tạo Bán dẫn ASE, Công ty Cổ phần Chế tạo Bán dẫn ASE - Chi nhánh Trung Lịch, Công ty Cổ phần Công nghiệp Chính xác Siliconware (SPIL), Công ty Cổ phần Điện tử Universal Scientific Industrial (USI)",
+            organizer: [
+                {
+                    title: "Đơn vị tổ chức:",
+                    items: [
+                        "Quỹ Văn hóa và Giáo dục ASE",
+                        "Ủy ban Phúc lợi Liên hiệp Tập đoàn ASE"
+                    ]
+                },
+                {
+                    title: "Đơn vị đồng tổ chức:",
+                    items: [
+                        "Công ty Cổ phần Chế tạo Bán dẫn ASE",
+                        "Công ty Cổ phần Chế tạo Bán dẫn ASE - Chi nhánh Trung Lịch",
+                        "Công ty Cổ phần Công nghiệp Chính xác Siliconware (SPIL)",
+                        "Công ty Cổ phần Điện tử Universal Scientific Industrial (USI)"
+                    ]
+                },
+                {
+                    title: "Đơn vị thực hiện:",
+                    items: ["Câu lạc bộ Ca hát và Âm nhạc Pop ASE"]
+                }
+            ],
             rights: "Số điểm Vòng Chung kết được quyết định bởi Ban giám khảo chuyên môn. Kết quả công bố là cuối cùng, dựa trên sự tôn trọng tính chuyên môn. Ban tổ chức có quyền điều chỉnh bổ sung, thay thế, tạm dừng cuộc thi.",
             contactTitle: "Liên Hệ Chúng Tôi",
             qaEmail: "Q&A Email: service@asevoice.org",

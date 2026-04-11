@@ -39,11 +39,22 @@ const InfoSection = () => {
                     viewport={{ once: true, margin: "-50px" }}
                     className="text-center mb-16 md:mb-24"
                 >
-                    <div className="inline-block relative">
-                        <div className="absolute -inset-2 bg-dark transform rotate-2"></div>
-                        <h2 className="relative inline-block text-5xl md:text-7xl font-heading font-black bg-white text-dark px-10 py-5 border-[5px] border-dark -rotate-1 tracking-tight">
-                            {t.info.title}
-                        </h2>
+                    <div className="flex flex-col items-center justify-center gap-6">
+                        <div className="inline-block relative">
+                            <div className="absolute -inset-2 bg-dark transform rotate-2"></div>
+                            <h2 className="relative inline-block text-5xl md:text-7xl font-heading font-black bg-white text-dark px-10 py-5 border-[5px] border-dark -rotate-1 tracking-tight">
+                                {t.info.title}
+                            </h2>
+                        </div>
+                        <a 
+                            href={`${import.meta.env.BASE_URL}downloads/${t.info.downloadFile}`}
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            className="inline-flex items-center gap-3 bg-secondary text-white font-heading font-black tracking-wide text-xl px-8 py-3.5 border-[4px] border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] hover:shadow-[0px_0px_0_0_rgba(26,26,26,1)] hover:translate-x-1 hover:translate-y-1 transition-all"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                            {t.info.downloadGuide}
+                        </a>
                     </div>
                 </motion.div>
 

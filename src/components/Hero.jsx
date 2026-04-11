@@ -179,9 +179,6 @@ const Hero = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className="text-center md:text-left font-body font-bold text-sm md:text-base text-white bg-dark px-5 py-2 border-l-4 border-[#00F0FF] mx-auto md:mx-0 shadow-lg">
-                            {t.hero.registerPrefix}{t.hero.registerNote}
-                        </div>
                     </motion.div>
                 </div>
 

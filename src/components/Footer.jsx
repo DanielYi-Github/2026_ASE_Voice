@@ -10,10 +10,25 @@ const Footer = () => {
             <div className="container mx-auto max-w-6xl">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12 pb-12 border-b-2 border-gray-700">
 
-                    <div className="max-w-md">
-                        <h2 className="text-3xl font-heading font-black mb-4"><span className="text-primary">ASE</span> VOICE</h2>
-                        <p className="font-body text-gray-400 mb-2 whitespace-pre-line">{t.footer.organizer}</p>
-                        <p className="font-body text-gray-500 text-sm">{t.footer.rights}</p>
+                    <div className="max-w-[100%] md:max-w-[60%] lg:max-w-xl">
+                        <h2 className="text-3xl font-heading font-black mb-6"><span className="text-primary">ASE</span> VOICE</h2>
+                        
+                        <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-5 font-body text-gray-400 mb-8 text-[15px] leading-relaxed tracking-wide">
+                            {Array.isArray(t.footer.organizer) ? t.footer.organizer.map((group, idx) => (
+                                <React.Fragment key={idx}>
+                                    <div className="font-bold text-gray-300 whitespace-nowrap leading-relaxed">{group.title}</div>
+                                    <div className="flex flex-col">
+                                        {group.items.map((item, i) => (
+                                            <span key={i} className="leading-relaxed">{item}</span>
+                                        ))}
+                                    </div>
+                                </React.Fragment>
+                            )) : (
+                                <p className="whitespace-pre-line col-span-2">{t.footer.organizer}</p>
+                            )}
+                        </div>
+                        
+                        <p className="font-body text-gray-500 text-sm leading-relaxed">{t.footer.rights}</p>
                     </div>
 
                     <div className="bg-white/10 p-6 border-l-4 border-primary">
