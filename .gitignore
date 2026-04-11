@@ -80,6 +80,7 @@ Desktop.ini
 *.pptx
 *.ppt
 *.pdf
+!public/downloads/*.pdf
 
 # ── 非專案用途的圖片 ────────────────────────────────────
 # 排除通訊軟體截圖等非專案資源 (專案圖片放在 public/ 和 src/assets/)

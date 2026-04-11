@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // GitHub Pages 子目錄部署路徑 (須與 Repo 名稱一致)
+  base: '/', // 由於使用了自訂網域 (asevoice.org)，因此必須將 base 設為 '/' 確保路由正確
   build: {
     cssMinify: 'lightningcss',
     rollupOptions: {
