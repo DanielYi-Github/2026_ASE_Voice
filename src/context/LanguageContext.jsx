@@ -59,17 +59,17 @@ const translations = {
                     details: (
                         <span>
                             為主辦單位安排之專業指導，入圍者需配合出席。若時間無法配合，視為放棄指導機會，不得要求另行安排：{'\n'}
-                            - 專業歌唱老師 1對1 個人指導一次 (依排定時間於高雄/中部地區進行){'\n'}
-                            - 與伴奏樂隊進行兩次現場彩排 (依排定時間於高雄/中部地區進行){'\n'}
+                            - 專業歌唱老師 1對1 個人指導一次 (依排定時間於高雄/中北部地區進行){'\n'}
+                            - 與伴奏樂隊進行兩次現場彩排 (依排定時間於高雄/中北部地區進行){'\n'}
                             {'\n'}
                             【培訓與彩排日程】{'\n'}
                             - 7/18(六) - 7/19(日)：歌唱老師個人指導（高雄場）{'\n'}
-                            - 7/25(六) - 7/26(日)：歌唱老師個人指導（中部場）{'\n'}
+                            - 7/25(六) - 7/26(日)：歌唱老師個人指導（中北部場）{'\n'}
                             - 8/1(六)、8/15(六)：樂團彩排（高雄場）{'\n'}
-                            - 8/8(六)、8/22(六)：樂團彩排（中部場）{'\n'}
+                            - 8/8(六)、8/22(六)：樂團彩排（中北部場）{'\n'}
                             {'\n'}
                             <span className="text-sm text-gray-500 mt-1 inline-block">
-                                * 註記：中部地區之培訓與彩排據點，將於初賽後視晉級選手之區域分佈情形（如北部選手比例）定案並公告。
+                                * 註記：中北部地區之培訓與彩排據點，將於初賽後視晉級選手之區域分佈情形定案並公告（如中部或北部選手比例而定）。
                             </span>
                         </span>
                     )
@@ -118,7 +118,7 @@ const translations = {
                         "日月光半導體製造股份有限公司",
                         "日月光半導體製造股份有限公司中壢分公司",
                         "矽品精密工業股份有限公司",
-                        "環旭電子股份有限公司"
+                        "環鴻科技股份有限公司"
                     ]
                 },
                 {
@@ -133,7 +133,7 @@ const translations = {
                 "日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID:roy_chin)",
                 "矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "環旭電子：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com ( Line ID: catnow )"
+                "環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com ( Line ID: catnow )"
             ]
         }
     },
@@ -195,17 +195,17 @@ const translations = {
                     details: (
                         <span>
                             To help finalists improve their performance, professional coaching will be arranged. Finalists MUST attend. If unable to attend at the scheduled time, it shall be deemed as a voluntary waiver, and no rescheduling will be arranged:{'\n'}
-                            - One 1-on-1 session with a professional vocal coach (in Kaohsiung/Central Region){'\n'}
-                            - Two live rehearsals with the accompaniment band (in Kaohsiung/Central Region){'\n'}
+                            - One 1-on-1 session with a professional vocal coach (in Kaohsiung/Central-Northern Region){'\n'}
+                            - Two live rehearsals with the accompaniment band (in Kaohsiung/Central-Northern Region){'\n'}
                             {'\n'}
                             [Training & Rehearsal Schedule]{'\n'}
                             - Jul 18(Sat) - Jul 19(Sun): Vocal Coaching (Kaohsiung){'\n'}
-                            - Jul 25(Sat) - Jul 26(Sun): Vocal Coaching (Central Region){'\n'}
+                            - Jul 25(Sat) - Jul 26(Sun): Vocal Coaching (Central-Northern Region){'\n'}
                             - Aug 1(Sat) & Aug 15(Sat): Band Rehearsals (Kaohsiung){'\n'}
-                            - Aug 8(Sat) & Aug 22(Sat): Band Rehearsals (Central Region){'\n'}
+                            - Aug 8(Sat) & Aug 22(Sat): Band Rehearsals (Central-Northern Region){'\n'}
                             {'\n'}
                             <span className="text-sm text-gray-500 mt-1 inline-block">
-                                * Note: The specific locations for the Central Region will be finalized and announced after the preliminary results, based on the geographical distribution of the finalists.
+                                * Note: The specific training and rehearsal locations for the Central-Northern Region will be finalized and announced after the preliminary results, based on the geographical distribution of the finalists (e.g., concentration of contestants from the Northern or Central regions).
                             </span>
                         </span>
                     )
@@ -254,7 +254,7 @@ const translations = {
                         "Advanced Semiconductor Engineering, Inc.",
                         "Advanced Semiconductor Engineering, Inc., ChungLi Branch",
                         "Siliconware Precision Industries Co., Ltd.",
-                        "Universal Scientific Industrial Co., Ltd."
+                        "Universal Global Technology Co., Ltd."
                     ]
                 },
                 {
@@ -269,7 +269,7 @@ const translations = {
                 "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "ASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+                "UGT: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
             ]
         }
     },
@@ -331,17 +331,17 @@ const translations = {
                     details: (
                         <span>
                             Nhằm hỗ trợ thí sinh nâng cao hiệu suất, sẽ có hướng dẫn chuyên nghiệp. Thí sinh bắt buộc tham dự. Nếu thời gian không phù hợp, xem như tự động từ bỏ cơ hội và không được yêu cầu sắp xếp bù giờ khác:{'\n'}
-                            - Hướng dẫn cá nhân 1 kèm 1 với giáo viên thanh nhạc (tại Cao Hùng/Khu vực Miền Trung){'\n'}
-                            - Tổng duyệt trực tiếp với ban nhạc hai lần (tại Cao Hùng/Khu vực Miền Trung){'\n'}
+                            - Hướng dẫn cá nhân 1 kèm 1 với giáo viên thanh nhạc (tại Cao Hùng/Khu vực Miền Trung-Bắc){'\n'}
+                            - Tổng duyệt trực tiếp với ban nhạc hai lần (tại Cao Hùng/Khu vực Miền Trung-Bắc){'\n'}
                             {'\n'}
                             [Lịch Đào tạo & Tổng duyệt]{'\n'}
                             - 18/7(T7) - 19/7(CN): Hướng dẫn thanh nhạc (Cao Hùng){'\n'}
-                            - 25/7(T7) - 26/7(CN): Hướng dẫn thanh nhạc (Khu vực Miền Trung){'\n'}
+                            - 25/7(T7) - 26/7(CN): Hướng dẫn thanh nhạc (Khu vực Miền Trung-Bắc){'\n'}
                             - 1/8(T7), 15/8(T7): Tổng duyệt ban nhạc (Cao Hùng){'\n'}
-                            - 8/8(T7), 22/8(T7): Tổng duyệt ban nhạc (Khu vực Miền Trung){'\n'}
+                            - 8/8(T7), 22/8(T7): Tổng duyệt ban nhạc (Khu vực Miền Trung-Bắc){'\n'}
                             {'\n'}
                             <span className="text-sm text-gray-500 mt-1 inline-block">
-                                * Lưu ý: Địa điểm tại khu vực Miền Trung sẽ được quyết định và thông báo sau vòng sơ loại, dựa trên sự phân bổ vùng miền của các thí sinh lọt vào chung kết.
+                                * Lưu ý: Địa điểm tổng duyệt và hướng dẫn thanh nhạc tại khu vực Miền Trung-Bắc sẽ được quyết định và thông báo chính thức sau vòng sơ loại, dựa trên sự phân bổ vùng miền của các thí sinh lọt vào chung kết (ví dụ: mức độ tập trung của thí sinh khu vực phía Bắc hoặc Miền Trung).
                             </span>
                         </span>
                     )
@@ -390,7 +390,7 @@ const translations = {
                         "Công ty Cổ phần Chế tạo Bán dẫn ASE",
                         "Công ty Cổ phần Chế tạo Bán dẫn ASE - Chi nhánh Trung Lịch",
                         "Công ty Cổ phần Công nghiệp Chính xác Siliconware (SPIL)",
-                        "Công ty Cổ phần Điện tử Universal Scientific Industrial (USI)"
+                        "Công ty Cổ phần Công nghệ Universal Global Technology (UGT)"
                     ]
                 },
                 {
@@ -405,7 +405,7 @@ const translations = {
                 "Nhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "Nhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "Công ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+                "Công ty UGT: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
             ]
         }
     }

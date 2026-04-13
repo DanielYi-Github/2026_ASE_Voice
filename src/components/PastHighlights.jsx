@@ -4,10 +4,10 @@ import { Play } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const videoIds = [
-    "3aPvPPvMA9s",
-    "mU9gdHJlpGQ",
+    "CxSdfx_eOPQ",
     "3O52Vo_H5XQ",
-    "CxSdfx_eOPQ"
+    "mU9gdHJlpGQ",
+    "3aPvPPvMA9s"
 ];
 
 const PastHighlights = () => {
