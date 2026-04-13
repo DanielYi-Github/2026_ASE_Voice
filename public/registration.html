@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 ASE Voice - 報名系統</title>
-    
+
     <link rel="preconnect" href="https://script.google.com">
     <link rel="preconnect" href="https://script.googleusercontent.com">
-    
+
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -42,7 +44,7 @@
             border-radius: 50%;
             animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
             margin-bottom: 24px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .loading-text {
@@ -55,13 +57,27 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(0.98); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: scale(0.98);
+            }
         }
 
         iframe {
@@ -72,6 +88,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="loader-container">
         <div class="loader"></div>
@@ -79,11 +96,8 @@
     </div>
 
     <div style="width: 100%; height: 100vh; overflow: hidden; background-color: white;">
-        <iframe 
-            id="gscript-iframe"
-            src="" 
-            style="width: 100%; height: calc(100vh + 40px); border: none; margin-top: -40px;"
-            onload="hideLoader()">
+        <iframe id="gscript-iframe" src=""
+            style="width: 100%; height: calc(100vh + 40px); border: none; margin-top: -40px;" onload="hideLoader()">
         </iframe>
     </div>
 
@@ -123,15 +137,15 @@
 
         // 4. 將語系參數也一起傳給 Google Apps Script iframe
         const iframe = document.getElementById('gscript-iframe');
-        let baseUrl = 'https://script.google.com/macros/s/AKfycbwIB5zNO3lQBC7YBNu5Z4j0bUHAHogI8M1FxCz-O7vyK5rXnftjGq4MD5tm4qh85JiH/exec';
+        let baseUrl = 'https://script.google.com/macros/s/AKfycbxh75Ek3GCurGj7FCpser5GgJK2LlqyUTA9Li_wLe6LYZKeP8cIu2zdki2bLkdIFfQ/exec';
         // 開始拼接
         baseUrl += '?lang=' + lang; // 第一個參數用 ?
         if (email) baseUrl += '&email=' + encodeURIComponent(email);
         if (timestamp) baseUrl += '&timestamp=' + timestamp;
         if (nonce) baseUrl += '&nonce=' + nonce;
         if (hash) baseUrl += '&hash=' + hash;
-        
-        iframe.src = baseUrl ;
+
+        iframe.src = baseUrl;
 
         // --- 以下為原本的 Loader 隱藏邏輯 ---
         function hideLoader() {
@@ -152,4 +166,5 @@
         }, 5500);
     </script>
 </body>
+
 </html>
