@@ -22,7 +22,7 @@ const translations = {
         info: {
             title: "活動資訊與規範",
             downloadGuide: "下載活動簡章 (PDF)",
-            downloadFile: "2026日月光投控好聲音歌唱比賽簡章.pdf",
+            downloadFile: "2026日月光投控好聲音歌唱比賽簡章_(Security C).pdf",
             purpose: "活動宗旨",
             purposeDesc: "秉持日月光文教基金會「宏揚文化、發展社會教育、培養藝文人才」之宗旨，與集團「社會共融、價值共創」之永續理念。本比賽期望透過音樂的溫暖力量促進交流，為員工提供展現歌唱才華的舞台，藉由正當休閒娛樂活動展現企業活力、增進同仁身心健康，並深化職場中的人際共融與企業向心力。",
             groups: "參賽資格與組別",
@@ -39,7 +39,8 @@ const translations = {
                             【錄製規範】錄製自選曲之主歌、副歌各一遍。影片總時長限 60 至 90 秒。須正面拍攝，清晰露出臉部、嘴形、半身及腰部。{'\n'}
                             【錄製範例】{'\n'}
                             - 中文範例：<a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
-                            - 英文範例：<a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>
+                            - 英文範例：<a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
+                            - 越文範例：<a href="https://youtu.be/nlEOeIwtYh" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYh</a>
                         </span>
                     )
                 },
@@ -158,7 +159,7 @@ const translations = {
         info: {
             title: "Information & Rules",
             downloadGuide: "Download Guidelines (PDF)",
-            downloadFile: "2026 ASE Voice Singing Competition Rules and Regulations.pdf",
+            downloadFile: "2026 ASE Voice Singing Competition Rules and Regulations_(Security C).pdf",
             purpose: "Event Purpose",
             purposeDesc: "In upholding the mission of the ASE Cultural & Educational Foundation — \"promoting culture, advancing social education, and nurturing artistic talent\" — and the Group's sustainability philosophy of \"social inclusion and shared value creation,\" this competition aims to foster communication through the warm power of music, provide employees with a stage to showcase their singing talents, demonstrate corporate vitality through wholesome recreational activities, promote the physical and mental well-being of employees, and deepen interpersonal inclusion and corporate cohesion in the workplace.",
             groups: "Eligibility & Categories",
@@ -175,7 +176,8 @@ const translations = {
                             [Video] Record one Verse and one Chorus. Total length: 60-90 seconds. Must shoot clearly showing face, mouth, and upper body from the waist up.{'\n'}
                             [Recording Examples]{'\n'}
                             - Chinese Example: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
-                            - English Example: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>
+                            - English Example: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
+                            - Vietnamese Example: <a href="https://youtu.be/nlEOeIwtYh" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYh</a>
                         </span>
                     )
                 },
@@ -294,7 +296,7 @@ const translations = {
         info: {
             title: "Hình thức & Tiêu chí",
             downloadGuide: "Tải xuống Thể lệ (PDF)",
-            downloadFile: "2026 ASE Voice - Thể lệ Cuộc thi Ca hát \"Giọng hát hay Tập đoàn ASE.pdf",
+            downloadFile: "2026 ASE Voice - Thể lệ Cuộc thi Ca hát Giọng hát hay Tập đoàn ASE_(Security C).pdf",
             purpose: "Mục đích",
             purposeDesc: "Nêu cao tôn chỉ \"Hoằng dương văn hóa, Phát triển giáo dục xã hội, Bồi dưỡng nhân tài nghệ thuật\" của Quỹ Văn hóa và Giáo dục ASE, cùng với triết lý phát triển bền vững \"Hòa nhập xã hội, Cùng nhau sáng tạo giá trị\" của Tập đoàn. Cuộc thi này kỳ vọng thông qua sức mạnh ấm áp của âm nhạc để thúc đẩy giao lưu, tạo sân chơi cho nhân viên thể hiện tài năng ca hát. Qua các hoạt động giải trí lành mạnh để thể hiện sức sống của doanh nghiệp, nâng cao sức khỏe thể chất và tinh thần cho đồng nghiệp, cũng như làm sâu sắc thêm sự gắn kết nhân sự trong môi trường làm việc và tinh thần hướng về doanh nghiệp.",
             groups: "Đối tượng & Bảng",
@@ -311,7 +313,8 @@ const translations = {
                             [Quy cách quay video] Hát phần verse và chorus. Độ dài từ 60 đến 90 giây. Quay góc chính diện thấy rõ mặt, khẩu hình và nửa thân trên.{'\n'}
                             [Video mẫu]{'\n'}
                             - Ví dụ tiếng Trung: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
-                            - Ví dụ tiếng Anh: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>
+                            - Ví dụ tiếng Anh: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
+                            - Ví dụ tiếng Việt: <a href="https://youtu.be/nlEOeIwtYh" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYh</a>
                         </span>
                     )
                 },
