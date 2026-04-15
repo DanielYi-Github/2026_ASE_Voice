@@ -12,7 +12,7 @@ translations = {
     '日月光高雄廠': 'Nhà máy ASE Cao Hùng',
     '日月光中壢廠': 'Nhà máy ASE Trung Lịch',
     '矽品精密': 'Công ty SPIL (Siliconware Precision)',
-    '環旭電子': 'Công ty USI (Universal Scientific Industrial)',
+    '環鴻科技': 'Công ty USI (Universal Scientific Industrial)',
     '新竹業務辦公室': 'Văn phòng Kinh doanh Tân Trúc',
     '姓名': 'Họ và tên',
     '提示：請填寫身分證或護照上的完整姓名': 'Lưu ý: Vui lòng điền đầy đủ họ và tên như trên CMND/CCCD hoặc Hộ chiếu.',
@@ -46,7 +46,7 @@ translations = {
     '日月光高雄廠： 宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)': 'Nhà máy ASE Cao Hùng: Daniel Yi | 0919-635-167 | daniel_yi@aseglobal.com (Line ID: danyanline)',
     '日月光中壢廠： 秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)': 'Nhà máy ASE Trung Lịch: Roy Chin | 0989-678-600 | roy_chin@aseglobal.com (Line ID: roy_chin)',
     '矽品精密： Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw': 'Công ty SPIL: Jerry Liu | 0978-892-508 | 04-2534-1525#1557 | Jerry0276@spil.com.tw',
-    '環旭電子： 黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com（Line ID: catnow)': 'Công ty USI: Aldis Huang | 0963-788-621 | aldis_huang@usiglobal.com (Line ID: catnow)',
+    '環鴻科技： 黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com（Line ID: catnow)': 'Công ty USI: Aldis Huang | 0963-788-621 | aldis_huang@usiglobal.com (Line ID: catnow)',
     '▍ 官方資源': '▍ Nguồn thông tin chính thức',
     '欲了解更多賽事動態或回顧精彩瞬間，請至官方網站：https://asevoice.org': 'Để tìm hiểu thêm chi tiết về cuộc thi hoặc xem lại những khoảnh khắc tuyệt vời, vui lòng truy cập trang web chính thức: https://asevoice.org'
 }

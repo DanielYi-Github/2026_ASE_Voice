@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 translations = {
-    '環旭電子股份有限公司': 'Công ty Cổ phần Điện tử Universal Scientific Industrial (USI)',
+    '環鴻科技股份有限公司': 'Công ty Cổ phần Điện tử Universal Scientific Industrial (USI)',
     '2026 日月光集團好聲音 歌唱比賽報名表': 'Phiếu đăng ký cuộc thi ca hát Giọng hát hay Tập đoàn ASE 2026',
     '初賽上傳影片規定與注意事項': 'Quy định và Lưu ý về việc tải video Vòng sơ loại',
     '報名組別：': 'Bảng dự thi:',
@@ -27,7 +27,7 @@ translations = {
     '日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)': 'Nhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)',
     '日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)': 'Nhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)',
     '矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw': 'Công ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw',
-    '環旭電子：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com（Line ID: catnow)': 'Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)',
+    '環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com（Line ID: catnow)': 'Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)',
     '公司別': 'Công ty'
 }
 
