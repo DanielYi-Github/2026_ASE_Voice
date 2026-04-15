@@ -256,7 +256,7 @@ const translations = {
                         "Advanced Semiconductor Engineering, Inc.",
                         "Advanced Semiconductor Engineering, Inc., ChungLi Branch",
                         "Siliconware Precision Industries Co., Ltd.",
-                        "Universal Global Technology Co., Ltd."
+                        "Universal Global Scientific Industrial Co. Ltd"
                     ]
                 },
                 {
@@ -271,7 +271,7 @@ const translations = {
                 "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "ASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "UGT: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+                "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
             ]
         }
     },
@@ -393,7 +393,7 @@ const translations = {
                         "Công ty Cổ phần Chế tạo Bán dẫn ASE",
                         "Công ty Cổ phần Chế tạo Bán dẫn ASE - Chi nhánh Trung Lịch",
                         "Công ty Cổ phần Công nghiệp Chính xác Siliconware (SPIL)",
-                        "Công ty Cổ phần Công nghệ Universal Global Technology (UGT)"
+                        "Công ty Cổ phần Công nghệ Universal Global (USI)"
                     ]
                 },
                 {
@@ -408,7 +408,7 @@ const translations = {
                 "Nhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "Nhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "Công ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "Công ty UGT: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+                "Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
             ]
         }
     }
