@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
+import AnnouncementBoard from './AnnouncementBoard';
 
 const Hero = () => {
     const { t, lang } = useLanguage();
@@ -52,7 +53,7 @@ const Hero = () => {
                         key={i}
                         animate={{ y: [-20, 20, -20], rotate: [-15, 15, -15] }}
                         transition={{ duration: note.dur, repeat: Infinity, ease: "easeInOut", delay: note.delay }}
-                        className="absolute opacity-80 z-20"
+                        className="absolute opacity-40 z-20"
                         style={{ top: note.top, left: note.left }}
                     >
                         {/* 移除 SVG 內部的高耗能 drop-shadow，改用純色確保 60fps 順暢運行 */}
@@ -87,27 +88,27 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-dark/60 md:from-dark/40 via-transparent to-transparent z-10 pointer-events-none"></div>
 
             {/* MAIN CONTENT WRAPPER */}
-            <div className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-center min-h-[calc(100vh-5rem)]">
+            <div className="relative w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 flex flex-col md:flex-row items-center md:items-stretch justify-between min-h-[calc(100vh-5rem)] pt-8 md:pt-16">
 
                 {/* Left Side: Information & Title (Z-40) */}
-                <div className="w-full md:w-[60%] lg:w-[50%] pt-12 md:pt-0 pb-32 flex flex-col items-center md:items-start relative z-40 mt-10 md:mt-0">
+                <div className="w-full md:w-[35%] lg:w-[32%] xl:w-[30%] pb-12 md:pb-24 flex flex-col items-center md:items-start relative z-40 mt-6 md:mt-0 justify-center">
 
                     {/* Corporate Logos Integrated Elegantly */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 mb-8 bg-white px-6 py-4 border-[3px] border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] rounded-none self-center md:self-start"
+                        className="flex flex-col items-center justify-center md:items-start md:justify-start gap-4 mb-6 md:mb-8 bg-white p-2.5 lg:p-3 border-[3px] border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] rounded-none self-center md:self-start w-max"
                     >
-                        <div className="flex items-center gap-3 pb-2 md:pb-0 md:pr-5 border-b-2 md:border-b-0 md:border-r-2 border-dark/20">
-                            <span className="font-heading font-black text-secondary tracking-wider text-xl md:text-2xl">ASE</span>
+                        <div className="flex items-center gap-2 lg:gap-3 pb-1.5 border-b-2 border-dark/20 w-max">
+                            <span className="font-heading font-black text-secondary tracking-wider text-base lg:text-lg">ASE</span>
                             <div className="w-1.5 h-1.5 rounded-full bg-dark/40"></div>
-                            <span className="font-heading font-black text-blue-600 tracking-wider text-xl md:text-2xl">SPIL</span>
+                            <span className="font-heading font-black text-blue-600 tracking-wider text-base lg:text-lg">SPIL</span>
                             <div className="w-1.5 h-1.5 rounded-full bg-dark/40"></div>
-                            <span className="font-heading font-black text-green-600 tracking-wider text-xl md:text-2xl">USI</span>
+                            <span className="font-heading font-black text-green-600 tracking-wider text-base lg:text-lg">USI</span>
                         </div>
-                        <div className="pt-2 md:pt-0 md:pl-2">
-                            <span className="font-heading font-black text-xl md:text-2xl text-dark tracking-wide">
+                        <div className="pt-0">
+                            <span className="font-heading font-black text-sm lg:text-base text-dark tracking-wide">
                                 {t.hero.brandNote}
                             </span>
                         </div>
@@ -118,33 +119,33 @@ const Hero = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative w-full"
+                        className="relative w-full flex justify-center md:justify-start"
                     >
-                        <div className="bg-dark text-white pt-10 pb-10 px-6 md:px-10 transform -rotate-2 relative z-10 inline-block w-fit max-w-full text-center md:text-left shadow-[12px_12px_0_0_rgba(244,196,98,0.3)] border-4 border-white">
+                        <div className="bg-dark text-white pt-6 pb-6 px-5 lg:px-7 transform -rotate-2 relative z-10 inline-block w-max text-center md:text-left shadow-[8px_8px_0_0_rgba(244,196,98,0.3)] border-4 border-white max-w-full">
 
                             {/* Accent Ribbon */}
-                            <div className="absolute -top-5 left-4 md:-left-6 bg-secondary text-white font-heading font-black text-sm md:text-lg py-2 px-6 transform -rotate-2 border-2 border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] z-20 whitespace-nowrap">
+                            <div className="absolute -top-4 left-3 md:-left-4 bg-secondary text-white font-heading font-black text-[10px] md:text-xs lg:text-sm py-1 px-3 transform -rotate-2 border-2 border-dark shadow-[2px_2px_0_0_rgba(26,26,26,1)] z-20 whitespace-nowrap">
                                 {t.hero.titleLine1} | {t.hero.subtitle}
                             </div>
 
                             {/* Row 1: 日月光 ASE */}
-                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-3 sm:gap-4 md:mb-2 whitespace-nowrap mt-4">
-                                <span className="font-heading font-black text-[3.5rem] sm:text-[5rem] md:text-[6.5rem] lg:text-[7.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[3px_3px_0_#444]">
+                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-2 whitespace-nowrap mt-3">
+                                <span className="font-heading font-black text-[2.8rem] sm:text-[3.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
                                     {t.hero.titleLine2}
                                 </span>
                                 {t.hero.titleLine2En && (
-                                    <span className="font-heading font-black text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[7rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[3px_3px_0_#444]">
+                                    <span className="font-heading font-black text-[2.2rem] sm:text-[3rem] md:text-[2.5rem] lg:text-[3.5rem] xl:text-[4.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444]">
                                         {t.hero.titleLine2En}
                                     </span>
                                 )}
                             </div>
 
-                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-3 sm:gap-4 mt-4 whitespace-nowrap">
-                                <span className="font-heading font-black text-[4rem] sm:text-[5.5rem] md:text-[7rem] lg:text-[8.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[3px_3px_0_#444]">
+                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-2 mt-3 whitespace-nowrap">
+                                <span className="font-heading font-black text-[3rem] sm:text-[4rem] md:text-[3.2rem] lg:text-[4.5rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
                                     {t.hero.titleLine3}
                                 </span>
                                 {t.hero.titleLine3En && (
-                                    <span className="font-heading font-black text-[3.5rem] sm:text-[5rem] md:text-[6.5rem] lg:text-[7.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[3px_3px_0_#444] ml-2">
+                                    <span className="font-heading font-black text-[2.8rem] sm:text-[3.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444] lg:ml-2">
                                         {t.hero.titleLine3En}
                                     </span>
                                 )}
@@ -157,48 +158,50 @@ const Hero = () => {
                         initial={{ y: 40, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="mt-14 md:mt-20 flex flex-col items-center md:items-start gap-5 relative z-40 w-full"
+                        className="mt-8 lg:mt-10 flex flex-col items-center md:items-start relative z-40 w-full"
                     >
-                        <div className="group relative mx-auto md:mx-0 w-full max-w-[360px] md:max-w-max">
-                            {/* 降低效能消耗的發光底座，移除 blur 與 pulse */}
+                        <div className="group relative mx-auto md:mx-0 w-max">
                             <div className="absolute -inset-2 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                             <a
                                 href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-10 sm:px-16 md:px-24 py-6 md:py-8 rounded-2xl border-[4px] border-white shadow-[0_10px_30px_rgba(0,195,255,0.6)] hover:shadow-[0_15px_50px_rgba(0,195,255,1)] hover:scale-105 transition-all duration-300 overflow-hidden"
+                                className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-6 sm:px-10 md:px-8 lg:px-12 py-3 md:py-4 rounded-xl border-[3px] border-white shadow-[0_6px_15px_rgba(0,195,255,0.6)] hover:shadow-[0_10px_25px_rgba(0,195,255,1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                             >
-                                {/* Diagonal Shine */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>
 
-                                <div className="relative flex items-center justify-center gap-4 font-heading font-black tracking-widest whitespace-nowrap">
-                                    <span className="text-[2.5rem] md:text-[3.5rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
-                                    <span className="text-[2.2rem] md:text-[3.2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">{t.nav.register}</span>
-                                    <span className="text-[2rem] md:text-[3rem] text-white leading-none animate-bounce-x">→</span>
+                                <div className="relative flex items-center justify-center gap-2 font-heading font-black tracking-widest whitespace-nowrap">
+                                    <span className="text-[1.5rem] md:text-[1.8rem] lg:text-[2.2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
+                                    <span className="text-[1.4rem] md:text-[1.6rem] lg:text-[2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">{t.nav.register}</span>
                                 </div>
                             </a>
                         </div>
                     </motion.div>
                 </div>
 
-                {/* ===== MASSIVE MICROPHONE EXACTLY BOTTOM ANCHORED ===== */}
+                {/* ===== CENTER: MASSIVE MICROPHONE EXACTLY BOTTOM ANCHORED ===== */}
                 <motion.div
                     initial={{ y: 200, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.9, delay: 0.3, type: "spring", stiffness: 40 }}
-                    className="absolute bottom-0 right-[-10vw] md:right-[-5vw] lg:right-10 2xl:right-32 z-30 pointer-events-none mx-auto md:mx-0 w-[120vw] md:w-auto origin-bottom flex justify-center md:justify-end mix-blend-multiply translate-x-8 md:translate-x-32 lg:translate-x-48 2xl:translate-x-64"
-                    style={{ height: '65vh' }}
+                    className="md:absolute bottom-0 left-1/2 md:-translate-x-1/2 z-30 pointer-events-none mx-auto origin-bottom flex justify-center mix-blend-multiply w-[100vw] md:w-[35%] xl:w-[28%] md:mt-0 mt-[-5rem]"
+                    style={{ height: '70vh' }}
                 >
                     <picture>
                         <source srcSet={`${import.meta.env.BASE_URL}pure-mic.webp`} type="image/webp" />
                         <img
                             src={`${import.meta.env.BASE_URL}pure-mic.png`}
                             alt="ASE Voice Retro Microphone Pop Art"
-                            className="w-auto h-full max-h-[100%] max-w-[150vw] md:max-w-none object-contain object-bottom"
+                            className="w-auto h-full max-h-[100%] max-w-[100vw] md:max-w-none object-contain object-bottom drop-shadow-xl"
                         />
                     </picture>
                 </motion.div>
+
+                {/* Right Side: AnnouncementBoard (Z-40) */}
+                <div className="w-full md:w-[35%] lg:w-[32%] xl:w-[30%] pb-12 md:pb-24 flex flex-col items-center md:items-end relative z-50 justify-center">
+                    <AnnouncementBoard />
+                </div>
 
             </div>
 

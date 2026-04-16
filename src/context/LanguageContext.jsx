@@ -7,6 +7,13 @@ const translations = {
             title: "日月光投控歌唱比賽",
             langSwitch: "EN"
         },
+        board: {
+            title: "最新賽事公告",
+            featured: "🔥 重點消息",
+            dates: "比賽時程",
+            prizes: "競賽獎金"
+        },
+        announcement: "📣 【2026 日月光好聲音】報名即將開跑！初賽線上海選收件期間為 6/1 - 6/21，請及早備妥清唱影片！",
         hero: {
             brandNote: "日月光投控集團成員共同參與",
             titleLine1: "第五屆",
@@ -144,6 +151,13 @@ const translations = {
             title: "Singing Competition",
             langSwitch: "中文"
         },
+        board: {
+            title: "BULLETIN BOARD",
+            featured: "🔥 FEATURED",
+            dates: "KEY DATES",
+            prizes: "TOP PRIZES"
+        },
+        announcement: "📣 [2026 ASE Voice] Registration opens soon! Audition video submission: Jun 1 - Jun 21. Prepare your A Cappella video now!",
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
             titleLine1: "THE 5TH",
@@ -281,6 +295,13 @@ const translations = {
             title: "Cuộc thi Giọng hát hay",
             langSwitch: "VN"
         },
+        board: {
+            title: "BẢNG TIN",
+            featured: "🔥 NỔI BẬT",
+            dates: "LỊCH TRÌNH",
+            prizes: "GIẢI THƯỞNG"
+        },
+        announcement: "📣 [Giọng hát hay ASE 2026] Sắp mở đăng ký! Nộp video Sơ loại từ 1/6 - 21/6. Hãy chuẩn bị video hát mộc của bạn ngay!",
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",
             titleLine1: "LẦN THỨ 5",
