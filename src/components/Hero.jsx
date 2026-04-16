@@ -96,7 +96,7 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.9, delay: 0.3, type: "spring", stiffness: 40 }}
                     className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30 pointer-events-none origin-bottom flex justify-center mix-blend-multiply"
-                    style={{ width: 'clamp(300px, 40vw, 680px)', height: '80vh' }}
+                    style={{ width: 'clamp(380px, 50vw, 820px)', height: '92vh' }}
                 >
                     <picture>
                         <source srcSet={`${import.meta.env.BASE_URL}pure-mic.webp`} type="image/webp" />
