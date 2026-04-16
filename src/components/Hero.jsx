@@ -91,24 +91,24 @@ const Hero = () => {
             <div className="relative w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 flex flex-col md:flex-row items-center md:items-stretch justify-between min-h-[calc(100vh-5rem)] pt-8 md:pt-16">
 
                 {/* Left Side: Information & Title (Z-40) */}
-                <div className="w-full md:w-[35%] lg:w-[32%] xl:w-[30%] pb-12 md:pb-24 flex flex-col items-center md:items-start relative z-40 mt-6 md:mt-0 justify-center">
+                <div className="w-full md:w-[35%] lg:w-[34%] xl:w-[32%] pb-12 md:pb-24 flex flex-col items-center md:items-start relative z-40 mt-10 md:mt-2 justify-center">
 
                     {/* Corporate Logos Integrated Elegantly */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-col items-center justify-center md:items-start md:justify-start gap-4 mb-6 md:mb-8 bg-white p-2.5 lg:p-3 border-[3px] border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] rounded-none self-center md:self-start w-max"
+                        className="flex flex-col items-center justify-center md:items-start md:justify-start gap-4 mb-8 md:mb-12 bg-white p-3 lg:p-4 border-[3px] border-dark shadow-[6px_6px_0_0_rgba(26,26,26,1)] rounded-none self-center md:self-start w-max"
                     >
-                        <div className="flex items-center gap-2 lg:gap-3 pb-1.5 border-b-2 border-dark/20 w-max">
-                            <span className="font-heading font-black text-secondary tracking-wider text-base lg:text-lg">ASE</span>
-                            <div className="w-1.5 h-1.5 rounded-full bg-dark/40"></div>
-                            <span className="font-heading font-black text-blue-600 tracking-wider text-base lg:text-lg">SPIL</span>
-                            <div className="w-1.5 h-1.5 rounded-full bg-dark/40"></div>
-                            <span className="font-heading font-black text-green-600 tracking-wider text-base lg:text-lg">USI</span>
+                        <div className="flex items-center gap-2 lg:gap-3 pb-2 border-b-2 border-dark/20 w-max">
+                            <span className="font-heading font-black text-secondary tracking-wider text-xl lg:text-3xl">ASE</span>
+                            <div className="w-2 h-2 rounded-full bg-dark/40"></div>
+                            <span className="font-heading font-black text-blue-600 tracking-wider text-xl lg:text-3xl">SPIL</span>
+                            <div className="w-2 h-2 rounded-full bg-dark/40"></div>
+                            <span className="font-heading font-black text-green-600 tracking-wider text-xl lg:text-3xl">USI</span>
                         </div>
                         <div className="pt-0">
-                            <span className="font-heading font-black text-sm lg:text-base text-dark tracking-wide">
+                            <span className="font-heading font-black text-base lg:text-lg text-dark tracking-wide">
                                 {t.hero.brandNote}
                             </span>
                         </div>
@@ -121,31 +121,31 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="relative w-full flex justify-center md:justify-start"
                     >
-                        <div className="bg-dark text-white pt-6 pb-6 px-5 lg:px-7 transform -rotate-2 relative z-10 inline-block w-max text-center md:text-left shadow-[8px_8px_0_0_rgba(244,196,98,0.3)] border-4 border-white max-w-full">
+                        <div className="bg-dark text-white pt-8 pb-8 px-6 lg:px-10 transform -rotate-2 relative z-10 inline-block w-max text-center md:text-left shadow-[10px_10px_0_0_rgba(244,196,98,0.3)] border-4 border-white max-w-full">
 
                             {/* Accent Ribbon */}
-                            <div className="absolute -top-4 left-3 md:-left-4 bg-secondary text-white font-heading font-black text-[10px] md:text-xs lg:text-sm py-1 px-3 transform -rotate-2 border-2 border-dark shadow-[2px_2px_0_0_rgba(26,26,26,1)] z-20 whitespace-nowrap">
+                            <div className="absolute -top-5 left-3 md:-left-4 bg-secondary text-white font-heading font-black text-xs md:text-sm lg:text-base py-1 px-4 transform -rotate-2 border-2 border-dark shadow-[3px_3px_0_0_rgba(26,26,26,1)] z-20 whitespace-nowrap">
                                 {t.hero.titleLine1} | {t.hero.subtitle}
                             </div>
 
                             {/* Row 1: 日月光 ASE */}
-                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-2 whitespace-nowrap mt-3">
-                                <span className="font-heading font-black text-[2.8rem] sm:text-[3.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
+                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-2 whitespace-nowrap mt-4">
+                                <span className="font-heading font-black text-[3.2rem] sm:text-[4rem] md:text-[3.5rem] lg:text-[4.8rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
                                     {t.hero.titleLine2}
                                 </span>
                                 {t.hero.titleLine2En && (
-                                    <span className="font-heading font-black text-[2.2rem] sm:text-[3rem] md:text-[2.5rem] lg:text-[3.5rem] xl:text-[4.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444]">
+                                    <span className="font-heading font-black text-[2.8rem] sm:text-[3.5rem] md:text-[3rem] lg:text-[4.2rem] xl:text-[5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444]">
                                         {t.hero.titleLine2En}
                                     </span>
                                 )}
                             </div>
 
-                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-2 mt-3 whitespace-nowrap">
-                                <span className="font-heading font-black text-[3rem] sm:text-[4rem] md:text-[3.2rem] lg:text-[4.5rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
+                            <div className="flex flex-row items-baseline justify-center md:justify-start gap-2 md:gap-3 mt-4 whitespace-nowrap">
+                                <span className="font-heading font-black text-[3.8rem] sm:text-[4.8rem] md:text-[4rem] lg:text-[5.5rem] xl:text-[6.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
                                     {t.hero.titleLine3}
                                 </span>
                                 {t.hero.titleLine3En && (
-                                    <span className="font-heading font-black text-[2.8rem] sm:text-[3.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444] lg:ml-2">
+                                    <span className="font-heading font-black text-[3.2rem] sm:text-[4rem] md:text-[3.5rem] lg:text-[4.8rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444] lg:ml-2">
                                         {t.hero.titleLine3En}
                                     </span>
                                 )}
@@ -158,7 +158,7 @@ const Hero = () => {
                         initial={{ y: 40, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="mt-8 lg:mt-10 flex flex-col items-center md:items-start relative z-40 w-full"
+                        className="mt-12 lg:mt-16 flex flex-col items-center md:items-start relative z-40 w-full"
                     >
                         <div className="group relative mx-auto md:mx-0 w-max">
                             <div className="absolute -inset-2 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -167,13 +167,13 @@ const Hero = () => {
                                 href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-6 sm:px-10 md:px-8 lg:px-12 py-3 md:py-4 rounded-xl border-[3px] border-white shadow-[0_6px_15px_rgba(0,195,255,0.6)] hover:shadow-[0_10px_25px_rgba(0,195,255,1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                                className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-8 sm:px-12 md:px-10 lg:px-14 py-4 md:py-5 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] hover:shadow-[0_12px_35px_rgba(0,195,255,1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>
 
-                                <div className="relative flex items-center justify-center gap-2 font-heading font-black tracking-widest whitespace-nowrap">
-                                    <span className="text-[1.5rem] md:text-[1.8rem] lg:text-[2.2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
-                                    <span className="text-[1.4rem] md:text-[1.6rem] lg:text-[2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">{t.nav.register}</span>
+                                <div className="relative flex items-center justify-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
+                                    <span className="text-[2rem] md:text-[2.2rem] lg:text-[2.6rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
+                                    <span className="text-[1.8rem] md:text-[2.2rem] lg:text-[2.5rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">{t.nav.register}</span>
                                 </div>
                             </a>
                         </div>
@@ -199,7 +199,7 @@ const Hero = () => {
                 </motion.div>
 
                 {/* Right Side: AnnouncementBoard (Z-40) */}
-                <div className="w-full md:w-[35%] lg:w-[32%] xl:w-[30%] pb-12 md:pb-24 flex flex-col items-center md:items-end relative z-50 justify-center">
+                <div className="w-full md:w-[38%] lg:w-[35%] xl:w-[34%] pb-12 md:pb-24 flex flex-col items-center md:items-end relative z-50 justify-center mt-8 md:mt-16 lg:mt-20 md:translate-x-2 lg:translate-x-6 xl:translate-x-12">
                     <AnnouncementBoard />
                 </div>
 

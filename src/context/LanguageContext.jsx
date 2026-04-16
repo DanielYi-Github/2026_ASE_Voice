@@ -13,7 +13,12 @@ const translations = {
             dates: "比賽時程",
             prizes: "競賽獎金"
         },
-        announcement: "📣 【2026 日月光好聲音】報名即將開跑！初賽線上海選收件期間為 6/1 - 6/21，請及早備妥清唱影片！",
+        announcement: {
+            headline: "🎤 決戰好聲音！唱出你的高光時刻✨",
+            description: "萬眾矚目的【2026 日月光投控好聲音】即將強勢開跑！無論你是天生歌姬還是隱藏版麥霸，這都是你閃耀的舞台！✨",
+            dates: "📌 初賽收件期間：6/1 - 6/21",
+            reminder: "👉 快保養好你的喉嚨，及早備妥 60-90 秒的「純清唱影片」來挑戰吧！"
+        },
         hero: {
             brandNote: "日月光投控集團成員共同參與",
             titleLine1: "第五屆",
@@ -53,7 +58,7 @@ const translations = {
                 },
                 {
                     date: "6/22 - 7/4",
-                    event: "初賽評審",
+                    event: "初賽審評",
                     details: "由評審老師針對清唱影片進行線上評分，參賽者只需靜候結果。\n【評分準則】\n1. 歌唱技巧 (40%)：旋律難度、演唱技巧及方式\n2. 發音咬字 (20%)\n3. 節奏 (20%)\n4. 感情 (10%)\n5. 演繹風格 (10%)：演唱時的形象、表情、肢體語言"
                 },
                 {
@@ -157,7 +162,12 @@ const translations = {
             dates: "KEY DATES",
             prizes: "TOP PRIZES"
         },
-        announcement: "📣 [2026 ASE Voice] Registration opens soon! Audition video submission: Jun 1 - Jun 21. Prepare your A Cappella video now!",
+        announcement: {
+            headline: "🎤 Battle for the Best Voice! Sing Your Shining Moment✨",
+            description: "The highly anticipated [2026 ASE Voice] is about to begin! This is your stage to shine! ✨",
+            dates: "📌 Video Submission: Jun 1 - Jun 21",
+            reminder: "👉 Warm up your vocal cords and prepare a 60-90s A Cappella video to join the challenge!"
+        },
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
             titleLine1: "THE 5TH",
@@ -301,7 +311,12 @@ const translations = {
             dates: "LỊCH TRÌNH",
             prizes: "GIẢI THƯỞNG"
         },
-        announcement: "📣 [Giọng hát hay ASE 2026] Sắp mở đăng ký! Nộp video Sơ loại từ 1/6 - 21/6. Hãy chuẩn bị video hát mộc của bạn ngay!",
+        announcement: {
+            headline: "🎤 Cuộc Chiến Giọng Hát! Hát Lên Khoảnh Khắc Tỏa Sáng Của Bạn✨",
+            description: "Sự kiện được mong đợi nhất [Giọng hát hay ASE 2026] sắp bắt đầu! Đây là sân khấu để bạn tỏa sáng! ✨",
+            dates: "📌 Nộp Video Sơ Loại: 1/6 - 21/6",
+            reminder: "👉 Hãy chuẩn bị giọng hát và video hát mộc 60-90 giây của bạn ngay từ bây giờ!"
+        },
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",
             titleLine1: "LẦN THỨ 5",
