@@ -87,11 +87,29 @@ const Hero = () => {
             {/* OVERLAY LAYER for readable text */}
             <div className="absolute inset-0 bg-gradient-to-r from-dark/60 md:from-dark/40 via-transparent to-transparent z-10 pointer-events-none"></div>
 
-            {/* MAIN CONTENT WRAPPER */}
-            <div className="relative w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 flex flex-col md:flex-row items-center md:items-stretch justify-between min-h-[calc(100vh-5rem)] pt-8 md:pt-16">
+            {/* MAIN CONTENT WRAPPER — mic is absolute-centered on the section, left/right panels use absolute side-anchoring */}
+            <div className="relative w-full max-w-[1680px] mx-auto min-h-[calc(100vh-5rem)] pt-8 md:pt-16">
 
-                {/* Left Side: Information & Title (Z-40) */}
-                <div className="w-full md:w-[35%] lg:w-[34%] xl:w-[32%] pb-12 md:pb-24 flex flex-col items-center md:items-start relative z-40 mt-10 md:mt-2 justify-center">
+                {/* ===== CENTER: MASSIVE MICROPHONE — always pinned to screen center ===== */}
+                <motion.div
+                    initial={{ y: 200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.9, delay: 0.3, type: "spring", stiffness: 40 }}
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30 pointer-events-none origin-bottom flex justify-center mix-blend-multiply"
+                    style={{ width: 'clamp(300px, 40vw, 680px)', height: '80vh' }}
+                >
+                    <picture>
+                        <source srcSet={`${import.meta.env.BASE_URL}pure-mic.webp`} type="image/webp" />
+                        <img
+                            src={`${import.meta.env.BASE_URL}pure-mic.png`}
+                            alt="ASE Voice Retro Microphone Pop Art"
+                            className="w-auto h-full max-h-[100%] object-contain object-bottom drop-shadow-xl"
+                        />
+                    </picture>
+                </motion.div>
+
+                {/* Left Side: Information & Title (Z-40) — anchored to left edge, width scales with viewport */}
+                <div className="absolute top-0 bottom-0 left-0 w-[40%] md:w-[36%] lg:w-[33%] xl:w-[30%] pl-6 sm:pl-8 md:pl-12 lg:pl-14 xl:pl-18 pb-12 md:pb-24 flex flex-col items-center md:items-start z-40 justify-center">
 
                     {/* Corporate Logos Integrated Elegantly */}
                     <motion.div
@@ -180,26 +198,8 @@ const Hero = () => {
                     </motion.div>
                 </div>
 
-                {/* ===== CENTER: MASSIVE MICROPHONE EXACTLY BOTTOM ANCHORED ===== */}
-                <motion.div
-                    initial={{ y: 200, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.9, delay: 0.3, type: "spring", stiffness: 40 }}
-                    className="md:absolute bottom-0 left-1/2 md:-translate-x-1/2 z-30 pointer-events-none mx-auto origin-bottom flex justify-center mix-blend-multiply w-[100vw] md:w-[35%] xl:w-[28%] md:mt-0 mt-[-5rem]"
-                    style={{ height: '70vh' }}
-                >
-                    <picture>
-                        <source srcSet={`${import.meta.env.BASE_URL}pure-mic.webp`} type="image/webp" />
-                        <img
-                            src={`${import.meta.env.BASE_URL}pure-mic.png`}
-                            alt="ASE Voice Retro Microphone Pop Art"
-                            className="w-auto h-full max-h-[100%] max-w-[100vw] md:max-w-none object-contain object-bottom drop-shadow-xl"
-                        />
-                    </picture>
-                </motion.div>
-
-                {/* Right Side: AnnouncementBoard (Z-40) */}
-                <div className="w-full md:w-[38%] lg:w-[35%] xl:w-[34%] pb-12 md:pb-24 flex flex-col items-center md:items-end relative z-50 justify-center mt-8 md:mt-16 lg:mt-20 md:translate-x-2 lg:translate-x-6 xl:translate-x-12">
+                {/* Right Side: AnnouncementBoard (Z-50) — anchored to right edge, width scales with viewport */}
+                <div className="absolute top-0 bottom-0 right-0 w-[40%] md:w-[36%] lg:w-[33%] xl:w-[30%] pr-6 sm:pr-8 md:pr-12 lg:pr-14 xl:pr-18 pb-12 md:pb-24 flex flex-col items-center md:items-end z-50 justify-center pt-12 md:pt-20">
                     <AnnouncementBoard />
                 </div>
 
