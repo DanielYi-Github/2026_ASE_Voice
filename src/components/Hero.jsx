@@ -95,14 +95,13 @@ const Hero = () => {
                 <div className="relative w-full" style={{ minHeight: 'calc(100vh - 5rem)' }}>
 
                     {/* 麥克風：absolute 背景，z-30，mix-blend-multiply 融入黃色背景 */}
-                    {/*  ⚠️ 此容器本身不帶 z-index 的父元素，父 div 只是 relative 無 z-index  */}
-                    {/*  → mix-blend-multiply 直接與 section[isolate] 的黃色背景混合，白底消失  */}
+                    {/*  高度縮至 65vh 讓它更像背景裝飾而非主角，配合內容緊湊排列  */}
                     <motion.div
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.9, delay: 0.3, type: "spring", stiffness: 40 }}
                         className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30 mix-blend-multiply pointer-events-none origin-bottom"
-                        style={{ width: '88vw', maxWidth: '380px', height: '78vh' }}
+                        style={{ width: '88vw', maxWidth: '380px', height: '65vh' }}
                     >
                         <picture>
                             <source srcSet={`${import.meta.env.BASE_URL}pure-mic.webp`} type="image/webp" />
@@ -115,7 +114,8 @@ const Hero = () => {
                     </motion.div>
 
                     {/* 內容層（z-40）：Logo + 標題 + 報名按鈕，全部疊在麥克風上 */}
-                    <div className="relative z-40 w-full h-full flex flex-col justify-between px-4 pt-2 pb-4"
+                    {/* justify-start + gap：Logo → 標題 → 按鈕緊密排列，不留大空白 */}
+                    <div className="relative z-40 w-full flex flex-col justify-start gap-5 px-4 pt-2 pb-6"
                          style={{ minHeight: 'calc(100vh - 5rem)' }}>
 
                         {/* 上半：Logo + 標題 */}
@@ -178,7 +178,7 @@ const Hero = () => {
                             </motion.div>
                         </div>
 
-                        {/* 下半：報名按鈕（固定在視窗底部附近） */}
+                        {/* 報名按鈕：標題下方直接緊接，不再 push 到底部 */}
                         <motion.div
                             initial={{ y: 30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}

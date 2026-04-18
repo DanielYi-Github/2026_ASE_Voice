@@ -32,7 +32,7 @@ const InfoSection = () => {
                 <path d="M50,0 L90,50 L10,100 L90,150 L10,200 L90,250 L10,300 L90,350 L10,400 L90,450 L10,500 L90,550 L10,600 L90,650 L10,700 L90,750 L10,800 L90,850 L10,900 L90,950 L50,1000" />
             </svg>
 
-            <div className="container mx-auto max-w-[100rem] relative z-10 px-4 md:px-8 lg:px-12">
+            <div className="container mx-auto max-w-[100rem] relative z-10 px-3 md:px-8 lg:px-12">
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -111,18 +111,23 @@ const InfoSection = () => {
                         <h3 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tighter uppercase">{t.info.timeline}</h3>
                     </div>
 
-                    <div className="space-y-12 relative before:absolute before:inset-0 before:ml-[1.75rem] before:-translate-x-px before:h-full before:w-[6px] before:bg-dark">
+                    {/* 手機版：圓圈縮至 w-9 h-9，減少 gap，讓文字欄更寬 */}
+                    <div className="space-y-8 md:space-y-12 relative before:absolute before:inset-0 before:ml-[1.1rem] md:before:ml-[1.75rem] before:-translate-x-px before:h-full before:w-[4px] md:before:w-[6px] before:bg-dark">
                         {t.info.timelineItems.map((item, index) => (
-                            <div key={index} className="relative flex items-start gap-6 md:gap-10 group">
-                                <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full border-[4px] border-dark bg-secondary text-white font-black font-heading text-2xl md:text-3xl shrink-0 shadow-[4px_4px_0_0_rgba(26,26,26,1)] z-10 transform transition-transform group-hover:scale-110 group-hover:-rotate-12">
+                            <div key={index} className="relative flex items-start gap-3 md:gap-10 group">
+                                {/* 手機版圓圈縮小至 w-9 h-9，桌面版恢復 w-16 h-16 */}
+                                <div className="flex items-center justify-center w-9 h-9 md:w-16 md:h-16 rounded-full border-[3px] md:border-[4px] border-dark bg-secondary text-white font-black font-heading text-base md:text-3xl shrink-0 shadow-[3px_3px_0_0_rgba(26,26,26,1)] md:shadow-[4px_4px_0_0_rgba(26,26,26,1)] z-10 transform transition-transform group-hover:scale-110 group-hover:-rotate-12">
                                     {index + 1}
                                 </div>
-                                <div className="bg-light border-[4px] border-dark p-6 md:p-8 shadow-[6px_6px_0_0_rgba(26,26,26,1)] w-full group-hover:-translate-y-2 group-hover:bg-[#ffefd8] transition-all duration-300">
-                                    <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between mb-5 gap-4">
-                                        <span className="font-heading font-black text-secondary text-2xl bg-dark text-white px-4 py-1 w-fit border-2 border-dark">{item.date}</span>
-                                        <h4 className="font-heading font-bold text-3xl md:text-4xl uppercase items-center text-dark tracking-tight">{item.event}</h4>
+                                {/* 手機版：內白發展到剩餘寬度，縮小內部 padding 讓文字不隨於過窄 */}
+                                <div className="bg-light border-[3px] md:border-[4px] border-dark p-4 md:p-8 shadow-[4px_4px_0_0_rgba(26,26,26,1)] md:shadow-[6px_6px_0_0_rgba(26,26,26,1)] w-full group-hover:-translate-y-2 group-hover:bg-[#ffefd8] transition-all duration-300">
+                                    {/* 手機版永遠 flex-col，無顯示擅擠問題 */}
+                                    <div className="flex flex-col mb-3 md:mb-5 gap-2">
+                                        <span className="font-heading font-black text-secondary text-base md:text-2xl bg-dark text-white px-3 py-0.5 w-fit border-2 border-dark">{item.date}</span>
+                                        <h4 className="font-heading font-bold text-xl md:text-4xl uppercase text-dark tracking-tight">{item.event}</h4>
                                     </div>
-                                    <p className="font-body font-bold text-gray-800 leading-[1.8] whitespace-pre-line text-lg md:text-xl border-t-[3px] border-dashed border-gray-400 pt-5">
+                                    {/* 手機版縮小字型讓行數減少 */}
+                                    <p className="font-body font-bold text-gray-800 leading-[1.7] whitespace-pre-line text-sm md:text-xl border-t-[2px] md:border-t-[3px] border-dashed border-gray-400 pt-3 md:pt-5">
                                         {item.details}
                                     </p>
                                 </div>
