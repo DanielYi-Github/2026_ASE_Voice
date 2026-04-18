@@ -86,16 +86,14 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-dark/60 md:from-dark/40 via-transparent to-transparent z-10 pointer-events-none"></div>
 
             {/* ================================================================ */}
-            {/* MOBILE LAYOUT — 麥克風為 absolute 背景，內容層疊於上，與桌面邏輯相同 */}
+            {/* MOBILE LAYOUT — 移除 minHeight，內容自然撐高，公告板緊接報名按鈕 */}
             {/* ================================================================ */}
-            {/* Hero 區（全螢幕高度），公告板流動於其下 */}
-            <div className="md:hidden w-full flex flex-col">
+            <div className="md:hidden w-full">
 
-                {/* ── Hero poster 區：麥克風當背景，內容疊上去 ── */}
-                <div className="relative w-full" style={{ minHeight: 'calc(100vh - 5rem)' }}>
+                {/* 單一 relative 容器：麥克風 absolute 背景，所有內容正常流排 */}
+                <div className="relative w-full">
 
-                    {/* 麥克風：absolute 背景，z-30，mix-blend-multiply 融入黃色背景 */}
-                    {/*  高度縮至 65vh 讓它更像背景裝飾而非主角，配合內容緊湊排列  */}
+                    {/* 麥克風：absolute bottom-0，貼在整個內容底端作為背景裝飾 */}
                     <motion.div
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -113,15 +111,12 @@ const Hero = () => {
                         </picture>
                     </motion.div>
 
-                    {/* 內容層（z-40）：Logo + 標題 + 報名按鈕，全部疊在麥克風上 */}
-                    {/* justify-start + gap：Logo → 標題 → 按鈕緊密排列，不留大空白 */}
-                    <div className="relative z-40 w-full flex flex-col justify-start gap-5 px-4 pt-2 pb-6"
-                         style={{ minHeight: 'calc(100vh - 5rem)' }}>
+                    {/* 內容層（z-40）：無 minHeight，高度由內容自然決定 */}
+                    <div className="relative z-40 w-full flex flex-col gap-5 px-4 pt-2 pb-8">
 
-                        {/* 上半：Logo + 標題 */}
+                        {/* Logo + 標題 */}
                         <div className="flex flex-col items-start gap-4">
 
-                            {/* Corporate Logo Badge */}
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -140,7 +135,6 @@ const Hero = () => {
                                 </span>
                             </motion.div>
 
-                            {/* Title Block */}
                             <motion.div
                                 initial={{ y: 40, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
@@ -148,11 +142,9 @@ const Hero = () => {
                                 className="relative"
                             >
                                 <div className="bg-dark text-white pt-6 pb-6 px-4 transform -rotate-1 relative inline-block text-left shadow-[8px_8px_0_0_rgba(244,196,98,0.3)] border-4 border-white">
-                                    {/* Accent Ribbon */}
                                     <div className="absolute -top-4 -left-1 bg-secondary text-white font-heading font-black text-[10px] py-1 px-3 transform -rotate-1 border-2 border-dark shadow-[2px_2px_0_0_rgba(26,26,26,1)] z-10 whitespace-nowrap">
                                         {t.hero.titleLine1} | {t.hero.subtitle}
                                     </div>
-                                    {/* Row 1 */}
                                     <div className="flex flex-row items-baseline gap-2 whitespace-nowrap mt-2">
                                         <span className="font-heading font-black text-[2.4rem] leading-[0.85] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
                                             {t.hero.titleLine2}
@@ -163,7 +155,6 @@ const Hero = () => {
                                             </span>
                                         )}
                                     </div>
-                                    {/* Row 2 */}
                                     <div className="flex flex-row items-baseline gap-2 mt-2 whitespace-nowrap">
                                         <span className="font-heading font-black text-[2.8rem] leading-[0.85] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
                                             {t.hero.titleLine3}
@@ -178,7 +169,7 @@ const Hero = () => {
                             </motion.div>
                         </div>
 
-                        {/* 報名按鈕：標題下方直接緊接，不再 push 到底部 */}
+                        {/* 報名按鈕 */}
                         <motion.div
                             initial={{ y: 30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -200,18 +191,17 @@ const Hero = () => {
                                 </a>
                             </div>
                         </motion.div>
+
+                        {/* 公告板：直接接在按鈕後，無空白間距 */}
+                        <motion.div
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                        >
+                            <AnnouncementBoard />
+                        </motion.div>
                     </div>
                 </div>
-
-                {/* ── 公告板：hero 下方，正常流排版 ── */}
-                <motion.div
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="relative z-40 w-full px-4 pb-8"
-                >
-                    <AnnouncementBoard />
-                </motion.div>
             </div>
 
             {/* ================================================================ */}
