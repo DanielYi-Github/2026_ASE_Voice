@@ -9,7 +9,9 @@ const Hero = () => {
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-start bg-[#FFC107] overflow-hidden pt-20 border-b-[6px] border-dark isolate">
             {/* BACKGROUND LAYER: Radial Sunburst & Halftone */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[200vw] h-[200vw] rounded-full bg-sunburst opacity-80 pointer-events-none z-[-2] origin-center animate-[spin_120s_linear_infinite]"></div>
+            {/* 手機版：top-[45vh] 讓轉盤中心固定在 viewport 可見區（避免 section 高於視窗時下移）  */}
+            {/* 桌面版：top-1/2 維持以 section 為基準置中（section ≈ viewport 高度）             */}
+            <div className="absolute left-1/2 top-[45vh] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[200vw] h-[200vw] rounded-full bg-sunburst opacity-80 pointer-events-none z-[-2] origin-center animate-[spin_120s_linear_infinite]"></div>
             <div className="absolute inset-0 bg-halftone opacity-10 pointer-events-none z-[-1]"></div>
 
             {/* MIDDLE LAYER: Rich Music Particles & Waves */}
@@ -113,7 +115,7 @@ const Hero = () => {
                     </motion.div>
 
                     {/* 內容層（z-40）：Logo + 標題 + 報名按鈕，全部疊在麥克風上 */}
-                    <div className="relative z-40 w-full h-full flex flex-col justify-between px-4 pt-2 pb-8"
+                    <div className="relative z-40 w-full h-full flex flex-col justify-between px-4 pt-2 pb-4"
                          style={{ minHeight: 'calc(100vh - 5rem)' }}>
 
                         {/* 上半：Logo + 標題 */}
@@ -206,7 +208,7 @@ const Hero = () => {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="relative z-40 w-full px-4 py-8"
+                    className="relative z-40 w-full px-4 pb-8"
                 >
                     <AnnouncementBoard />
                 </motion.div>
