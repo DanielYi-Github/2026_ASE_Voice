@@ -34,18 +34,18 @@ const Hero = () => {
                 {[
                     { type: 'double', top: '10%', left: '15%', size: 64, dur: 6, delay: 0 },
                     { type: 'single', top: '22%', left: '45%', size: 48, dur: 4.5, delay: 0.5 },
-                    { type: 'staff',  top: '15%', left: '30%', size: 100, dur: 7, delay: 1.2 },
+                    { type: 'staff', top: '15%', left: '30%', size: 100, dur: 7, delay: 1.2 },
                     { type: 'double', top: '40%', left: '12%', size: 56, dur: 7, delay: 2 },
-                    { type: 'single', top: '8%',  left: '75%', size: 60, dur: 8, delay: 0.8 },
-                    { type: 'staff',  top: '55%', left: '8%',  size: 120, dur: 8.5, delay: 1.5 },
+                    { type: 'single', top: '8%', left: '75%', size: 60, dur: 8, delay: 0.8 },
+                    { type: 'staff', top: '55%', left: '8%', size: 120, dur: 8.5, delay: 1.5 },
                     { type: 'double', top: '65%', left: '40%', size: 96, dur: 9, delay: 0.2 },
                     { type: 'single', top: '75%', left: '15%', size: 50, dur: 5, delay: 1.0 },
                     { type: 'double', top: '80%', left: '32%', size: 70, dur: 6.5, delay: 0.7 },
-                    { type: 'staff',  top: '18%', left: '60%', size: 140, dur: 10, delay: 0 },
+                    { type: 'staff', top: '18%', left: '60%', size: 140, dur: 10, delay: 0 },
                     { type: 'single', top: '35%', left: '25%', size: 42, dur: 5.5, delay: 0.3 },
-                    { type: 'double', top: '50%', left: '5%',  size: 60, dur: 6, delay: 1.8 },
+                    { type: 'double', top: '50%', left: '5%', size: 60, dur: 6, delay: 1.8 },
                     { type: 'double', top: '25%', left: '85%', size: 52, dur: 7.5, delay: 1.1 },
-                    { type: 'staff',  top: '35%', left: '55%', size: 90, dur: 6.5, delay: 0.4 },
+                    { type: 'staff', top: '35%', left: '55%', size: 90, dur: 6.5, delay: 0.4 },
                     { type: 'single', top: '45%', left: '88%', size: 46, dur: 5, delay: 0.9 },
                 ].map((note, i) => (
                     <motion.div
@@ -205,9 +205,9 @@ const Hero = () => {
             </div>
 
             {/* ================================================================ */}
-            {/* DESKTOP LAYOUT — absolute 三欄，僅 md+ 顯示                      */}
+            {/* DESKTOP LAYOUT — 正常流排版支撐高度，避免放大時擠入 Navbar                 */}
             {/* ================================================================ */}
-            <div className="hidden md:block relative w-full max-w-[1680px] mx-auto min-h-[calc(100vh-5rem)] pt-16">
+            <div className="hidden md:flex justify-between relative w-full max-w-[1680px] mx-auto min-h-[calc(100vh-5rem)] items-stretch pt-12 pb-16">
 
                 {/* CENTER: MASSIVE MICROPHONE — pinned bottom-center */}
                 <motion.div
@@ -227,88 +227,92 @@ const Hero = () => {
                     </picture>
                 </motion.div>
 
-                {/* Left Side: Logo + Title + CTA */}
-                <div className="absolute top-0 bottom-0 left-0 w-[36%] lg:w-[33%] xl:w-[30%] pl-8 md:pl-12 lg:pl-14 xl:pl-18 pb-24 flex flex-col items-start z-40 justify-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="flex flex-col items-start gap-4 mb-8 md:mb-12 bg-white p-3 lg:p-4 border-[3px] border-dark shadow-[6px_6px_0_0_rgba(26,26,26,1)] rounded-none w-max"
-                    >
-                        <div className="flex items-center gap-2 lg:gap-3 pb-2 border-b-2 border-dark/20 w-max">
-                            <span className="font-heading font-black text-secondary tracking-wider text-xl lg:text-3xl">ASE</span>
-                            <div className="w-2 h-2 rounded-full bg-dark/40"></div>
-                            <span className="font-heading font-black text-blue-600 tracking-wider text-xl lg:text-3xl">SPIL</span>
-                            <div className="w-2 h-2 rounded-full bg-dark/40"></div>
-                            <span className="font-heading font-black text-green-600 tracking-wider text-xl lg:text-3xl">USI</span>
-                        </div>
-                        <div className="pt-0">
-                            <span className="font-heading font-black text-base lg:text-lg text-dark tracking-wide">
-                                {t.hero.brandNote}
-                            </span>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative w-full flex justify-start"
-                    >
-                        <div className="bg-dark text-white pt-8 pb-8 px-6 lg:px-10 transform -rotate-2 relative z-10 inline-block w-max text-left shadow-[10px_10px_0_0_rgba(244,196,98,0.3)] border-4 border-white max-w-full">
-                            <div className="absolute -top-5 -left-4 bg-secondary text-white font-heading font-black text-sm lg:text-base py-1 px-4 transform -rotate-2 border-2 border-dark shadow-[3px_3px_0_0_rgba(26,26,26,1)] z-20 whitespace-nowrap">
-                                {t.hero.titleLine1} | {t.hero.subtitle}
+                {/* Left Side: Logo + Title + CTA (正常流排版，自然撐開高度防止遮擋) */}
+                <div className="w-[45%] lg:w-[42%] xl:w-[40%] pl-8 md:pl-12 lg:pl-14 xl:pl-18 flex flex-col items-start z-40 relative">
+                    <div className="my-auto w-full flex flex-col items-start py-8">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="flex flex-col items-start gap-4 mb-8 md:mb-12 bg-white p-3 lg:p-4 border-[3px] border-dark shadow-[6px_6px_0_0_rgba(26,26,26,1)] rounded-none w-max"
+                        >
+                            <div className="flex items-center gap-2 lg:gap-3 pb-2 border-b-2 border-dark/20 w-max">
+                                <span className="font-heading font-black text-secondary tracking-wider text-xl lg:text-3xl">ASE</span>
+                                <div className="w-2 h-2 rounded-full bg-dark/40"></div>
+                                <span className="font-heading font-black text-blue-600 tracking-wider text-xl lg:text-3xl">SPIL</span>
+                                <div className="w-2 h-2 rounded-full bg-dark/40"></div>
+                                <span className="font-heading font-black text-green-600 tracking-wider text-xl lg:text-3xl">USI</span>
                             </div>
-                            <div className="flex flex-row items-baseline justify-start gap-2 whitespace-nowrap mt-4">
-                                <span className="font-heading font-black text-[3.5rem] lg:text-[4.8rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
-                                    {t.hero.titleLine2}
+                            <div className="pt-0">
+                                <span className="font-heading font-black text-base lg:text-lg text-dark tracking-wide">
+                                    {t.hero.brandNote}
                                 </span>
-                                {t.hero.titleLine2En && (
-                                    <span className="font-heading font-black text-[3rem] lg:text-[4.2rem] xl:text-[5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444]">
-                                        {t.hero.titleLine2En}
-                                    </span>
-                                )}
                             </div>
-                            <div className="flex flex-row items-baseline justify-start gap-2 md:gap-3 mt-4 whitespace-nowrap">
-                                <span className="font-heading font-black text-[4rem] lg:text-[5.5rem] xl:text-[6.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
-                                    {t.hero.titleLine3}
-                                </span>
-                                {t.hero.titleLine3En && (
-                                    <span className="font-heading font-black text-[3.5rem] lg:text-[4.8rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444] lg:ml-2">
-                                        {t.hero.titleLine3En}
-                                    </span>
-                                )}
-                            </div>
-                        </div>
-                    </motion.div>
+                        </motion.div>
 
-                    <motion.div
-                        initial={{ y: 40, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                        className="mt-12 lg:mt-16 flex flex-col items-start relative z-40 w-full"
-                    >
-                        <div className="group relative w-max">
-                            <div className="absolute -inset-2 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <a
-                                href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-10 md:px-10 lg:px-14 py-4 md:py-5 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] hover:shadow-[0_12px_35px_rgba(0,195,255,1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>
-                                <div className="relative flex items-center justify-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
-                                    <span className="text-[2.2rem] lg:text-[2.6rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
-                                    <span className="text-[2.2rem] lg:text-[2.5rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">{t.nav.register}</span>
+                        <motion.div
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="relative w-full flex justify-start"
+                        >
+                            <div className="bg-dark text-white pt-8 pb-8 px-6 lg:px-10 transform -rotate-2 relative z-10 inline-block w-max text-left shadow-[10px_10px_0_0_rgba(244,196,98,0.3)] border-4 border-white max-w-full">
+                                <div className="absolute -top-5 -left-4 bg-secondary text-white font-heading font-black text-sm lg:text-base py-1 px-4 transform -rotate-2 border-2 border-dark shadow-[3px_3px_0_0_rgba(26,26,26,1)] z-20 whitespace-nowrap">
+                                    {t.hero.titleLine1} | {t.hero.subtitle}
                                 </div>
-                            </a>
-                        </div>
-                    </motion.div>
+                                <div className="flex flex-row items-baseline justify-start gap-2 whitespace-nowrap mt-4">
+                                    <span className="font-heading font-black text-[3.5rem] lg:text-[4.8rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
+                                        {t.hero.titleLine2}
+                                    </span>
+                                    {t.hero.titleLine2En && (
+                                        <span className="font-heading font-black text-[3rem] lg:text-[4.2rem] xl:text-[5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444]">
+                                            {t.hero.titleLine2En}
+                                        </span>
+                                    )}
+                                </div>
+                                <div className="flex flex-row items-baseline justify-start gap-2 md:gap-3 mt-4 whitespace-nowrap">
+                                    <span className="font-heading font-black text-[4rem] lg:text-[5.5rem] xl:text-[6.5rem] leading-[0.8] tracking-tighter text-white drop-shadow-[2px_2px_0_#444]">
+                                        {t.hero.titleLine3}
+                                    </span>
+                                    {t.hero.titleLine3En && (
+                                        <span className="font-heading font-black text-[3.5rem] lg:text-[4.8rem] xl:text-[5.5rem] leading-[0.8] tracking-tighter text-secondary drop-shadow-[2px_2px_0_#444] lg:ml-2">
+                                            {t.hero.titleLine3En}
+                                        </span>
+                                    )}
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ y: 40, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            className="mt-12 lg:mt-16 flex flex-col items-start relative z-40 w-full"
+                        >
+                            <div className="group relative w-max">
+                                <div className="absolute -inset-2 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <a
+                                    href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-10 md:px-10 lg:px-14 py-4 md:py-5 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] hover:shadow-[0_12px_35px_rgba(0,195,255,1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>
+                                    <div className="relative flex items-center justify-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
+                                        <span className="text-[2rem] lg:text-[2.2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
+                                        <span className="text-[1.8rem] lg:text-[2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)] pr-1">{t.nav.register}</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
 
-                {/* Right Side: AnnouncementBoard */}
-                <div className="absolute top-0 bottom-0 right-0 w-[36%] lg:w-[33%] xl:w-[30%] pr-8 md:pr-12 lg:pr-14 xl:pr-18 pb-24 flex flex-col items-end z-50 justify-center pt-20">
-                    <AnnouncementBoard />
+                {/* Right Side: AnnouncementBoard (正常流排版支撐) */}
+                <div className="w-[45%] lg:w-[35%] xl:w-[33%] pr-8 md:pr-12 lg:pr-14 xl:pr-18 flex flex-col items-end z-50 relative">
+                    <div className="my-auto w-full pt-8 pb-12 overflow-visible">
+                        <AnnouncementBoard />
+                    </div>
                 </div>
             </div>
 
