@@ -46,7 +46,7 @@ const Navbar = () => {
                         <span className="sm:hidden">{lang.toUpperCase()}</span>
                         <ChevronDown size={14} className={`transition-transform duration-200 ${isLangOpen ? 'rotate-180' : ''}`} />
                     </button>
-                    
+
                     {isLangOpen && (
                         <div className="absolute right-0 mt-2 w-36 bg-white border-2 border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] flex flex-col z-50 overflow-hidden">
                             {languages.map((l) => (
