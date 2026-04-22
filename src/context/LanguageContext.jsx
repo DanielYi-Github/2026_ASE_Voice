@@ -52,7 +52,7 @@ const translations = {
                             【錄製範例】{'\n'}
                             - 中文範例：<a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
                             - 英文範例：<a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
-                            - 越文範例：<a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYh</a>
+                            - 越文範例：<a href="s" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYhs</a>
                         </span>
                     )
                 },
@@ -201,7 +201,7 @@ const translations = {
                             [Recording Examples]{'\n'}
                             - Chinese Example: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
                             - English Example: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
-                            - Vietnamese Example: <a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYh</a>
+                            - Vietnamese Example: <a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYhs</a>
                         </span>
                     )
                 },
@@ -350,7 +350,7 @@ const translations = {
                             [Video mẫu]{'\n'}
                             - Ví dụ tiếng Trung: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
                             - Ví dụ tiếng Anh: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
-                            - Ví dụ tiếng Việt: <a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYh</a>
+                            - Ví dụ tiếng Việt: <a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYhs</a>
                         </span>
                     )
                 },
