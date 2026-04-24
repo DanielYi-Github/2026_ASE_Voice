@@ -141,7 +141,7 @@
         // 開始拼接
         baseUrl += '?lang=' + lang; // 第一個參數用 ?
         if (email) baseUrl += '&email=' + encodeURIComponent(email);
-        if (timestamp) baseUrl += '&timestamp=' + timestamp;
+        if (timestamp) baseUrl += '&t=' + timestamp;
         if (nonce) baseUrl += '&nonce=' + nonce;
         if (hash) baseUrl += '&hash=' + hash;
 
