@@ -64,16 +64,7 @@ const translations = {
                 {
                     date: "7/8",
                     event: "公告決賽名單",
-                    details: (
-                        <span>
-                            錄取名額：華語組與外語組各取前 10 名，共 20 名晉級決賽。{'\n'}{'\n'}
-                            入圍決賽選手，將由公司以公假安排至高雄總場參與比賽。至高雄場參與比賽的選手，將會有以下補助：{'\n'}
-                            1. 制裝費補貼{'\n'}
-                            2. 專屬化妝{'\n'}
-                            3. 彩排{'\n'}
-                            4. 交通費等相關補助
-                        </span>
-                    )
+                    details: "錄取名額：華語組與外語組各取前 10 名，共 20 名晉級決賽。"
                 },
                 {
                     date: "7/18 - 8/22",
@@ -273,16 +264,7 @@ const translations = {
                 {
                     date: "Jul 8",
                     event: "Finalists Announced",
-                    details: (
-                        <span>
-                            Quota: Top 10 from each category, totaling 20 finalists advancing to the Grand Finals.{'\n'}{'\n'}
-                            Finalists will be arranged by the company with official leave to participate in the Grand Finals at the Kaohsiung main venue. Finalists competing at the Kaohsiung venue will receive the following support:{'\n'}
-                            1. Wardrobe allowance{'\n'}
-                            2. Exclusive makeup services{'\n'}
-                            3. Rehearsal arrangements{'\n'}
-                            4. Transportation and related subsidies
-                        </span>
-                    )
+                    details: "Quota: Top 10 from each category, totaling 20 finalists advancing to the Grand Finals."
                 },
                 {
                     date: "Jul 18 - Aug 22",
@@ -482,16 +464,7 @@ const translations = {
                 {
                     date: "8/7",
                     event: "Công bố danh sách Chung kết",
-                    details: (
-                        <span>
-                            Tuyển chọn: Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn ra top 10 thí sinh đứng đầu, tổng cộng có 20 thí sinh được lọt vào Vòng Chung kết.{'\n'}{'\n'}
-                            Thí sinh lọt vào Vòng Chung kết sẽ được công ty sắp xếp nghỉ phép có lương để tham gia cuộc thi tại trụ sở chính tại Cao Hùng. Thí sinh thi đấu tại Cao Hùng sẽ nhận được các hỗ trợ sau:{'\n'}
-                            1. Hỗ trợ chi phí trang phục{'\n'}
-                            2. Trang điểm chuyên nghiệp{'\n'}
-                            3. Tổng duyệt{'\n'}
-                            4. Hỗ trợ chi phí đi lại và các khoản liên quan
-                        </span>
-                    )
+                    details: "Tuyển chọn: Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn ra top 10 thí sinh đứng đầu, tổng cộng có 20 thí sinh được lọt vào Vòng Chung kết."
                 },
                 {
                     date: "18/7 - 22/8",
