@@ -58,32 +58,13 @@ const InfoSection = () => {
                     </div>
                 </motion.div>
 
-                {/* 1. Purpose & Groups Row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 px-0 md:px-8">
-                    {/* Upgraded Mission Card with Softer, Connecting Theme */}
+                {/* 1. Groups Card (Full Width) */}
+                <div className="mb-16 px-0 md:px-8">
                     <motion.div
                         initial={{ y: 30, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
-                        className="bg-gradient-to-br from-blue-50 to-cyan-100 border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 transform -rotate-1"
-                    >
-                        <div className="flex items-center gap-4 mb-6 border-b-[4px] border-cyan-300 pb-5">
-                            <div className="bg-cyan-500 p-3 rounded-full text-white shadow-brutal border-2 border-dark">
-                                <Mic2 size={36} />
-                            </div>
-                            <h3 className="text-3xl font-heading font-black text-cyan-950 uppercase">{t.info.purpose}</h3>
-                        </div>
-                        <p className="font-body text-cyan-950 text-xl md:text-2xl leading-[1.9] text-justify font-bold tracking-wide">
-                            {t.info.purposeDesc}
-                        </p>
-                    </motion.div>
-
-                    {/* Clear Columns for Categories */}
-                    <motion.div
-                        initial={{ y: 30, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true, delay: 0.1 }}
-                        className="bg-primary border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 transform rotate-1 relative"
+                        className="bg-primary border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 relative"
                     >
                         <div className="flex items-center gap-4 mb-6 border-b-[4px] border-dark pb-5">
                             <div className="bg-white p-3 border-4 border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)]">
@@ -192,6 +173,24 @@ const InfoSection = () => {
                                 </div>
                             </div>
                         </div>
+                    </motion.div>
+
+                    {/* Purpose Section (moved here, above Obligations) */}
+                    <motion.div
+                        initial={{ y: 30, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="w-full bg-gradient-to-br from-blue-50 to-cyan-100 border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 mb-8"
+                    >
+                        <div className="flex items-center gap-4 mb-6 border-b-[4px] border-cyan-300 pb-5">
+                            <div className="bg-cyan-500 p-3 rounded-full text-white shadow-brutal border-2 border-dark">
+                                <Mic2 size={36} />
+                            </div>
+                            <h3 className="text-3xl font-heading font-black text-cyan-950 uppercase">{t.info.purpose}</h3>
+                        </div>
+                        <p className="font-body text-cyan-950 text-xl md:text-2xl leading-[1.9] text-justify font-bold tracking-wide">
+                            {t.info.purposeDesc}
+                        </p>
                     </motion.div>
 
                     {/* Obligations Section */}

@@ -64,7 +64,16 @@ const translations = {
                 {
                     date: "7/8",
                     event: "公告決賽名單",
-                    details: "錄取名額：華語組與外語組各取前 10 名，共 20 名晉級決賽。"
+                    details: (
+                        <span>
+                            錄取名額：華語組與外語組各取前 10 名，共 20 名晉級決賽。{'\n'}{'\n'}
+                            入圍決賽選手，將由公司以公假安排至高雄總場參與比賽。至高雄場參與比賽的選手，將會有以下補助：{'\n'}
+                            1. 制裝費補貼{'\n'}
+                            2. 專屬化妝{'\n'}
+                            3. 彩排{'\n'}
+                            4. 交通費等相關補助
+                        </span>
+                    )
                 },
                 {
                     date: "7/18 - 8/22",
@@ -83,6 +92,9 @@ const translations = {
                             {'\n'}
                             <span className="text-sm text-gray-500 mt-1 inline-block">
                                 * 註記：中北部地區之培訓與彩排據點，將於初賽後視晉級選手之區域分佈情形定案並公告（如中部或北部選手比例而定）。
+                            </span>{'\n'}{'\n'}
+                            <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
+                                📌 若與上班時間衝突，將由公司協助安排以公假處理，並負擔所有交通與誤餐費。
                             </span>
                         </span>
                     )
@@ -90,7 +102,21 @@ const translations = {
                 {
                     date: "9/11",
                     event: "活動總決賽 (現場演唱)",
-                    details: "時間：14:30 - 17:00\n地點：日月光高雄廠 K23 1F 國際會議廳 (楠梓區研發路 66 號)\n現場由主辦方安排專業樂團進行伴奏。比賽現場不提供提詞機，參賽者須背熟歌詞！"
+                    details: (
+                        <span>
+                            時間：14:30 - 17:00{'\n'}
+                            地點：日月光高雄廠 K23 1F 國際會議廳 (楠梓區研發路 66 號){'\n'}
+                            現場由主辦方安排專業樂團進行伴奏。比賽現場不提供提詞機，參賽者須背熟歌詞！{'\n'}{'\n'}
+                            <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
+                                📌 決賽選手專屬支援：{'\n'}
+                                入圍決賽之選手，公司將統一安排公假前往高雄總場參賽。凡至高雄現場參賽之選手，主辦單位將提供以下專屬補助與支援：{'\n'}
+                                1. 制裝費補貼{'\n'}
+                                2. 專業造型與美妝服務{'\n'}
+                                3. 樂團現場彩排{'\n'}
+                                4. 交通與相關差旅補助
+                            </span>
+                        </span>
+                    )
                 }
             ],
             prizes: "競賽獎項",
@@ -147,6 +173,40 @@ const translations = {
                 "日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID:roy_chin)",
                 "矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
                 "環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com ( Line ID: catnow )"
+            ]
+        },
+        qa: {
+            title: "常見問題",
+            subtitle: "關於比賽的各種疑問，都可以在這裡找到解答！",
+            showBtn: "查看 Q&A",
+            hideBtn: "收起 Q&A",
+            contactTitle: "還有問題？聯繫我們",
+            contactInfo: "Q&A信箱：service@asevoice.org\n\n日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\n日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\n矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\n環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+            items: [
+                { q: "誰可以報名？", a: "僅限日月光投資控股股份有限公司所屬各事業體之在職員工。" },
+                { q: "哪些人不能報名？", a: "2025 年好聲音冠軍、亞軍、佳作，以及 2024 年好聲音冠軍、亞軍，不得報名。" },
+                { q: "比賽是個人還是團體？", a: "本比賽採個人賽。" },
+                { q: "有哪些組別？", a: "分為華語組與外語組；華語組為國語、台語、客家、粵語，外語組為英語與其他語言。" },
+                { q: "報名時間到什麼時候？", a: "2026/6/1（一）至 2026/6/21（日）。" },
+                { q: "要怎麼報名？", a: "採個人線上報名，請使用官方網站：https://asevoice.org" },
+                { q: "初賽需要到現場嗎？", a: "不用，初賽為線上影片審核。" },
+                { q: "初賽影片要怎麼錄？", a: "錄製自選曲的主歌、副歌各一遍，影片總時長 60 至 90 秒，並須正面拍攝，清晰露出臉部、嘴形、半身及腰部。" },
+                { q: "初賽影片可以有伴奏、伴唱、修音或後製嗎？", a: "不可以，初賽影片必須為純清唱，嚴禁伴奏、擴音、伴唱及數位修音等後製處理。" },
+                { q: "初賽和決賽可以換歌嗎？", a: "不可以，初、決賽皆為同一首曲目，不得更改。" },
+                { q: "初賽線上影片有參考範例嗎？", a: "有的。\n中文範例：https://youtu.be/4mBwgx77t4I\n英文範例：https://youtu.be/K7x4SSkpk8A\n越文範例：https://youtu.be/nlEOeIwtYhs" },
+                { q: "什麼時候公布決賽名單？", a: "2026/7/8（三）。" },
+                { q: "會有多少人晉級決賽？", a: "華語組與外語組各取前 10 名，共 20 名。" },
+                { q: "決賽在哪裡、什麼時候？", a: "2026/9/11（五）14:30–17:00，於日月光高雄廠 K23 1F 國際會議廳舉行。" },
+                { q: "決賽有伴奏嗎？有提詞機嗎？", a: "決賽由主辦單位安排專業樂團現場伴奏；現場不提供提詞機，參賽者須背熟歌詞。" },
+                { q: "晉級決賽後需要配合培訓和彩排嗎？", a: "需要；晉級者須配合 1 次歌唱老師 1 對 1 指導及 2 次現場彩排，若時間無法配合，視為放棄指導機會，不得要求另行安排。" },
+                { q: "晉級決賽後需要配合培訓與彩排地點在哪裡？", a: "專業歌唱老師 1對1 個人指導、伴奏樂隊進行兩次現場彩排於高雄/中北部地區。\n\n註記：中北部地區之培訓與彩排據點，將於初賽後視晉級選手之區域分佈情形定案並公告（如中部或北部選手比例而定）。" },
+                { q: "評分標準是什麼？", a: "歌唱技巧 40%、發音咬字 20%、節奏 20%、感情 10%、演繹風格 10%。" },
+                { q: "各組獎金怎麼發？", a: "冠軍 20,000 元、亞軍 15,000 元、季軍 10,000 元、佳作每名 3,000 元；並依名次頒發獎盃或獎牌。" },
+                { q: "得獎需要繳稅嗎？", a: "需要，依中華民國相關稅法規定辦理。" },
+                { q: "如果被查到代唱、冒名頂替、修音或違規後製會怎樣？", a: "主辦單位有權立即取消參賽資格；若頒獎後查證屬實，將撤銷得獎資格並追回全數獎金及獎座（牌），缺額原則上不遞補。" },
+                { q: "主辦單位會使用我的照片、聲音或影片嗎？", a: "會；參賽者同意主辦單位及其關係企業於活動期間錄影、攝影，並得將含有其肖像、聲音及演出畫面之照片與影片，用於內部平台、對外刊物、文宣及活動相關宣傳。" },
+                { q: "活動辦法如果後續有更新，要看哪裡？", a: "以官方網站為主，不另行個別通知。" },
+                { q: "有問題要找誰？", a: "Q&A信箱：service@asevoice.org\n\n日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\n日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\n矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\n環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)" }
             ]
         }
     },
@@ -213,7 +273,16 @@ const translations = {
                 {
                     date: "Jul 8",
                     event: "Finalists Announced",
-                    details: "Quota: Top 10 from each category, totaling 20 finalists advancing to the Grand Finals."
+                    details: (
+                        <span>
+                            Quota: Top 10 from each category, totaling 20 finalists advancing to the Grand Finals.{'\n'}{'\n'}
+                            Finalists will be arranged by the company with official leave to participate in the Grand Finals at the Kaohsiung main venue. Finalists competing at the Kaohsiung venue will receive the following support:{'\n'}
+                            1. Wardrobe allowance{'\n'}
+                            2. Exclusive makeup services{'\n'}
+                            3. Rehearsal arrangements{'\n'}
+                            4. Transportation and related subsidies
+                        </span>
+                    )
                 },
                 {
                     date: "Jul 18 - Aug 22",
@@ -232,6 +301,9 @@ const translations = {
                             {'\n'}
                             <span className="text-sm text-gray-500 mt-1 inline-block">
                                 * Note: The specific training and rehearsal locations for the Central-Northern Region will be finalized and announced after the preliminary results, based on the geographical distribution of the finalists (e.g., concentration of contestants from the Northern or Central regions).
+                            </span>{'\n'}{'\n'}
+                            <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
+                                📌 If the schedule conflicts with working hours, the company will assist in arranging official leave and cover all transportation and meal allowances.
                             </span>
                         </span>
                     )
@@ -239,7 +311,21 @@ const translations = {
                 {
                     date: "Sep 11",
                     event: "Grand Finals (Live)",
-                    details: "Time: 14:30 - 17:00\nLocation: ASE Kaohsiung K23 1F Int'l Conference Hall.\nLive band accompaniment will be provided. NO TELEPROMPTERS allowed. Memorize your lyrics!"
+                    details: (
+                        <span>
+                            Time: 14:30 - 17:00{'\n'}
+                            Location: ASE Kaohsiung K23 1F Int'l Conference Hall.{'\n'}
+                            Live band accompaniment will be provided. NO TELEPROMPTERS allowed. Memorize your lyrics!{'\n'}{'\n'}
+                            <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
+                                📌 Exclusive Support for Finalists:{'\n'}
+                                Finalists will be granted official leave to participate in the Grand Finals in Kaohsiung. The following exclusive support and subsidies will be provided to all on-site contestants:{'\n'}
+                                1. Wardrobe & Outfit Allowance{'\n'}
+                                2. Professional Makeup & Styling Services{'\n'}
+                                3. Live Band Rehearsal{'\n'}
+                                4. Transportation & Travel Subsidies
+                            </span>
+                        </span>
+                    )
                 }
             ],
             prizes: "Prizes",
@@ -296,6 +382,40 @@ const translations = {
                 "ASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
                 "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+            ]
+        },
+        qa: {
+            title: "FAQ",
+            subtitle: "Find answers to all your questions about the competition here!",
+            showBtn: "View Q&A",
+            hideBtn: "Hide Q&A",
+            contactTitle: "Still Have Questions? Contact Us",
+            contactInfo: "Q&A Email: service@asevoice.org\n\nASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nSPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nUSI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+            items: [
+                { q: "Who is eligible to register?", a: "Only current employees of all business units under ASE Technology Holding Co., Ltd. are eligible to register." },
+                { q: "Who is not eligible to register?", a: "The 2025 ASE Voice First Place winner, Second Place winner, Merit Award winners, as well as the 2024 ASE Voice First Place winner and Second Place winner, are not eligible to register." },
+                { q: "Is the competition individual or group-based?", a: "This competition is an individual contest." },
+                { q: "What categories are available?", a: "The competition is divided into Mandarin and Foreign Language categories. The Mandarin category includes Mandarin, Taiwanese, Hakka, and Cantonese; the Foreign Language category includes English and other languages." },
+                { q: "What is the registration period?", a: "From June 1, 2026 (Monday) to June 21, 2026 (Sunday)." },
+                { q: "How do I register?", a: "For individual online registration, please use the official website: https://asevoice.org" },
+                { q: "Is on-site attendance required for the preliminary round?", a: "No, the preliminary round is conducted through online video review." },
+                { q: "How should the preliminary video be recorded?", a: "Record one verse and one chorus of a self-selected song. The total video duration should be 60 to 90 seconds. The video must be filmed from the front, clearly showing the face, mouth movements, upper body, and waist." },
+                { q: "Can the preliminary video include accompaniment, backing vocals, audio enhancement, or post-production?", a: "No. The preliminary video must be pure a cappella. Any accompaniment, amplification, backing vocals, or digital audio enhancement and post-production are strictly prohibited." },
+                { q: "Can I change the song between the preliminary round and the finals?", a: "No. The same song must be used for both the preliminary round and the finals, and it cannot be changed." },
+                { q: "Are there any reference examples for the preliminary round online video?", a: "Yes.\nChinese Example: https://youtu.be/4mBwgx77t4I\nEnglish Example: https://youtu.be/K7x4SSkpk8A\nVietnamese Example: https://youtu.be/nlEOeIwtYhs" },
+                { q: "When will the finalists be announced?", a: "July 8, 2026 (Wednesday)." },
+                { q: "How many participants will advance to the finals?", a: "The top 10 from each category (Mandarin and Foreign Language) will advance, for a total of 20 finalists." },
+                { q: "When and where will the finals be held?", a: "September 11, 2026 (Friday), from 14:30 to 17:00, ASE Kaohsiung Plant K23 1F International Conference Hall." },
+                { q: "Will there be accompaniment and a teleprompter in the finals?", a: "A professional live band will be arranged by the organizer for accompaniment. No teleprompter will be provided; participants must memorize the lyrics." },
+                { q: "Do finalists need to attend training and rehearsals?", a: "Yes. Finalists must attend one one-on-one coaching session with a vocal instructor and two on-site rehearsals. If unable to attend, it will be considered a forfeiture of the coaching opportunity, and no alternative arrangements will be made." },
+                { q: "Where will the training and rehearsals be held after advancing to the finals?", a: "One session of one-on-one professional vocal coaching and two live rehearsals with the accompaniment band will be held in Kaohsiung or the Central-Northern Region.\n\nNote: The specific training and rehearsal locations in the Central-Northern Region will be finalized and announced after the preliminary results, based on the geographical distribution of the finalists." },
+                { q: "What are the judging criteria?", a: "Vocal Technique (40%): melodic difficulty, singing technique, and style; Pronunciation and Articulation (20%); Rhythm (20%); Emotion (10%); Performance Style (10%): stage presence, facial expressions, and body language during the performance." },
+                { q: "What are the prizes for each category?", a: "First Place: NT$20,000; Second Place: NT$15,000; Third Place: NT$10,000; Merit Award: NT$3,000 per winner. Trophies or medals will be awarded according to placement." },
+                { q: "Are prizes subject to tax?", a: "Yes, in accordance with the tax regulations of the Republic of China (Taiwan)." },
+                { q: "What happens if cheating, impersonation, audio enhancement, or other violations are discovered?", a: "The organizer reserves the right to immediately disqualify the participant. If violations are confirmed after awards have been given, the awards will be revoked, and all prize money and trophies (or medals) must be returned. Vacancies will generally not be filled." },
+                { q: "Will the organizer use my photos, voice, or video?", a: "Yes. Participants agree that the organizer and its affiliated companies may record and photograph during the event, and may use images, voice, and performance footage containing the participant for internal platforms, external publications, promotional materials, and event-related publicity." },
+                { q: "Where can I check for updates to the event rules?", a: "Please refer to the official website at https://asevoice.org for any updates to the event rules. No individual notifications will be provided." },
+                { q: "Who should I contact if I have questions?", a: "Q&A Email: service@asevoice.org\n\nASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nSPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nUSI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)" }
             ]
         }
     },
@@ -362,7 +482,16 @@ const translations = {
                 {
                     date: "8/7",
                     event: "Công bố danh sách Chung kết",
-                    details: "Tuyển chọn: Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn ra top 10 thí sinh đứng đầu, tổng cộng có 20 thí sinh được lọt vào Vòng Chung kết."
+                    details: (
+                        <span>
+                            Tuyển chọn: Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn ra top 10 thí sinh đứng đầu, tổng cộng có 20 thí sinh được lọt vào Vòng Chung kết.{'\n'}{'\n'}
+                            Thí sinh lọt vào Vòng Chung kết sẽ được công ty sắp xếp nghỉ phép có lương để tham gia cuộc thi tại trụ sở chính tại Cao Hùng. Thí sinh thi đấu tại Cao Hùng sẽ nhận được các hỗ trợ sau:{'\n'}
+                            1. Hỗ trợ chi phí trang phục{'\n'}
+                            2. Trang điểm chuyên nghiệp{'\n'}
+                            3. Tổng duyệt{'\n'}
+                            4. Hỗ trợ chi phí đi lại và các khoản liên quan
+                        </span>
+                    )
                 },
                 {
                     date: "18/7 - 22/8",
@@ -381,6 +510,9 @@ const translations = {
                             {'\n'}
                             <span className="text-sm text-gray-500 mt-1 inline-block">
                                 * Lưu ý: Địa điểm tổng duyệt và hướng dẫn thanh nhạc tại khu vực Miền Trung-Bắc sẽ được quyết định và thông báo chính thức sau vòng sơ loại, dựa trên sự phân bổ vùng miền của các thí sinh lọt vào chung kết (ví dụ: mức độ tập trung của thí sinh khu vực phía Bắc hoặc Miền Trung).
+                            </span>{'\n'}{'\n'}
+                            <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
+                                📌 Nếu lịch trình trùng với giờ làm việc, công ty sẽ hỗ trợ sắp xếp nghỉ phép có lương và chi trả toàn bộ chi phí đi lại và ăn uống.
                             </span>
                         </span>
                     )
@@ -388,7 +520,21 @@ const translations = {
                 {
                     date: "11/9",
                     event: "Vòng Chung kết (Trình diễn trực tiếp)",
-                    details: "Thời gian: 14:30 - 17:00\nĐịa điểm: Hội trường Quốc tế Tầng 1, K23, Nhà máy ASE Cao Hùng.\nĐơn vị tổ chức sẽ bố trí ban nhạc đệm trực tiếp. KHÔNG cung cấp máy nhắc chữ, thí sinh phải thuộc lòng lời bài hát!"
+                    details: (
+                        <span>
+                            Thời gian: 14:30 - 17:00{'\n'}
+                            Địa điểm: Hội trường Quốc tế Tầng 1, K23, Nhà máy ASE Cao Hùng.{'\n'}
+                            Đơn vị tổ chức sẽ bố trí ban nhạc đệm trực tiếp. KHÔNG cung cấp máy nhắc chữ, thí sinh phải thuộc lòng lời bài hát!{'\n'}{'\n'}
+                            <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
+                                📌 Hỗ trợ đặc biệt dành cho thí sinh Chung kết:{'\n'}
+                                Các thí sinh lọt vào vòng chung kết sẽ được công ty sắp xếp nghỉ phép công để tham gia thi đấu tại Cao Hùng. Ban tổ chức sẽ cung cấp các khoản hỗ trợ và dịch vụ độc quyền sau:{'\n'}
+                                1. Hỗ trợ chi phí trang phục{'\n'}
+                                2. Dịch vụ trang điểm và tạo hình chuyên nghiệp{'\n'}
+                                3. Tổng duyệt trực tiếp với ban nhạc{'\n'}
+                                4. Hỗ trợ chi phí đi lại và công tác phí liên quan
+                            </span>
+                        </span>
+                    )
                 }
             ],
             prizes: "Cơ cấu Giải thưởng",
@@ -445,6 +591,40 @@ const translations = {
                 "Nhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "Công ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
                 "Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+            ]
+        },
+        qa: {
+            title: "Câu Hỏi Thường Gặp",
+            subtitle: "Tìm câu trả lời cho mọi thắc mắc của bạn về cuộc thi tại đây!",
+            showBtn: "Xem Q&A",
+            hideBtn: "Ẩn Q&A",
+            contactTitle: "Còn Thắc Mắc? Liên Hệ Chúng Tôi",
+            contactInfo: "Hộp thư Q&A: service@asevoice.org\n\nNhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nNhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nCông ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nCông ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+            items: [
+                { q: "Ai có thể đăng ký tham gia?", a: "Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị sự nghiệp trực thuộc Công ty Cổ phần Đầu tư Công nghiệp Công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia." },
+                { q: "Những ai không được đăng ký tham gia?", a: "Quán quân, Á quân, và thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay." },
+                { q: "Cuộc thi là thi cá nhân hay theo nhóm?", a: "Cuộc thi này hoàn toàn là thi đấu cá nhân." },
+                { q: "Có những bảng thi nào?", a: "Cuộc thi được chia thành Bảng Tiếng Hoa và Bảng Ngoại ngữ; Bảng Tiếng Hoa gồm Tiếng Phổ thông (Quan Thoại), Tiếng Đài Loan, Tiếng Khách Gia (Hakka), và Tiếng Quảng Đông; Bảng Ngoại ngữ gồm Tiếng Anh và các ngôn ngữ khác." },
+                { q: "Thời gian đăng ký đến khi nào?", a: "Từ ngày 1/6/2026 (Thứ Hai) đến ngày 21/6/2026 (Chủ Nhật)." },
+                { q: "Đăng ký như thế nào?", a: "Áp dụng đăng ký trực tuyến cá nhân, vui lòng sử dụng trang web chính thức: https://asevoice.org" },
+                { q: "Vòng Sơ loại có cần đến hiện trường không?", a: "Không cần, Vòng Sơ loại được xét duyệt qua video trực tuyến." },
+                { q: "Video Vòng Sơ loại phải quay như thế nào?", a: "Hát phần phiên khúc và điệp khúc của bài hát tự chọn, mỗi phần một lần; tổng thời lượng video từ 60 đến 90 giây, đồng thời phải quay ở góc chính diện, thấy rõ khuôn mặt, khẩu hình, nửa thân trên và eo." },
+                { q: "Video Vòng Sơ loại có được dùng nhạc đệm, bè, chỉnh âm hoặc hậu kỳ không?", a: "Không được. Video Vòng Sơ loại phải là hát mộc hoàn toàn; nghiêm cấm sử dụng nhạc đệm, loa khuếch đại, hát bè hoặc các xử lý chỉnh âm kỹ thuật số và hậu kỳ." },
+                { q: "Có thể đổi bài hát giữa Vòng Sơ loại và Vòng Chung kết không?", a: "Không được. Bài hát ở Vòng Sơ loại và Vòng Chung kết phải là cùng một bài, không được thay đổi." },
+                { q: "Có video mẫu tham khảo cho Vòng Sơ loại trực tuyến không?", a: "Có.\nVí dụ tiếng Trung: https://youtu.be/4mBwgx77t4I\nVí dụ tiếng Anh: https://youtu.be/K7x4SSkpk8A\nVí dụ tiếng Việt: https://youtu.be/nlEOeIwtYhs" },
+                { q: "Khi nào công bố danh sách vào Vòng Chung kết?", a: "Ngày 8/7/2026 (Thứ Tư)." },
+                { q: "Sẽ có bao nhiêu người được vào Vòng Chung kết?", a: "Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn top 10, tổng cộng 20 thí sinh vào Vòng Chung kết." },
+                { q: "Vòng Chung kết được tổ chức ở đâu, khi nào?", a: "Từ 14:30 đến 17:00 ngày 11/9/2026 (Thứ Sáu), tổ chức tại Hội trường Quốc tế Tầng 1, Tòa nhà K23, Nhà máy ASE Cao Hùng." },
+                { q: "Vòng Chung kết có nhạc đệm không? Có máy nhắc chữ không?", a: "Ban tổ chức sẽ bố trí ban nhạc chuyên nghiệp biểu diễn nhạc đệm trực tiếp; tại hiện trường không cung cấp máy nhắc chữ, thí sinh phải thuộc lòng lời bài hát." },
+                { q: "Sau khi vào Vòng Chung kết có cần phối hợp tham gia huấn luyện và tổng duyệt không?", a: "Có. Thí sinh vào Vòng Chung kết phải phối hợp tham gia 1 buổi hướng dẫn 1 kèm 1 với giáo viên thanh nhạc và 2 buổi tổng duyệt trực tiếp. Nếu không thể phối hợp về thời gian, sẽ được xem là tự nguyện từ bỏ cơ hội được hướng dẫn và không được yêu cầu sắp xếp lại." },
+                { q: "Địa điểm huấn luyện và tổng duyệt sau khi vào Vòng Chung kết ở đâu?", a: "Hướng dẫn cá nhân 1 kèm 1 với giáo viên thanh nhạc và hai buổi tổng duyệt trực tiếp với ban nhạc đệm sẽ được tổ chức tại Cao Hùng hoặc khu vực Miền Trung-Bắc.\n\nLưu ý: Địa điểm huấn luyện và tổng duyệt tại khu vực Miền Trung-Bắc sẽ được quyết định và công bố sau vòng sơ loại, tùy theo tỷ lệ thí sinh vào chung kết đến từ khu vực miền Trung hoặc miền Bắc." },
+                { q: "Tiêu chí chấm điểm là gì?", a: "Kỹ năng thanh nhạc 40%, phát âm và nhả chữ 20%, nhịp điệu 20%, cảm xúc 10%, phong cách trình diễn 10%." },
+                { q: "Giải thưởng của mỗi bảng được trao như thế nào?", a: "Quán quân 20.000 Đài tệ, Á quân 15.000 Đài tệ, Quý quân 10.000 Đài tệ, giải Khuyến khích mỗi giải 3.000 Đài tệ; đồng thời trao cúp hoặc huy chương theo thứ hạng." },
+                { q: "Nhận giải có cần nộp thuế không?", a: "Có, thực hiện theo các quy định liên quan của pháp luật thuế Trung Hoa Dân Quốc." },
+                { q: "Nếu bị phát hiện hát thay, mạo danh, chỉnh âm hoặc hậu kỳ vi phạm thì sẽ thế nào?", a: "Ban tổ chức có quyền lập tức hủy tư cách tham gia; nếu được xác minh là vi phạm sau khi trao giải, ban tổ chức sẽ hủy tư cách đạt giải và thu hồi toàn bộ tiền thưởng cùng cúp/huy chương, về nguyên tắc sẽ không bổ sung người thay thế." },
+                { q: "Ban tổ chức có sử dụng hình ảnh, giọng nói hoặc video của tôi không?", a: "Có. Thí sinh đồng ý để ban tổ chức và các đơn vị liên kết quay phim, chụp ảnh trong thời gian diễn ra hoạt động, đồng thời có thể sử dụng hình ảnh, giọng nói và phần biểu diễn của thí sinh trong các nền tảng nội bộ, ấn phẩm đối ngoại, tài liệu tuyên truyền và các hoạt động quảng bá liên quan." },
+                { q: "Nếu thể lệ hoạt động có cập nhật sau này thì xem ở đâu?", a: "Lấy trang web chính thức làm chuẩn, sẽ không gửi thông báo riêng từng người." },
+                { q: "Nếu có vấn đề thắc mắc thì liên hệ ai?", a: "Hộp thư Q&A: service@asevoice.org\n\nNhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nNhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nCông ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nCông ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)" }
             ]
         }
     }
