@@ -64,7 +64,14 @@ const translations = {
                 {
                     date: "7/8",
                     event: "公告決賽名單",
-                    details: "錄取名額：華語組與外語組各取前 10 名，共 20 名晉級決賽。"
+                    details: (
+                        <span>
+                            錄取名額：華語組與外語組各取前 10 名，共 20 名晉級決賽。{'\n'}
+                            <span className="inline-block mt-3 font-heading font-bold bg-dark text-white px-3 py-1 border-2 border-dark text-sm md:text-base tracking-wide shadow-[3px_3px_0_0_rgba(26,26,26,1)] transform hover:-translate-y-1 transition-transform">
+                                📢 決賽入圍名單將於本網站首頁公告
+                            </span>
+                        </span>
+                    )
                 },
                 {
                     date: "7/18 - 8/22",
@@ -264,7 +271,14 @@ const translations = {
                 {
                     date: "Jul 8",
                     event: "Finalists Announced",
-                    details: "Quota: Top 10 from each category, totaling 20 finalists advancing to the Grand Finals."
+                    details: (
+                        <span>
+                            Quota: Top 10 from each category, totaling 20 finalists advancing to the Grand Finals.{'\n'}
+                            <span className="inline-block mt-3 font-heading font-bold bg-dark text-white px-3 py-1 border-2 border-dark text-sm md:text-base tracking-wide shadow-[3px_3px_0_0_rgba(26,26,26,1)] transform hover:-translate-y-1 transition-transform">
+                                📢 The list of finalists will be officially announced on this website
+                            </span>
+                        </span>
+                    )
                 },
                 {
                     date: "Jul 18 - Aug 22",
@@ -464,7 +478,14 @@ const translations = {
                 {
                     date: "8/7",
                     event: "Công bố danh sách Chung kết",
-                    details: "Tuyển chọn: Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn ra top 10 thí sinh đứng đầu, tổng cộng có 20 thí sinh được lọt vào Vòng Chung kết."
+                    details: (
+                        <span>
+                            Tuyển chọn: Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn ra top 10 thí sinh đứng đầu, tổng cộng có 20 thí sinh được lọt vào Vòng Chung kết.{'\n'}
+                            <span className="inline-block mt-3 font-heading font-bold bg-dark text-white px-3 py-1 border-2 border-dark text-sm md:text-base tracking-wide shadow-[3px_3px_0_0_rgba(26,26,26,1)] transform hover:-translate-y-1 transition-transform">
+                                📢 Danh sách thí sinh vào Chung kết sẽ được công bố chính thức trên trang web này
+                            </span>
+                        </span>
+                    )
                 },
                 {
                     date: "18/7 - 22/8",
