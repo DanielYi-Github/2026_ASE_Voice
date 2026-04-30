@@ -38,7 +38,13 @@ const translations = {
             purpose: "活動宗旨",
             purposeDesc: "秉持日月光文教基金會「宏揚文化、發展社會教育、培養藝文人才」之宗旨，與集團「社會共融、價值共創」之永續理念。本比賽期望透過音樂的溫暖力量促進交流，為員工提供展現歌唱才華的舞台，藉由正當休閒娛樂活動展現企業活力、增進同仁身心健康，並深化職場中的人際共融與企業向心力。",
             groups: "參賽資格與組別",
-            groupsDesc: "【參賽資格】\n- 限日月光投資控股股份有限公司旗下之事業體在職職員均可報名參加。\n- 2025年冠亞軍及佳作選手與2024年冠亞軍，不得報名此屆賽事。\n\n【競賽組別】(本比賽均採個人賽)\n- 華語組：國語、台語、客家、粵語 (限額 200 組)\n- 外語組：英語與其他語言 (限額 200 組)",
+            groupsDesc: (
+                <span>
+                    {"【參賽資格】\n- 限日月光投資控股股份有限公司旗下之事業體在職職員均可報名參加。\n"}
+                    <span className="text-sm text-gray-500 inline-block">* 註記：2025年冠亞軍及佳作選手與2024年冠亞軍，不得報名此屆賽事。</span>
+                    {"\n\n【競賽組別】(本比賽均採個人賽)\n- 華語組：國語、台語、客家、粵語 (限額 200 組)\n- 外語組：英語與其他語言 (限額 200 組)"}
+                </span>
+            ),
             timeline: "完整賽制與時程",
             timelineItems: [
                 {
@@ -245,7 +251,13 @@ const translations = {
             purpose: "Event Purpose",
             purposeDesc: "In upholding the mission of the ASE Cultural & Educational Foundation — \"promoting culture, advancing social education, and nurturing artistic talent\" — and the Group's sustainability philosophy of \"social inclusion and shared value creation,\" this competition aims to foster communication through the warm power of music, provide employees with a stage to showcase their singing talents, demonstrate corporate vitality through wholesome recreational activities, promote the physical and mental well-being of employees, and deepen interpersonal inclusion and corporate cohesion in the workplace.",
             groups: "Eligibility & Categories",
-            groupsDesc: "[Eligibility]\n- Open to current employees of ASE Technology Holding subsidiaries.\n- 2024/2025 Champions and Runners-up (and 2025 Merit winners) may not participate.\n\n[Categories] (Individual entries only)\n- Mandarin Group: Mandarin, Taiwanese, Hakka, Cantonese (Limit: 200 entries)\n- Foreign Language Group: English & Others (Limit: 200 entries)",
+            groupsDesc: (
+                <span>
+                    {"[Eligibility]\n- Open to current employees of ASE Technology Holding subsidiaries.\n"}
+                    <span className="text-sm text-gray-500 inline-block">* Note: 2024/2025 Champions and Runners-up (and 2025 Merit winners) may not participate.</span>
+                    {"\n\n[Categories] (Individual entries only)\n- Mandarin Group: Mandarin, Taiwanese, Hakka, Cantonese (Limit: 200 entries)\n- Foreign Language Group: English & Others (Limit: 200 entries)"}
+                </span>
+            ),
             timeline: "Competition Formats & Timeline",
             timelineItems: [
                 {
@@ -452,7 +464,13 @@ const translations = {
             purpose: "Mục đích",
             purposeDesc: "Nêu cao tôn chỉ \"Hoằng dương văn hóa, Phát triển giáo dục xã hội, Bồi dưỡng nhân tài nghệ thuật\" của Quỹ Văn hóa và Giáo dục ASE, cùng với triết lý phát triển bền vững \"Hòa nhập xã hội, Cùng nhau sáng tạo giá trị\" của Tập đoàn. Cuộc thi này kỳ vọng thông qua sức mạnh ấm áp của âm nhạc để thúc đẩy giao lưu, tạo sân chơi cho nhân viên thể hiện tài năng ca hát. Qua các hoạt động giải trí lành mạnh để thể hiện sức sống của doanh nghiệp, nâng cao sức khỏe thể chất và tinh thần cho đồng nghiệp, cũng như làm sâu sắc thêm sự gắn kết nhân sự trong môi trường làm việc và tinh thần hướng về doanh nghiệp.",
             groups: "Đối tượng & Bảng",
-            groupsDesc: "[Đối tượng tham gia]\n- Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị sự nghiệp trực thuộc Công ty Cổ phần Đầu tư Công nghiệp Công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia.\n- Quán quân, Á quân, và Thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay.\n\n[Bảng thi đấu] (hoàn toàn là thi đấu cá nhân)\n- Bảng Tiếng Hoa: Tiếng Phổ thông, Tiếng Đài Loan, Tiếng Khách Gia, Tiếng Quảng Đông (Giới hạn 200 lượt)\n- Bảng Ngoại ngữ: Tiếng Anh và các ngôn ngữ khác (Giới hạn 200 lượt)",
+            groupsDesc: (
+                <span>
+                    {"[Đối tượng tham gia]\n- Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị sự nghiệp trực thuộc Công ty Cổ phần Đầu tư Công nghiệp Công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia.\n"}
+                    <span className="text-sm text-gray-500 inline-block">* Lưu ý: Quán quân, Á quân, và Thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay.</span>
+                    {"\n\n[Bảng thi đấu] (hoàn toàn là thi đấu cá nhân)\n- Bảng Tiếng Hoa: Tiếng Phổ thông, Tiếng Đài Loan, Tiếng Khách Gia, Tiếng Quảng Đông (Giới hạn 200 lượt)\n- Bảng Ngoại ngữ: Tiếng Anh và các ngôn ngữ khác (Giới hạn 200 lượt)"}
+                </span>
+            ),
             timeline: "Hình thức và Thời gian",
             timelineItems: [
                 {
