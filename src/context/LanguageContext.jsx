@@ -108,7 +108,7 @@ const translations = {
                             <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
                                 📌 決賽選手專屬支援：{'\n'}
                                 入圍決賽之選手，公司將統一安排公假前往高雄總場參賽。凡至高雄現場參賽之選手，主辦單位將提供以下專屬補助與支援：{'\n'}
-                                1. 制裝費補貼{'\n'}
+                                1. 治裝費補貼{'\n'}
                                 2. 專業造型與美妝服務{'\n'}
                                 3. 樂團現場彩排{'\n'}
                                 4. 交通與相關差旅補助
