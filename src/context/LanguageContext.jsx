@@ -129,7 +129,7 @@ const translations = {
                 foreign: "外語組獎項"
             },
             rulesAndObligations: "權利與義務 / 注意事項",
-            rulesDesc: "【著作權與合法性擔保】影片中嚴禁使用未經授權之商業 MV、伴奏。決賽演出若含大會指導之改編，版權歸主辦方所有。\n【肖像權授權】參賽者同意授權主辦方於活動期間錄影攝影，並同意永久無償授權內部平台(如GoTube)或外宣使用其肖像與聲音。\n【個資聲明】參賽者報名即同意個資於活動特定目的內合理使用。\n【公平性與違規】若查出冒名頂替、代唱、清唱過度後製，將立即取消資格。若已頒獎將追回全數獎金與獎盃。\n【不可抗力】若遇天災或疫情，主辦單位保留修改、變更、暫停延遲活動之最終權利。",
+            rulesDesc: "【著作權與合法性擔保】影片中嚴禁使用未經授權之商業 MV、伴奏。決賽演出若含大會指導之改編，版權歸主辦方所有。\n【肖像權授權】參賽者同意授權主辦方於活動期間錄影攝影，並同意永久無償授權內部平台(如GoTube)或外宣使用其肖像與聲音。\n【個資聲明】參賽者報名即同意個資於活動特定目的內合理使用。\n【公平性與違規】若查出冒名頂替、代唱、清唱過度後製，將立即取消資格。若已頒獎將追回全數獎金與獎盃。\n【不可抗力】若遇天災或疫情，主辦單位保留修改、變更、暫停延遲活動之最終權利。\n【原曲參考】填寫報名表過程中，原曲參考的 YouTube 連結將作為初賽評審老師參考依據，以及決賽伴奏之版本。",
             prizesList: [
                 { title: "冠軍 (1名)", amount: "NT$ 20,000", extra: "獎盃乙座" },
                 { title: "亞軍 (1名)", amount: "NT$ 15,000", extra: "獎盃乙座" },
@@ -192,12 +192,21 @@ const translations = {
                 { q: "比賽是個人還是團體？", a: "本比賽採個人賽。" },
                 { q: "有哪些組別？", a: "分為華語組與外語組；華語組為國語、台語、客家、粵語，外語組為英語與其他語言。" },
                 { q: "報名時間到什麼時候？", a: "2026/6/1（一）至 2026/6/21（日）。" },
-                { q: "要怎麼報名？", a: "採個人線上報名，請使用官方網站：https://asevoice.org" },
+                { q: "要怎麼報名？", a: (
+                    <span>採個人線上報名，請使用官方網站：<a href="https://asevoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://asevoice.org</a></span>
+                ) },
                 { q: "初賽需要到現場嗎？", a: "不用，初賽為線上影片審核。" },
                 { q: "初賽影片要怎麼錄？", a: "錄製自選曲的主歌、副歌各一遍，影片總時長 60 至 90 秒，並須正面拍攝，清晰露出臉部、嘴形、半身及腰部。" },
                 { q: "初賽影片可以有伴奏、伴唱、修音或後製嗎？", a: "不可以，初賽影片必須為純清唱，嚴禁伴奏、擴音、伴唱及數位修音等後製處理。" },
                 { q: "初賽和決賽可以換歌嗎？", a: "不可以，初、決賽皆為同一首曲目，不得更改。" },
-                { q: "初賽線上影片有參考範例嗎？", a: "有的。\n中文範例：https://youtu.be/4mBwgx77t4I\n英文範例：https://youtu.be/K7x4SSkpk8A\n越文範例：https://youtu.be/nlEOeIwtYhs" },
+                { q: "初賽線上影片有參考範例嗎？", a: (
+                    <span>
+                        有的。{'\n'}
+                        中文範例：<a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
+                        英文範例：<a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
+                        越文範例：<a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYhs</a>
+                    </span>
+                ) },
                 { q: "什麼時候公布決賽名單？", a: "2026/7/8（三）。" },
                 { q: "會有多少人晉級決賽？", a: "華語組與外語組各取前 10 名，共 20 名。" },
                 { q: "決賽在哪裡、什麼時候？", a: "2026/9/11（五）14:30–17:00，於日月光高雄廠 K23 1F 國際會議廳舉行。" },
@@ -342,7 +351,7 @@ const translations = {
                 foreign: "Foreign Language Category Prizes"
             },
             rulesAndObligations: "Rights, Obligations & Notices",
-            rulesDesc: "[Copyright] Strict ban on unauthorized commercial MVs/backing tracks. Performance copyrights adapted with coach advice belong to organizers.\n[Portrait Rights] Participants authorize permanent, regional-free use of recordings and imaging for internal (e.g., GoTube) and external promo uses.\n[Data Privacy] Registration counts as consent to use personal data specifically for this event's operations.\n[Fairness] Identity fraud, lip-syncing, or vocal editing in auditions will result in immediate disqualification and prize revocation.\n[Force Majeure] Organizers reserve the right to suspend or modify the event due to unforeseen natural disasters or pandemics.",
+            rulesDesc: "[Copyright] Strict ban on unauthorized commercial MVs/backing tracks. Performance copyrights adapted with coach advice belong to organizers.\n[Portrait Rights] Participants authorize permanent, regional-free use of recordings and imaging for internal (e.g., GoTube) and external promo uses.\n[Data Privacy] Registration counts as consent to use personal data specifically for this event's operations.\n[Fairness] Identity fraud, lip-syncing, or vocal editing in auditions will result in immediate disqualification and prize revocation.\n[Force Majeure] Organizers reserve the right to suspend or modify the event due to unforeseen natural disasters or pandemics.\n[Reference Track] The YouTube link submitted during registration will serve as a reference for the preliminary judges and as the version for the finals accompaniment.",
             prizesList: [
                 { title: "Champion", amount: "NT$ 20,000", extra: "Trophy" },
                 { title: "Runner-up", amount: "NT$ 15,000", extra: "Trophy" },
@@ -405,12 +414,21 @@ const translations = {
                 { q: "Is the competition individual or group-based?", a: "This competition is an individual contest." },
                 { q: "What categories are available?", a: "The competition is divided into Mandarin and Foreign Language categories. The Mandarin category includes Mandarin, Taiwanese, Hakka, and Cantonese; the Foreign Language category includes English and other languages." },
                 { q: "What is the registration period?", a: "From June 1, 2026 (Monday) to June 21, 2026 (Sunday)." },
-                { q: "How do I register?", a: "For individual online registration, please use the official website: https://asevoice.org" },
+                { q: "How do I register?", a: (
+                    <span>For individual online registration, please use the official website: <a href="https://asevoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://asevoice.org</a></span>
+                ) },
                 { q: "Is on-site attendance required for the preliminary round?", a: "No, the preliminary round is conducted through online video review." },
                 { q: "How should the preliminary video be recorded?", a: "Record one verse and one chorus of a self-selected song. The total video duration should be 60 to 90 seconds. The video must be filmed from the front, clearly showing the face, mouth movements, upper body, and waist." },
                 { q: "Can the preliminary video include accompaniment, backing vocals, audio enhancement, or post-production?", a: "No. The preliminary video must be pure a cappella. Any accompaniment, amplification, backing vocals, or digital audio enhancement and post-production are strictly prohibited." },
                 { q: "Can I change the song between the preliminary round and the finals?", a: "No. The same song must be used for both the preliminary round and the finals, and it cannot be changed." },
-                { q: "Are there any reference examples for the preliminary round online video?", a: "Yes.\nChinese Example: https://youtu.be/4mBwgx77t4I\nEnglish Example: https://youtu.be/K7x4SSkpk8A\nVietnamese Example: https://youtu.be/nlEOeIwtYhs" },
+                { q: "Are there any reference examples for the preliminary round online video?", a: (
+                    <span>
+                        Yes.{'\n'}
+                        Chinese Example: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
+                        English Example: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
+                        Vietnamese Example: <a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYhs</a>
+                    </span>
+                ) },
                 { q: "When will the finalists be announced?", a: "July 8, 2026 (Wednesday)." },
                 { q: "How many participants will advance to the finals?", a: "The top 10 from each category (Mandarin and Foreign Language) will advance, for a total of 20 finalists." },
                 { q: "When and where will the finals be held?", a: "September 11, 2026 (Friday), from 14:30 to 17:00, ASE Kaohsiung Plant K23 1F International Conference Hall." },
@@ -422,7 +440,9 @@ const translations = {
                 { q: "Are prizes subject to tax?", a: "Yes, in accordance with the tax regulations of the Republic of China (Taiwan)." },
                 { q: "What happens if cheating, impersonation, audio enhancement, or other violations are discovered?", a: "The organizer reserves the right to immediately disqualify the participant. If violations are confirmed after awards have been given, the awards will be revoked, and all prize money and trophies (or medals) must be returned. Vacancies will generally not be filled." },
                 { q: "Will the organizer use my photos, voice, or video?", a: "Yes. Participants agree that the organizer and its affiliated companies may record and photograph during the event, and may use images, voice, and performance footage containing the participant for internal platforms, external publications, promotional materials, and event-related publicity." },
-                { q: "Where can I check for updates to the event rules?", a: "Please refer to the official website at https://asevoice.org for any updates to the event rules. No individual notifications will be provided." },
+                { q: "Where can I check for updates to the event rules?", a: (
+                    <span>Please refer to the official website at <a href="https://asevoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://asevoice.org</a> for any updates to the event rules. No individual notifications will be provided.</span>
+                ) },
                 { q: "Who should I contact if I have questions?", a: "Q&A Email: service@asevoice.org\n\nASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nSPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nUSI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)" }
             ]
         }
@@ -466,7 +486,7 @@ const translations = {
             groups: "Đối tượng & Bảng",
             groupsDesc: (
                 <span>
-                    {"[Đối tượng tham gia]\n- Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị sự nghiệp trực thuộc Công ty Cổ phần Đầu tư Công nghiệp Công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia.\n"}
+                    {"[Đối tượng tham gia]\n- Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị xí nghiệp trực thuộc Công ty cổ phần đầu tư công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia.\n"}
                     <span className="text-sm text-gray-500 inline-block">* Lưu ý: Quán quân, Á quân, và Thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay.</span>
                     {"\n\n[Bảng thi đấu] (hoàn toàn là thi đấu cá nhân)\n- Bảng Tiếng Hoa: Tiếng Phổ thông, Tiếng Đài Loan, Tiếng Khách Gia, Tiếng Quảng Đông (Giới hạn 200 lượt)\n- Bảng Ngoại ngữ: Tiếng Anh và các ngôn ngữ khác (Giới hạn 200 lượt)"}
                 </span>
@@ -555,7 +575,7 @@ const translations = {
                 foreign: "Giải Bảng Ngoại ngữ"
             },
             rulesAndObligations: "Quyền Lợi, Nghĩa Vụ & Lưu Ý",
-            rulesDesc: "[Bản quyền] Tuyệt đối nghiêm cấm sử dụng MV/nhạc đệm thương mại không được ủy quyền. Quyền tác giả cải biên tại Vòng Chung kết theo tư vấn của giáo viên thuộc Đơn vị Tổ chức.\n[Quyền Hình Ảnh] Thí sinh ủy quyền vô điều kiện trọn đời tài liệu ghi hình cho Đơn vị Quản lý để sử dụng cho nền tảng nội bộ (như GoTube) và quảng bá đối ngoại.\n[Bảo Vệ Thông Tin] Khi đăng ký, thí sinh đồng ý Đơn vị tổ chức sử dụng thông tin cá nhân trong phạm vi phục vụ hoạt động cuộc thi.\n[Tính công bằng] Nghiêm cấm các trường hợp nhờ người hát thay, hát nhép, hậu kỳ chỉnh sửa giọng; nếu phát hiện sau Lễ Trao Giải, sẽ lập tức thu hồi toàn bộ tiền thưởng và cúp.\n[Bất khả kháng] Trong các trường hợp thiên tai hay dịch bệnh, Ban tổ chức bảo lưu quyền thay đổi, tạm dừng hoặc hủy bỏ cuộc thi.",
+            rulesDesc: "[Bản quyền] Tuyệt đối nghiêm cấm sử dụng MV/nhạc đệm thương mại không được ủy quyền. Quyền tác giả cải biên tại Vòng Chung kết theo tư vấn của giáo viên thuộc Đơn vị Tổ chức.\n[Quyền Hình Ảnh] Thí sinh ủy quyền vô điều kiện trọn đời tài liệu ghi hình cho Đơn vị Quản lý để sử dụng cho nền tảng nội bộ (như GoTube) và quảng bá đối ngoại.\n[Bảo Vệ Thông Tin] Khi đăng ký, thí sinh đồng ý Đơn vị tổ chức sử dụng thông tin cá nhân trong phạm vi phục vụ hoạt động cuộc thi.\n[Tính công bằng] Nghiêm cấm các trường hợp nhờ người hát thay, hát nhép, hậu kỳ chỉnh sửa giọng; nếu phát hiện sau Lễ Trao Giải, sẽ lập tức thu hồi toàn bộ tiền thưởng và cúp.\n[Bất khả kháng] Trong các trường hợp thiên tai hay dịch bệnh, Ban tổ chức bảo lưu quyền thay đổi, tạm dừng hoặc hủy bỏ cuộc thi.\n[Bản gốc tham khảo] Link YouTube được cung cấp trong quá trình đăng ký sẽ được dùng làm tài liệu tham khảo cho Ban giám khảo Vòng Sơ loại và làm phiên bản nhạc đệm cho Vòng Chung kết.",
             prizesList: [
                 { title: "Quán quân (1)", amount: "NT$ 20,000", extra: "Cúp lưu niệm" },
                 { title: "Á quân (1)", amount: "NT$ 15,000", extra: "Cúp lưu niệm" },
@@ -613,17 +633,26 @@ const translations = {
             contactTitle: "Còn Thắc Mắc? Liên Hệ Chúng Tôi",
             contactInfo: "Hộp thư Q&A: service@asevoice.org\n\nNhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nNhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nCông ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nCông ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
             items: [
-                { q: "Ai có thể đăng ký tham gia?", a: "Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị sự nghiệp trực thuộc Công ty Cổ phần Đầu tư Công nghiệp Công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia." },
+                { q: "Ai có thể đăng ký tham gia?", a: "Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị xí nghiệp trực thuộc Công ty cổ phần đầu tư công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia." },
                 { q: "Những ai không được đăng ký tham gia?", a: "Quán quân, Á quân, và thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay." },
                 { q: "Cuộc thi là thi cá nhân hay theo nhóm?", a: "Cuộc thi này hoàn toàn là thi đấu cá nhân." },
                 { q: "Có những bảng thi nào?", a: "Cuộc thi được chia thành Bảng Tiếng Hoa và Bảng Ngoại ngữ; Bảng Tiếng Hoa gồm Tiếng Phổ thông (Quan Thoại), Tiếng Đài Loan, Tiếng Khách Gia (Hakka), và Tiếng Quảng Đông; Bảng Ngoại ngữ gồm Tiếng Anh và các ngôn ngữ khác." },
                 { q: "Thời gian đăng ký đến khi nào?", a: "Từ ngày 1/6/2026 (Thứ Hai) đến ngày 21/6/2026 (Chủ Nhật)." },
-                { q: "Đăng ký như thế nào?", a: "Áp dụng đăng ký trực tuyến cá nhân, vui lòng sử dụng trang web chính thức: https://asevoice.org" },
+                { q: "Đăng ký như thế nào?", a: (
+                    <span>Áp dụng đăng ký trực tuyến cá nhân, vui lòng sử dụng trang web chính thức: <a href="https://asevoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://asevoice.org</a></span>
+                ) },
                 { q: "Vòng Sơ loại có cần đến hiện trường không?", a: "Không cần, Vòng Sơ loại được xét duyệt qua video trực tuyến." },
                 { q: "Video Vòng Sơ loại phải quay như thế nào?", a: "Hát phần phiên khúc và điệp khúc của bài hát tự chọn, mỗi phần một lần; tổng thời lượng video từ 60 đến 90 giây, đồng thời phải quay ở góc chính diện, thấy rõ khuôn mặt, khẩu hình, nửa thân trên và eo." },
                 { q: "Video Vòng Sơ loại có được dùng nhạc đệm, bè, chỉnh âm hoặc hậu kỳ không?", a: "Không được. Video Vòng Sơ loại phải là hát mộc hoàn toàn; nghiêm cấm sử dụng nhạc đệm, loa khuếch đại, hát bè hoặc các xử lý chỉnh âm kỹ thuật số và hậu kỳ." },
                 { q: "Có thể đổi bài hát giữa Vòng Sơ loại và Vòng Chung kết không?", a: "Không được. Bài hát ở Vòng Sơ loại và Vòng Chung kết phải là cùng một bài, không được thay đổi." },
-                { q: "Có video mẫu tham khảo cho Vòng Sơ loại trực tuyến không?", a: "Có.\nVí dụ tiếng Trung: https://youtu.be/4mBwgx77t4I\nVí dụ tiếng Anh: https://youtu.be/K7x4SSkpk8A\nVí dụ tiếng Việt: https://youtu.be/nlEOeIwtYhs" },
+                { q: "Có video mẫu tham khảo cho Vòng Sơ loại trực tuyến không?", a: (
+                    <span>
+                        Có.{'\n'}
+                        Ví dụ tiếng Trung: <a href="https://youtu.be/4mBwgx77t4I" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/4mBwgx77t4I</a>{'\n'}
+                        Ví dụ tiếng Anh: <a href="https://youtu.be/K7x4SSkpk8A" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/K7x4SSkpk8A</a>{'\n'}
+                        Ví dụ tiếng Việt: <a href="https://youtu.be/nlEOeIwtYhs" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://youtu.be/nlEOeIwtYhs</a>
+                    </span>
+                ) },
                 { q: "Khi nào công bố danh sách vào Vòng Chung kết?", a: "Ngày 8/7/2026 (Thứ Tư)." },
                 { q: "Sẽ có bao nhiêu người được vào Vòng Chung kết?", a: "Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn top 10, tổng cộng 20 thí sinh vào Vòng Chung kết." },
                 { q: "Vòng Chung kết được tổ chức ở đâu, khi nào?", a: "Từ 14:30 đến 17:00 ngày 11/9/2026 (Thứ Sáu), tổ chức tại Hội trường Quốc tế Tầng 1, Tòa nhà K23, Nhà máy ASE Cao Hùng." },
