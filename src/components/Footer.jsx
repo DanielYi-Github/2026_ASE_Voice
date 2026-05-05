@@ -6,7 +6,7 @@ const Footer = () => {
     const { lang, t } = useLanguage();
 
     return (
-        <footer className="bg-dark text-white pt-16 pb-8 px-4 md:px-8">
+        <footer id="footer" className="bg-dark text-white pt-16 pb-8 px-4 md:px-8">
             <div className="container mx-auto max-w-6xl">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12 pb-12 border-b-2 border-gray-700">
 
