@@ -1,131 +1,84 @@
-# 2026 ASE Voice 日月光集團好聲音 官方網站
+# 🎤 2026 ASE Voice 日月光集團好聲音 官方網站
 
-本專案為「2026 年首次全國性日月光集團歌唱比賽」的官方活動網站，以 React + Vite + Tailwind CSS v4 開發，具備完整的 RWD（手機/電腦皆完美呈現）與中英雙語系自動偵測切換功能。
+![Banner](https://img.shields.io/badge/ASE-VOICE-FFC107?style=for-the-badge&logo=music)
+![Version](https://img.shields.io/badge/Version-1.2.0-blue?style=for-the-badge)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=for-the-badge&logo=tailwindcss)
 
-## 📋 Tech Stack
-
-| 分類       | 工具                          |
-| ---------- | ----------------------------- |
-| 框架       | React 19                      |
-| 建置工具   | Vite 7                        |
-| 樣式       | Tailwind CSS v4               |
-| 動畫       | Framer Motion                 |
-| 圖示       | Lucide React                  |
-| 部署       | GitHub Pages (GitHub Actions) |
+本專案為「2026 年首次全國性日月光集團歌唱比賽」的官方活動網站。採用 **React 19 + Vite 7 + Tailwind CSS v4** 開發，打造極具視覺衝擊力的 Neo-Brutalism (新野獸主義) 設計風格，並具備完整的 RWD 與三語系（中/英/越）自動偵測切換功能。
 
 ---
 
-## 🚀 本地開發
+## ✨ 核心特色
+
+- 🚀 **極致效能**：基於 Vite 7 構建，實現秒開的載入體驗。
+- 🎨 **前衛設計**：採用 Neo-Brutalism 風格，結合豐富的微交互動畫 (Framer Motion)。
+- 🌍 **多國語系**：支援 **中文、英文、越南文**，自動偵測瀏覽器語言並提供無縫切換。
+- 📅 **智能狀態控制**：報名按鈕會根據系統時間自動切換狀態：
+  - **尚未開放**：顯示「6 月 1 號開放報名」並提供提示。
+  - **報名期間**：動態高亮「即刻報名」導向報名系統。
+  - **報名結束**：自動切換為「報名時間已過，敬請期待入圍名單」。
+- 📱 **全平台支援**：針對手機與桌面端進行深度介面優化。
+
+---
+
+## 📋 技術堆疊
+
+| 類別 | 工具 | 描述 |
+| :--- | :--- | :--- |
+| **核心框架** | React 19 | 最新版本的 React，提供更優異的渲染效能。 |
+| **建置工具** | Vite 7 | 閃電般的熱更新與編譯速度。 |
+| **樣式解決方案** | Tailwind CSS v4 | 最前衛的 CSS 框架，實現極速開發與高度定製。 |
+| **動畫效果** | Framer Motion | 驅動網站中所有精緻的物理性動畫。 |
+| **圖示庫** | Lucide React | 清晰、美觀且具一致性的向量圖示。 |
+| **部署** | GitHub Pages | 透過 GitHub Actions 實現 CI/CD 自動化部署。 |
+
+---
+
+## 🛠️ 本地開發
 
 ```bash
-# 1. 安裝套件
+# 1. 克隆專案
+git clone https://github.com/DanielYi-Github/2026_ASE_Voice.git
+
+# 2. 安裝依賴
 npm install
 
-# 2. 啟動開發伺服器
+# 3. 啟動開發伺服器
 npm run dev
-
-# 3. 建置正式版（選用）
-npm run build
-
-# 4. 預覽正式版（選用）
-npm run preview
 ```
 
 ---
 
-## 🔄 GitHub Actions 自動部署 (CI/CD)
+## 🔄 自動化部署 (CI/CD)
 
-本專案使用 **GitHub 官方推薦**的 Pages 部署方式（位於 `.github/workflows/deploy.yml`），具備以下特色：
-
-- ✅ 使用 `actions/deploy-pages@v4` 官方 Action（更安全、更穩定）
-- ✅ 支援手動觸發部署（`workflow_dispatch`）
-- ✅ 並行部署保護（新部署會自動取消舊的進行中部署）
-- ✅ Build 與 Deploy 拆分為獨立 Job，清晰可追蹤
-
-### 自動部署流程：
-
-1. 將變更 Push 到 GitHub 的 `main` 分支
-2. GitHub Actions 自動觸發 `Deploy to GitHub Pages` 工作流程
-3. 系統自動安裝套件並執行 `npm run build`
-4. 建置產物自動上傳至 GitHub Pages
-
-### 首次啟用 GitHub Pages：
-
-1. 前往本專案的 GitHub 頁面，點選 **Settings** > 左側 **Pages**
-2. 在 **Build and deployment** 區塊中：
-   - **Source** 選擇 `GitHub Actions`（⚠️ 注意：不是選  `Deploy from a branch`）
-3. 回到 **Actions** 分頁，手動觸發一次工作流程或 Push 一次程式碼
-4. 等待約 1~2 分鐘，網站即自動上線！✨
-
-### 手動觸發部署：
-
-如需手動部署（不需要 Push 程式碼），可以：
-1. 前往 GitHub 頁面 > **Actions** 分頁
-2. 左側選擇 **Deploy to GitHub Pages**
-3. 點擊右側 **Run workflow** > **Run workflow**
-
-> **🛑 網域路徑配置注意：**
-> - 目前 `vite.config.js` 內已設定 `base: '/2026_ASE_Voice/'`，適用於 `https://DanielYi-Github.github.io/2026_ASE_Voice/` 部署路徑。
-> - 若改為自訂網域或根目錄部署，請將 `base` 改為 `'/'`。
+本專案透過 `.github/workflows/deploy.yml` 實現自動化流程：
+1. **Push to main**：當程式碼推送到主分支。
+2. **Auto Build**：系統自動執行 `npm run build`。
+3. **Auto Deploy**：建置產物自動推送至 GitHub Pages 網域。
 
 ---
 
-## 🔒 .gitignore 隱私與安全管控
+## 📂 專案結構精要
 
-為保護專案安全與節省 Repository 空間，`.gitignore` 已設定排除以下類型檔案：
-
-| 類別                       | 排除項目                                                              |
-| -------------------------- | --------------------------------------------------------------------- |
-| 📦 套件與編譯              | `node_modules/`, `dist/`, `build/`, `.vite/`                          |
-| 🔑 環境變數與金鑰          | `.env`, `.env.*`, `*.pem`, `*.key`（保留 `.env.example` 作為範本）    |
-| 📝 日誌                    | `*.log`, `npm-debug.log*` 系列                                        |
-| 💻 作業系統產物            | `.DS_Store`, `Thumbs.db`, `._*`, `Desktop.ini`                        |
-| 🔧 編輯器/IDE             | `.vscode/*`, `.idea/`, `*.sw?`（保留 `extensions.json`, `settings.json`） |
-| 📄 辦公文件                | `*.docx`, `*.xlsx`, `*.pptx`, `*.pdf` 等                              |
-| 📸 非專案圖片              | `aTalk-*` 等通訊軟體截圖                                              |
-| 🗜️ 壓縮檔                 | `*.zip`, `*.tar.gz`, `*.rar`                                          |
-
-> **💡 小提醒：** 專案用圖片請統一放在 `public/` 或 `src/assets/` 目錄下。
-
----
-
-## 📁 專案結構
-
-```
-形象網站/
-├── .github/workflows/     # GitHub Actions 自動部署設定
-│   └── deploy.yml
-├── public/                # 靜態資源 (不經過 Vite 處理)
-│   ├── hero-mic.png
-│   ├── pure-mic.png
-│   └── vite.svg
-├── src/
-│   ├── assets/            # 需經過 Vite 處理的資源
-│   ├── components/        # React 元件
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── InfoSection.jsx
-│   │   ├── Navbar.jsx
-│   │   └── PastHighlights.jsx
-│   ├── context/           # React Context（語系切換）
-│   │   └── LanguageContext.jsx
-│   ├── App.jsx            # 主要應用元件
-│   ├── App.css            # App 樣式
-│   ├── index.css          # 全域樣式
-│   └── main.jsx           # 進入點
-├── .gitignore             # Git 排除規則
-├── index.html             # HTML 入口
-├── package.json           # 專案設定與依賴
-├── vite.config.js         # Vite 設定（含 base 路徑）
-├── tailwind.config.js     # Tailwind CSS 設定
-├── postcss.config.js      # PostCSS 設定
-└── eslint.config.js       # ESLint 設定
+```text
+src/
+├── assets/          # 視覺資源 (圖片、SVG)
+├── components/      # 重用組件 (Hero, Navbar, AnnouncementBoard...)
+├── context/         # 狀態管理 (語系切換邏輯)
+├── utils/           # 工具函式 (報名時間判斷邏輯)
+├── App.jsx          # 主要應用入口
+└── main.jsx         # 渲染進入點
 ```
 
 ---
 
 ## 📌 注意事項
 
-- 部署前請確認 `vite.config.js` 中的 `base` 路徑與您的 GitHub Repo 名稱一致
-- 機密資訊（API Key 等）務必使用 `.env` 管理，**絕對不要** commit 到版控
-- 辦公文件（簡章、企劃書等）請存放於獨立文件目錄，不要放入程式碼 Repo
+- **報名時間設定**：位於 `src/utils/registrationUtils.js`，如需修改請直接變更該處日期。
+- **語系資料**：所有文字內容統一管理於 `src/context/LanguageContext.jsx`。
+- **網域路徑**：`vite.config.js` 中的 `base` 需與 Repository 名稱一致。
+
+---
+
+© 2026 日月光集團聯合職工福利委員會 & 日月光文教基金會. All rights reserved.

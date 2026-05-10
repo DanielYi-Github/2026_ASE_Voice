@@ -4,6 +4,14 @@ const translations = {
     zh: {
         nav: {
             register: "即刻報名",
+            registrationNotStartedText: "6 月 1 號開放報名",
+            registrationNotStartedAlert: "報名尚未開始，請於 6月1號至6月21號開始報名。",
+            registrationEndedText: "報名時間已過，敬請期待入圍名單",
+            countdownTitle: "距離報名開始還有：",
+            days: "天",
+            hours: "時",
+            mins: "分",
+            secs: "秒",
             title: "日月光投控歌唱比賽",
             langSwitch: "EN"
         },
@@ -225,7 +233,15 @@ const translations = {
     },
     en: {
         nav: {
-            register: "Register",
+            register: "Register Now",
+            registrationNotStartedText: "Registration Opens Jun 1",
+            registrationNotStartedAlert: "Registration has not started yet. Please register between June 1 and June 21.",
+            registrationEndedText: "Registration Ended. Stay tuned for the finalists!",
+            countdownTitle: "REGISTRATION STARTS IN:",
+            days: "DAYS",
+            hours: "HRS",
+            mins: "MINS",
+            secs: "SECS",
             title: "Singing Competition",
             langSwitch: "中文"
         },
@@ -449,7 +465,15 @@ const translations = {
     },
     vi: {
         nav: {
-            register: "Đăng ký",
+            register: "Đăng ký ngay",
+            registrationNotStartedText: "Mở đăng ký vào ngày 1/6",
+            registrationNotStartedAlert: "Thời gian đăng ký chưa bắt đầu. Vui lòng đăng ký từ ngày 1/6 đến 21/6.",
+            registrationEndedText: "Thời gian đăng ký đã kết thúc. Hãy chờ đón danh sách lọt vào chung kết!",
+            countdownTitle: "THỜI GIAN CÒN LẠI ĐẾN KHI MỞ ĐĂNG KÝ:",
+            days: "NGÀY",
+            hours: "GIỜ",
+            mins: "PHÚT",
+            secs: "GIÂY",
             title: "Cuộc thi Giọng hát hay",
             langSwitch: "VN"
         },

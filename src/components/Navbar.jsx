@@ -1,9 +1,42 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Globe, ChevronDown } from 'lucide-react';
+import { getRegistrationStatus, REGISTRATION_STATUS } from '../utils/registrationUtils';
 
 const Navbar = () => {
     const { lang, setLanguage, t } = useLanguage();
+    const [status, setStatus] = useState(getRegistrationStatus());
+
+    useEffect(() => {
+        if (status === REGISTRATION_STATUS.BEFORE) {
+            const timer = setInterval(() => {
+                const currentStatus = getRegistrationStatus();
+                if (currentStatus !== REGISTRATION_STATUS.BEFORE) {
+                    setStatus(currentStatus);
+                    clearInterval(timer);
+                }
+            }, 1000);
+            return () => clearInterval(timer);
+        }
+    }, [status]);
+
+    const handleRegisterClick = (e) => {
+        if (status === REGISTRATION_STATUS.BEFORE) {
+            e.preventDefault();
+            alert(t.nav.registrationNotStartedAlert);
+        } else if (status === REGISTRATION_STATUS.ENDED) {
+            e.preventDefault();
+        }
+    };
+
+    const getButtonText = () => {
+        if (status === REGISTRATION_STATUS.BEFORE) return t.nav.registrationNotStartedText;
+        if (status === REGISTRATION_STATUS.ENDED) return t.nav.registrationEndedText;
+        return t.nav.register;
+    };
+
+    const isDisabled = status === REGISTRATION_STATUS.BEFORE || status === REGISTRATION_STATUS.ENDED;
+    const isEnded = status === REGISTRATION_STATUS.ENDED;
     const [isLangOpen, setIsLangOpen] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -66,12 +99,13 @@ const Navbar = () => {
                 </div>
 
                 <a
-                    href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
-                    target="_blank"
+                    href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
+                    target={isDisabled ? '_self' : '_blank'}
                     rel="noopener noreferrer"
-                    className="hidden md:inline-flex btn-brutal btn-primary px-4 py-2 text-sm"
+                    onClick={handleRegisterClick}
+                    className={`hidden md:inline-flex btn-brutal px-4 py-2 text-sm transition-all ${isDisabled ? 'bg-gray-500 border-gray-600 text-gray-200 cursor-not-allowed shadow-none' : 'btn-primary'}`}
                 >
-                    {t.nav.register}
+                    {getButtonText()}
                 </a>
             </div>
         </nav>

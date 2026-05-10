@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
 import AnnouncementBoard from './AnnouncementBoard';
+import RegistrationCountdown from './RegistrationCountdown';
+import { getRegistrationStatus, REGISTRATION_STATUS } from '../utils/registrationUtils';
 
 const Hero = () => {
     const { t, lang } = useLanguage();
+    const [status, setStatus] = useState(getRegistrationStatus());
+
+    const handleRegisterClick = (e) => {
+        if (status === REGISTRATION_STATUS.BEFORE) {
+            e.preventDefault();
+            // User requested unclickable/gray, so we can keep the alert or just let it do nothing.
+            // I'll keep the alert for UX clarity, but the cursor will be not-allowed.
+            alert(t.nav.registrationNotStartedAlert);
+        } else if (status === REGISTRATION_STATUS.ENDED) {
+            e.preventDefault();
+        }
+    };
+
+    const getButtonText = () => {
+        if (status === REGISTRATION_STATUS.BEFORE) return t.nav.registrationNotStartedText;
+        if (status === REGISTRATION_STATUS.ENDED) return t.nav.registrationEndedText;
+        return t.nav.register;
+    };
+
+    const isBefore = status === REGISTRATION_STATUS.BEFORE;
+    const isEnded = status === REGISTRATION_STATUS.ENDED;
+    const isDisabled = isBefore || isEnded;
 
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-start bg-[#FFC107] overflow-hidden pt-20 border-b-[6px] border-dark isolate">
@@ -169,28 +193,34 @@ const Hero = () => {
                             </motion.div>
                         </div>
 
-                        {/* 報名按鈕 */}
-                        <motion.div
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            className="flex justify-center"
-                        >
-                            <div className="group relative w-max">
-                                <div className="absolute -inset-2 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <a
-                                    href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="relative flex items-center justify-center bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-10 py-4 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] overflow-hidden"
-                                >
-                                    <div className="relative flex items-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
-                                        <span className="text-[1.8rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
-                                        <span className="text-[1.6rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">{t.nav.register}</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </motion.div>
+                        {/* 報名按鈕與倒數 */}
+                        <div className="flex flex-col items-center">
+                            <motion.div
+                                initial={{ y: 30, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.4 }}
+                                className="flex justify-center"
+                            >
+                                <div className="group relative w-max">
+                                    <div className={`absolute -inset-2 rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 ${isDisabled ? 'bg-gray-400' : 'bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF]'}`}></div>
+                                    <a
+                                        href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
+                                        target={isDisabled ? '_self' : '_blank'}
+                                        rel="noopener noreferrer"
+                                        onClick={handleRegisterClick}
+                                        className={`relative flex items-center justify-center px-10 py-4 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] overflow-hidden transition-all ${isDisabled ? 'bg-gray-500 cursor-not-allowed shadow-none border-gray-300' : 'bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF]'}`}
+                                    >
+                                        <div className="relative flex items-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
+                                            <span className={`text-[1.8rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>🎤</span>
+                                            <span className={`text-[1.6rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>{getButtonText()}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </motion.div>
+
+                            {/* 倒數計時組件 */}
+                            {isBefore && <RegistrationCountdown onFinish={() => setStatus(getRegistrationStatus())} />}
+                        </div>
 
                         {/* 公告板：直接接在按鈕後，無空白間距 */}
                         <motion.div
@@ -289,20 +319,26 @@ const Hero = () => {
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className="mt-12 lg:mt-16 flex flex-col items-start relative z-40 w-full"
                         >
-                            <div className="group relative w-max">
-                                <div className="absolute -inset-2 bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF] rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <a
-                                    href={`${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="relative flex items-center justify-center w-full bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] px-10 md:px-10 lg:px-14 py-4 md:py-5 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] hover:shadow-[0_12px_35px_rgba(0,195,255,1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-                                >
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>
-                                    <div className="relative flex items-center justify-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
-                                        <span className="text-[2rem] lg:text-[2.2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]">🎤</span>
-                                        <span className="text-[1.8rem] lg:text-[2rem] text-white leading-none drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)] pr-1">{t.nav.register}</span>
-                                    </div>
-                                </a>
+                            <div className="flex flex-col items-start w-full">
+                                <div className="group relative w-max">
+                                    <div className={`absolute -inset-2 rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 ${isDisabled ? 'bg-gray-400' : 'bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF]'}`}></div>
+                                    <a
+                                        href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
+                                        target={isDisabled ? '_self' : '_blank'}
+                                        rel="noopener noreferrer"
+                                        onClick={handleRegisterClick}
+                                        className={`relative flex items-center justify-center w-full px-10 md:px-10 lg:px-14 py-4 md:py-5 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] transition-all overflow-hidden ${isDisabled ? 'bg-gray-500 cursor-not-allowed shadow-none border-gray-300' : 'bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] hover:shadow-[0_12px_35px_rgba(0,195,255,1)] hover:-translate-y-1'}`}
+                                    >
+                                        {!isDisabled && <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>}
+                                        <div className="relative flex items-center justify-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
+                                            <span className={`text-[2rem] lg:text-[2.2rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>🎤</span>
+                                            <span className={`text-[1.8rem] lg:text-[2rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'} pr-1`}>{getButtonText()}</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                {/* 倒數計時組件 */}
+                                {isBefore && <RegistrationCountdown onFinish={() => setStatus(getRegistrationStatus())} />}
                             </div>
                         </motion.div>
                     </div>
