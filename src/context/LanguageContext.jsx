@@ -116,7 +116,7 @@ const translations = {
                     event: "活動總決賽 (現場演唱)",
                     details: (
                         <span>
-                            時間：14:30 - 17:00{'\n'}
+                            時間：9/11(五) 14:30 - 17:00{'\n'}
                             地點：日月光高雄廠 K23 1F 國際會議廳 (楠梓區研發路 66 號){'\n'}
                             現場由主辦方安排專業樂團進行伴奏。比賽現場不提供提詞機，參賽者須背熟歌詞！{'\n'}{'\n'}
                             <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
@@ -192,7 +192,8 @@ const translations = {
                 "日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID:roy_chin)",
                 "矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com ( Line ID: catnow )"
+                "環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com ( Line ID: catnow )",
+                "南港、台北、新竹辦公室與其他廠區：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)"
             ]
         },
         qa: {
@@ -201,7 +202,7 @@ const translations = {
             showBtn: "查看 Q&A",
             hideBtn: "收起 Q&A",
             contactTitle: "還有問題？聯繫我們",
-            contactInfo: "Q&A信箱：service@asevoice.org\n\n日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\n日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\n矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\n環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+            contactInfo: "Q&A信箱：service@asevoice.org\n\n日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\n日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\n矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\n環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)\n南港、台北、新竹辦公室與其他廠區：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
             items: [
                 { q: "誰可以報名？", a: "僅限日月光投資控股股份有限公司所屬各事業體之在職員工。" },
                 { q: "哪些人不能報名？", a: "2025 年好聲音冠軍、亞軍、佳作，以及 2024 年好聲音冠軍、亞軍，不得報名。" },
@@ -234,8 +235,7 @@ const translations = {
                 { q: "得獎需要繳稅嗎？", a: "需要，依中華民國相關稅法規定辦理。" },
                 { q: "如果被查到代唱、冒名頂替、修音或違規後製會怎樣？", a: "主辦單位有權立即取消參賽資格；若頒獎後查證屬實，將撤銷得獎資格並追回全數獎金及獎座（牌），缺額原則上不遞補。" },
                 { q: "主辦單位會使用我的照片、聲音或影片嗎？", a: "會；參賽者同意主辦單位及其關係企業於活動期間錄影、攝影，並得將含有其肖像、聲音及演出畫面之照片與影片，用於內部平台、對外刊物、文宣及活動相關宣傳。" },
-                { q: "活動辦法如果後續有更新，要看哪裡？", a: "以官方網站為主，不另行個別通知。" },
-                { q: "有問題要找誰？", a: "Q&A信箱：service@asevoice.org\n\n日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\n日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\n矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\n環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)" }
+                { q: "活動辦法如果後續有更新，要看哪裡？", a: "以官方網站為主，不另行個別通知。" }
             ]
         }
     },
@@ -354,7 +354,7 @@ const translations = {
                     event: "Grand Finals (Live)",
                     details: (
                         <span>
-                            Time: 14:30 - 17:00{'\n'}
+                            Time: Sep 11(Fri), 14:30 - 17:00{'\n'}
                             Location: ASE Kaohsiung K23 1F Int'l Conference Hall.{'\n'}
                             Live band accompaniment will be provided. NO TELEPROMPTERS allowed. Memorize your lyrics!{'\n'}{'\n'}
                             <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
@@ -430,7 +430,8 @@ const translations = {
                 "ASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "ASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+                "USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+                "Nangang, Taipei, Hsinchu Offices & Other Sites: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)"
             ]
         },
         qa: {
@@ -439,7 +440,7 @@ const translations = {
             showBtn: "View Q&A",
             hideBtn: "Hide Q&A",
             contactTitle: "Still Have Questions? Contact Us",
-            contactInfo: "Q&A Email: service@asevoice.org\n\nASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nSPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nUSI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+            contactInfo: "Q&A Email: service@asevoice.org\n\nASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nSPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nUSI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)\nNangang, Taipei, Hsinchu Offices & Other Sites: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
             items: [
                 { q: "Who is eligible to register?", a: "Only current employees of all business units under ASE Technology Holding Co., Ltd. are eligible to register." },
                 { q: "Who is not eligible to register?", a: "The 2025 ASE Voice First Place winner, Second Place winner, Merit Award winners, as well as the 2024 ASE Voice First Place winner and Second Place winner, are not eligible to register." },
@@ -474,8 +475,7 @@ const translations = {
                 { q: "Will the organizer use my photos, voice, or video?", a: "Yes. Participants agree that the organizer and its affiliated companies may record and photograph during the event, and may use images, voice, and performance footage containing the participant for internal platforms, external publications, promotional materials, and event-related publicity." },
                 { q: "Where can I check for updates to the event rules?", a: (
                     <span>Please refer to the official website at <a href="https://asevoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 hover:bg-blue-50 px-1 rounded transition-colors">https://asevoice.org</a> for any updates to the event rules. No individual notifications will be provided.</span>
-                ) },
-                { q: "Who should I contact if I have questions?", a: "Q&A Email: service@asevoice.org\n\nASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nSPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nUSI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)" }
+                ) }
             ]
         }
     },
@@ -510,7 +510,7 @@ const translations = {
             titleLine1: "LẦN THỨ 5",
             titleLine2: "日月光",
             titleLine2En: "ASE",
-            titleLine3: "Giọng hát hay",
+            titleLine3: "好聲音",
             titleLine3En: "VOICE",
             subtitle: "Cuộc thi ca hát toàn quốc đầu tiên mở cho nhân viên tập đoàn",
             registerBtn: "ĐĂNG KÝ NGAY",
@@ -594,7 +594,7 @@ const translations = {
                     event: "Vòng Chung kết (Trình diễn trực tiếp)",
                     details: (
                         <span>
-                            Thời gian: 14:30 - 17:00{'\n'}
+                            Thời gian: 11/9(T6) 14:30 - 17:00{'\n'}
                             Địa điểm: Hội trường Quốc tế Tầng 1, K23, Nhà máy ASE Cao Hùng.{'\n'}
                             Đơn vị tổ chức sẽ bố trí ban nhạc đệm trực tiếp. KHÔNG cung cấp máy nhắc chữ, thí sinh phải thuộc lòng lời bài hát!{'\n'}{'\n'}
                             <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
@@ -670,7 +670,8 @@ const translations = {
                 "Nhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
                 "Nhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)",
                 "Công ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw",
-                "Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)"
+                "Công ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+                "Văn phòng Nangang, Taipei, Hsinchu & Các chi nhánh khác: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)"
             ]
         },
         qa: {
@@ -679,7 +680,7 @@ const translations = {
             showBtn: "Xem Q&A",
             hideBtn: "Ẩn Q&A",
             contactTitle: "Còn Thắc Mắc? Liên Hệ Chúng Tôi",
-            contactInfo: "Hộp thư Q&A: service@asevoice.org\n\nNhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nNhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nCông ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nCông ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)",
+            contactInfo: "Hộp thư Q&A: service@asevoice.org\n\nNhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nNhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nCông ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nCông ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)\nVăn phòng Nangang, Taipei, Hsinchu & Các chi nhánh khác: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
             items: [
                 { q: "Ai có thể đăng ký tham gia?", a: "Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị xí nghiệp trực thuộc Công ty cổ phần đầu tư công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia." },
                 { q: "Những ai không được đăng ký tham gia?", a: "Quán quân, Á quân, và thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay." },
@@ -712,8 +713,7 @@ const translations = {
                 { q: "Nhận giải có cần nộp thuế không?", a: "Có, thực hiện theo các quy định liên quan của pháp luật thuế Trung Hoa Dân Quốc." },
                 { q: "Nếu bị phát hiện hát thay, mạo danh, chỉnh âm hoặc hậu kỳ vi phạm thì sẽ thế nào?", a: "Ban tổ chức có quyền lập tức hủy tư cách tham gia; nếu được xác minh là vi phạm sau khi trao giải, ban tổ chức sẽ hủy tư cách đạt giải và thu hồi toàn bộ tiền thưởng cùng cúp/huy chương, về nguyên tắc sẽ không bổ sung người thay thế." },
                 { q: "Ban tổ chức có sử dụng hình ảnh, giọng nói hoặc video của tôi không?", a: "Có. Thí sinh đồng ý để ban tổ chức và các đơn vị liên kết quay phim, chụp ảnh trong thời gian diễn ra hoạt động, đồng thời có thể sử dụng hình ảnh, giọng nói và phần biểu diễn của thí sinh trong các nền tảng nội bộ, ấn phẩm đối ngoại, tài liệu tuyên truyền và các hoạt động quảng bá liên quan." },
-                { q: "Nếu thể lệ hoạt động có cập nhật sau này thì xem ở đâu?", a: "Lấy trang web chính thức làm chuẩn, sẽ không gửi thông báo riêng từng người." },
-                { q: "Nếu có vấn đề thắc mắc thì liên hệ ai?", a: "Hộp thư Q&A: service@asevoice.org\n\nNhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nNhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nCông ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nCông ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)" }
+                { q: "Nếu thể lệ hoạt động có cập nhật sau này thì xem ở đâu?", a: "Lấy trang web chính thức làm chuẩn, sẽ không gửi thông báo riêng từng người." }
             ]
         }
     }
