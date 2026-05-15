@@ -146,6 +146,14 @@ const translations = {
             ]
         },
         highlights: {
+            lectures: {
+                title: "不知道該怎麼選歌？該如何在歌唱比賽中突圍？",
+                subtitle: "快來看名師指導歌唱心法",
+                videos: [
+                    { id: "fwo9db99lis", title: "《找到自己的聲音》潘芊樹 老師", date: "第一場 2026.03.12", thumbnail: "/lecture-1.jpg" },
+                    { id: "a_QBn-Raf7U", title: "《專業歌手的歌唱詮釋課程：精準的歌唱情感表達與語氣呈現》陳威宇 講師", date: "第二場 2026.05.14", thumbnail: "/lecture-2.jpg" }
+                ]
+            },
             title: "歷屆精彩回顧",
             videos: [
                 { year: "2025", title: "第四屆 決賽" },
@@ -376,6 +384,14 @@ const translations = {
             ]
         },
         highlights: {
+            lectures: {
+                title: "Not sure how to pick a song? How to stand out in a singing competition?",
+                subtitle: "Learn from expert vocal coaches",
+                videos: [
+                    { id: "fwo9db99lis", title: "《Find Your Own Voice》Pan Chien-Shu Teacher", date: "Lecture 1 2026.03.12", thumbnail: "/lecture-1.jpg" },
+                    { id: "a_QBn-Raf7U", title: "《Professional Singer's Vocal Interpretation Course: Precise Emotional Expression and Tone Presentation》Chen Wei-Yu Lecturer", date: "Lecture 2 2026.05.14", thumbnail: "/lecture-2.jpg" }
+                ]
+            },
             title: "Past Highlights",
             videos: [
                 { year: "2025", title: "4th Ed. Finals" },
@@ -608,6 +624,14 @@ const translations = {
             ]
         },
         highlights: {
+            lectures: {
+                title: "Không biết chọn bài như thế nào? Làm thế nào để nổi bật trong cuộc thi hát?",
+                subtitle: "Học hỏi từ các chuyên gia thanh nhạc",
+                videos: [
+                    { id: "fwo9db99lis", title: "《Tìm Thấy Giọng Của Riêng Mình》Pan Chien-Shu Giáo viên", date: "Bài giảng 1 2026.03.12", thumbnail: "/lecture-1.jpg" },
+                    { id: "a_QBn-Raf7U", title: "《Khóa Học Giải Thích Ca Hát Của Ca Sĩ Chuyên Nghiệp: Diễn Đạt Cảm Xúc Chính Xác Và Trình Bày Giọng Điệu》Chen Wei-Yu Giảng Viên", date: "Bài giảng 2 2026.05.14", thumbnail: "/lecture-2.jpg" }
+                ]
+            },
             title: "Những Điểm Nhấn Nổi Bật",
             videos: [
                 { year: "2025", title: "Lần 4 Chung kết" },
