@@ -4,8 +4,8 @@ const translations = {
     zh: {
         nav: {
             register: "即刻報名",
-            registrationNotStartedText: "6 月 1 號開放報名",
-            registrationNotStartedAlert: "報名尚未開始，請於 6月1號至6月21號期間報名。",
+            registrationNotStartedText: "6 月 1 日開放報名",
+            registrationNotStartedAlert: "報名尚未開始，請於 6月1日至6月21日期間報名。",
             registrationEndedText: "報名時間已過，敬請期待入圍名單",
             countdownTitle: "距離報名開始還有：",
             days: "天",
