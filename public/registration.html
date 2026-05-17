@@ -3,30 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        viewport-fit=cover：讓 iOS 上 env(safe-area-inset-*) 才有效用，
+        避開瀏海與 Home Indicator
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>2026 ASE Voice - 報名系統</title>
 
     <link rel="preconnect" href="https://script.google.com">
     <link rel="preconnect" href="https://script.googleusercontent.com">
 
     <style>
-        body,
-        html {
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #FFC107;
-            font-family: 'Arial', sans-serif;
         }
 
-        #loader-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+        body,
+        html {
             width: 100%;
             height: 100%;
+            background-color: #FFC107;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Loading overlay */
+        #loader-container {
+            position: fixed;
+            inset: 0;
             background-color: #FFC107;
             display: flex;
             flex-direction: column;
@@ -57,34 +65,61 @@
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+            to { transform: rotate(360deg); }
         }
 
         @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.6;
-                transform: scale(0.98);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.98); }
         }
 
-        iframe {
+        /*
+         * iframe 容器：position:fixed 貼滿全螢幕可見區域。
+         *
+         * 策略分析：
+         * - top/left/right = 0  →  三邊固定
+         * - bottom = 0          →  底部先固定為 0
+         * - height = 100dvh     →  dvh (Dynamic Viewport Height) 在 Android Chrome
+         *                          會隨工具列顯隱動態調整，確保不被工具列遮住。
+         *                          iOS Safari 14.5+ 也完整支援。
+         *
+         * 關於 safe-area-inset-bottom：
+         * - 需要 viewport-fit=cover 才有效
+         * - iOS Home Indicator 約 34px（iPhone X+）
+         * - Android 手勢導覽模式同樣會有此值（~24px）
+         * - 舊版 Android 三鍵導覽列：瀏覽器通常已扣除，safe-area 為 0
+         * - 用 max() 確保至少有 0px，不影響無此特性的瀏覽器
+         *
+         * padding-bottom 將 Google Form 的「送出」按鈕往上推，
+         * 避免被 Home Indicator 或導覽列蓋住。
+         */
+        #iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100dvh;
+            /* 把容器底部往上縮，讓按鈕不被系統 UI 遮住 */
+            padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px);
+            background-color: white;
+            /* overflow:hidden 讓 margin-top 負值裁切頂部 Google Form banner */
+            overflow: hidden;
+        }
+
+        /*
+         * iframe 本身：
+         * - margin-top: -40px → 向上移動裁切 Google Form 頂部多餘 banner
+         * - height: calc(100% + 40px) → 補回被 margin-top 佔用的高度，
+         *   確保底部「送出」按鈕仍在容器可見範圍內
+         */
+        #gscript-iframe {
+            display: block;
+            border: none;
+            width: 100%;
+            height: calc(100% + 40px);
+            margin-top: -40px;
             opacity: 0;
             transition: opacity 0.6s ease-in;
-            position: relative;
-            z-index: 10;
         }
     </style>
 </head>
@@ -95,10 +130,8 @@
         <div class="loading-text" id="loading-text">表單載入中...</div>
     </div>
 
-    <div style="width: 100%; height: 100vh; overflow: hidden; background-color: white;">
-        <iframe id="gscript-iframe" src=""
-            style="width: 100%; height: calc(100vh + 40px); border: none; margin-top: -40px;" onload="hideLoader()">
-        </iframe>
+    <div id="iframe-container">
+        <iframe id="gscript-iframe" src="" onload="hideLoader()"></iframe>
     </div>
 
     <script>
