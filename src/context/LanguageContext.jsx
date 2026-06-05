@@ -48,7 +48,7 @@ const translations = {
             groups: "參賽資格與組別",
             groupsDesc: (
                 <span>
-                    {"【參賽資格】\n- 限日月光投資控股股份有限公司旗下之事業體在職職員均可報名參加。\n"}
+                    {"【參賽資格】\n- 限日月光投資控股股份有限公司及其所屬事業體、子公司、轉投資公司之在職職員均可報名參加。\n"}
                     <span className="text-sm text-gray-500 inline-block">* 註記：2025年冠亞軍及佳作選手與2024年冠亞軍，不得報名此屆賽事。</span>
                     {"\n\n【競賽組別】(本比賽均採個人賽)\n- 華語組：國語、台語、客家、粵語 (限額 200 組)\n- 外語組：英語與其他語言 (限額 200 組)"}
                 </span>
@@ -204,7 +204,7 @@ const translations = {
             contactTitle: "還有問題？聯繫我們",
             contactInfo: "Q&A信箱：service@asevoice.org\n\n日月光高雄廠：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\n日月光中壢廠：秦瑞麟 Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\n矽品精密：劉旻杰 Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\n環鴻科技：黃詩婷 Aldis, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)\n南港、台北、新竹辦公室與其他廠區：宜德彥 Daniel, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
             items: [
-                { q: "誰可以報名？", a: "僅限日月光投資控股股份有限公司所屬各事業體之在職員工。" },
+                { q: "誰可以報名？", a: "僅限日月光投資控股股份有限公司及其所屬事業體、子公司、轉投資公司之在職員工。" },
                 { q: "哪些人不能報名？", a: "2025 年好聲音冠軍、亞軍、佳作，以及 2024 年好聲音冠軍、亞軍，不得報名。" },
                 { q: "比賽是個人還是團體？", a: "本比賽採個人賽。" },
                 { q: "有哪些組別？", a: "分為華語組與外語組；華語組為國語、台語、客家、粵語，外語組為英語與其他語言。" },
@@ -286,7 +286,7 @@ const translations = {
             groups: "Eligibility & Categories",
             groupsDesc: (
                 <span>
-                    {"[Eligibility]\n- Open to current employees of ASE Technology Holding subsidiaries.\n"}
+                    {"[Eligibility]\n- Limited to current employees of ASE Technology Holding Co., Ltd. and its affiliated business units, subsidiaries, and investee companies.\n"}
                     <span className="text-sm text-gray-500 inline-block">* Note: 2024/2025 Champions and Runners-up (and 2025 Merit winners) may not participate.</span>
                     {"\n\n[Categories] (Individual entries only)\n- Mandarin Group: Mandarin, Taiwanese, Hakka, Cantonese (Limit: 200 entries)\n- Foreign Language Group: English & Others (Limit: 200 entries)"}
                 </span>
@@ -442,7 +442,7 @@ const translations = {
             contactTitle: "Still Have Questions? Contact Us",
             contactInfo: "Q&A Email: service@asevoice.org\n\nASE Kaohsiung: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nASE ChungLi: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nSPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nUSI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)\nNangang, Taipei, Hsinchu Offices & Other Sites: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
             items: [
-                { q: "Who is eligible to register?", a: "Only current employees of all business units under ASE Technology Holding Co., Ltd. are eligible to register." },
+                { q: "Who is eligible to register?", a: "Only current employees of ASE Technology Holding Co., Ltd. and its affiliated business units, subsidiaries, and investee companies are eligible to register." },
                 { q: "Who is not eligible to register?", a: "The 2025 ASE Voice First Place winner, Second Place winner, Merit Award winners, as well as the 2024 ASE Voice First Place winner and Second Place winner, are not eligible to register." },
                 { q: "Is the competition individual or group-based?", a: "This competition is an individual contest." },
                 { q: "What categories are available?", a: "The competition is divided into Mandarin and Foreign Language categories. The Mandarin category includes Mandarin, Taiwanese, Hakka, and Cantonese; the Foreign Language category includes English and other languages." },
@@ -526,7 +526,7 @@ const translations = {
             groups: "Đối tượng & Bảng",
             groupsDesc: (
                 <span>
-                    {"[Đối tượng tham gia]\n- Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị xí nghiệp trực thuộc Công ty cổ phần đầu tư công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia.\n"}
+                    {"[Đối tượng tham gia]\n- Chỉ giới hạn cho nhân viên đang làm việc tại Công ty cổ phần đầu tư công nghệ ASE (ASE Technology Holding Co., Ltd.) cùng các đơn vị xí nghiệp trực thuộc, công ty con và công ty nhận vốn đầu tư đăng ký tham gia.\n"}
                     <span className="text-sm text-gray-500 inline-block">* Lưu ý: Quán quân, Á quân, và Thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay.</span>
                     {"\n\n[Bảng thi đấu] (hoàn toàn là thi đấu cá nhân)\n- Bảng Tiếng Hoa: Tiếng Phổ thông, Tiếng Đài Loan, Tiếng Khách Gia, Tiếng Quảng Đông (Giới hạn 200 lượt)\n- Bảng Ngoại ngữ: Tiếng Anh và các ngôn ngữ khác (Giới hạn 200 lượt)"}
                 </span>
@@ -682,7 +682,7 @@ const translations = {
             contactTitle: "Còn Thắc Mắc? Liên Hệ Chúng Tôi",
             contactInfo: "Hộp thư Q&A: service@asevoice.org\n\nNhà máy ASE Cao Hùng: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)\nNhà máy ASE Trung Lịch: Roy Chin, 0989678600, roy_chin@aseglobal.com (Line ID: roy_chin)\nCông ty SPIL: Jerry Liu, 0978892508, 04-25341525#1557, Jerry0276@spil.com.tw\nCông ty USI: Aldis Huang, 0963788621, aldis_huang@usiglobal.com (Line ID: catnow)\nVăn phòng Nangang, Taipei, Hsinchu & Các chi nhánh khác: Daniel Yi, 0919635167, daniel_yi@aseglobal.com (Line ID: danyanline)",
             items: [
-                { q: "Ai có thể đăng ký tham gia?", a: "Chỉ giới hạn cho nhân viên đang làm việc tại các đơn vị xí nghiệp trực thuộc Công ty cổ phần đầu tư công nghệ ASE (ASE Technology Holding Co., Ltd.) đăng ký tham gia." },
+                { q: "Ai có thể đăng ký tham gia?", a: "Chỉ giới hạn cho nhân viên đang làm việc tại Công ty cổ phần đầu tư công nghệ ASE (ASE Technology Holding Co., Ltd.) cùng các đơn vị xí nghiệp trực thuộc, công ty con và công ty nhận vốn đầu tư đăng ký tham gia." },
                 { q: "Những ai không được đăng ký tham gia?", a: "Quán quân, Á quân, và thí sinh đạt giải Khuyến khích của Cuộc thi Giọng hát hay ASE năm 2025 cùng Quán quân, Á quân của năm 2024 không được đăng ký tham gia cuộc thi năm nay." },
                 { q: "Cuộc thi là thi cá nhân hay theo nhóm?", a: "Cuộc thi này hoàn toàn là thi đấu cá nhân." },
                 { q: "Có những bảng thi nào?", a: "Cuộc thi được chia thành Bảng Tiếng Hoa và Bảng Ngoại ngữ; Bảng Tiếng Hoa gồm Tiếng Phổ thông (Quan Thoại), Tiếng Đài Loan, Tiếng Khách Gia (Hakka), và Tiếng Quảng Đông; Bảng Ngoại ngữ gồm Tiếng Anh và các ngôn ngữ khác." },
