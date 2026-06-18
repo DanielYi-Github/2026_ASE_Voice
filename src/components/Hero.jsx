@@ -201,21 +201,38 @@ const Hero = () => {
                                 transition={{ duration: 0.5, delay: 0.4 }}
                                 className="flex justify-center"
                             >
-                                <div className="group relative w-max">
-                                    <div className={`absolute -inset-2 rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 ${isDisabled ? 'bg-gray-400' : 'bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF]'}`}></div>
-                                    <a
-                                        href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
-                                        target={isDisabled ? '_self' : '_blank'}
-                                        rel="noopener noreferrer"
-                                        onClick={handleRegisterClick}
-                                        className={`relative flex items-center justify-center px-10 py-4 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] overflow-hidden transition-all ${isDisabled ? 'bg-gray-500 cursor-not-allowed shadow-none border-gray-300' : 'bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF]'}`}
-                                    >
-                                        <div className="relative flex items-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
-                                            <span className={`text-[1.8rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>🎤</span>
-                                            <span className={`text-[1.6rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>{getButtonText()}</span>
+                                {isEnded ? (
+                                    <div className="relative w-max mt-2">
+                                        <div className="absolute -inset-2 bg-gradient-to-r from-[#002BFF] via-[#051159] to-[#0a0f24] rounded-2xl opacity-80 blur-md animate-pulse"></div>
+                                        <div className="relative flex flex-col items-center justify-center px-6 py-4 rounded-2xl border-[3px] border-white shadow-[6px_6px_0_0_rgba(26,26,26,1)] bg-[repeating-linear-gradient(45deg,#002BFF,#002BFF_10px,#051159_10px,#051159_20px)] overflow-hidden">
+                                            <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+                                            <div className="relative flex flex-col items-center gap-1.5 font-heading font-black tracking-widest text-center">
+                                                <span className="text-[1.1rem] text-[#00F0FF] drop-shadow-[2px_2px_0_rgba(26,26,26,1)] uppercase">
+                                                    {lang === 'en' ? "COMING SOON" : lang === 'vi' ? "SẮP RA MẮT" : "即將揭曉"}
+                                                </span>
+                                                <span className="text-[1.3rem] text-white drop-shadow-[2px_2px_0_rgba(26,26,26,1)]">
+                                                    {getButtonText()}
+                                                </span>
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                ) : (
+                                    <div className="group relative w-max">
+                                        <div className={`absolute -inset-2 rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 ${isDisabled ? 'bg-gray-400' : 'bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF]'}`}></div>
+                                        <a
+                                            href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
+                                            target={isDisabled ? '_self' : '_blank'}
+                                            rel="noopener noreferrer"
+                                            onClick={handleRegisterClick}
+                                            className={`relative flex items-center justify-center px-10 py-4 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] overflow-hidden transition-all ${isDisabled ? 'bg-gray-500 cursor-not-allowed shadow-none border-gray-300' : 'bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF]'}`}
+                                        >
+                                            <div className="relative flex items-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
+                                                <span className={`text-[1.8rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>🎤</span>
+                                                <span className={`text-[1.6rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>{getButtonText()}</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                )}
                             </motion.div>
 
                             {/* 倒數計時組件 */}
@@ -320,22 +337,39 @@ const Hero = () => {
                             className="mt-12 lg:mt-16 flex flex-col items-start relative z-40 w-full"
                         >
                             <div className="flex flex-col items-start w-full">
-                                <div className="group relative w-max">
-                                    <div className={`absolute -inset-2 rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 ${isDisabled ? 'bg-gray-400' : 'bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF]'}`}></div>
-                                    <a
-                                        href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
-                                        target={isDisabled ? '_self' : '_blank'}
-                                        rel="noopener noreferrer"
-                                        onClick={handleRegisterClick}
-                                        className={`relative flex items-center justify-center w-full px-10 md:px-10 lg:px-14 py-4 md:py-5 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] transition-all overflow-hidden ${isDisabled ? 'bg-gray-500 cursor-not-allowed shadow-none border-gray-300' : 'bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] hover:shadow-[0_12px_35px_rgba(0,195,255,1)] hover:-translate-y-1'}`}
-                                    >
-                                        {!isDisabled && <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>}
-                                        <div className="relative flex items-center justify-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
-                                            <span className={`text-[2rem] lg:text-[2.2rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>🎤</span>
-                                            <span className={`text-[1.8rem] lg:text-[2rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'} pr-1`}>{getButtonText()}</span>
+                                {isEnded ? (
+                                    <div className="relative w-max mt-2">
+                                        <div className="absolute -inset-2 bg-gradient-to-r from-[#002BFF] via-[#051159] to-[#0a0f24] rounded-2xl opacity-80 blur-md animate-pulse"></div>
+                                        <div className="relative flex flex-col items-center justify-center px-8 py-5 md:px-12 md:py-6 rounded-2xl border-[3px] border-white shadow-[8px_8px_0_0_rgba(26,26,26,1)] bg-[repeating-linear-gradient(45deg,#002BFF,#002BFF_10px,#051159_10px,#051159_20px)] overflow-hidden">
+                                            <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+                                            <div className="relative flex flex-col items-center gap-2 font-heading font-black tracking-widest text-center">
+                                                <span className="text-[1.3rem] md:text-[1.5rem] text-[#00F0FF] drop-shadow-[2px_2px_0_rgba(26,26,26,1)] uppercase">
+                                                    {lang === 'en' ? "COMING SOON" : lang === 'vi' ? "SẮP RA MẮT" : "即將揭曉"}
+                                                </span>
+                                                <span className="text-[1.6rem] md:text-[2rem] text-white drop-shadow-[2px_2px_0_rgba(26,26,26,1)]">
+                                                    {getButtonText()}
+                                                </span>
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                ) : (
+                                    <div className="group relative w-max">
+                                        <div className={`absolute -inset-2 rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 ${isDisabled ? 'bg-gray-400' : 'bg-gradient-to-r from-[#00F0FF] via-[#0080FF] to-[#00F0FF]'}`}></div>
+                                        <a
+                                            href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
+                                            target={isDisabled ? '_self' : '_blank'}
+                                            rel="noopener noreferrer"
+                                            onClick={handleRegisterClick}
+                                            className={`relative flex items-center justify-center w-full px-10 md:px-10 lg:px-14 py-4 md:py-5 rounded-2xl border-[3px] border-white shadow-[0_8px_20px_rgba(0,195,255,0.6)] transition-all overflow-hidden ${isDisabled ? 'bg-gray-500 cursor-not-allowed shadow-none border-gray-300' : 'bg-gradient-to-r from-[#00E1FF] via-[#0066FF] to-[#002BFF] hover:shadow-[0_12px_35px_rgba(0,195,255,1)] hover:-translate-y-1'}`}
+                                        >
+                                            {!isDisabled && <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_infinite] transition-transform duration-700"></div>}
+                                            <div className="relative flex items-center justify-center gap-3 font-heading font-black tracking-widest whitespace-nowrap">
+                                                <span className={`text-[2rem] lg:text-[2.2rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'}`}>🎤</span>
+                                                <span className={`text-[1.8rem] lg:text-[2rem] text-white leading-none ${!isDisabled && 'drop-shadow-[2px_2px_0_rgba(0,43,255,0.8)]'} pr-1`}>{getButtonText()}</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                )}
 
                                 {/* 倒數計時組件 */}
                                 {isBefore && <RegistrationCountdown onFinish={() => setStatus(getRegistrationStatus())} />}

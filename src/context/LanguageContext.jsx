@@ -6,7 +6,7 @@ const translations = {
             register: "即刻報名",
             registrationNotStartedText: "6 月 1 日開放報名",
             registrationNotStartedAlert: "報名尚未開始，請於 6月1日至6月21日期間報名。",
-            registrationEndedText: "報名時間已過，敬請期待入圍名單",
+            registrationEndedText: "7月8日 決賽名單即將揭曉",
             countdownTitle: "距離報名開始還有：",
             days: "天",
             hours: "時",
@@ -26,6 +26,12 @@ const translations = {
             description: "萬眾矚目的【2026 日月光投控好聲音】即將強勢開跑！無論你是天生歌姬還是隱藏版麥霸，這都是你閃耀的舞台！✨",
             dates: "📌 初賽收件期間：6/1 - 6/21",
             reminder: "👉 快保養好你的喉嚨，及早備妥 60-90 秒的「純清唱影片」來挑戰吧！"
+        },
+        announcementEnded: {
+            headline: "📢 初賽收件已截止！",
+            description: "感謝各位同仁的熱情參與，初賽影片正由專業評審團進行線上評選！",
+            dates: "📌 決賽名單將於 7 月 8 日正式公布",
+            reminder: "👉 敬請期待最強好聲音的誕生！"
         },
         hero: {
             brandNote: "日月光投控集團成員共同參與",
@@ -244,7 +250,7 @@ const translations = {
             register: "Register Now",
             registrationNotStartedText: "Registration Opens Jun 1",
             registrationNotStartedAlert: "Registration has not started yet. Please register between June 1 and June 21.",
-            registrationEndedText: "Registration Ended. Stay tuned for the finalists!",
+            registrationEndedText: "July 8 - Finalists Announcement",
             countdownTitle: "REGISTRATION STARTS IN:",
             days: "DAYS",
             hours: "HRS",
@@ -264,6 +270,12 @@ const translations = {
             description: "The highly anticipated [2026 ASE Voice] is about to begin! This is your stage to shine! ✨",
             dates: "📌 Video Submission: Jun 1 - Jun 21",
             reminder: "👉 Warm up your vocal cords and prepare a 60-90s A Cappella video to join the challenge!"
+        },
+        announcementEnded: {
+            headline: "📢 Audition Submissions Closed!",
+            description: "Thank you all for your enthusiastic participation! The preliminary videos are now being reviewed by our professional judges.",
+            dates: "📌 The finalists will be officially announced on July 8",
+            reminder: "👉 Stay tuned for the shortlist of the ultimate voices!"
         },
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
@@ -484,7 +496,7 @@ const translations = {
             register: "Đăng ký ngay",
             registrationNotStartedText: "Mở đăng ký vào ngày 1/6",
             registrationNotStartedAlert: "Thời gian đăng ký chưa bắt đầu. Vui lòng đăng ký từ ngày 1/6 đến 21/6.",
-            registrationEndedText: "Thời gian đăng ký đã kết thúc. Hãy chờ đón danh sách lọt vào chung kết!",
+            registrationEndedText: "8/7 - Công bố danh sách chung kết",
             countdownTitle: "THỜI GIAN CÒN LẠI ĐẾN KHI MỞ ĐĂNG KÝ:",
             days: "NGÀY",
             hours: "GIỜ",
@@ -504,6 +516,12 @@ const translations = {
             description: "Sự kiện được mong đợi nhất [Giọng hát hay ASE 2026] sắp bắt đầu! Đây là sân khấu để bạn tỏa sáng! ✨",
             dates: "📌 Nộp Video Sơ Loại: 1/6 - 21/6",
             reminder: "👉 Hãy chuẩn bị giọng hát và video hát mộc 60-90 giây của bạn ngay từ bây giờ!"
+        },
+        announcementEnded: {
+            headline: "📢 Đã Đóng Nhận Video Sơ Loại!",
+            description: "Cảm ơn sự tham gia nhiệt tình của tất cả các bạn! Các video sơ loại đang được ban giám khảo chuyên môn đánh giá.",
+            dates: "📌 Danh sách vào chung kết sẽ được công bố chính thức vào ngày 8/7",
+            reminder: "👉 Hãy tiếp tục theo dõi để biết danh sách những giọng ca xuất sắc nhất!"
         },
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",
