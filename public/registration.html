@@ -125,79 +125,37 @@
 </head>
 
 <body>
-    <div id="loader-container">
-        <div class="loader"></div>
-        <div class="loading-text" id="loading-text">表單載入中...</div>
-    </div>
-
-    <div id="iframe-container">
-        <iframe id="gscript-iframe" src="" onload="hideLoader()"></iframe>
+    <div id="message-container" style="position: fixed; inset: 0; background-color: #FFC107; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 50; padding: 20px;">
+        <div id="message-text" style="color: #1A1A1A; font-size: 2rem; font-weight: 900; letter-spacing: 2px; text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8); text-align: center; line-height: 1.5;">
+        </div>
     </div>
 
     <script>
-        // 1. 解析網址帶來的語系參數 (例如 ?lang=en)
         const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang') || 'zh'; // 預設為繁體中文
-        const email = urlParams.get('email') || null;
-        var timestamp = urlParams.get('timestamp') || null;
-         timestamp = urlParams.get('t') || null;
-        const nonce = urlParams.get('nonce') || null;
-        const hash = urlParams.get('hash') || null;
-
-        // 2. 定義多語系字典
+        const lang = urlParams.get('lang') || 'zh';
+        
         const i18n = {
             'zh': {
-                title: '2026 ASE Voice - 報名系統',
-                loading: '表單載入中...',
+                title: '2026 ASE Voice - 報名已截止',
+                message: '報名已截止，<br>敬請期待 7/8 公布晉級決賽名單！',
                 htmlLang: 'zh-TW'
             },
             'en': {
-                title: '2026 ASE Voice - Registration',
-                loading: 'Loading Form...',
+                title: '2026 ASE Voice - Registration Closed',
+                message: 'Registration is closed.<br>Please stay tuned for the finalists announcement on July 8th!',
                 htmlLang: 'en'
             },
             'vi': {
-                title: '2026 ASE Voice - Đăng ký',
-                loading: 'Đang tải biểu mẫu...',
+                title: '2026 ASE Voice - Đăng ký đã đóng',
+                message: 'Đăng ký đã đóng.<br>Vui lòng đón chờ danh sách thí sinh lọt vào vòng chung kết vào ngày 8 tháng 7!',
                 htmlLang: 'vi'
             }
         };
 
-        // 3. 套用對應的語系到載入畫面與 Meta
         const currentLang = i18n[lang] || i18n['zh'];
         document.title = currentLang.title;
         document.documentElement.lang = currentLang.htmlLang;
-        document.getElementById('loading-text').textContent = currentLang.loading;
-
-        // 4. 將語系參數也一起傳給 Google Apps Script iframe
-        const iframe = document.getElementById('gscript-iframe');
-        let baseUrl = 'https://script.google.com/macros/s/AKfycbzYnUuHhwD_LLOAaR6G6l39qqGfSERQFA14AbRpeje0ctqZbmv3fDJAGA8tdyRLIcbY/exec';
-        // 開始拼接
-        baseUrl += '?lang=' + lang; // 第一個參數用 ?
-        if (email) baseUrl += '&email=' + encodeURIComponent(email);
-        if (timestamp) baseUrl += '&t=' + timestamp;
-        if (nonce) baseUrl += '&nonce=' + nonce;
-        if (hash) baseUrl += '&hash=' + hash;
-
-        iframe.src = baseUrl;
-
-        // --- 以下為原本的 Loader 隱藏邏輯 ---
-        function hideLoader() {
-            const loader = document.getElementById('loader-container');
-            loader.style.opacity = '0';
-            iframe.style.opacity = '1';
-
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-        }
-
-        setTimeout(() => {
-            const loader = document.getElementById('loader-container');
-            if (loader.style.display !== 'none') {
-                hideLoader();
-            }
-        }, 5500);
+        document.getElementById('message-text').innerHTML = currentLang.message;
     </script>
 </body>
 
