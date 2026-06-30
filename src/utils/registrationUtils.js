@@ -7,6 +7,7 @@ export const REGISTRATION_STATUS = {
 // 使用 ISO 格式並包含台灣時區 +08:00
 const START_DATE = new Date('2026-06-01T00:00:00+08:00');
 const END_DATE = new Date('2026-06-21T23:59:59+08:00');
+export const FINALIST_ANNOUNCEMENT_DATE = new Date('2026-07-08T00:00:00+08:00');
 
 export const getRegistrationStatus = () => {
   const now = new Date();
@@ -18,6 +19,13 @@ export const getRegistrationStatus = () => {
   } else {
     return REGISTRATION_STATUS.OPEN;
   }
+};
+
+export const isFinalistAnnounced = () => {
+  if (typeof window !== 'undefined' && window.location.search.includes('preview=finalist')) {
+    return true;
+  }
+  return new Date() >= FINALIST_ANNOUNCEMENT_DATE;
 };
 
 export const getTimeRemaining = () => {

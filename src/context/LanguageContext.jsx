@@ -33,6 +33,18 @@ const translations = {
             dates: "📌 決賽名單將於 7 月 8 日正式公布",
             reminder: "👉 敬請期待最強好聲音的誕生！"
         },
+        announcementFinalist: {
+            headline: "🎉 決賽名單 霸氣揭曉！",
+            description: "歷經激烈的線上初選，各路好手脫穎而出！快來看看是哪些最強好聲音即將站上最終決戰舞台！",
+            dates: "🎤 決賽時間：9月11日 現場演唱",
+            location: "📍 決賽地點：日月光高雄廠 K23國際會議廳",
+            reminder: "📺 決賽當天將於【本網站】全程實況轉播，敬請鎖定，為你支持的選手集氣加油！🔥"
+        },
+        finalistBanner: {
+            chineseGroup: "華語組決賽名單",
+            foreignGroup: "外語組決賽名單",
+            liveBroadcast: "⚡️ 終極之戰！9/11 決賽現場直播，見證歌王誕生！"
+        },
         hero: {
             brandNote: "日月光投控集團成員共同參與",
             titleLine1: "第五屆",
@@ -276,6 +288,18 @@ const translations = {
             description: "Thank you all for your enthusiastic participation! The preliminary videos are now being reviewed by our professional judges.",
             dates: "📌 The finalists will be officially announced on July 8",
             reminder: "👉 Stay tuned for the shortlist of the ultimate voices!"
+        },
+        announcementFinalist: {
+            headline: "🎉 Finalists Revealed!",
+            description: "After fierce preliminary rounds, the top vocalists have emerged! Check out who will rock the stage at the Grand Finals!",
+            dates: "🎤 Finals: Sep 11 Live Performance",
+            location: "📍 Location: ASE Kaohsiung Plant K23 International Conference Hall",
+            reminder: "📺 The Finals will be broadcast LIVE right here on 【This Website】! Stay tuned and cheer for your favorites! 🔥"
+        },
+        finalistBanner: {
+            chineseGroup: "Chinese Group Finalists",
+            foreignGroup: "Foreign Language Group Finalists",
+            liveBroadcast: "⚡️ The Ultimate Showdown! Live Broadcast on 9/11 - Witness the Birth of the Champion!"
         },
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
@@ -522,6 +546,18 @@ const translations = {
             description: "Cảm ơn sự tham gia nhiệt tình của tất cả các bạn! Các video sơ loại đang được ban giám khảo chuyên môn đánh giá.",
             dates: "📌 Danh sách vào chung kết sẽ được công bố chính thức vào ngày 8/7",
             reminder: "👉 Hãy tiếp tục theo dõi để biết danh sách những giọng ca xuất sắc nhất!"
+        },
+        announcementFinalist: {
+            headline: "🎉 Danh Sách Chung Kết Đã Lộ Diện!",
+            description: "Sau những vòng sơ loại trực tuyến gay cấn, các giọng ca xuất sắc nhất đã xuất hiện! Cùng chờ xem ai sẽ tỏa sáng tại vòng chung kết nhé!",
+            dates: "🎤 Chung Kết: Biểu diễn trực tiếp 11/9",
+            location: "📍 Địa điểm: Hội trường Quốc tế K23, Nhà máy ASE Cao Hùng",
+            reminder: "📺 Vòng chung kết sẽ được phát sóng TRỰC TIẾP ngay trên 【Trang Web Này】! Hãy đón xem và cổ vũ cho thí sinh bạn yêu thích! 🔥"
+        },
+        finalistBanner: {
+            chineseGroup: "Danh sách Chung kết Nhóm tiếng Hoa",
+            foreignGroup: "Danh sách Chung kết Nhóm tiếng Nước ngoài",
+            liveBroadcast: "⚡️ Trận Chiến Cuối Cùng! Phát sóng Trực tiếp 11/9 - Hãy chứng kiến sự lên ngôi của Quán quân!"
         },
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",

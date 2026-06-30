@@ -1,14 +1,20 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Megaphone, CalendarClock, Trophy } from 'lucide-react';
-import { getRegistrationStatus, REGISTRATION_STATUS } from '../utils/registrationUtils';
+import { getRegistrationStatus, REGISTRATION_STATUS, isFinalistAnnounced } from '../utils/registrationUtils';
 
 const AnnouncementBoard = () => {
     const { t, lang } = useLanguage();
     const status = getRegistrationStatus();
     const isEnded = status === REGISTRATION_STATUS.ENDED;
+    const isFinalist = isFinalistAnnounced();
     
-    const content = isEnded ? t.announcementEnded : t.announcement;
+    let content = t.announcement;
+    if (isFinalist) {
+        content = t.announcementFinalist;
+    } else if (isEnded) {
+        content = t.announcementEnded;
+    }
 
     if (!content) return null;
 
@@ -31,11 +37,11 @@ const AnnouncementBoard = () => {
                 </div>
                 
                 {/* --- Section 1: The Hook (Rich Promotional Announcement) --- */}
-                <div className={`p-4 md:p-6 text-white border-b-[3px] md:border-b-[4px] border-dark relative flex flex-col items-center text-center transition-colors duration-500 ${isEnded ? 'bg-gradient-to-br from-[#002BFF] via-[#051159] to-dark' : 'bg-gradient-to-br from-[#e21d38] via-[#c41530] to-dark'}`}>
+                <div className={`p-4 md:p-6 text-white border-b-[3px] md:border-b-[4px] border-dark relative flex flex-col items-center text-center transition-colors duration-500 ${isFinalist ? 'bg-gradient-to-br from-[#1E1B4B] via-[#4338CA] to-dark' : isEnded ? 'bg-gradient-to-br from-[#002BFF] via-[#051159] to-dark' : 'bg-gradient-to-br from-[#e21d38] via-[#c41530] to-dark'}`}>
                     
                     <div className="relative z-10 flex flex-col items-center w-full">
                         {/* Highlight Label */}
-                        <div className={`inline-flex items-center gap-1.5 backdrop-blur-md px-3 py-1 rounded-full border mb-4 shadow-sm ${isEnded ? 'bg-[#00E1FF]/20 border-[#00E1FF]/50 text-[#00E1FF]' : 'bg-white/10 border-white/30 text-white'}`}>
+                        <div className={`inline-flex items-center gap-1.5 backdrop-blur-md px-3 py-1 rounded-full border mb-4 shadow-sm ${isFinalist ? 'bg-[#22C55E]/20 border-[#22C55E]/50 text-[#22C55E]' : isEnded ? 'bg-[#00E1FF]/20 border-[#00E1FF]/50 text-[#00E1FF]' : 'bg-white/10 border-white/30 text-white'}`}>
                             <span className="animate-pulse text-sm">🔥</span>
                             <span className="font-heading font-bold tracking-widest text-[11px] md:text-sm">
                                 {t.board?.featured || "FEATURED"}
@@ -51,15 +57,24 @@ const AnnouncementBoard = () => {
                                 {content.description}
                             </p>
                             
-                            <div className={`rounded-lg px-4 py-2 mt-1 border w-full md:w-auto transform -rotate-1 shadow-inner ${isEnded ? 'bg-[#00F0FF]/10 border-[#00F0FF]/30 animate-pulse' : 'bg-black/30 border-white/10'}`}>
-                                <span className={`font-heading font-black text-sm md:text-base tracking-wide drop-shadow-sm ${isEnded ? 'text-[#00F0FF]' : 'text-yellow-200'}`}>
+                            <div className={`rounded-lg px-4 py-2 mt-1 border w-full md:w-auto transform -rotate-1 shadow-inner flex flex-col items-center gap-1 ${isFinalist ? 'bg-[#22C55E]/10 border-[#22C55E]/30 animate-pulse' : isEnded ? 'bg-[#00F0FF]/10 border-[#00F0FF]/30 animate-pulse' : 'bg-black/30 border-white/10'}`}>
+                                <span className={`font-heading font-black text-sm md:text-base tracking-wide drop-shadow-sm ${isFinalist ? 'text-[#22C55E]' : isEnded ? 'text-[#00F0FF]' : 'text-yellow-200'}`}>
                                     {content.dates}
                                 </span>
+                                {content.location && (
+                                    <span className={`font-heading font-black text-sm md:text-base tracking-wide drop-shadow-sm ${isFinalist ? 'text-[#22C55E]' : isEnded ? 'text-[#00F0FF]' : 'text-yellow-200'}`}>
+                                        {content.location}
+                                    </span>
+                                )}
                             </div>
                             
-                            <p className="font-body font-bold text-white/90 text-[12px] md:text-[13px] leading-snug mt-2 border-t border-white/20 pt-3">
-                                {content.reminder}
-                            </p>
+                            {!isFinalist && (
+                                <div className="mt-2 border-t border-white/20 pt-3 w-full text-center">
+                                    <p className="font-body font-bold text-[12px] md:text-[13px] leading-snug text-white/90">
+                                        {content.reminder}
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

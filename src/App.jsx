@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import FinalistBanner from './components/FinalistBanner';
+import { isFinalistAnnounced } from './utils/registrationUtils';
 import InfoSection from './components/InfoSection';
 import QASection from './components/QASection';
 import PastHighlights from './components/PastHighlights';
@@ -24,7 +26,7 @@ function App() {
     <div className="min-h-screen font-body relative">
       <Navbar />
       <main>
-        <Hero />
+        {isFinalistAnnounced() ? <FinalistBanner /> : <Hero />}
         <InfoSection />
         <QASection />
         <PastHighlights />
