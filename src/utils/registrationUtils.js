@@ -5,8 +5,8 @@ export const REGISTRATION_STATUS = {
 };
 
 // 使用 ISO 格式並包含台灣時區 +08:00
-export const START_DATE = new Date('2026-06-01T00:00:00+08:00');
-export const END_DATE = new Date('2026-06-21T23:59:59+08:00');
+const START_DATE = new Date('2026-06-01T00:00:00+08:00');
+const END_DATE = new Date('2026-06-21T23:59:59+08:00');
 
 export const getRegistrationStatus = () => {
   const now = new Date();
