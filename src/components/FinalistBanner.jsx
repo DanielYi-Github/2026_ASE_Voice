@@ -175,7 +175,7 @@ const FinalistBanner = () => {
       {/* OVERLAY LAYER for readable text */}
       <div className="absolute inset-0 bg-gradient-to-r from-dark/60 md:from-dark/40 via-transparent to-transparent z-10 pointer-events-none"></div>
 
-      <div className="relative w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row md:items-center flex-grow z-40 pb-16 md:pb-0">
+      <div className="relative w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row md:items-center flex-grow z-40 pb-6 md:pb-4">
         
         {/* Left Side: Finalist Carousel */}
         <div className="w-full md:w-[65%] lg:w-[70%] flex flex-col justify-center py-8 md:py-0 relative z-40 md:-mt-12">
@@ -273,8 +273,8 @@ const FinalistBanner = () => {
         </div>
       </div>
 
-      {/* Horizontal Bottom Bar for Reminder (Screenshot 2 style) */}
-      <div className="absolute bottom-20 md:bottom-28 left-1/2 -translate-x-1/2 w-[95%] max-w-[1200px] z-50">
+      {/* Horizontal Bottom Bar for Reminder (In-flow layout to prevent overlapping) */}
+      <div className="relative w-[95%] max-w-[1200px] z-50 mb-16 md:mb-24 mt-6 md:mt-4">
         <div className="bg-gradient-to-r from-[#1A103C]/95 via-[#3B2875]/95 to-[#1A103C]/95 border-[2px] border-[#6D42D0]/60 shadow-[0_0_30px_rgba(109,66,208,0.6)] backdrop-blur-xl rounded-2xl py-3 md:py-4 px-6 flex items-center justify-center">
             <p className="font-heading font-black text-[#FFC107] text-sm md:text-lg lg:text-xl tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center animate-pulse">
                 {t.announcementFinalist?.reminder || "📺 決賽當天將於【本網站】全程實況轉播，敬請鎖定，為你支持的選手集氣加油！🔥"}
