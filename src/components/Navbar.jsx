@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Globe, ChevronDown } from 'lucide-react';
-import { getRegistrationStatus, REGISTRATION_STATUS } from '../utils/registrationUtils';
+import { getRegistrationStatus, REGISTRATION_STATUS, isFinalistAnnounced } from '../utils/registrationUtils';
 
 const Navbar = () => {
     const { lang, setLanguage, t } = useLanguage();
@@ -98,15 +98,18 @@ const Navbar = () => {
                     )}
                 </div>
 
-                <a
-                    href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
-                    target={isDisabled ? '_self' : '_blank'}
-                    rel="noopener noreferrer"
-                    onClick={handleRegisterClick}
-                    className={`hidden md:inline-flex btn-brutal px-4 py-2 text-sm transition-all ${isDisabled ? 'bg-gray-500 border-gray-600 text-gray-200 cursor-not-allowed shadow-none' : 'btn-primary'}`}
-                >
-                    {getButtonText()}
-                </a>
+                {/* 決賽名單公佈(7/8)後,報名/名單預告按鈕即失去作用,直接隱藏 */}
+                {!isFinalistAnnounced() && (
+                    <a
+                        href={isDisabled ? '#' : `${import.meta.env.BASE_URL}registration.html?lang=${lang}`}
+                        target={isDisabled ? '_self' : '_blank'}
+                        rel="noopener noreferrer"
+                        onClick={handleRegisterClick}
+                        className={`hidden md:inline-flex btn-brutal px-4 py-2 text-sm transition-all ${isDisabled ? 'bg-gray-500 border-gray-600 text-gray-200 cursor-not-allowed shadow-none' : 'btn-primary'}`}
+                    >
+                        {getButtonText()}
+                    </a>
+                )}
             </div>
         </nav>
     );

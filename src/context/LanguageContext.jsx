@@ -19,7 +19,8 @@ const translations = {
             title: "最新賽事公告",
             featured: "🔥 重點消息",
             dates: "比賽時程",
-            prizes: "競賽獎金"
+            prizes: "競賽獎金",
+            pastLabel: "已結束"
         },
         announcement: {
             headline: "🎤 決戰好聲音！唱出你的高光時刻✨",
@@ -43,7 +44,45 @@ const translations = {
         finalistBanner: {
             chineseGroup: "華語組決賽名單",
             foreignGroup: "外語組決賽名單",
-            liveBroadcast: "⚡️ 終極之戰！9/11 決賽現場直播，見證歌王誕生！"
+            liveBroadcast: "⚡️ 終極之戰！9/11 決賽現場直播，見證歌王誕生！",
+            liveTeaserText: "📺 9/11 (五) 14:30 決賽現場直播，就在本網站，敬請鎖定！",
+            showcaseTitle: "決賽選手陣容"
+        },
+        // 廠區顯示名稱對照表:鍵為 finalistsData.js 中的廠區中文正名,集團僅此四個廠區,勿新增其他
+        factories: {
+            '日月光高雄廠': '日月光高雄廠',
+            '日月光中壢廠': '日月光中壢廠',
+            '矽品精密': '矽品精密',
+            '環鴻科技': '環鴻科技'
+        },
+        prediction: {
+            slogan: "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 熱血上線，猜中冠軍贏好禮 — 敬請期待！",
+            sloganLive: "冠軍預測 PK 賽火熱進行中！你心目中的歌王是誰？快來下注你的神直覺！",
+            dateChip: "8/1 上線・敬請期待",
+            cta: "立即預測"
+        },
+        predictionBanner: {
+            eyebrow: "SPECIAL EVENT 互動企劃",
+            title: "冠軍預測 PK 賽",
+            titleEn: "CHAMPION PREDICTION",
+            subtitle: "華語組、外語組各 10 位決賽選手已就位！誰能奪下兩組冠軍寶座？下滑認識決賽選手，再用你的神直覺預測冠軍，猜中就有機會把好禮抱回家！",
+            cta: "立即預測冠軍",
+            note: "* 免費參加，全集團同仁一起同樂！",
+            scrollHint: "▼ 認識華語組 × 外語組決賽選手 ▼"
+        },
+        live: {
+            eyebrow: "ASE VOICE 2026 · GRAND FINALE",
+            title: "決賽之日",
+            titleEn: "THE FINAL SHOWDOWN",
+            dateLine: "9.11 (五) 14:30",
+            days: "天",
+            hours: "時",
+            minutes: "分",
+            seconds: "秒",
+            onAirBadge: "LIVE 直播中",
+            watchHint: "直播將於本頁面準時開播，倒數歸零自動上線 — 敬請鎖定！",
+            onAirNote: "若影片未自動播放，請點擊播放鍵。直播結束後此處將保留完整重播。",
+            streamPending: "直播連結準備中，請稍候再回來！"
         },
         hero: {
             brandNote: "日月光投控集團成員共同參與",
@@ -275,7 +314,8 @@ const translations = {
             title: "BULLETIN BOARD",
             featured: "🔥 FEATURED",
             dates: "KEY DATES",
-            prizes: "TOP PRIZES"
+            prizes: "TOP PRIZES",
+            pastLabel: "Ended"
         },
         announcement: {
             headline: "🎤 Battle for the Best Voice! Sing Your Shining Moment✨",
@@ -299,7 +339,45 @@ const translations = {
         finalistBanner: {
             chineseGroup: "Chinese Group Finalists",
             foreignGroup: "Foreign Language Group Finalists",
-            liveBroadcast: "⚡️ The Ultimate Showdown! Live Broadcast on 9/11 - Witness the Birth of the Champion!"
+            liveBroadcast: "⚡️ The Ultimate Showdown! Live Broadcast on 9/11 - Witness the Birth of the Champion!",
+            liveTeaserText: "📺 Grand Final LIVE right here on this website — Sep 11 (Fri) 2:30 PM. Stay tuned!",
+            showcaseTitle: "GRAND FINAL LINE-UP"
+        },
+        // Factory display names keyed by the Chinese canonical names in finalistsData.js — only these four exist
+        factories: {
+            '日月光高雄廠': 'ASE Kaohsiung',
+            '日月光中壢廠': 'ASE Chungli',
+            '矽品精密': 'SPIL',
+            '環鴻科技': 'USI'
+        },
+        prediction: {
+            slogan: "Call the Crown! Who will be this year's champion? Champion Prediction goes live on Aug 1 — pick the winner, win prizes. Stay tuned!",
+            sloganLive: "Champion Prediction is ON! Who's your pick? Trust your instinct and cast your prediction now!",
+            dateChip: "COMING AUG 1",
+            cta: "Predict Now"
+        },
+        predictionBanner: {
+            eyebrow: "SPECIAL EVENT",
+            title: "CHAMPION PREDICTION",
+            titleEn: "WHO TAKES THE CROWN?",
+            subtitle: "10 finalists from the Mandarin group and 10 from the Foreign-language group are ready! Scroll down to meet them, then trust your instinct and predict the champions — guess right for a chance to win great prizes!",
+            cta: "Predict the Champion",
+            note: "* Free to join — everyone in the ASE family is welcome!",
+            scrollHint: "▼ Meet the Finalists of Both Groups ▼"
+        },
+        live: {
+            eyebrow: "ASE VOICE 2026 · GRAND FINALE",
+            title: "THE FINAL DAY",
+            titleEn: "THE FINAL SHOWDOWN",
+            dateLine: "SEP 11 (FRI) 2:30 PM",
+            days: "Days",
+            hours: "Hrs",
+            minutes: "Min",
+            seconds: "Sec",
+            onAirBadge: "LIVE NOW",
+            watchHint: "The live stream starts right here on this page when the countdown hits zero — stay tuned!",
+            onAirNote: "If the video doesn't autoplay, press play. A full replay will remain here after the show.",
+            streamPending: "The stream link is being prepared — check back soon!"
         },
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
@@ -533,7 +611,8 @@ const translations = {
             title: "BẢNG TIN",
             featured: "🔥 NỔI BẬT",
             dates: "LỊCH TRÌNH",
-            prizes: "GIẢI THƯỞNG"
+            prizes: "GIẢI THƯỞNG",
+            pastLabel: "Đã kết thúc"
         },
         announcement: {
             headline: "🎤 Cuộc Chiến Giọng Hát! Hát Lên Khoảnh Khắc Tỏa Sáng Của Bạn✨",
@@ -557,7 +636,45 @@ const translations = {
         finalistBanner: {
             chineseGroup: "Danh sách Chung kết Nhóm tiếng Hoa",
             foreignGroup: "Danh sách Chung kết Nhóm tiếng Nước ngoài",
-            liveBroadcast: "⚡️ Trận Chiến Cuối Cùng! Phát sóng Trực tiếp 11/9 - Hãy chứng kiến sự lên ngôi của Quán quân!"
+            liveBroadcast: "⚡️ Trận Chiến Cuối Cùng! Phát sóng Trực tiếp 11/9 - Hãy chứng kiến sự lên ngôi của Quán quân!",
+            liveTeaserText: "📺 Chung kết LIVE ngay trên website này — 11/9 (Thứ Sáu) 14:30. Hãy đón xem!",
+            showcaseTitle: "ĐỘI HÌNH CHUNG KẾT"
+        },
+        // Tên nhà máy hiển thị, khóa là tên tiếng Trung chính thức trong finalistsData.js — chỉ có bốn nhà máy này
+        factories: {
+            '日月光高雄廠': 'ASE Cao Hùng',
+            '日月光中壢廠': 'ASE Trung Lịch',
+            '矽品精密': 'SPIL',
+            '環鴻科技': 'USI'
+        },
+        prediction: {
+            slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân ra mắt ngày 1/8 — đoán đúng nhà vô địch, rinh quà hấp dẫn. Hãy đón chờ!",
+            sloganLive: "Dự đoán Quán quân đang diễn ra! Bạn chọn ai? Tin vào trực giác và dự đoán ngay!",
+            dateChip: "RA MẮT 1/8",
+            cta: "Dự đoán ngay"
+        },
+        predictionBanner: {
+            eyebrow: "SỰ KIỆN ĐẶC BIỆT",
+            title: "DỰ ĐOÁN QUÁN QUÂN",
+            titleEn: "CHAMPION PREDICTION",
+            subtitle: "10 thí sinh nhóm tiếng Hoa và 10 thí sinh nhóm tiếng nước ngoài đã sẵn sàng! Kéo xuống để gặp các thí sinh chung kết, rồi tin vào trực giác của bạn và dự đoán quán quân — đoán đúng sẽ có cơ hội nhận quà hấp dẫn!",
+            cta: "Dự đoán Quán quân",
+            note: "* Tham gia miễn phí — chào đón tất cả thành viên đại gia đình ASE!",
+            scrollHint: "▼ Gặp gỡ thí sinh chung kết hai nhóm ▼"
+        },
+        live: {
+            eyebrow: "ASE VOICE 2026 · CHUNG KẾT",
+            title: "NGÀY CHUNG KẾT",
+            titleEn: "THE FINAL SHOWDOWN",
+            dateLine: "11.9 (Thứ Sáu) 14:30",
+            days: "Ngày",
+            hours: "Giờ",
+            minutes: "Phút",
+            seconds: "Giây",
+            onAirBadge: "ĐANG PHÁT TRỰC TIẾP",
+            watchHint: "Buổi phát trực tiếp sẽ bắt đầu ngay trên trang này khi đồng hồ đếm ngược về 0 — hãy đón xem!",
+            onAirNote: "Nếu video không tự phát, hãy nhấn nút phát. Bản phát lại đầy đủ sẽ được lưu tại đây sau chương trình.",
+            streamPending: "Đường link trực tiếp đang được chuẩn bị — hãy quay lại sau!"
         },
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",

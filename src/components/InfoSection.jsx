@@ -1,10 +1,47 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Trophy, CalendarCheck, Users, Mic2, ShieldAlert, Medal, Gem, Star } from 'lucide-react';
+import { Trophy, CalendarCheck, Users, Mic2, ShieldAlert, Medal, Gem, Star, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { isTimelineItemPast, isFinalistAnnounced } from '../utils/registrationUtils';
 
 const InfoSection = () => {
     const { t } = useLanguage();
+    // 決賽名單公佈(7/8)後,報名相關的「下載簡章」與「參賽資格與組別」重要性降低,
+    // 從頁面頂部移到「活動宗旨」正上方
+    const announced = isFinalistAnnounced();
+
+    const downloadButton = (
+        <a
+            href={`${import.meta.env.BASE_URL}downloads/${t.info.downloadFile}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-secondary text-white font-heading font-black tracking-wide text-xl px-8 py-3.5 border-[4px] border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] hover:shadow-[0px_0px_0_0_rgba(26,26,26,1)] hover:translate-x-1 hover:translate-y-1 transition-all"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            {t.info.downloadGuide}
+        </a>
+    );
+
+    const groupsCard = (
+        <div className="mb-16 px-0 md:px-8">
+            <motion.div
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                className="bg-primary border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 relative"
+            >
+                <div className="flex items-center gap-4 mb-6 border-b-[4px] border-dark pb-5">
+                    <div className="bg-white p-3 border-4 border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)]">
+                        <Star className="text-dark" size={32} />
+                    </div>
+                    <h3 className="text-3xl lg:text-4xl font-heading font-black uppercase text-dark tracking-tight">{t.info.groups}</h3>
+                </div>
+                <div className="bg-white text-dark p-6 lg:p-8 border-4 border-dark font-body font-bold whitespace-pre-line text-xl md:text-2xl leading-[1.9] shadow-inner tracking-wide">
+                    {t.info.groupsDesc}
+                </div>
+            </motion.div>
+        </div>
+    );
 
     // Helper for 3D Honor Card styling based on Rank (0: Gold, 1: Silver, 2: Bronze, 3+: Regular)
     const getRankStyle = (index) => {
@@ -46,37 +83,12 @@ const InfoSection = () => {
                                 {t.info.title}
                             </h2>
                         </div>
-                        <a 
-                            href={`${import.meta.env.BASE_URL}downloads/${t.info.downloadFile}`}
-                            target="_blank"
-                            rel="noopener noreferrer" 
-                            className="inline-flex items-center gap-3 bg-secondary text-white font-heading font-black tracking-wide text-xl px-8 py-3.5 border-[4px] border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)] hover:shadow-[0px_0px_0_0_rgba(26,26,26,1)] hover:translate-x-1 hover:translate-y-1 transition-all"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                            {t.info.downloadGuide}
-                        </a>
+                        {!announced && downloadButton}
                     </div>
                 </motion.div>
 
-                {/* 1. Groups Card (Full Width) */}
-                <div className="mb-16 px-0 md:px-8">
-                    <motion.div
-                        initial={{ y: 30, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        className="bg-primary border-[5px] border-dark shadow-[8px_8px_0_0_rgba(26,26,26,1)] p-8 md:p-12 relative"
-                    >
-                        <div className="flex items-center gap-4 mb-6 border-b-[4px] border-dark pb-5">
-                            <div className="bg-white p-3 border-4 border-dark shadow-[4px_4px_0_0_rgba(26,26,26,1)]">
-                                <Star className="text-dark" size={32} />
-                            </div>
-                            <h3 className="text-3xl lg:text-4xl font-heading font-black uppercase text-dark tracking-tight">{t.info.groups}</h3>
-                        </div>
-                        <div className="bg-white text-dark p-6 lg:p-8 border-4 border-dark font-body font-bold whitespace-pre-line text-xl md:text-2xl leading-[1.9] shadow-inner tracking-wide">
-                            {t.info.groupsDesc}
-                        </div>
-                    </motion.div>
-                </div>
+                {/* 1. Groups Card (Full Width) — 名單公佈後移至活動宗旨上方 */}
+                {!announced && groupsCard}
 
                 {/* 2. Massive Timeline Row */}
                 <motion.div
@@ -94,17 +106,27 @@ const InfoSection = () => {
 
                     {/* 手機版：圓圈縮至 w-9 h-9，減少 gap，讓文字欄更寬 */}
                     <div className="space-y-8 md:space-y-12 relative before:absolute before:inset-0 before:ml-[1.1rem] md:before:ml-[1.75rem] before:-translate-x-px before:h-full before:w-[4px] md:before:w-[6px] before:bg-dark">
-                        {t.info.timelineItems.map((item, index) => (
+                        {t.info.timelineItems.map((item, index) => {
+                            const isPast = isTimelineItemPast(index);
+                            return (
                             <div key={index} className="relative flex items-start gap-3 md:gap-10 group">
                                 {/* 手機版圓圈縮小至 w-9 h-9，桌面版恢復 w-16 h-16 */}
-                                <div className="flex items-center justify-center w-9 h-9 md:w-16 md:h-16 rounded-full border-[3px] md:border-[4px] border-dark bg-secondary text-white font-black font-heading text-base md:text-3xl shrink-0 shadow-[3px_3px_0_0_rgba(26,26,26,1)] md:shadow-[4px_4px_0_0_rgba(26,26,26,1)] z-10 transform transition-transform group-hover:scale-110 group-hover:-rotate-12">
+                                <div className={`flex items-center justify-center w-9 h-9 md:w-16 md:h-16 rounded-full border-[3px] md:border-[4px] border-dark text-white font-black font-heading text-base md:text-3xl shrink-0 shadow-[3px_3px_0_0_rgba(26,26,26,1)] md:shadow-[4px_4px_0_0_rgba(26,26,26,1)] z-10 transform transition-transform group-hover:scale-110 group-hover:-rotate-12 ${isPast ? 'bg-gray-400' : 'bg-secondary'}`}>
                                     {index + 1}
                                 </div>
-                                {/* 手機版：內白發展到剩餘寬度，縮小內部 padding 讓文字不隨於過窄 */}
-                                <div className="bg-light border-[3px] md:border-[4px] border-dark p-4 md:p-8 shadow-[4px_4px_0_0_rgba(26,26,26,1)] md:shadow-[6px_6px_0_0_rgba(26,26,26,1)] w-full group-hover:-translate-y-2 group-hover:bg-[#ffefd8] transition-all duration-300">
+                                {/* 手機版：內白發展到剩餘寬度，縮小內部 padding 讓文字不隨於過窄；已結束時程整體調暗 */}
+                                <div className={`border-[3px] md:border-[4px] border-dark p-4 md:p-8 shadow-[4px_4px_0_0_rgba(26,26,26,1)] md:shadow-[6px_6px_0_0_rgba(26,26,26,1)] w-full transition-all duration-300 ${isPast ? 'bg-gray-200 opacity-70 grayscale' : 'bg-light group-hover:-translate-y-2 group-hover:bg-[#ffefd8]'}`}>
                                     {/* 手機版永遠 flex-col，無顯示擅擠問題 */}
                                     <div className="flex flex-col mb-3 md:mb-5 gap-2">
-                                        <span className="font-heading font-black text-secondary text-base md:text-2xl bg-dark text-white px-3 py-0.5 w-fit border-2 border-dark">{item.date}</span>
+                                        <div className="flex items-center gap-2 flex-wrap">
+                                            <span className={`font-heading font-black text-base md:text-2xl text-white px-3 py-0.5 w-fit border-2 border-dark ${isPast ? 'bg-gray-500 line-through decoration-2' : 'bg-dark'}`}>{item.date}</span>
+                                            {isPast && (
+                                                <span className="inline-flex items-center gap-1 font-heading font-black text-xs md:text-base text-gray-600 bg-white border-2 border-gray-500 px-2 py-0.5 rounded-full">
+                                                    <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                                                    {t.board?.pastLabel || "已結束"}
+                                                </span>
+                                            )}
+                                        </div>
                                         <h4 className="font-heading font-bold text-xl md:text-4xl uppercase text-dark tracking-tight">{item.event}</h4>
                                     </div>
                                     {/* 手機版縮小字型讓行數減少 */}
@@ -113,7 +135,8 @@ const InfoSection = () => {
                                     </p>
                                 </div>
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </motion.div>
 
@@ -174,6 +197,14 @@ const InfoSection = () => {
                             </div>
                         </div>
                     </motion.div>
+
+                    {/* 名單公佈(7/8)後,下載簡章與參賽資格移到活動宗旨正上方 */}
+                    {announced && (
+                        <div className="w-full">
+                            <div className="text-center mb-10">{downloadButton}</div>
+                            {groupsCard}
+                        </div>
+                    )}
 
                     {/* Purpose Section (moved here, above Obligations) */}
                     <motion.div

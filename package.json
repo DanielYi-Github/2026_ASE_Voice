@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update-finalists": "node scripts/update-finalists.mjs",
+    "set-live": "node scripts/set-live.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.35.1",

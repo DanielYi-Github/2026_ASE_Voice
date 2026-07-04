@@ -22,21 +22,37 @@
 │   ├── assets/          # 視覺資源 (圖片、SVG 標誌)
 │   ├── components/      # 各模組 React 元件
 │   │   ├── Navbar.jsx              # 導覽列與語系切換器
-│   │   ├── Hero.jsx                # 首頁橫幅與即時倒數器
+│   │   ├── Hero.jsx                # 首頁橫幅與即時倒數器（報名期主 Banner）
+│   │   ├── FinalistBanner.jsx      # 7/8 起：決賽名單主 Banner
+│   │   ├── FinalistCarousel.jsx    # 決賽名單卡片與輪播（華語/外語分組配色，可重用）
+│   │   ├── FinalistShowcase.jsx    # 8/1 起：名單下移後的獨立展示區塊
+│   │   ├── PredictionBanner.jsx    # 8/1 起：冠軍預測活動主 Banner
+│   │   ├── PredictionTeaser.jsx    # 主 Banner 下方的預測活動宣傳/CTA 條
+│   │   ├── LiveBanner.jsx          # 9/7 起：決賽直播倒數 + YouTube 直播嵌入主 Banner
+│   │   ├── LiveTeaserStrip.jsx     # 9/11 直播預告條（嵌於名單/預測 Banner 內）
 │   │   ├── AnnouncementBoard.jsx   # 最新賽事佈告欄
 │   │   ├── InfoSection.jsx         # 比賽簡章、時程與獎金說明
 │   │   ├── QASection.jsx           # 折疊式常見問題 (FAQ)
 │   │   ├── PastHighlights.jsx     # 歷屆精彩賽事回顧影音
 │   │   ├── RegistrationCountdown.jsx # 倒數計時元件
 │   │   └── Footer.jsx              # 主辦與聯絡資訊
+│   ├── config/          # 可調整的活動設定
+│   │   ├── liveConfig.js           # 決賽直播 YouTube 網址（由 npm run set-live 改寫）
+│   │   └── siteConfig.js           # 冠軍預測活動網址
 │   ├── context/         # 全域狀態管理
 │   │   └── LanguageContext.jsx     # 三語系切換核心邏輯與語系對照表 (700+ 行)
+│   ├── data/            # 靜態資料
+│   │   └── finalistsData.js        # 20 位決賽名單（由 npm run update-finalists 產生）
 │   ├── utils/           # 工具函式
-│   │   └── registrationUtils.js    # 報名時間判斷邏輯
+│   │   └── registrationUtils.js    # 報名/名單/預測/直播 全時間軸判斷邏輯
 │   ├── App.css          # 應用程式基礎樣式
-│   ├── App.jsx          # 頁面主入口與錨點滾動定位
+│   ├── App.jsx          # 頁面主入口、階段 Banner 切換與錨點滾動定位
 │   ├── index.css        # 全域樣式與自訂 CSS 動畫
 │   └── main.jsx         # React 渲染起點與全域 Provider 包裹
+├── scripts/             # 一鍵維運腳本（零依賴，純 Node）
+│   ├── update-finalists.mjs        # CSV → 決賽名單一鍵更新
+│   └── set-live.mjs                # 一鍵設定直播 YouTube 連結
+├── finalists.template.csv          # 決賽名單 CSV 範本
 ├── eslint.config.js     # ESLint 靜態代碼分析配置
 ├── package.json         # 專案套件及腳本定義
 ├── tailwind.config.js   # Tailwind CSS 輔助配置
@@ -113,6 +129,94 @@ export const END_DATE = new Date('2026-06-21T23:59:59+08:00');   // 報名截止
 - `parse_pdf.py`：使用 `pdfplumber` 讀取並提取官方簡章 PDF 檔案中的越文內容，以利校對。
 
 *備註：執行此類腳本前，請確保已安裝 pandas、openpyxl 以及 pdfplumber 等依賴庫。*
+
+---
+
+## 🎬 活動階段營運手冊
+
+網站首頁主 Banner 會依「今天的日期」**自動**切換四個階段，完全不需要改程式碼或手動上線。你只需要在兩個時間點各下一條指令（更新名單、設定直播連結），其餘都是自動的。
+
+### 📅 時間軸：什麼時候該做什麼
+
+| 日期（台灣時間） | 網站會自動變成 | 你要做的事 | 指令 |
+|---|---|---|---|
+| ~ 6/21 報名期 | 報名主視覺 + 即時倒數 | 無 | — |
+| **7/8 00:00** | **決賽名單 Banner**（華語/外語分組輪播），公佈欄與比賽時程中「已過去」的項目自動調暗 | **7/8 前**先把 20 位名單填進 `finalists.csv` 並更新上線 | `npm run update-finalists -- finalists.csv` |
+| **8/1 00:00** | **冠軍預測活動 Banner**（整版），決賽名單自動下移為頁面中段的獨立區塊 | 無（預測活動網址已設定好，按鈕自動可點） | — |
+| **9/7（決賽當週週一）00:00** | **決賽直播倒數 Banner**（Apple 發表會風格倒數） | **9/11 前**拿到正式直播連結後，設定上去 | `npm run set-live -- <YouTube網址>` |
+| **9/11 14:30** | 倒數歸零，**自動換成 YouTube 直播播放器**（直播結束後自動變重播） | 無 | — |
+
+> 每次下完指令後，記得 `git add -A && git commit && git push`；推上 `main` 後 GitHub Actions 會自動建置並部署到 `asevoice.org`（約 1~2 分鐘）。指令本身只更新本地檔案，**不會**自動 push。
+
+---
+
+### 步驟一：一鍵更新 20 位決賽名單（7/8 前）
+
+1. 複製範本：把根目錄的 `finalists.template.csv` 另存為 `finalists.csv`。
+2. 用 Excel 打開，填入正式名單。**六個欄位（順序不限、表頭中英皆可）**：
+   | 欄位 | 說明 |
+   |---|---|
+   | 組別 | 填「華語組」或「外語組」（含「華/中」判為華語、含「外/越/英」判為外語） |
+   | 員工姓名 | 中文或外文全名皆可，長名不會被截斷 |
+   | 員工工號 | 顯示於卡片上（如 `No.0068001`） |
+   | 廠區 | **必須是以下四個之一**：日月光高雄廠、日月光中壢廠、矽品精密、環鴻科技。填其他值腳本會報錯（常見簡寫如「中壢廠」「矽品」會自動轉為正名） |
+   | 歌名 | 決賽演唱曲目 |
+   | 原唱歌手 | 該曲原唱 |
+
+   **多語系顯示規則**：
+   - **廠區**會隨網站語系自動翻譯（中：日月光高雄廠 → 英：ASE Kaohsiung → 越：ASE Cao Hùng），對照表在 `src/context/LanguageContext.jsx` 各語言的 `factories` 區塊；若未來廠區名稱有異動，需同步更新 zh/en/vi 三處。
+   - **員工工號、員工姓名、歌名、原唱歌手**一律依 CSV 原文顯示、**不做翻譯**——請直接填入最終要呈現在網站上的文字。
+3. **存檔為 CSV**：Excel →「另存新檔」→ 檔案類型選 **「CSV UTF-8（逗號分隔）」**（務必選 UTF-8，否則中文/越南文會變亂碼）。
+4. 執行一鍵更新：
+   ```bash
+   npm run update-finalists -- finalists.csv
+   ```
+   - 腳本會驗證「華語 10 位 + 外語 10 位」，並在終端列出完整名單供你核對。
+   - 只想先看解析結果、**不寫檔**：加 `--dry-run`。
+   - 數量不是 10+10 但你確定要用：加 `--force`。
+5. `npm run dev` 於瀏覽器核對畫面 → 沒問題就 commit + push。
+
+---
+
+### 步驟二：一鍵設定決賽直播連結（9/11 前）
+
+1. 事先在 YouTube 建立直播（排程或開台皆可），取得直播網址。**支援任一種格式**：
+   `https://www.youtube.com/live/xxxx`、`https://youtu.be/xxxx`、`https://www.youtube.com/watch?v=xxxx`
+2. 執行一鍵設定：
+   ```bash
+   npm run set-live -- https://www.youtube.com/live/你的直播ID
+   ```
+   - 腳本會自動解析出影片 ID 並寫入 `src/config/liveConfig.js`。
+   - 只想先驗證網址、不寫檔：加 `--dry-run`。
+3. 用 `?preview=onair` 預覽播放器（見下方預覽章節）確認能正常播放 → commit + push。
+
+> 直播當天什麼都不用做：9/11 14:30 一到，倒數 Banner 會自動換成 YouTube 播放器；直播結束後同一連結會自動變成完整重播。
+
+---
+
+### 🔍 上線前預覽：先看到未來畫面再放心上線
+
+所有階段畫面都能在**還沒到日期前**先預覽，dev 環境與正式站皆適用。有兩種方式：
+
+**方式 A：`?preview=` 快捷（跳到某個階段，並連動模擬該階段起始日期 — 時程調暗、按鈕顯隱等時間邏輯會一起變化）**
+
+| 網址 | 看到的畫面 |
+|---|---|
+| `http://localhost:5173/?preview=finalist` | 決賽名單 Banner |
+| `http://localhost:5173/?preview=prediction` | 冠軍預測活動 Banner + 名單下移區塊 |
+| `http://localhost:5173/?preview=live` | 決賽直播倒數 Banner |
+| `http://localhost:5173/?preview=onair` | 直播播放器（測試 YouTube 嵌入是否正常） |
+
+**方式 B：`?mockdate=` 模擬某一天（連帶時程調暗、預測 CTA 等時間邏輯全部一起模擬，最接近真實情境）**
+
+| 網址 | 模擬情境 |
+|---|---|
+| `http://localhost:5173/?mockdate=2026-07-08` | 7/8 名單公佈日：決賽名單 + 前兩項時程調暗（「公告決賽名單」當天保持亮起，7/9 起才調暗） |
+| `http://localhost:5173/?mockdate=2026-08-02` | 8/1 後：整版預測 Banner + CTA 可點 + 名單下移 |
+| `http://localhost:5173/?mockdate=2026-09-08` | 9/7 後：直播倒數計時 |
+| `http://localhost:5173/?mockdate=2026-09-11T15:00` | 直播已開始：YouTube 播放器 |
+
+> `mockdate` 可只寫日期（`2026-09-11`）或含時間（`2026-09-11T15:00`），一律以台灣時間（UTC+8）解讀。正式站也能用：`https://asevoice.org/?mockdate=2026-09-08`。移除網址參數即回到真實當前時間。
 
 ---
 

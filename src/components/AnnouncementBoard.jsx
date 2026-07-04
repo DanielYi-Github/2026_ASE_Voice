@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Megaphone, CalendarClock, Trophy } from 'lucide-react';
-import { getRegistrationStatus, REGISTRATION_STATUS, isFinalistAnnounced } from '../utils/registrationUtils';
+import { getRegistrationStatus, REGISTRATION_STATUS, isFinalistAnnounced, isTimelineItemPast } from '../utils/registrationUtils';
 
 const AnnouncementBoard = () => {
     const { t, lang } = useLanguage();
@@ -91,17 +91,26 @@ const AnnouncementBoard = () => {
                     {/* Full Unrolled Timeline (No Scrollbar) */}
                     <div className="w-full">
                         <ul className="space-y-3.5 md:space-y-4">
-                            {fullTimelines.map((item, idx) => (item && 
-                                <li key={idx} className="flex flex-col relative group">
-                                    <div className="absolute left-[4px] top-1.5 w-1.5 h-1.5 rounded-full bg-secondary group-hover:scale-150 transition-transform"></div>
-                                    <span className="font-heading font-bold text-secondary text-[11px] md:text-xs pl-[16px]">
+                            {fullTimelines.map((item, idx) => {
+                                if (!item) return null;
+                                const isPast = isTimelineItemPast(idx);
+                                return (
+                                <li key={idx} className={`flex flex-col relative group ${isPast ? 'opacity-45 grayscale' : ''}`}>
+                                    <div className={`absolute left-[4px] top-1.5 w-1.5 h-1.5 rounded-full transition-transform ${isPast ? 'bg-gray-400' : 'bg-secondary group-hover:scale-150'}`}></div>
+                                    <span className={`font-heading font-bold text-[11px] md:text-xs pl-[16px] ${isPast ? 'text-gray-500 line-through' : 'text-secondary'}`}>
                                         {item.date}
+                                        {isPast && (
+                                            <span className="ml-1.5 no-underline inline-block bg-gray-300 text-gray-600 px-1.5 rounded-full text-[9px] md:text-[10px] align-middle">
+                                                ✓ {t.board?.pastLabel || "已結束"}
+                                            </span>
+                                        )}
                                     </span>
-                                    <span className="font-body font-bold text-dark text-xs md:text-[13px] border-l-[3px] border-primary/40 pl-3 ml-[6px] mt-1 leading-snug">
+                                    <span className={`font-body font-bold text-xs md:text-[13px] border-l-[3px] pl-3 ml-[6px] mt-1 leading-snug ${isPast ? 'text-gray-500 border-gray-300' : 'text-dark border-primary/40'}`}>
                                         {typeof item.event === 'string' ? item.event : '賽程活動'}
                                     </span>
                                 </li>
-                            ))}
+                                );
+                            })}
                         </ul>
                     </div>
                 </div>
