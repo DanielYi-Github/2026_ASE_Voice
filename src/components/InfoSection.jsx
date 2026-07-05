@@ -107,7 +107,7 @@ const InfoSection = () => {
                     {/* 手機版：圓圈縮至 w-9 h-9，減少 gap，讓文字欄更寬 */}
                     <div className="space-y-8 md:space-y-12 relative before:absolute before:inset-0 before:ml-[1.1rem] md:before:ml-[1.75rem] before:-translate-x-px before:h-full before:w-[4px] md:before:w-[6px] before:bg-dark">
                         {t.info.timelineItems.map((item, index) => {
-                            const isPast = isTimelineItemPast(index);
+                            const isPast = index >= 2 && isTimelineItemPast(index);
                             return (
                             <div key={index} className="relative flex items-start gap-3 md:gap-10 group">
                                 {/* 手機版圓圈縮小至 w-9 h-9，桌面版恢復 w-16 h-16 */}

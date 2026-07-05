@@ -6,7 +6,7 @@ import PredictionBanner from './components/PredictionBanner';
 import PredictionTeaser from './components/PredictionTeaser';
 import FinalistShowcase from './components/FinalistShowcase';
 import LiveBanner from './components/LiveBanner';
-import { getHeroMode, HERO_MODE } from './utils/registrationUtils';
+import { getHeroMode, HERO_MODE, isFinalistAnnounced } from './utils/registrationUtils';
 import InfoSection from './components/InfoSection';
 import QASection from './components/QASection';
 import PastHighlights from './components/PastHighlights';
@@ -42,8 +42,8 @@ function App() {
       <Navbar />
       <main>
         {heroByMode[heroMode]}
-        {/* 8/1 前:預測活動預告條;LIVE 階段:預測 CTA 條(PREDICTION 階段由整版 Banner 呈現,不重複) */}
-        {heroMode !== HERO_MODE.PREDICTION && <PredictionTeaser />}
+        {/* 7/8 起:預測活動預告條;LIVE 階段:預測 CTA 條(PREDICTION 階段由整版 Banner 呈現,不重複) */}
+        {isFinalistAnnounced() && heroMode !== HERO_MODE.PREDICTION && <PredictionTeaser />}
         {/* 8/1 起名單自 Banner 下移為獨立區塊 */}
         {(heroMode === HERO_MODE.PREDICTION || heroMode === HERO_MODE.LIVE) && <FinalistShowcase />}
         <InfoSection />
