@@ -48,12 +48,13 @@ const translations = {
             liveTeaserText: "📺 9/11 (五) 14:30 決賽現場直播，就在本網站，敬請鎖定！",
             showcaseTitle: "決賽選手陣容"
         },
-        // 廠區顯示名稱對照表:鍵為 finalistsData.js 中的廠區中文正名,集團僅此四個廠區,勿新增其他
+        // 廠區顯示名稱對照表:鍵為 finalistsData.js 中的廠區中文正名,集團僅此五個廠區,勿新增其他
         factories: {
             '日月光高雄廠': '日月光高雄廠',
             '日月光中壢廠': '日月光中壢廠',
             '矽品精密': '矽品精密',
-            '環鴻科技': '環鴻科技'
+            '環鴻科技': '環鴻科技',
+            '日月光整合服務': '日月光整合服務'
         },
         prediction: {
             slogan: "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 熱血上線，猜中冠軍贏好禮 — 敬請期待！",
@@ -343,12 +344,13 @@ const translations = {
             liveTeaserText: "📺 Grand Final LIVE right here on this website — Sep 11 (Fri) 2:30 PM. Stay tuned!",
             showcaseTitle: "GRAND FINAL LINE-UP"
         },
-        // Factory display names keyed by the Chinese canonical names in finalistsData.js — only these four exist
+        // Factory display names keyed by the Chinese canonical names in finalistsData.js — only these five exist
         factories: {
             '日月光高雄廠': 'ASE Kaohsiung',
             '日月光中壢廠': 'ASE Chungli',
             '矽品精密': 'SPIL',
-            '環鴻科技': 'USI'
+            '環鴻科技': 'USI',
+            '日月光整合服務': 'GIS'
         },
         prediction: {
             slogan: "Call the Crown! Who will be this year's champion? Champion Prediction goes live on Aug 1 — pick the winner, win prizes. Stay tuned!",
@@ -640,12 +642,13 @@ const translations = {
             liveTeaserText: "📺 Chung kết LIVE ngay trên website này — 11/9 (Thứ Sáu) 14:30. Hãy đón xem!",
             showcaseTitle: "ĐỘI HÌNH CHUNG KẾT"
         },
-        // Tên nhà máy hiển thị, khóa là tên tiếng Trung chính thức trong finalistsData.js — chỉ có bốn nhà máy này
+        // Tên nhà máy hiển thị, khóa là tên tiếng Trung chính thức trong finalistsData.js — chỉ có năm nhà máy này
         factories: {
             '日月光高雄廠': 'ASE Cao Hùng',
             '日月光中壢廠': 'ASE Trung Lịch',
             '矽品精密': 'SPIL',
-            '環鴻科技': 'USI'
+            '環鴻科技': 'USI',
+            '日月光整合服務': 'GIS'
         },
         prediction: {
             slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân ra mắt ngày 1/8 — đoán đúng nhà vô địch, rinh quà hấp dẫn. Hãy đón chờ!",

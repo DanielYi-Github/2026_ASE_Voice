@@ -9,7 +9,7 @@
 // CSV 欄位（表頭中英皆可，順序不限）:
 //   組別 / group、員工姓名 / name、員工工號 / employeeId、廠區 / factory、歌名 / songName、原唱歌手 / originalArtist
 // 組別欄位含「華」「中」「Chinese」→ 華語組;含「外」「Foreign」「越」「英」→ 外語組。
-// 廠區欄位僅接受四個正名:日月光高雄廠、日月光中壢廠、矽品精密、環鴻科技(常見簡寫會自動轉為正名,其餘報錯)。
+// 廠區欄位僅接受五個正名:日月光高雄廠、日月光中壢廠、矽品精密、環鴻科技、日月光整合服務(常見簡寫會自動轉為正名,其餘報錯)。
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -99,14 +99,15 @@ function classifyGroup(raw) {
   return null;
 }
 
-// 廠區只有四個正名(顯示時由 LanguageContext.jsx 的 factories 依語系翻譯)。
+// 廠區只有五個正名(顯示時由 LanguageContext.jsx 的 factories 依語系翻譯)。
 // 常見簡寫自動轉為正名,其餘一律報錯,避免打錯字或新增不存在的廠區。
-const FACTORY_CANONICAL = ['日月光高雄廠', '日月光中壢廠', '矽品精密', '環鴻科技'];
+const FACTORY_CANONICAL = ['日月光高雄廠', '日月光中壢廠', '矽品精密', '環鴻科技', '日月光整合服務'];
 const FACTORY_ALIASES = [
   [/^(日月光)?(高雄廠?|楠梓.{0,2}廠)$/, '日月光高雄廠'],
   [/^(日月光)?中壢廠?$/, '日月光中壢廠'],
   [/^矽品(精密)?$/, '矽品精密'],
-  [/^環鴻(科技)?$/, '環鴻科技']
+  [/^環鴻(科技)?$/, '環鴻科技'],
+  [/^GIS$|^日月光整合服務(股份有限公司)?$/i, '日月光整合服務']
 ];
 
 function normalizeFactory(raw) {

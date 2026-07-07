@@ -1,29 +1,28 @@
 // 此檔案由 `npm run update-finalists -- <csv檔>` 自動產生,也可手動編輯。
 // 欄位:id(流水號)、name(員工姓名)、employeeId(員工工號)、factory(廠區)、songName(歌名)、originalArtist(原唱歌手)
-// 廠區僅限四個正名:日月光高雄廠、日月光中壢廠、矽品精密、環鴻科技(顯示時依語系自動翻譯,見 LanguageContext.jsx 的 factories)
-// 最後更新:2026-07-04T10:19:14.817Z
+// 最後更新:2026-07-07T13:34:06.971Z
 export const chineseGroup = [
-  { id: 1, name: "test", employeeId: "0068001", factory: "日月光高雄廠", songName: "小幸運", originalArtist: "田馥甄" },
-  { id: 2, name: "test", employeeId: "0068002", factory: "日月光中壢廠", songName: "聽海", originalArtist: "張惠妹" },
-  { id: 3, name: "test", employeeId: "0068003", factory: "矽品精密", songName: "約定", originalArtist: "周蕙" },
-  { id: 4, name: "test", employeeId: "0068004", factory: "環鴻科技", songName: "征服", originalArtist: "那英" },
-  { id: 5, name: "test", employeeId: "0068005", factory: "日月光高雄廠", songName: "月亮代表我的心", originalArtist: "鄧麗君" },
-  { id: 6, name: "test", employeeId: "0068006", factory: "日月光中壢廠", songName: "身騎白馬", originalArtist: "徐佳瑩" },
-  { id: 7, name: "test", employeeId: "0068007", factory: "矽品精密", songName: "你把我灌醉", originalArtist: "黃大煒" },
-  { id: 8, name: "test", employeeId: "0068008", factory: "日月光高雄廠", songName: "天黑黑", originalArtist: "孫燕姿" },
-  { id: 9, name: "test", employeeId: "0068009", factory: "環鴻科技", songName: "新不了情", originalArtist: "萬芳" },
-  { id: 10, name: "test", employeeId: "0068010", factory: "日月光高雄廠", songName: "勇氣", originalArtist: "梁靜茹" }
+  { id: 1, name: "袁佳鴻", employeeId: "C05454", factory: "日月光中壢廠", songName: "平庸", originalArtist: "薛之謙" },
+  { id: 2, name: "張珈毓", employeeId: "K23924", factory: "日月光整合服務", songName: "不痛", originalArtist: "徐佳瑩" },
+  { id: 3, name: "賴威良", employeeId: "D1429", factory: "日月光高雄廠", songName: "寂寞先生", originalArtist: "曹格" },
+  { id: 4, name: "姜宛林", employeeId: "C13286", factory: "日月光中壢廠", songName: "身後", originalArtist: "張惠妹" },
+  { id: 5, name: "王駿豪", employeeId: "164966", factory: "矽品精密", songName: "背叛情歌", originalArtist: "動力火車" },
+  { id: 6, name: "莊景翔", employeeId: "13878", factory: "日月光中壢廠", songName: "你的行李", originalArtist: "謝震廷" },
+  { id: 7, name: "蔡曜之", employeeId: "C06575", factory: "環鴻科技", songName: "這樣很好", originalArtist: "陳奕迅" },
+  { id: 8, name: "李順興", employeeId: "K13726", factory: "日月光高雄廠", songName: "最長的電影", originalArtist: "周杰倫" },
+  { id: 9, name: "鄭儒馨", employeeId: "TW022655", factory: "環鴻科技", songName: "青藏高原", originalArtist: "張惠妹" },
+  { id: 10, name: "林子杉", employeeId: "13995", factory: "日月光中壢廠", songName: "水星記", originalArtist: "郭頂" }
 ];
 
 export const foreignGroup = [
-  { id: 11, name: "test", employeeId: "0068011", factory: "日月光高雄廠", songName: "My Heart Will Go On", originalArtist: "Celine Dion" },
-  { id: 12, name: "test", employeeId: "0068012", factory: "日月光中壢廠", songName: "Perfect", originalArtist: "Ed Sheeran" },
-  { id: 13, name: "test", employeeId: "0068013", factory: "矽品精密", songName: "Rolling in the Deep", originalArtist: "Adele" },
-  { id: 14, name: "test", employeeId: "0068014", factory: "環鴻科技", songName: "Yêu Một Người Vô Tâm", originalArtist: "Chi Dân" },
-  { id: 15, name: "test", employeeId: "0068015", factory: "日月光高雄廠", songName: "Shallow", originalArtist: "Lady Gaga" },
-  { id: 16, name: "test", employeeId: "0068016", factory: "日月光中壢廠", songName: "Thinking Out Loud", originalArtist: "Ed Sheeran" },
-  { id: 17, name: "test", employeeId: "0068017", factory: "矽品精密", songName: "Cause You Are My Everything", originalArtist: "Sungha Jung" },
-  { id: 18, name: "test", employeeId: "0068018", factory: "日月光高雄廠", songName: "Someone Like You", originalArtist: "Adele" },
-  { id: 19, name: "test", employeeId: "0068019", factory: "環鴻科技", songName: "Bento", originalArtist: "Iwan Fals" },
-  { id: 20, name: "test", employeeId: "0068020", factory: "日月光高雄廠", songName: "Because You Loved Me", originalArtist: "Celine Dion" }
+  { id: 11, name: "Jardeleza Rhailey Pepa", employeeId: "K26687", factory: "日月光高雄廠", songName: "In Case You Don't Live Forever", originalArtist: "Ben Platt" },
+  { id: 12, name: "Cordero Judy Anne Boa", employeeId: "251766", factory: "矽品精密", songName: "One Moment in Time", originalArtist: "Whitney Houston" },
+  { id: 13, name: "Ruffa Mae Villas Glorioso", employeeId: "31762", factory: "環鴻科技", songName: "When We Were Young", originalArtist: "Adele" },
+  { id: 14, name: "Melody Pontejos Sia", employeeId: "K16812", factory: "日月光高雄廠", songName: "You Don't Have To Say You Love Me", originalArtist: "Dusty Springfield" },
+  { id: 15, name: "Gulane Geliza Cabataña", employeeId: "K25272", factory: "日月光高雄廠", songName: "What's Up", originalArtist: "4 Non Blondes" },
+  { id: 16, name: "Mary Joy Macha", employeeId: "FC728", factory: "日月光中壢廠", songName: "Almost Over You", originalArtist: "Sheena Easton" },
+  { id: 17, name: "Timothy John Cachero", employeeId: "F8274", factory: "日月光高雄廠", songName: "Jealous", originalArtist: "Labrinth" },
+  { id: 18, name: "Dennis Rodriguez Acosta", employeeId: "F5289", factory: "日月光中壢廠", songName: "To Where You Are", originalArtist: "Josh Groban" },
+  { id: 19, name: "Lauron Karen Gomez", employeeId: "K23798", factory: "日月光高雄廠", songName: "Reflection", originalArtist: "Christina Aguilera" },
+  { id: 20, name: "Angela Madrona", employeeId: "K04327", factory: "日月光高雄廠", songName: "Fight Song", originalArtist: "Rachel Platten" }
 ];

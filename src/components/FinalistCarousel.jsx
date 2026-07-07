@@ -49,7 +49,7 @@ export const ContestantCard = ({ contestant, variant = 'chinese' }) => {
 
       <div className="w-full flex justify-between items-center gap-1 mb-2 mt-2">
         <span className={`text-[9px] sm:text-[10px] font-heading font-bold ${theme.idBadge} border-2 border-dark px-1.5 py-0.5 rounded-full whitespace-nowrap`}>
-          No.{contestant.employeeId}
+          {contestant.employeeId}
         </span>
         <span className={`text-[9px] sm:text-[10px] font-heading font-bold ${theme.factoryBadge} border-2 border-dark px-1.5 py-0.5 rounded-full whitespace-nowrap shadow-[2px_2px_0_0_#1a1a1a]`}>
           {factoryLabel}
