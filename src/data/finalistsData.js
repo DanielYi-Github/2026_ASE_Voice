@@ -1,6 +1,6 @@
 // 此檔案由 `npm run update-finalists -- <csv檔>` 自動產生,也可手動編輯。
 // 欄位:id(流水號)、name(員工姓名)、employeeId(員工工號)、factory(廠區)、songName(歌名)、originalArtist(原唱歌手)
-// 最後更新:2026-07-07T13:34:06.971Z
+// 最後更新:2026-07-07T15:48:28.268Z
 export const chineseGroup = [
   { id: 1, name: "袁佳鴻", employeeId: "C05454", factory: "日月光中壢廠", songName: "平庸", originalArtist: "薛之謙" },
   { id: 2, name: "張珈毓", employeeId: "K23924", factory: "日月光整合服務", songName: "不痛", originalArtist: "徐佳瑩" },
@@ -8,7 +8,7 @@ export const chineseGroup = [
   { id: 4, name: "姜宛林", employeeId: "C13286", factory: "日月光中壢廠", songName: "身後", originalArtist: "張惠妹" },
   { id: 5, name: "王駿豪", employeeId: "164966", factory: "矽品精密", songName: "背叛情歌", originalArtist: "動力火車" },
   { id: 6, name: "莊景翔", employeeId: "13878", factory: "日月光中壢廠", songName: "你的行李", originalArtist: "謝震廷" },
-  { id: 7, name: "蔡曜之", employeeId: "C06575", factory: "環鴻科技", songName: "這樣很好", originalArtist: "陳奕迅" },
+  { id: 7, name: "蔡曜之", employeeId: "C06575", factory: "日月光中壢廠", songName: "這樣很好", originalArtist: "陳奕迅" },
   { id: 8, name: "李順興", employeeId: "K13726", factory: "日月光高雄廠", songName: "最長的電影", originalArtist: "周杰倫" },
   { id: 9, name: "鄭儒馨", employeeId: "TW022655", factory: "環鴻科技", songName: "青藏高原", originalArtist: "張惠妹" },
   { id: 10, name: "林子杉", employeeId: "13995", factory: "日月光中壢廠", songName: "水星記", originalArtist: "郭頂" }
