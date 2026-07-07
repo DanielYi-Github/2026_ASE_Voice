@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import AnnouncementBoard from './AnnouncementBoard';
 import FinalistCarousel from './FinalistCarousel';
 import LiveTeaserStrip from './LiveTeaserStrip';
+import PredictionTeaserStrip from './PredictionTeaserStrip';
 
 const FinalistBanner = () => {
   const { t } = useLanguage();
@@ -109,9 +110,10 @@ const FinalistBanner = () => {
         </div>
       </div>
 
-      {/* In-flow Live Broadcast Teaser (9/11 直播預告) */}
-      <div className="relative w-full max-w-[1200px] mx-auto px-4 sm:px-6 z-40 pb-24 md:pb-28 pt-4">
+      {/* In-flow 重要訊息匡:9/11 直播預告 + 冠軍預測預告,兩者同款樣式並排,確保首屏可見 */}
+      <div className="relative w-full max-w-[1200px] mx-auto px-4 sm:px-6 z-40 pb-24 md:pb-28 pt-4 flex flex-col gap-5 md:gap-6">
         <LiveTeaserStrip />
+        <PredictionTeaserStrip />
       </div>
 
       {/* Subdued Bottom Waveform */}

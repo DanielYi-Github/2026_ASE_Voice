@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { getLiveTimeRemaining, isLiveStarted, getYouTubeVideoId } from '../utils/registrationUtils';
 import { LIVE_VIDEO_URL } from '../config/liveConfig';
+import PredictionTeaserStrip from './PredictionTeaserStrip';
 
 const pad = (n) => String(Math.max(0, n)).padStart(2, '0');
 
@@ -146,6 +147,16 @@ const LiveBanner = () => {
             </motion.div>
           </>
         )}
+
+        {/* 冠軍預測仍開放時的預告條(直播開始後自動撤下) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="w-full max-w-3xl"
+        >
+          <PredictionTeaserStrip />
+        </motion.div>
       </div>
     </section>
   );
