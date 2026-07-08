@@ -19,7 +19,7 @@ const PredictionTeaserStrip = () => {
       <p className="font-heading font-black text-primary text-sm md:text-lg tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center">
         {launched
           ? (t.prediction?.sloganLive || "冠軍預測 PK 賽火熱進行中!你心目中的歌王是誰?快來下注你的神直覺!")
-          : (t.prediction?.slogan || "神預測開催!誰是本屆歌王?冠軍預測活動 8/1 熱血上線,猜中冠軍贏好禮 — 敬請期待!")}
+          : (t.prediction?.slogan || "神預測開催!誰是本屆歌王?冠軍預測活動 8/1 熱血上線,猜中冠軍抽好禮 — 敬請期待!")}
       </p>
       {launched ? (
         <a

@@ -57,7 +57,7 @@ const translations = {
             '日月光整合服務': '日月光整合服務'
         },
         prediction: {
-            slogan: "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 熱血上線，猜中冠軍贏好禮 — 敬請期待！",
+            slogan: "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 熱血上線，猜中冠軍抽好禮 — 敬請期待！",
             sloganLive: "冠軍預測 PK 賽火熱進行中！你心目中的歌王是誰？快來下注你的神直覺！",
             dateChip: "8/1 上線・敬請期待",
             cta: "立即預測"
@@ -353,7 +353,7 @@ const translations = {
             '日月光整合服務': 'GIS'
         },
         prediction: {
-            slogan: "Call the Crown! Who will be this year's champion? Champion Prediction goes live on Aug 1 — pick the winner, win prizes. Stay tuned!",
+            slogan: "Call the Crown! Who will be this year's champion? Champion Prediction goes live on Aug 1 — pick the winner, enter the lucky draw. Stay tuned!",
             sloganLive: "Champion Prediction is ON! Who's your pick? Trust your instinct and cast your prediction now!",
             dateChip: "COMING AUG 1",
             cta: "Predict Now"
@@ -651,7 +651,7 @@ const translations = {
             '日月光整合服務': 'GIS'
         },
         prediction: {
-            slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân ra mắt ngày 1/8 — đoán đúng nhà vô địch, rinh quà hấp dẫn. Hãy đón chờ!",
+            slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân ra mắt ngày 1/8 — đoán đúng nhà vô địch, bốc thăm trúng thưởng. Hãy đón chờ!",
             sloganLive: "Dự đoán Quán quân đang diễn ra! Bạn chọn ai? Tin vào trực giác và dự đoán ngay!",
             dateChip: "RA MẮT 1/8",
             cta: "Dự đoán ngay"
