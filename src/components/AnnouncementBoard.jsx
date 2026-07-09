@@ -93,7 +93,7 @@ const AnnouncementBoard = () => {
                         <ul className="space-y-3.5 md:space-y-4">
                             {fullTimelines.map((item, idx) => {
                                 if (!item) return null;
-                                const isPast = idx >= 2 && isTimelineItemPast(idx);
+                                const isPast = isTimelineItemPast(idx);
                                 return (
                                 <li key={idx} className={`flex flex-col relative group ${isPast ? 'opacity-45 grayscale' : ''}`}>
                                     <div className={`absolute left-[4px] top-1.5 w-1.5 h-1.5 rounded-full transition-transform ${isPast ? 'bg-gray-400' : 'bg-secondary group-hover:scale-150'}`}></div>
