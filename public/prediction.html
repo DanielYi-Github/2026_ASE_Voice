@@ -65,12 +65,23 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(0.98); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: scale(0.98);
+            }
         }
 
         /*
@@ -120,7 +131,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const lang = urlParams.get('lang') || 'zh';
-        
+
         const i18n = {
             'zh': {
                 title: '2026 ASE Voice - 冠軍預測活動',
@@ -145,24 +156,24 @@
         document.getElementById('loading-text').innerText = currentLang.loading;
 
         // 這裡替換成真實的 Google Apps Script (GAS) Web App 網址
-        const GAS_URL = 'https://script.google.com/macros/s/AKfycbytNWfnqiecPu9fXjSiEjtx1XKHqwINYCpALXiCBQyXpU4SQ8RC_Al2ty1jbqX-5Y9k/exec';
-        
+        const GAS_URL = 'https://script.google.com/macros/s/AKfycbw37fWFbgtxc2YNzXgaFHx7nq66SmvqiCrRfEx3eZ4MJTsf5c-JfOYPo3GiNfWiop_o/exec';
+
         // 將 lang 參數往後傳給 iframe 裡的 Google Apps Script
         const iframeSrc = `${GAS_URL}?lang=${lang}`;
-        
+
         const iframe = document.getElementById('gscript-iframe');
-        
+
         // 當 iframe 載入完成，隱藏 Loading，顯示 iframe
         iframe.onload = () => {
             const loader = document.getElementById('loader-container');
             loader.style.opacity = '0';
             setTimeout(() => {
                 loader.style.display = 'none';
-            }, 500); // 等待淡出動畫結束
-            
+            }, 200); // 等待淡出動畫結束
+
             iframe.style.opacity = '1';
         };
-        
+
         iframe.src = iframeSrc;
     </script>
 </body>
