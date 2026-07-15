@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <!--
+        viewport-fit=cover：讓 iOS 上 env(safe-area-inset-*) 才有效用，
+        避開瀏海與 Home Indicator
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>2026 ASE Voice - 冠軍預測活動</title>
+
+    <link rel="preconnect" href="https://script.google.com">
+    <link rel="preconnect" href="https://script.googleusercontent.com">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background-color: #FFC107;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Loading overlay */
+        #loader-container {
+            position: fixed;
+            inset: 0;
+            background-color: #FFC107;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(26, 26, 26, 0.15);
+            border-top-color: #1A1A1A;
+            border-radius: 50%;
+            animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading-text {
+            color: #1A1A1A;
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            animation: pulse 1.5s ease-in-out infinite;
+            text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.98); }
+        }
+
+        /*
+         * iframe 容器：position:fixed 貼滿全螢幕可見區域。
+         */
+        #iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100dvh;
+            /* 把容器底部往上縮，讓按鈕不被系統 UI 遮住 */
+            padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px);
+            background-color: white;
+            /* overflow:hidden 讓 margin-top 負值裁切頂部 Google Form banner */
+            overflow: hidden;
+        }
+
+        /*
+         * iframe 本身：
+         * - margin-top: -40px → 向上移動裁切 Google Form 頂部多餘 banner
+         * - height: calc(100% + 40px) → 補回被 margin-top 佔用的高度，
+         *   確保底部「送出」按鈕仍在容器可見範圍內
+         */
+        #gscript-iframe {
+            display: block;
+            border: none;
+            width: 100%;
+            height: calc(100% + 40px);
+            margin-top: -40px;
+            opacity: 0;
+            transition: opacity 0.6s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader-container">
+        <div class="loader"></div>
+        <div class="loading-text" id="loading-text">Loading...</div>
+    </div>
+
+    <div id="iframe-container">
+        <iframe id="gscript-iframe" title="Prediction System"></iframe>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'zh';
+        
+        const i18n = {
+            'zh': {
+                title: '2026 ASE Voice - 冠軍預測活動',
+                loading: '載入中...',
+                htmlLang: 'zh-TW'
+            },
+            'en': {
+                title: '2026 ASE Voice - Champion Prediction',
+                loading: 'Loading...',
+                htmlLang: 'en'
+            },
+            'vi': {
+                title: '2026 ASE Voice - Dự đoán nhà vô địch',
+                loading: 'Đang tải...',
+                htmlLang: 'vi'
+            }
+        };
+
+        const currentLang = i18n[lang] || i18n['zh'];
+        document.title = currentLang.title;
+        document.documentElement.lang = currentLang.htmlLang;
+        document.getElementById('loading-text').innerText = currentLang.loading;
+
+        // 這裡替換成真實的 Google Apps Script (GAS) Web App 網址
+        const GAS_URL = 'https://script.google.com/macros/s/AKfycbytNWfnqiecPu9fXjSiEjtx1XKHqwINYCpALXiCBQyXpU4SQ8RC_Al2ty1jbqX-5Y9k/exec';
+        
+        // 將 lang 參數往後傳給 iframe 裡的 Google Apps Script
+        const iframeSrc = `${GAS_URL}?lang=${lang}`;
+        
+        const iframe = document.getElementById('gscript-iframe');
+        
+        // 當 iframe 載入完成，隱藏 Loading，顯示 iframe
+        iframe.onload = () => {
+            const loader = document.getElementById('loader-container');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500); // 等待淡出動畫結束
+            
+            iframe.style.opacity = '1';
+        };
+        
+        iframe.src = iframeSrc;
+    </script>
+</body>
+
+</html>

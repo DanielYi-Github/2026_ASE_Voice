@@ -1,12 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import { PREDICTION_URL } from '../config/siteConfig';
 import LiveTeaserStrip from './LiveTeaserStrip';
 
 // 8/1 起整版取代主 Banner 的「冠軍預測活動」主視覺
 const PredictionBanner = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const tp = t.predictionBanner || {};
 
   return (
@@ -87,7 +86,7 @@ const PredictionBanner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
-          href={PREDICTION_URL}
+          href={`${import.meta.env.BASE_URL}prediction.html?lang=${lang}`}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.04 }}
