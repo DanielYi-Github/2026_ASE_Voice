@@ -125,7 +125,14 @@
     </div>
 
     <div id="iframe-container">
-        <iframe id="gscript-iframe" title="Prediction System"></iframe>
+        <!--
+            credentialless：iframe 在全新的空白環境載入（cookie 罐是空的），
+            Google 收不到登入 cookie，所有訪客一律以匿名身分載入 GAS，
+            避開「已登入多個 Google 帳號時顯示雲端硬碟錯誤頁」的已知問題
+            （Google 官方確認多帳號登入不支援 web app，只能從瀏覽器端繞過）。
+            Chrome/Edge 110+ 支援；Safari/Firefox 會忽略此屬性、維持原行為。
+        -->
+        <iframe id="gscript-iframe" title="Prediction System" credentialless></iframe>
     </div>
 
     <script>
@@ -156,7 +163,7 @@
         document.getElementById('loading-text').innerText = currentLang.loading;
 
         // 這裡替換成真實的 Google Apps Script (GAS) Web App 網址
-        const GAS_URL = 'https://script.google.com/macros/s/AKfycbw37fWFbgtxc2YNzXgaFHx7nq66SmvqiCrRfEx3eZ4MJTsf5c-JfOYPo3GiNfWiop_o/exec';
+        const GAS_URL = 'https://script.google.com/macros/s/AKfycbxnqL_q_9X2or4Ngy7Nkbup4W6CtBG8g7iw3HL2dlVe6f6n18yHJYCktltAo7sp8fo/exec';
 
         // 將 lang 參數往後傳給 iframe 裡的 Google Apps Script
         const iframeSrc = `${GAS_URL}?lang=${lang}`;

@@ -1,12 +1,11 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { isPredictionLaunched, isLiveStarted } from '../utils/registrationUtils';
-import { PREDICTION_URL } from '../config/siteConfig';
 
 // 冠軍預測預告條:與 LiveTeaserStrip 同款主要訊息匡樣式,嵌入主 Banner 內(非絕對定位),
 // 確保訪客一進站就能在首屏看到,不必往下捲動到獨立區塊才發現
 const PredictionTeaserStrip = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const launched = isPredictionLaunched();
 
   if (isLiveStarted()) return null;
@@ -23,7 +22,7 @@ const PredictionTeaserStrip = () => {
       </p>
       {launched ? (
         <a
-          href={PREDICTION_URL}
+          href={`${import.meta.env.BASE_URL}prediction.html?lang=${lang}`}
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 inline-flex items-center gap-1 bg-primary text-dark font-heading font-black text-[11px] md:text-xs px-3 py-1.5 rounded-full border-2 border-white/80 uppercase tracking-widest hover:translate-x-[1px] hover:translate-y-[1px] transition-transform"
