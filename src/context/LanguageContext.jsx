@@ -39,6 +39,7 @@ const translations = {
             description: "歷經激烈的線上初選，各路好手脫穎而出！快來看看是哪些最強好聲音即將站上最終決戰舞台！",
             dates: "🎤 決賽時間：9月11日 現場演唱",
             location: "📍 決賽地點：日月光高雄廠 K23國際會議廳",
+            notice: "📢 異動公告：外語組晉級選手 Angela Madrona 因個人因素放棄決賽資格，特此公告。",
             reminder: "📺 決賽當天將於【本網站】全程實況轉播，敬請鎖定，為你支持的選手集氣加油！🔥"
         },
         finalistBanner: {
@@ -57,18 +58,20 @@ const translations = {
             '日月光整合服務': '日月光整合服務'
         },
         prediction: {
-            slogan: "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 熱血上線，猜中冠軍抽好禮 — 敬請期待！",
-            sloganLive: "冠軍預測 PK 賽火熱進行中！你心目中的歌王是誰？快來下注你的神直覺！",
-            dateChip: "8/1 上線・敬請期待",
+            slogan: "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 - 9/10 熱血登場，猜中冠軍抽好禮 — 敬請期待！",
+            sloganLive: "冠軍預測 PK 賽火熱進行中（即日起至 9/10 截止）！你心目中的歌王是誰？快來下注你的神直覺！",
+            sloganEnded: "預測活動已於 9/10 23:59 圓滿截止！感謝全集團同仁熱烈參與！",
+            dateChip: "8/1 - 9/10 開催",
+            endedBadge: "預測已截止",
             cta: "立即預測"
         },
         predictionBanner: {
-            eyebrow: "SPECIAL EVENT 互動企劃",
+            eyebrow: "SPECIAL EVENT 互動企劃 (即日起至 9/10)",
             title: "冠軍預測 PK 賽",
             titleEn: "CHAMPION PREDICTION",
-            subtitle: "華語組、外語組各 10 位決賽選手已就位！誰能奪下兩組冠軍寶座？下滑認識決賽選手，再用你的神直覺預測冠軍，猜中就有機會把好禮抱回家！",
+            subtitle: "華語組 10 位與外語組 9 位決賽選手已就位！誰能奪下兩組冠軍寶座？下滑認識決賽選手，再用你的神直覺預測冠軍（活動只到 9/10 為止），猜中就有機會把好禮抱回家！",
             cta: "立即預測冠軍",
-            note: "* 免費參加，全集團同仁一起同樂！",
+            note: "* 免費參加，全集團同仁與親朋好友都能一起玩！（預測截至 9/10 23:59）",
             scrollHint: "▼ 認識華語組 × 外語組決賽選手 ▼"
         },
         live: {
@@ -335,6 +338,7 @@ const translations = {
             description: "After fierce preliminary rounds, the top vocalists have emerged! Check out who will rock the stage at the Grand Finals!",
             dates: "🎤 Finals: Sep 11 Live Performance",
             location: "📍 Location: ASE Kaohsiung Plant K23 International Conference Hall",
+            notice: "📢 Notice: Foreign-language group finalist Angela Madrona has withdrawn from the finals due to personal reasons.",
             reminder: "📺 The Finals will be broadcast LIVE right here on 【This Website】! Stay tuned and cheer for your favorites! 🔥"
         },
         finalistBanner: {
@@ -353,18 +357,20 @@ const translations = {
             '日月光整合服務': 'GIS'
         },
         prediction: {
-            slogan: "Call the Crown! Who will be this year's champion? Champion Prediction goes live on Aug 1 — pick the winner, enter the lucky draw. Stay tuned!",
-            sloganLive: "Champion Prediction is ON! Who's your pick? Trust your instinct and cast your prediction now!",
-            dateChip: "COMING AUG 1",
+            slogan: "Call the Crown! Who will be this year's champion? Champion Prediction runs Aug 1 - Sep 10 — pick the winner, enter the lucky draw. Stay tuned!",
+            sloganLive: "Champion Prediction is ON (Runs through Sep 10)! Who's your pick? Trust your instinct and cast your prediction now!",
+            sloganEnded: "Champion Prediction ended on Sep 10 at 23:59! Thank you all for participating!",
+            dateChip: "AUG 1 - SEP 10",
+            endedBadge: "Prediction Closed",
             cta: "Predict Now"
         },
         predictionBanner: {
-            eyebrow: "SPECIAL EVENT",
+            eyebrow: "SPECIAL EVENT (UNTIL SEP 10)",
             title: "CHAMPION PREDICTION",
             titleEn: "WHO TAKES THE CROWN?",
-            subtitle: "10 finalists from the Mandarin group and 10 from the Foreign-language group are ready! Scroll down to meet them, then trust your instinct and predict the champions — guess right for a chance to win great prizes!",
+            subtitle: "10 finalists from the Mandarin group and 9 from the Foreign-language group are ready! Scroll down to meet them, then trust your instinct and predict the champions (Event ends Sep 10) — guess right for a chance to win great prizes!",
             cta: "Predict the Champion",
-            note: "* Free to join — everyone in the ASE family is welcome!",
+            note: "* Free to join — everyone in the ASE family is welcome! (Ends Sep 10, 23:59)",
             scrollHint: "▼ Meet the Finalists of Both Groups ▼"
         },
         live: {
@@ -633,6 +639,7 @@ const translations = {
             description: "Sau những vòng sơ loại trực tuyến gay cấn, các giọng ca xuất sắc nhất đã xuất hiện! Cùng chờ xem ai sẽ tỏa sáng tại vòng chung kết nhé!",
             dates: "🎤 Chung Kết: Biểu diễn trực tiếp 11/9",
             location: "📍 Địa điểm: Hội trường Quốc tế K23, Nhà máy ASE Cao Hùng",
+            notice: "📢 Thông báo: Thí sinh nhóm ngoại ngữ Angela Madrona đã xin rút khỏi vòng chung kết vì lý do cá nhân.",
             reminder: "📺 Vòng chung kết sẽ được phát sóng TRỰC TIẾP ngay trên 【Trang Web Này】! Hãy đón xem và cổ vũ cho thí sinh bạn yêu thích! 🔥"
         },
         finalistBanner: {
@@ -651,18 +658,20 @@ const translations = {
             '日月光整合服務': 'GIS'
         },
         prediction: {
-            slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân ra mắt ngày 1/8 — đoán đúng nhà vô địch, bốc thăm trúng thưởng. Hãy đón chờ!",
-            sloganLive: "Dự đoán Quán quân đang diễn ra! Bạn chọn ai? Tin vào trực giác và dự đoán ngay!",
-            dateChip: "RA MẮT 1/8",
+            slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân diễn ra từ 1/8 đến 10/9 — đoán đúng nhà vô địch, bốc thăm trúng thưởng. Hãy đón chờ!",
+            sloganLive: "Dự đoán Quán quân đang diễn ra (Đến hết 10/9)! Bạn chọn ai? Tin vào trực giác và dự đoán ngay!",
+            sloganEnded: "Hoạt động dự đoán đã kết thúc vào 23:59 ngày 10/9! Cảm ơn sự tham gia nhiệt tình của tất cả đồng nghiệp!",
+            dateChip: "1/8 - 10/9",
+            endedBadge: "Đã kết thúc dự đoán",
             cta: "Dự đoán ngay"
         },
         predictionBanner: {
-            eyebrow: "SỰ KIỆN ĐẶC BIỆT",
+            eyebrow: "SỰ KIỆN ĐẶC BIỆT (ĐẾN HẾT 10/9)",
             title: "DỰ ĐOÁN QUÁN QUÂN",
             titleEn: "CHAMPION PREDICTION",
-            subtitle: "10 thí sinh nhóm tiếng Hoa và 10 thí sinh nhóm tiếng nước ngoài đã sẵn sàng! Kéo xuống để gặp các thí sinh chung kết, rồi tin vào trực giác của bạn và dự đoán quán quân — đoán đúng sẽ có cơ hội nhận quà hấp dẫn!",
+            subtitle: "10 thí sinh nhóm tiếng Hoa và 9 thí sinh nhóm tiếng nước ngoài đã sẵn sàng! Kéo xuống để gặp các thí sinh chung kết, rồi tin vào trực giác của bạn và dự đoán quán quân (Đến hết 10/9) — đoán đúng sẽ có cơ hội nhận quà hấp dẫn!",
             cta: "Dự đoán Quán quân",
-            note: "* Tham gia miễn phí — chào đón tất cả thành viên đại gia đình ASE!",
+            note: "* Tham gia miễn phí — chào đón tất cả thành viên đại gia đình ASE! (Kết thúc 23:59 ngày 10/9)",
             scrollHint: "▼ Gặp gỡ thí sinh chung kết hai nhóm ▼"
         },
         live: {

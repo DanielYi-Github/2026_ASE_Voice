@@ -68,7 +68,15 @@ const AnnouncementBoard = () => {
                                 )}
                             </div>
                             
-                            {!isFinalist && (
+                            {content.notice && (
+                                <div className="mt-1 border-t border-amber-300/30 pt-2.5 w-full text-center">
+                                    <p className="font-body font-bold text-[12px] md:text-[13px] leading-snug text-yellow-200 bg-black/40 py-1.5 px-3 rounded border border-yellow-300/40">
+                                        {content.notice}
+                                    </p>
+                                </div>
+                            )}
+                            
+                            {content.reminder && (
                                 <div className="mt-2 border-t border-white/20 pt-3 w-full text-center">
                                     <p className="font-body font-bold text-[12px] md:text-[13px] leading-snug text-white/90">
                                         {content.reminder}

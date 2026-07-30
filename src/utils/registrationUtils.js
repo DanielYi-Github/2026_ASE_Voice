@@ -17,6 +17,7 @@ const START_DATE = new Date('2026-06-01T00:00:00+08:00');
 const END_DATE = new Date('2026-06-21T23:59:59+08:00');
 export const FINALIST_ANNOUNCEMENT_DATE = new Date('2026-07-08T08:00:00+08:00');
 export const PREDICTION_LAUNCH_DATE = new Date('2026-08-01T00:00:00+08:00');
+export const PREDICTION_END_DATE = new Date('2026-09-10T23:59:59+08:00');
 export const LIVE_COUNTDOWN_DATE = new Date('2026-09-07T00:00:00+08:00');
 export const LIVE_START_DATE = new Date('2026-09-11T14:30:00+08:00');
 
@@ -68,6 +69,10 @@ export const isPredictionLaunched = () => {
     return true;
   }
   return getNow() >= PREDICTION_LAUNCH_DATE;
+};
+
+export const isPredictionEnded = () => {
+  return getNow() > PREDICTION_END_DATE;
 };
 
 // 決定主 Banner 顯示哪個階段;?preview=finalist|prediction|live 可強制預覽

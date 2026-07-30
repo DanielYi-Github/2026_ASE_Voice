@@ -23,6 +23,5 @@ export const foreignGroup = [
   { id: 16, name: "Mary Joy Macha", employeeId: "FC728", factory: "日月光中壢廠", songName: "Almost Over You", originalArtist: "Sheena Easton" },
   { id: 17, name: "Timothy John Cachero", employeeId: "F8274", factory: "日月光高雄廠", songName: "Jealous", originalArtist: "Labrinth" },
   { id: 18, name: "Dennis Rodriguez Acosta", employeeId: "F5289", factory: "日月光中壢廠", songName: "To Where You Are", originalArtist: "Josh Groban" },
-  { id: 19, name: "Lauron Karen Gomez", employeeId: "K23798", factory: "日月光高雄廠", songName: "Reflection", originalArtist: "Christina Aguilera" },
-  { id: 20, name: "Angela Madrona", employeeId: "K04327", factory: "日月光高雄廠", songName: "Fight Song", originalArtist: "Rachel Platten" }
+  { id: 19, name: "Lauron Karen Gomez", employeeId: "K23798", factory: "日月光高雄廠", songName: "Reflection", originalArtist: "Christina Aguilera" }
 ];
