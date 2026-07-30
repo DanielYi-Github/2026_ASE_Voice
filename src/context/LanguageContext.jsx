@@ -45,6 +45,7 @@ const translations = {
         finalistBanner: {
             chineseGroup: "華語組決賽名單",
             foreignGroup: "外語組決賽名單",
+            foreignNotice: "📢 異動說明：外語組晉級選手 Angela Madrona 因個人因素放棄決賽資格，故本組決賽共 9 位選手。",
             liveBroadcast: "⚡️ 終極之戰！9/11 決賽現場直播，見證歌王誕生！",
             liveTeaserText: "📺 9/11 (五) 14:30 決賽現場直播，就在本網站，敬請鎖定！",
             showcaseTitle: "決賽選手陣容"
@@ -58,10 +59,10 @@ const translations = {
             '日月光整合服務': '日月光整合服務'
         },
         prediction: {
-            slogan: "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 - 9/10 熱血登場，猜中冠軍抽好禮 — 敬請期待！",
+            slogan: "神預測！誰是本屆歌王？冠軍預測活動 8/1 - 9/10 熱血登場，猜中冠軍抽好禮 — 敬請期待！",
             sloganLive: "冠軍預測 PK 賽火熱進行中（即日起至 9/10 截止）！你心目中的歌王是誰？快來下注你的神直覺！",
             sloganEnded: "預測活動已於 9/10 23:59 圓滿截止！感謝全集團同仁熱烈參與！",
-            dateChip: "8/1 - 9/10 開催",
+            dateChip: "8/1 - 9/10 限時開放",
             endedBadge: "預測已截止",
             cta: "立即預測"
         },
@@ -344,6 +345,7 @@ const translations = {
         finalistBanner: {
             chineseGroup: "Chinese Group Finalists",
             foreignGroup: "Foreign Language Group Finalists",
+            foreignNotice: "📢 Notice: Foreign-language group finalist Angela Madrona has withdrawn due to personal reasons (9 finalists in this group).",
             liveBroadcast: "⚡️ The Ultimate Showdown! Live Broadcast on 9/11 - Witness the Birth of the Champion!",
             liveTeaserText: "📺 Grand Final LIVE right here on this website — Sep 11 (Fri) 2:30 PM. Stay tuned!",
             showcaseTitle: "GRAND FINAL LINE-UP"
@@ -645,6 +647,7 @@ const translations = {
         finalistBanner: {
             chineseGroup: "Danh sách Chung kết Nhóm tiếng Hoa",
             foreignGroup: "Danh sách Chung kết Nhóm tiếng Nước ngoài",
+            foreignNotice: "📢 Thông báo: Thí sinh Angela Madrona đã xin rút khỏi vòng chung kết vì lý do cá nhân (Bảng ngoại ngữ gồm 9 thí sinh).",
             liveBroadcast: "⚡️ Trận Chiến Cuối Cùng! Phát sóng Trực tiếp 11/9 - Hãy chứng kiến sự lên ngôi của Quán quân!",
             liveTeaserText: "📺 Chung kết LIVE ngay trên website này — 11/9 (Thứ Sáu) 14:30. Hãy đón xem!",
             showcaseTitle: "ĐỘI HÌNH CHUNG KẾT"

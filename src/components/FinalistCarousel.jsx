@@ -77,13 +77,29 @@ export const ContestantCard = ({ contestant, variant = 'chinese' }) => {
   );
 };
 
-const ContestantGrid = ({ contestants, variant }) => (
-  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 lg:gap-4 w-full h-full pb-2">
-    {contestants.map((contestant) => (
-      <ContestantCard key={contestant.id} contestant={contestant} variant={variant} />
-    ))}
-  </div>
-);
+const ContestantGrid = ({ contestants, variant }) => {
+  const { t } = useLanguage();
+  return (
+    <div className="flex flex-col w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 lg:gap-4 w-full h-full pb-2">
+        {contestants.map((contestant) => (
+          <ContestantCard key={contestant.id} contestant={contestant} variant={variant} />
+        ))}
+      </div>
+      {variant === 'foreign' && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-3 w-full bg-[#0E7490]/10 border-2 border-[#0E7490]/40 rounded-xl p-3 flex items-center justify-center text-center shadow-sm"
+        >
+          <p className="text-xs sm:text-sm font-heading font-bold text-[#0E7490] leading-snug">
+            {t.finalistBanner?.foreignNotice || "📢 異動說明：外語組晉級選手 Angela Madrona 因個人因素放棄決賽資格，故本組決賽共 9 位選手。"}
+          </p>
+        </motion.div>
+      )}
+    </div>
+  );
+};
 
 // 華語/外語兩組輪播;align 控制標題與圓點在桌機的對齊(hero 版靠左、獨立區塊版置中)
 const FinalistCarousel = ({ align = 'left' }) => {

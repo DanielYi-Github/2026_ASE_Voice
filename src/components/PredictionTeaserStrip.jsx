@@ -21,7 +21,7 @@ const PredictionTeaserStrip = () => {
           ? (t.prediction?.sloganEnded || "預測活動已於 9/10 23:59 圓滿截止！感謝同仁熱烈參與！")
           : launched
           ? (t.prediction?.sloganLive || "冠軍預測 PK 賽火熱進行中！你心目中的歌王是誰？快來下注你的神直覺！")
-          : (t.prediction?.slogan || "神預測開催！誰是本屆歌王？冠軍預測活動 8/1 - 9/10 熱血登場，猜中冠軍抽好禮 — 敬請期待！")}
+          : (t.prediction?.slogan || "神預測！誰是本屆歌王？冠軍預測活動 8/1 - 9/10 熱血登場，猜中冠軍抽好禮 — 敬請期待！")}
       </p>
       {ended ? (
         <span className="shrink-0 inline-flex items-center gap-1.5 bg-white/20 text-white font-heading font-black text-[11px] md:text-xs px-3 py-1.5 rounded-full border-2 border-white/40 uppercase tracking-widest">
@@ -38,7 +38,7 @@ const PredictionTeaserStrip = () => {
         </a>
       ) : (
         <span className="shrink-0 inline-flex items-center gap-1.5 bg-white/10 text-white font-heading font-black text-[11px] md:text-xs px-2.5 py-1 rounded-full border-2 border-white/40 uppercase tracking-widest">
-          {t.prediction?.dateChip || "8/1 - 9/10 開催"}
+          {t.prediction?.dateChip || "8/1 - 9/10 限時開放"}
         </span>
       )}
     </div>
