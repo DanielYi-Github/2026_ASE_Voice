@@ -47,7 +47,7 @@ const translations = {
             foreignGroup: "外語組決賽名單",
             foreignNotice: "📢 異動說明：外語組晉級選手 Angela Madrona 因個人因素放棄決賽資格，故本組決賽共 9 位選手。",
             liveBroadcast: "⚡️ 終極之戰！9/11 決賽現場直播，見證歌王誕生！",
-            liveTeaserText: "📺 9/11 (五) 14:30 決賽現場直播，就在本網站，敬請鎖定！",
+            liveTeaserText: "📺 9/11 (五) 14:00 決賽現場直播，就在本網站，敬請鎖定！",
             showcaseTitle: "決賽選手陣容"
         },
         // 廠區顯示名稱對照表:鍵為 finalistsData.js 中的廠區中文正名,集團僅此五個廠區,勿新增其他
@@ -79,7 +79,7 @@ const translations = {
             eyebrow: "ASE VOICE 2026 · GRAND FINALE",
             title: "決賽之日",
             titleEn: "THE FINAL SHOWDOWN",
-            dateLine: "9.11 (五) 14:30",
+            dateLine: "9.11 (五) 14:00",
             days: "天",
             hours: "時",
             minutes: "分",
@@ -178,7 +178,7 @@ const translations = {
                     event: "活動總決賽 (現場演唱)",
                     details: (
                         <span>
-                            時間：9/11(五) 14:30 - 17:00{'\n'}
+                            時間：9/11(五) 14:00 - 17:00{'\n'}
                             地點：日月光高雄廠 K23 1F 國際會議廳 (楠梓區研發路 66 號){'\n'}
                             現場由主辦方安排專業樂團進行伴奏。比賽現場不提供提詞機，參賽者須背熟歌詞！{'\n'}{'\n'}
                             <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
@@ -288,7 +288,7 @@ const translations = {
                 ) },
                 { q: "什麼時候公布決賽名單？", a: "2026/7/8（三）。" },
                 { q: "會有多少人晉級決賽？", a: "華語組與外語組各取前 10 名，共 20 名。" },
-                { q: "決賽在哪裡、什麼時候？", a: "2026/9/11（五）14:30–17:00，於日月光高雄廠 K23 1F 國際會議廳舉行。" },
+                { q: "決賽在哪裡、什麼時候？", a: "2026/9/11（五）14:00–17:00，於日月光高雄廠 K23 1F 國際會議廳舉行。" },
                 { q: "決賽有伴奏嗎？有提詞機嗎？", a: "決賽由主辦單位安排專業樂團現場伴奏；現場不提供提詞機，參賽者須背熟歌詞。" },
                 { q: "晉級決賽後需要配合培訓和彩排嗎？", a: "需要；晉級者須配合 1 次歌唱老師 1 對 1 指導及 2 次現場彩排，若時間無法配合，視為放棄指導機會，不得要求另行安排。" },
                 { q: "晉級決賽後需要配合培訓與彩排地點在哪裡？", a: "專業歌唱老師 1對1 個人指導、伴奏樂隊進行兩次現場彩排於高雄/中北部地區。\n\n註記：中北部地區之培訓與彩排據點，將於初賽後視晉級選手之區域分佈情形定案並公告（依中部或北部選手比例而定）。" },
@@ -347,7 +347,7 @@ const translations = {
             foreignGroup: "Foreign Language Group Finalists",
             foreignNotice: "📢 Notice: Foreign-language group finalist Angela Madrona has withdrawn due to personal reasons (9 finalists in this group).",
             liveBroadcast: "⚡️ The Ultimate Showdown! Live Broadcast on 9/11 - Witness the Birth of the Champion!",
-            liveTeaserText: "📺 Grand Final LIVE right here on this website — Sep 11 (Fri) 2:30 PM. Stay tuned!",
+            liveTeaserText: "📺 Grand Final LIVE right here on this website — Sep 11 (Fri) 2:00 PM. Stay tuned!",
             showcaseTitle: "GRAND FINAL LINE-UP"
         },
         // Factory display names keyed by the Chinese canonical names in finalistsData.js — only these five exist
@@ -379,7 +379,7 @@ const translations = {
             eyebrow: "ASE VOICE 2026 · GRAND FINALE",
             title: "THE FINAL DAY",
             titleEn: "THE FINAL SHOWDOWN",
-            dateLine: "SEP 11 (FRI) 2:30 PM",
+            dateLine: "SEP 11 (FRI) 2:00 PM",
             days: "Days",
             hours: "Hrs",
             minutes: "Min",
@@ -478,7 +478,7 @@ const translations = {
                     event: "Grand Finals (Live)",
                     details: (
                         <span>
-                            Time: Sep 11(Fri), 14:30 - 17:00{'\n'}
+                            Time: Sep 11(Fri), 14:00 - 17:00{'\n'}
                             Location: ASE Kaohsiung K23 1F Int'l Conference Hall.{'\n'}
                             Live band accompaniment will be provided. NO TELEPROMPTERS allowed. Memorize your lyrics!{'\n'}{'\n'}
                             <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
@@ -588,7 +588,7 @@ const translations = {
                 ) },
                 { q: "When will the finalists be announced?", a: "July 8, 2026 (Wednesday)." },
                 { q: "How many participants will advance to the finals?", a: "The top 10 from each category (Mandarin and Foreign Language) will advance, for a total of 20 finalists." },
-                { q: "When and where will the finals be held?", a: "September 11, 2026 (Friday), from 14:30 to 17:00, ASE Kaohsiung Plant K23 1F International Conference Hall." },
+                { q: "When and where will the finals be held?", a: "September 11, 2026 (Friday), from 14:00 to 17:00, ASE Kaohsiung Plant K23 1F International Conference Hall." },
                 { q: "Will there be accompaniment and a teleprompter in the finals?", a: "A professional live band will be arranged by the organizer for accompaniment. No teleprompter will be provided; participants must memorize the lyrics." },
                 { q: "Do finalists need to attend training and rehearsals?", a: "Yes. Finalists must attend one one-on-one coaching session with a vocal instructor and two on-site rehearsals. If unable to attend, it will be considered a forfeiture of the coaching opportunity, and no alternative arrangements will be made." },
                 { q: "Where will the training and rehearsals be held after advancing to the finals?", a: "One session of one-on-one professional vocal coaching and two live rehearsals with the accompaniment band will be held in Kaohsiung or the Central-Northern Region.\n\nNote: The specific training and rehearsal locations in the Central-Northern Region will be finalized and announced after the preliminary results, based on the geographical distribution of the finalists." },
@@ -649,7 +649,7 @@ const translations = {
             foreignGroup: "Danh sách Chung kết Nhóm tiếng Nước ngoài",
             foreignNotice: "📢 Thông báo: Thí sinh Angela Madrona đã xin rút khỏi vòng chung kết vì lý do cá nhân (Bảng ngoại ngữ gồm 9 thí sinh).",
             liveBroadcast: "⚡️ Trận Chiến Cuối Cùng! Phát sóng Trực tiếp 11/9 - Hãy chứng kiến sự lên ngôi của Quán quân!",
-            liveTeaserText: "📺 Chung kết LIVE ngay trên website này — 11/9 (Thứ Sáu) 14:30. Hãy đón xem!",
+            liveTeaserText: "📺 Chung kết LIVE ngay trên website này — 11/9 (Thứ Sáu) 14:00. Hãy đón xem!",
             showcaseTitle: "ĐỘI HÌNH CHUNG KẾT"
         },
         // Tên nhà máy hiển thị, khóa là tên tiếng Trung chính thức trong finalistsData.js — chỉ có năm nhà máy này
@@ -681,7 +681,7 @@ const translations = {
             eyebrow: "ASE VOICE 2026 · CHUNG KẾT",
             title: "NGÀY CHUNG KẾT",
             titleEn: "THE FINAL SHOWDOWN",
-            dateLine: "11.9 (Thứ Sáu) 14:30",
+            dateLine: "11.9 (Thứ Sáu) 14:00",
             days: "Ngày",
             hours: "Giờ",
             minutes: "Phút",
@@ -780,7 +780,7 @@ const translations = {
                     event: "Vòng Chung kết (Trình diễn trực tiếp)",
                     details: (
                         <span>
-                            Thời gian: 11/9(T6) 14:30 - 17:00{'\n'}
+                            Thời gian: 11/9(T6) 14:00 - 17:00{'\n'}
                             Địa điểm: Hội trường Quốc tế Tầng 1, K23, Nhà máy ASE Cao Hùng.{'\n'}
                             Đơn vị tổ chức sẽ bố trí ban nhạc đệm trực tiếp. KHÔNG cung cấp máy nhắc chữ, thí sinh phải thuộc lòng lời bài hát!{'\n'}{'\n'}
                             <span className="text-sm text-amber-700 font-bold mt-2 inline-block border-t border-dashed border-amber-400 pt-2">
@@ -890,7 +890,7 @@ const translations = {
                 ) },
                 { q: "Khi nào công bố danh sách vào Vòng Chung kết?", a: "Ngày 8/7/2026 (Thứ Tư)." },
                 { q: "Sẽ có bao nhiêu người được vào Vòng Chung kết?", a: "Bảng Tiếng Hoa và Bảng Ngoại ngữ mỗi bảng chọn top 10, tổng cộng 20 thí sinh vào Vòng Chung kết." },
-                { q: "Vòng Chung kết được tổ chức ở đâu, khi nào?", a: "Từ 14:30 đến 17:00 ngày 11/9/2026 (Thứ Sáu), tổ chức tại Hội trường Quốc tế Tầng 1, Tòa nhà K23, Nhà máy ASE Cao Hùng." },
+                { q: "Vòng Chung kết được tổ chức ở đâu, khi nào?", a: "Từ 14:00 đến 17:00 ngày 11/9/2026 (Thứ Sáu), tổ chức tại Hội trường Quốc tế Tầng 1, Tòa nhà K23, Nhà máy ASE Cao Hùng." },
                 { q: "Vòng Chung kết có nhạc đệm không? Có máy nhắc chữ không?", a: "Ban tổ chức sẽ bố trí ban nhạc chuyên nghiệp biểu diễn nhạc đệm trực tiếp; tại hiện trường không cung cấp máy nhắc chữ, thí sinh phải thuộc lòng lời bài hát." },
                 { q: "Sau khi vào Vòng Chung kết có cần phối hợp tham gia huấn luyện và tổng duyệt không?", a: "Có. Thí sinh vào Vòng Chung kết phải phối hợp tham gia 1 buổi hướng dẫn 1 kèm 1 với giáo viên thanh nhạc và 2 buổi tổng duyệt trực tiếp. Nếu không thể phối hợp về thời gian, sẽ được xem là tự nguyện từ bỏ cơ hội được hướng dẫn và không được yêu cầu sắp xếp lại." },
                 { q: "Địa điểm huấn luyện và tổng duyệt sau khi vào Vòng Chung kết ở đâu?", a: "Hướng dẫn cá nhân 1 kèm 1 với giáo viên thanh nhạc và hai buổi tổng duyệt trực tiếp với ban nhạc đệm sẽ được tổ chức tại Cao Hùng hoặc khu vực Miền Trung-Bắc.\n\nLưu ý: Địa điểm huấn luyện và tổng duyệt tại khu vực Miền Trung-Bắc sẽ được quyết định và công bố sau vòng sơ loại, tùy theo tỷ lệ thí sinh vào chung kết đến từ khu vực miền Trung hoặc miền Bắc." },

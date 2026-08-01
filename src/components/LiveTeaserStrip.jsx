@@ -12,7 +12,7 @@ const LiveTeaserStrip = () => {
         LIVE
       </span>
       <p className="font-heading font-black text-[#FFC107] text-sm md:text-lg tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center">
-        {t.finalistBanner?.liveTeaserText || "📺 9/11 (五) 14:30 決賽現場直播,就在本網站,敬請鎖定!"}
+        {t.finalistBanner?.liveTeaserText || "📺 9/11 (五) 14:00 決賽現場直播,就在本網站,敬請鎖定!"}
       </p>
     </div>
   );

@@ -21,7 +21,7 @@ const CountdownUnit = ({ value, label }) => (
 );
 
 // 9/7 起取代主 Banner:Apple 發表會風格的決賽直播倒數;
-// 倒數歸零(9/11 14:30)自動換成 YouTube 直播播放器
+// 倒數歸零(9/11 14:00)自動換成 YouTube 直播播放器
 const LiveBanner = () => {
   const { t } = useLanguage();
   const tl = t.live || {};
@@ -82,7 +82,7 @@ const LiveBanner = () => {
           transition={{ delay: 0.3 }}
           className="font-heading font-black text-primary text-xl sm:text-2xl md:text-3xl tracking-widest"
         >
-          {tl.dateLine || "9.11 (五) 14:30"}
+          {tl.dateLine || "9.11 (五) 14:00"}
         </motion.p>
 
         {onAir ? (

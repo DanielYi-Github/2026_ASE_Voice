@@ -9,7 +9,7 @@ export const HERO_MODE = {
   HERO: 'HERO',             // 報名期間的原始主視覺
   FINALIST: 'FINALIST',     // 7/8 起:決賽名單公佈
   PREDICTION: 'PREDICTION', // 8/1 起:冠軍預測活動
-  LIVE: 'LIVE'              // 9/7 起:直播倒數 → 9/11 14:30 直播
+  LIVE: 'LIVE'              // 9/7 起:直播倒數 → 9/11 14:00 直播
 };
 
 // 使用 ISO 格式並包含台灣時區 +08:00
@@ -19,7 +19,7 @@ export const FINALIST_ANNOUNCEMENT_DATE = new Date('2026-07-08T08:00:00+08:00');
 export const PREDICTION_LAUNCH_DATE = new Date('2026-08-01T00:00:00+08:00');
 export const PREDICTION_END_DATE = new Date('2026-09-10T23:59:59+08:00');
 export const LIVE_COUNTDOWN_DATE = new Date('2026-09-07T00:00:00+08:00');
-export const LIVE_START_DATE = new Date('2026-09-11T14:30:00+08:00');
+export const LIVE_START_DATE = new Date('2026-09-11T14:00:00+08:00');
 
 const getSearch = () =>
   typeof window !== 'undefined' ? window.location.search : '';
@@ -113,7 +113,7 @@ export const getTimeRemaining = () => {
   };
 };
 
-// 直播開始(9/11 14:30)前的倒數
+// 直播開始(9/11 14:00)前的倒數
 export const getLiveTimeRemaining = () => {
   const total = LIVE_START_DATE.getTime() - getNow().getTime();
   const seconds = Math.floor((total / 1000) % 60);
