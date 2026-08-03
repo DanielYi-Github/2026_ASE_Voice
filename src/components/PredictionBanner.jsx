@@ -97,7 +97,7 @@ const PredictionBanner = () => {
           <span className="animate-bounce-x inline-block">→</span>
         </motion.a>
         <p className="font-body font-bold text-dark/70 text-xs md:text-sm -mt-2">
-          {tp.note || "* 免費參加,全集團同仁與親朋好友都能一起玩!"}
+          {tp.note || "* 免費參加,本活動限全集團同仁參與!"}
         </p>
 
         {/* 9/11 直播預告 */}

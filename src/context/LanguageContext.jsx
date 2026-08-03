@@ -72,7 +72,7 @@ const translations = {
             titleEn: "CHAMPION PREDICTION",
             subtitle: "華語組 10 位與外語組 9 位決賽選手已就位！誰能奪下兩組冠軍寶座？下滑認識決賽選手，再用你的神直覺預測冠軍（活動只到 9/10 為止），猜中就有機會把好禮抱回家！",
             cta: "立即預測冠軍",
-            note: "* 免費參加，全集團同仁與親朋好友都能一起玩！（預測截至 9/10 23:59）",
+            note: "* 免費參加，本活動限全集團同仁參與！（預測截至 9/10 23:59）",
             scrollHint: "▼ 認識華語組 × 外語組決賽選手 ▼"
         },
         live: {
@@ -372,7 +372,7 @@ const translations = {
             titleEn: "WHO TAKES THE CROWN?",
             subtitle: "10 finalists from the Mandarin group and 9 from the Foreign-language group are ready! Scroll down to meet them, then trust your instinct and predict the champions (Event ends Sep 10) — guess right for a chance to win great prizes!",
             cta: "Predict the Champion",
-            note: "* Free to join — everyone in the ASE family is welcome! (Ends Sep 10, 23:59)",
+            note: "* Free to join — open to ASE Group employees only! (Ends Sep 10, 23:59)",
             scrollHint: "▼ Meet the Finalists of Both Groups ▼"
         },
         live: {
@@ -674,7 +674,7 @@ const translations = {
             titleEn: "CHAMPION PREDICTION",
             subtitle: "10 thí sinh nhóm tiếng Hoa và 9 thí sinh nhóm tiếng nước ngoài đã sẵn sàng! Kéo xuống để gặp các thí sinh chung kết, rồi tin vào trực giác của bạn và dự đoán quán quân (Đến hết 10/9) — đoán đúng sẽ có cơ hội nhận quà hấp dẫn!",
             cta: "Dự đoán Quán quân",
-            note: "* Tham gia miễn phí — chào đón tất cả thành viên đại gia đình ASE! (Kết thúc 23:59 ngày 10/9)",
+            note: "* Tham gia miễn phí — chỉ dành cho nhân viên Tập đoàn ASE! (Kết thúc 23:59 ngày 10/9)",
             scrollHint: "▼ Gặp gỡ thí sinh chung kết hai nhóm ▼"
         },
         live: {
