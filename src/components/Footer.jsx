@@ -1,0 +1,60 @@
+import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { Mail, Phone } from 'lucide-react';
+
+const Footer = () => {
+    const { lang, t } = useLanguage();
+
+    return (
+        <footer id="footer" className="bg-dark text-white pt-16 pb-8 px-4 md:px-8">
+            <div className="container mx-auto max-w-6xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12 pb-12 border-b-2 border-gray-700">
+
+                    <div className="max-w-[100%] md:max-w-[60%] lg:max-w-xl">
+                        <h2 className="text-3xl font-heading font-black mb-6"><span className="text-primary">ASE</span> VOICE</h2>
+                        
+                        <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-5 font-body text-gray-400 mb-8 text-[15px] leading-relaxed tracking-wide">
+                            {Array.isArray(t.footer.organizer) ? t.footer.organizer.map((group, idx) => (
+                                <React.Fragment key={idx}>
+                                    <div className="font-bold text-gray-300 whitespace-nowrap leading-relaxed">{group.title}</div>
+                                    <div className="flex flex-col">
+                                        {group.items.map((item, i) => (
+                                            <span key={i} className="leading-relaxed">{item}</span>
+                                        ))}
+                                    </div>
+                                </React.Fragment>
+                            )) : (
+                                <p className="whitespace-pre-line col-span-2">{t.footer.organizer}</p>
+                            )}
+                        </div>
+                        
+                        <p className="font-body text-gray-500 text-sm leading-relaxed">{t.footer.rights}</p>
+                    </div>
+
+                    <div className="bg-white/10 p-6 border-l-4 border-primary">
+                        <h3 className="font-heading font-bold text-xl mb-4 text-primary">{t.footer.contactTitle}</h3>
+                        <ul className="space-y-3 font-body text-sm text-gray-300">
+                            {t.footer.qaEmail && (
+                                <li className="flex items-center gap-2">
+                                    <Mail size={16} className="text-primary" /> {t.footer.qaEmail}
+                                </li>
+                            )}
+                            {t.footer.contacts.map((contact, i) => (
+                                <li key={i} className="flex items-start gap-2">
+                                    <Phone size={16} className="mt-0.5 shrink-0 text-primary" /> 
+                                    <span>{contact}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="text-center font-body text-gray-600 text-sm">
+                    &copy; 2026 ASE Group. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;
