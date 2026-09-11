@@ -137,13 +137,14 @@ export const getLiveTimeRemaining = () => {
   return { total, days, hours, minutes, seconds };
 };
 
-// 對應 t.info.timelineItems 五個項目的結束時間(順序須一致)
+// 對應 t.info.timelineItems 前五個項目的結束時間(順序須一致);
+// 第六項「故事,還在繼續」沒有結束時間,永遠保持亮起
 const TIMELINE_END_DATES = [
   new Date('2026-06-21T23:59:59+08:00'), // 初賽線上海選
   new Date('2026-07-04T23:59:59+08:00'), // 初賽審評
   new Date('2026-07-08T23:59:59+08:00'), // 公告決賽名單(7/8 全天為公佈日保持亮起,7/9 起調暗)
   new Date('2026-08-22T23:59:59+08:00'), // 決賽培訓與樂團彩排
-  new Date('2026-09-11T23:59:59+08:00')  // 活動總決賽
+  new Date('2026-09-11T17:00:00+08:00')  // 活動總決賽(14:00-17:00 賽事結束即標示已結束)
 ];
 
 export const isTimelineItemPast = (index) => {

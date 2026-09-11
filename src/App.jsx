@@ -6,8 +6,7 @@ import PredictionBanner from './components/PredictionBanner';
 import FinalistShowcase from './components/FinalistShowcase';
 import LiveBanner from './components/LiveBanner';
 import ConcludedBanner from './components/ConcludedBanner';
-import ReplaySection from './components/ReplaySection';
-import ResultsSection from './components/ResultsSection';
+import PredictionDrawBanner from './components/PredictionDrawBanner';
 import PressReleaseSection from './components/PressReleaseSection';
 import { getHeroMode, HERO_MODE } from './utils/registrationUtils';
 import InfoSection from './components/InfoSection';
@@ -47,15 +46,10 @@ function App() {
       <main>
         {heroByMode[heroMode]}
         {/* 冠軍預測預告已內嵌於 FinalistBanner / LiveBanner 首屏(PredictionTeaserStrip),此處不再重複顯示 */}
-        {/* 9/11 17:30 起:回放區塊、決賽成績(成績未公布前不顯示)緊接在形象畫面下方 */}
-        {heroMode === HERO_MODE.CONCLUDED && (
-          <>
-            <ReplaySection />
-            <ResultsSection />
-          </>
-        )}
-        {/* 8/1 起名單自 Banner 下移為獨立區塊 */}
-        {(heroMode === HERO_MODE.PREDICTION || heroMode === HERO_MODE.LIVE || heroMode === HERO_MODE.CONCLUDED) && <FinalistShowcase />}
+        {/* 9/11 17:30 起:決賽成績與回放框已整合進 ConcludedBanner,下方緊接冠軍預測抽獎提醒 */}
+        {heroMode === HERO_MODE.CONCLUDED && <PredictionDrawBanner />}
+        {/* 8/1 起名單自 Banner 下移為獨立區塊;9/11 17:30 起 ConcludedBanner 已列出全部選手成績,不再顯示 */}
+        {(heroMode === HERO_MODE.PREDICTION || heroMode === HERO_MODE.LIVE) && <FinalistShowcase />}
         {/* 新聞稿送達前(pressData.js 為空)不會顯示任何東西 */}
         {heroMode === HERO_MODE.CONCLUDED && <PressReleaseSection />}
         <InfoSection />

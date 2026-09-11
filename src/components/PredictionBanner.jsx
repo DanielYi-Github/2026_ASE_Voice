@@ -63,7 +63,7 @@ const PredictionBanner = () => {
           </motion.span>
           <div className="bg-white border-[4px] border-dark shadow-brutal-lg px-6 md:px-12 py-4 md:py-6 transform -rotate-1">
             <h1 className="font-heading font-black text-dark text-3xl sm:text-5xl md:text-6xl tracking-wide leading-tight">
-              {tp.title || "冠軍預測 PK 賽"}
+              {tp.title || "日月光好聲音冠軍預測活動"}
             </h1>
             <p className="font-heading font-bold text-secondary text-base sm:text-xl md:text-2xl tracking-[0.25em] mt-1 uppercase">
               {tp.titleEn || "CHAMPION PREDICTION"}

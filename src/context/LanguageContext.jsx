@@ -68,7 +68,7 @@ const translations = {
         },
         predictionBanner: {
             eyebrow: "SPECIAL EVENT 互動企劃 (即日起至 9/10)",
-            title: "冠軍預測 PK 賽",
+            title: "日月光好聲音冠軍預測活動",
             titleEn: "CHAMPION PREDICTION",
             subtitle: "華語組 10 位與外語組 9 位決賽選手已就位！誰能奪下兩組冠軍寶座？下滑認識決賽選手，再用你的神直覺預測冠軍（活動只到 9/10 為止），猜中就有機會把好禮抱回家！",
             cta: "立即預測冠軍",
@@ -91,7 +91,7 @@ const translations = {
         },
         concluded: {
             eyebrow: "2026 ASE VOICE · GRAND FINALE",
-            title: "好聲音，因你而精彩",
+            title: "日月光好聲音，因你而精彩",
             titleEn: "THANK YOU FOR SHARING YOUR VOICE",
             subtitle: "來自日月光投控集團全國各地的十九位好聲音，\n在決賽舞台上唱出熱愛、綻放光芒，\n共同寫下屬於 2026 ASE VOICE 的動人篇章。\n感謝每一位選手傾注全力的演出，\n也謝謝每一位一路相伴、真心喝采的你——\n因為每一份參與與支持，\n都讓這段音樂旅程更加精彩，也更加難忘。",
             cta: "精彩回放看這裡",
@@ -99,11 +99,19 @@ const translations = {
             tierFirst: "冠軍",
             tierSecond: "亞軍",
             tierThird: "季軍",
-            tierMerit: "佳作",
+            tierMerit: "特別獎",
+            groupMandarin: "華語組",
+            groupForeign: "外語組",
             replayTitle: "決賽直播回顧",
             replayBadge: "精彩回放",
             replayNote: "完整決賽直播全程收錄，錯過的精彩片刻都在這裡！",
             watchOnYoutube: "在 YouTube 觀看"
+        },
+        predictionDraw: {
+            status: "抽獎準備中",
+            title: "幸運抽獎・即刻揭曉",
+            body: "感謝每一位參與冠軍預測的同仁！預測活動已於 9/10\u00A023:59 圓滿截止，成功猜中冠軍的你，我們將於近期內完成抽獎並發放獎品——好運也許就在你身邊，敬請期待！",
+            champions: "對答案！本屆冠軍"
         },
         hero: {
             brandNote: "日月光投控集團成員共同參與",
@@ -207,6 +215,11 @@ const translations = {
                             </span>
                         </span>
                     )
+                },
+                {
+                    date: "未完待續",
+                    event: "故事，還在繼續",
+                    details: "決賽的燈光暫時熄了，但這不是句點，而是下一段旋律的前奏。\n十九位好聲音寫下的篇章，會由更多熱愛唱歌的你，接著唱下去。\n下一個站上舞台的，也許就是你——我們舞台上見！"
                 }
             ],
             prizes: "競賽獎項",
@@ -220,7 +233,7 @@ const translations = {
                 { title: "冠軍 (1名)", amount: "NT$ 20,000", extra: "獎盃乙座" },
                 { title: "亞軍 (1名)", amount: "NT$ 15,000", extra: "獎盃乙座" },
                 { title: "季軍 (1名)", amount: "NT$ 10,000", extra: "獎盃乙座" },
-                { title: "佳作 (7名)", amount: "NT$ 3,000", extra: "獎牌乙枚" }
+                { title: "特別獎 (7名)", amount: "NT$ 3,000", extra: "獎牌乙枚" }
             ]
         },
         highlights: {
@@ -407,7 +420,7 @@ const translations = {
         },
         concluded: {
             eyebrow: "2026 ASE VOICE · GRAND FINALE",
-            title: "BRIGHTER, BECAUSE OF YOU",
+            title: "ASE VOICE, BRIGHTER BECAUSE OF YOU",
             titleEn: "THANK YOU FOR SHARING YOUR VOICE",
             subtitle: "Nineteen incredible voices, gathered from every corner of the ASE Technology Holding Group,\nsang their passion and let their light shine on the grand finale stage,\ntogether writing a moving chapter for 2026 ASE VOICE.\nThank you to every contestant who poured everything into their performance,\nand to every one of you who stayed with us and cheered from the heart —\nbecause every act of participation and support\nmade this musical journey even more wonderful, and even more unforgettable.",
             cta: "Watch the Replay",
@@ -415,11 +428,19 @@ const translations = {
             tierFirst: "Champion",
             tierSecond: "1st Runner-up",
             tierThird: "2nd Runner-up",
-            tierMerit: "Merit Award",
+            tierMerit: "Special Award",
+            groupMandarin: "Chinese Language Group",
+            groupForeign: "Foreign Language Group",
             replayTitle: "Grand Finale Replay",
             replayBadge: "Replay",
             replayNote: "The full grand finale broadcast is archived right here — catch anything you missed!",
             watchOnYoutube: "Watch on YouTube"
+        },
+        predictionDraw: {
+            status: "Lucky Draw in Preparation",
+            title: "The Lucky Draw Is On Its Way",
+            body: "Thank you to everyone who joined the Champion Prediction! Predictions closed on Sep 10 at 23:59. If you picked the champion, we'll hold the lucky draw and hand out prizes soon — good luck, and stay tuned!",
+            champions: "Check your pick! This year's champions"
         },
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
@@ -523,6 +544,11 @@ const translations = {
                             </span>
                         </span>
                     )
+                },
+                {
+                    date: "To Be Continued",
+                    event: "The Story Goes On",
+                    details: "The finale lights have dimmed, but this isn't the final note — it's the intro to the next song.\nThe chapter written by nineteen voices will be carried on by everyone who loves to sing.\nThe next voice on that stage could be yours — see you there!"
                 }
             ],
             prizes: "Prizes",
@@ -536,7 +562,7 @@ const translations = {
                 { title: "Champion", amount: "NT$ 20,000", extra: "Trophy" },
                 { title: "Runner-up", amount: "NT$ 15,000", extra: "Trophy" },
                 { title: "3rd Place", amount: "NT$ 10,000", extra: "Trophy" },
-                { title: "Merit (7)", amount: "NT$ 3,000", extra: "Medal" }
+                { title: "Special Award (7)", amount: "NT$ 3,000", extra: "Medal" }
             ]
         },
         highlights: {
@@ -725,7 +751,7 @@ const translations = {
         },
         concluded: {
             eyebrow: "2026 ASE VOICE · CHUNG KẾT",
-            title: "RẠNG RỠ HƠN VÌ CÓ BẠN",
+            title: "ASE VOICE, RẠNG RỠ HƠN VÌ CÓ BẠN",
             titleEn: "THANK YOU FOR SHARING YOUR VOICE",
             subtitle: "Mười chín giọng ca xuất sắc, đến từ khắp mọi miền của Tập đoàn ASE,\nđã cất lên đam mê và tỏa sáng trên sân khấu chung kết,\ncùng nhau viết nên chương cảm động của 2026 ASE VOICE.\nXin cảm ơn mỗi thí sinh đã dốc hết trái tim cho phần trình diễn,\nvà cảm ơn bạn — người đã đồng hành và cổ vũ hết mình —\nbởi vì mỗi sự tham gia và ủng hộ\nđều khiến hành trình âm nhạc này thêm rực rỡ và khó quên.",
             cta: "Xem Lại Ngay",
@@ -733,11 +759,19 @@ const translations = {
             tierFirst: "Quán quân",
             tierSecond: "Á quân",
             tierThird: "Quý quân",
-            tierMerit: "Giải Khuyến Khích",
+            tierMerit: "Giải Đặc Biệt",
+            groupMandarin: "Bảng Tiếng Hoa",
+            groupForeign: "Bảng Ngoại ngữ",
             replayTitle: "Xem Lại Chung Kết",
             replayBadge: "Phát Lại",
             replayNote: "Toàn bộ buổi phát trực tiếp chung kết đã được lưu lại đầy đủ tại đây — đừng bỏ lỡ khoảnh khắc nào!",
             watchOnYoutube: "Xem trên YouTube"
+        },
+        predictionDraw: {
+            status: "Đang chuẩn bị bốc thăm",
+            title: "Bốc thăm trúng thưởng sắp diễn ra",
+            body: "Cảm ơn tất cả đồng nghiệp đã tham gia Dự đoán Quán quân! Hoạt động dự đoán đã kết thúc vào 23:59 ngày 10/9. Nếu bạn đoán đúng Quán quân, chúng tôi sẽ sớm tiến hành bốc thăm và trao giải — chúc bạn may mắn và hãy đón chờ nhé!",
+            champions: "Dò kết quả! Quán quân năm nay"
         },
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",
@@ -841,6 +875,11 @@ const translations = {
                             </span>
                         </span>
                     )
+                },
+                {
+                    date: "Còn Tiếp",
+                    event: "Câu Chuyện Vẫn Tiếp Diễn",
+                    details: "Ánh đèn chung kết đã tạm tắt, nhưng đó không phải nốt nhạc cuối cùng — mà là khúc dạo đầu cho giai điệu tiếp theo.\nChương truyện do mười chín giọng ca viết nên sẽ được tiếp nối bởi tất cả những ai yêu ca hát.\nGiọng ca tiếp theo đứng trên sân khấu ấy có thể chính là bạn — hẹn gặp bạn trên sân khấu!"
                 }
             ],
             prizes: "Cơ cấu Giải thưởng",
@@ -854,7 +893,7 @@ const translations = {
                 { title: "Quán quân (1)", amount: "NT$ 20,000", extra: "Cúp lưu niệm" },
                 { title: "Á quân (1)", amount: "NT$ 15,000", extra: "Cúp lưu niệm" },
                 { title: "Hạng ba (1)", amount: "NT$ 10,000", extra: "Cúp lưu niệm" },
-                { title: "Khuyến khích (7)", amount: "NT$ 3,000", extra: "Huy chương" }
+                { title: "Giải Đặc Biệt (7)", amount: "NT$ 3,000", extra: "Huy chương" }
             ]
         },
         highlights: {
