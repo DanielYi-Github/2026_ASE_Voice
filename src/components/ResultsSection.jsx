@@ -36,7 +36,7 @@ const GroupResults = ({ title, contestants, variant, tierLabel }) => {
 };
 
 // 9/11 17:30 起,ReplaySection 下方的決賽成績公布區塊。
-// 兩組選手全部 award 都還是 null(成績還沒告訴我)時,不渲染任何東西,跟 PressReleaseSection 同一套「資料空就隱藏」慣例。
+// 兩組選手全部 award 都還是 null(成績還沒告訴我)時,不渲染任何東西,跟 PressReleaseCard 同一套「資料空就隱藏」慣例。
 const ResultsSection = () => {
   const { t } = useLanguage();
   const tc = t.concluded || {};

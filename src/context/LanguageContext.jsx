@@ -113,6 +113,12 @@ const translations = {
             body: "感謝每一位參與冠軍預測的同仁！預測活動已於 9/10\u00A023:59 圓滿截止，成功猜中冠軍的你，我們將於近期內完成抽獎並發放獎品——好運也許就在你身邊，敬請期待！",
             champions: "對答案！本屆冠軍"
         },
+        press: {
+            badge: "最新消息",
+            label: "新聞稿",
+            readMore: "閱讀完整新聞稿",
+            collapse: "收合新聞稿"
+        },
         hero: {
             brandNote: "日月光投控集團成員共同參與",
             titleLine1: "第五屆",
@@ -441,6 +447,13 @@ const translations = {
             title: "The Lucky Draw Is On Its Way",
             body: "Thank you to everyone who joined the Champion Prediction! Predictions closed on Sep 10 at 23:59. If you picked the champion, we'll hold the lucky draw and hand out prizes soon — good luck, and stay tuned!",
             champions: "Check your pick! This year's champions"
+        },
+        press: {
+            badge: "Latest News",
+            label: "Press Release",
+            readMore: "Read the Full Press Release",
+            collapse: "Collapse",
+            originalNote: "This press release is available in Chinese only."
         },
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
@@ -772,6 +785,13 @@ const translations = {
             title: "Bốc thăm trúng thưởng sắp diễn ra",
             body: "Cảm ơn tất cả đồng nghiệp đã tham gia Dự đoán Quán quân! Hoạt động dự đoán đã kết thúc vào 23:59 ngày 10/9. Nếu bạn đoán đúng Quán quân, chúng tôi sẽ sớm tiến hành bốc thăm và trao giải — chúc bạn may mắn và hãy đón chờ nhé!",
             champions: "Dò kết quả! Quán quân năm nay"
+        },
+        press: {
+            badge: "Tin Mới Nhất",
+            label: "Thông Cáo Báo Chí",
+            readMore: "Đọc toàn bộ thông cáo báo chí",
+            collapse: "Thu gọn",
+            originalNote: "Thông cáo báo chí này chỉ có bản tiếng Trung."
         },
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",

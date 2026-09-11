@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { chineseGroup, foreignGroup } from '../data/finalistsData';
 import { LIVE_VIDEO_URL } from '../config/liveConfig';
 import { getYouTubeVideoId } from '../utils/registrationUtils';
+import PressReleaseCard from './PressReleaseCard';
 
 // 頒獎台排列:桌機為 亞軍|冠軍|季軍(冠軍居中、台座最高);手機改成直向名次列表,冠軍排第一
 const PODIUM = [
@@ -95,7 +96,7 @@ const GroupResults = ({ title, tabColor, contestants }) => {
 };
 
 // 9/11 17:30 起取代 LiveBanner:賽後主視覺。延續 LiveBanner 的深色舞台語彙,由上而下為
-// 感謝標語 → 兩組決賽成績(頒獎台 + 特別獎)→ 感謝文 + 決賽直播回放框。
+// 感謝標語 → 最新消息新聞稿卡片 → 兩組決賽成績(頒獎台 + 特別獎)→ 感謝文 + 決賽直播回放框。
 // 名次讀取 finalistsData.js 的 award 欄位。
 const ConcludedBanner = () => {
   const { t } = useLanguage();
@@ -176,7 +177,10 @@ const ConcludedBanner = () => {
             </motion.div>
           </div>
 
-          {/* 2. 決賽成績 */}
+          {/* 2. 最新消息:新聞稿卡片,首屏可見、點擊原位展開全文 */}
+          <PressReleaseCard />
+
+          {/* 3. 決賽成績 */}
           <div id="results" className="relative scroll-mt-24 w-full flex flex-col items-center gap-12 md:gap-14">
             {/* 頒獎光芒:沿用 Hero 的 sunburst,在深色舞台上只留淡淡金色放射光 */}
             <div
@@ -204,7 +208,7 @@ const ConcludedBanner = () => {
             </div>
           </div>
 
-          {/* 3. 感謝文 + 決賽直播回放框(點擊才載入 iframe,比照 PastHighlights.jsx 的 VideoCard) */}
+          {/* 4. 感謝文 + 決賽直播回放框(點擊才載入 iframe,比照 PastHighlights.jsx 的 VideoCard) */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
