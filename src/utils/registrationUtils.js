@@ -4,12 +4,13 @@ export const REGISTRATION_STATUS = {
   ENDED: 'ENDED'
 };
 
-// 首頁主 Banner 的四個階段(依時間自動切換)
+// 首頁主 Banner 的五個階段(依時間自動切換)
 export const HERO_MODE = {
   HERO: 'HERO',             // 報名期間的原始主視覺
   FINALIST: 'FINALIST',     // 7/8 起:決賽名單公佈
   PREDICTION: 'PREDICTION', // 8/1 起:冠軍預測活動
-  LIVE: 'LIVE'              // 9/7 起:直播倒數 → 9/11 14:00 直播
+  LIVE: 'LIVE',             // 9/7 起:直播倒數 → 9/11 14:00 直播
+  CONCLUDED: 'CONCLUDED'    // 9/11 17:30 起:賽事結束形象畫面
 };
 
 // 使用 ISO 格式並包含台灣時區 +08:00
@@ -20,6 +21,7 @@ export const PREDICTION_LAUNCH_DATE = new Date('2026-08-01T00:00:00+08:00');
 export const PREDICTION_END_DATE = new Date('2026-09-10T23:59:59+08:00');
 export const LIVE_COUNTDOWN_DATE = new Date('2026-09-07T00:00:00+08:00');
 export const LIVE_START_DATE = new Date('2026-09-11T14:00:00+08:00');
+export const EVENT_CONCLUDED_DATE = new Date('2026-09-11T17:30:00+08:00');
 
 const getSearch = () =>
   typeof window !== 'undefined' ? window.location.search : '';
@@ -38,6 +40,7 @@ export const getNow = () => {
     const mocked = new Date(value);
     if (!isNaN(mocked.getTime())) return mocked;
   }
+  if (search.includes('preview=concluded')) return EVENT_CONCLUDED_DATE;
   if (search.includes('preview=onair')) return LIVE_START_DATE;
   if (search.includes('preview=live')) return LIVE_COUNTDOWN_DATE;
   if (search.includes('preview=prediction')) return PREDICTION_LAUNCH_DATE;
@@ -75,18 +78,28 @@ export const isPredictionEnded = () => {
   return getNow() > PREDICTION_END_DATE;
 };
 
-// 決定主 Banner 顯示哪個階段;?preview=finalist|prediction|live 可強制預覽
+// 決定主 Banner 顯示哪個階段;?preview=finalist|prediction|live|onair|concluded 可強制預覽
 export const getHeroMode = () => {
   const search = getSearch();
+  if (search.includes('preview=concluded')) return HERO_MODE.CONCLUDED;
   if (search.includes('preview=finalist')) return HERO_MODE.FINALIST;
   if (search.includes('preview=prediction')) return HERO_MODE.PREDICTION;
   if (search.includes('preview=live') || search.includes('preview=onair')) return HERO_MODE.LIVE;
 
   const now = getNow();
+  if (now >= EVENT_CONCLUDED_DATE) return HERO_MODE.CONCLUDED;
   if (now >= LIVE_COUNTDOWN_DATE) return HERO_MODE.LIVE;
   if (now >= PREDICTION_LAUNCH_DATE) return HERO_MODE.PREDICTION;
   if (now >= FINALIST_ANNOUNCEMENT_DATE) return HERO_MODE.FINALIST;
   return HERO_MODE.HERO;
+};
+
+// 賽事是否已結束(?preview=concluded 可強制預覽形象畫面)
+export const isEventConcluded = () => {
+  if (getSearch().includes('preview=concluded')) {
+    return true;
+  }
+  return getNow() >= EVENT_CONCLUDED_DATE;
 };
 
 // 直播是否已開始(?preview=onair 可強制預覽播放器)

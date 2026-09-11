@@ -57,7 +57,7 @@ const LiveBanner = () => {
           className="font-heading font-bold text-primary/90 text-xs md:text-sm uppercase tracking-[0.5em] flex items-center gap-3"
         >
           <span className="w-8 h-px bg-primary/50"></span>
-          {tl.eyebrow || "ASE VOICE 2026 · GRAND FINALE"}
+          {tl.eyebrow || "2026 ASE VOICE · GRAND FINALE"}
           <span className="w-8 h-px bg-primary/50"></span>
         </motion.div>
 

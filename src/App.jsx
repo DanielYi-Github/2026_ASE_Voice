@@ -5,6 +5,10 @@ import FinalistBanner from './components/FinalistBanner';
 import PredictionBanner from './components/PredictionBanner';
 import FinalistShowcase from './components/FinalistShowcase';
 import LiveBanner from './components/LiveBanner';
+import ConcludedBanner from './components/ConcludedBanner';
+import ReplaySection from './components/ReplaySection';
+import ResultsSection from './components/ResultsSection';
+import PressReleaseSection from './components/PressReleaseSection';
 import { getHeroMode, HERO_MODE } from './utils/registrationUtils';
 import InfoSection from './components/InfoSection';
 import QASection from './components/QASection';
@@ -12,12 +16,13 @@ import PastHighlights from './components/PastHighlights';
 import Footer from './components/Footer';
 
 // 主 Banner 依活動階段自動切換:
-// HERO(報名期)→ FINALIST(7/8 名單公佈)→ PREDICTION(8/1 冠軍預測)→ LIVE(9/7 倒數、9/11 直播)
+// HERO(報名期)→ FINALIST(7/8 名單公佈)→ PREDICTION(8/1 冠軍預測)→ LIVE(9/7 倒數、9/11 直播)→ CONCLUDED(9/11 17:30 起)
 const heroByMode = {
   [HERO_MODE.HERO]: <Hero />,
   [HERO_MODE.FINALIST]: <FinalistBanner />,
   [HERO_MODE.PREDICTION]: <PredictionBanner />,
-  [HERO_MODE.LIVE]: <LiveBanner />
+  [HERO_MODE.LIVE]: <LiveBanner />,
+  [HERO_MODE.CONCLUDED]: <ConcludedBanner />
 };
 
 function App() {
@@ -42,8 +47,17 @@ function App() {
       <main>
         {heroByMode[heroMode]}
         {/* 冠軍預測預告已內嵌於 FinalistBanner / LiveBanner 首屏(PredictionTeaserStrip),此處不再重複顯示 */}
+        {/* 9/11 17:30 起:回放區塊、決賽成績(成績未公布前不顯示)緊接在形象畫面下方 */}
+        {heroMode === HERO_MODE.CONCLUDED && (
+          <>
+            <ReplaySection />
+            <ResultsSection />
+          </>
+        )}
         {/* 8/1 起名單自 Banner 下移為獨立區塊 */}
-        {(heroMode === HERO_MODE.PREDICTION || heroMode === HERO_MODE.LIVE) && <FinalistShowcase />}
+        {(heroMode === HERO_MODE.PREDICTION || heroMode === HERO_MODE.LIVE || heroMode === HERO_MODE.CONCLUDED) && <FinalistShowcase />}
+        {/* 新聞稿送達前(pressData.js 為空)不會顯示任何東西 */}
+        {heroMode === HERO_MODE.CONCLUDED && <PressReleaseSection />}
         <InfoSection />
         <QASection />
         <PastHighlights />

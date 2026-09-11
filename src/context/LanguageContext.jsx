@@ -76,7 +76,7 @@ const translations = {
             scrollHint: "▼ 認識華語組 × 外語組決賽選手 ▼"
         },
         live: {
-            eyebrow: "ASE VOICE 2026 · GRAND FINALE",
+            eyebrow: "2026 ASE VOICE · GRAND FINALE",
             title: "決賽之日",
             titleEn: "THE FINAL SHOWDOWN",
             dateLine: "9.11 (五) 14:00",
@@ -88,6 +88,22 @@ const translations = {
             watchHint: "直播將於本頁面準時開播，倒數歸零自動上線 — 敬請鎖定！",
             onAirNote: "若影片未自動播放，請點擊播放鍵。直播結束後此處將保留完整重播。",
             streamPending: "直播連結準備中，請稍候再回來！"
+        },
+        concluded: {
+            eyebrow: "2026 ASE VOICE · GRAND FINALE",
+            title: "好聲音，因你而精彩",
+            titleEn: "THANK YOU FOR SHARING YOUR VOICE",
+            subtitle: "來自日月光投控集團全國各地的十九位好聲音，\n在決賽舞台上唱出熱愛、綻放光芒，\n共同寫下屬於 2026 ASE VOICE 的動人篇章。\n感謝每一位選手傾注全力的演出，\n也謝謝每一位一路相伴、真心喝采的你——\n因為每一份參與與支持，\n都讓這段音樂旅程更加精彩，也更加難忘。",
+            cta: "精彩回放看這裡",
+            resultsTitle: "決賽成績公布",
+            tierFirst: "冠軍",
+            tierSecond: "亞軍",
+            tierThird: "季軍",
+            tierMerit: "佳作",
+            replayTitle: "決賽直播回顧",
+            replayBadge: "精彩回放",
+            replayNote: "完整決賽直播全程收錄，錯過的精彩片刻都在這裡！",
+            watchOnYoutube: "在 YouTube 觀看"
         },
         hero: {
             brandNote: "日月光投控集團成員共同參與",
@@ -376,7 +392,7 @@ const translations = {
             scrollHint: "▼ Meet the Finalists of Both Groups ▼"
         },
         live: {
-            eyebrow: "ASE VOICE 2026 · GRAND FINALE",
+            eyebrow: "2026 ASE VOICE · GRAND FINALE",
             title: "THE FINAL DAY",
             titleEn: "THE FINAL SHOWDOWN",
             dateLine: "SEP 11 (FRI) 2:00 PM",
@@ -388,6 +404,22 @@ const translations = {
             watchHint: "The live stream starts right here on this page when the countdown hits zero — stay tuned!",
             onAirNote: "If the video doesn't autoplay, press play. A full replay will remain here after the show.",
             streamPending: "The stream link is being prepared — check back soon!"
+        },
+        concluded: {
+            eyebrow: "2026 ASE VOICE · GRAND FINALE",
+            title: "BRIGHTER, BECAUSE OF YOU",
+            titleEn: "THANK YOU FOR SHARING YOUR VOICE",
+            subtitle: "Nineteen incredible voices, gathered from every corner of the ASE Technology Holding Group,\nsang their passion and let their light shine on the grand finale stage,\ntogether writing a moving chapter for 2026 ASE VOICE.\nThank you to every contestant who poured everything into their performance,\nand to every one of you who stayed with us and cheered from the heart —\nbecause every act of participation and support\nmade this musical journey even more wonderful, and even more unforgettable.",
+            cta: "Watch the Replay",
+            resultsTitle: "Grand Finale Results",
+            tierFirst: "Champion",
+            tierSecond: "1st Runner-up",
+            tierThird: "2nd Runner-up",
+            tierMerit: "Merit Award",
+            replayTitle: "Grand Finale Replay",
+            replayBadge: "Replay",
+            replayNote: "The full grand finale broadcast is archived right here — catch anything you missed!",
+            watchOnYoutube: "Watch on YouTube"
         },
         hero: {
             brandNote: "Joint Participation by ASE Holdings Members",
@@ -678,7 +710,7 @@ const translations = {
             scrollHint: "▼ Gặp gỡ thí sinh chung kết hai nhóm ▼"
         },
         live: {
-            eyebrow: "ASE VOICE 2026 · CHUNG KẾT",
+            eyebrow: "2026 ASE VOICE · CHUNG KẾT",
             title: "NGÀY CHUNG KẾT",
             titleEn: "THE FINAL SHOWDOWN",
             dateLine: "11.9 (Thứ Sáu) 14:00",
@@ -690,6 +722,22 @@ const translations = {
             watchHint: "Buổi phát trực tiếp sẽ bắt đầu ngay trên trang này khi đồng hồ đếm ngược về 0 — hãy đón xem!",
             onAirNote: "Nếu video không tự phát, hãy nhấn nút phát. Bản phát lại đầy đủ sẽ được lưu tại đây sau chương trình.",
             streamPending: "Đường link trực tiếp đang được chuẩn bị — hãy quay lại sau!"
+        },
+        concluded: {
+            eyebrow: "2026 ASE VOICE · CHUNG KẾT",
+            title: "RẠNG RỠ HƠN VÌ CÓ BẠN",
+            titleEn: "THANK YOU FOR SHARING YOUR VOICE",
+            subtitle: "Mười chín giọng ca xuất sắc, đến từ khắp mọi miền của Tập đoàn ASE,\nđã cất lên đam mê và tỏa sáng trên sân khấu chung kết,\ncùng nhau viết nên chương cảm động của 2026 ASE VOICE.\nXin cảm ơn mỗi thí sinh đã dốc hết trái tim cho phần trình diễn,\nvà cảm ơn bạn — người đã đồng hành và cổ vũ hết mình —\nbởi vì mỗi sự tham gia và ủng hộ\nđều khiến hành trình âm nhạc này thêm rực rỡ và khó quên.",
+            cta: "Xem Lại Ngay",
+            resultsTitle: "Công Bố Kết Quả Chung Kết",
+            tierFirst: "Quán quân",
+            tierSecond: "Á quân",
+            tierThird: "Quý quân",
+            tierMerit: "Giải Khuyến Khích",
+            replayTitle: "Xem Lại Chung Kết",
+            replayBadge: "Phát Lại",
+            replayNote: "Toàn bộ buổi phát trực tiếp chung kết đã được lưu lại đầy đủ tại đây — đừng bỏ lỡ khoảnh khắc nào!",
+            watchOnYoutube: "Xem trên YouTube"
         },
         hero: {
             brandNote: "Sự tham gia chung của các thành viên Tập đoàn ASE",

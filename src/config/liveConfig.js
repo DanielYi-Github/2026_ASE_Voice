@@ -3,5 +3,5 @@
 //   1. 執行 `npm run set-live -- <YouTube網址>`(推薦,會自動驗證並改寫此檔)
 //   2. 直接把下面的網址換成正式直播連結
 // 支援格式:https://www.youtube.com/live/xxxx、https://youtu.be/xxxx、https://www.youtube.com/watch?v=xxxx
-// 最後更新:2026-09-10T13:13:05.194Z
-export const LIVE_VIDEO_URL = 'https://www.youtube.com/live/I-BsJqbRxVM';
+// 最後更新:2026-09-11T00:11:05.438Z
+export const LIVE_VIDEO_URL = 'https://www.youtube.com/live/1-Uodx8A7tU';
