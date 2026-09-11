@@ -137,8 +137,7 @@ export const getLiveTimeRemaining = () => {
   return { total, days, hours, minutes, seconds };
 };
 
-// 對應 t.info.timelineItems 前五個項目的結束時間(順序須一致);
-// 第六項「故事,還在繼續」沒有結束時間,永遠保持亮起
+// 對應 t.info.timelineItems 各項目的結束時間(順序須一致)
 const TIMELINE_END_DATES = [
   new Date('2026-06-21T23:59:59+08:00'), // 初賽線上海選
   new Date('2026-07-04T23:59:59+08:00'), // 初賽審評

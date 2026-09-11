@@ -248,11 +248,6 @@ const translations = {
                             </span>
                         </span>
                     )
-                },
-                {
-                    date: "未完待續",
-                    event: "故事，還在繼續",
-                    details: "決賽的燈光暫時熄了，但這不是句點，而是下一段旋律的前奏。\n十九位好聲音寫下的篇章，會由更多熱愛唱歌的你，接著唱下去。\n下一個站上舞台的，也許就是你——我們舞台上見！"
                 }
             ],
             prizes: "競賽獎項",
@@ -611,11 +606,6 @@ const translations = {
                             </span>
                         </span>
                     )
-                },
-                {
-                    date: "To Be Continued",
-                    event: "The Story Goes On",
-                    details: "The finale lights have dimmed, but this isn't the final note — it's the intro to the next song.\nThe chapter written by nineteen voices will be carried on by everyone who loves to sing.\nThe next voice on that stage could be yours — see you there!"
                 }
             ],
             prizes: "Prizes",
@@ -976,11 +966,6 @@ const translations = {
                             </span>
                         </span>
                     )
-                },
-                {
-                    date: "Còn Tiếp",
-                    event: "Câu Chuyện Vẫn Tiếp Diễn",
-                    details: "Ánh đèn chung kết đã tạm tắt, nhưng đó không phải nốt nhạc cuối cùng — mà là khúc dạo đầu cho giai điệu tiếp theo.\nChương truyện do mười chín giọng ca viết nên sẽ được tiếp nối bởi tất cả những ai yêu ca hát.\nGiọng ca tiếp theo đứng trên sân khấu ấy có thể chính là bạn — hẹn gặp bạn trên sân khấu!"
                 }
             ],
             prizes: "Cơ cấu Giải thưởng",

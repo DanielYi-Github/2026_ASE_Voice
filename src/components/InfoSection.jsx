@@ -105,11 +105,16 @@ const InfoSection = () => {
                     </div>
 
                     {/* 手機版：圓圈縮至 w-9 h-9，減少 gap，讓文字欄更寬 */}
-                    <div className="space-y-8 md:space-y-12 relative before:absolute before:inset-0 before:ml-[1.1rem] md:before:ml-[1.75rem] before:-translate-x-px before:h-full before:w-[4px] md:before:w-[6px] before:bg-dark">
+                    <div className="space-y-8 md:space-y-12 relative">
                         {t.info.timelineItems.map((item, index) => {
                             const isPast = isTimelineItemPast(index);
+                            const isLast = index === t.info.timelineItems.length - 1;
                             return (
                             <div key={index} className="relative flex items-start gap-3 md:gap-10 group">
+                                {/* 連接線:從本項圓圈延伸到下一項(含間距),最後一項不畫 */}
+                                {!isLast && (
+                                    <div aria-hidden="true" className="absolute top-0 left-0 ml-[1.1rem] md:ml-[1.75rem] -translate-x-px w-[4px] md:w-[6px] h-[calc(100%+2rem)] md:h-[calc(100%+3rem)] bg-dark" />
+                                )}
                                 {/* 手機版圓圈縮小至 w-9 h-9，桌面版恢復 w-16 h-16 */}
                                 <div className={`flex items-center justify-center w-9 h-9 md:w-16 md:h-16 rounded-full border-[3px] md:border-[4px] border-dark text-white font-black font-heading text-base md:text-3xl shrink-0 shadow-[3px_3px_0_0_rgba(26,26,26,1)] md:shadow-[4px_4px_0_0_rgba(26,26,26,1)] z-10 transform transition-transform group-hover:scale-110 group-hover:-rotate-12 ${isPast ? 'bg-gray-400' : 'bg-secondary'}`}>
                                     {index + 1}
