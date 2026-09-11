@@ -109,9 +109,36 @@ const translations = {
         },
         predictionDraw: {
             status: "抽獎準備中",
-            title: "幸運抽獎・即刻揭曉",
-            body: "感謝每一位參與冠軍預測的同仁！預測活動已於 9/10\u00A023:59 圓滿截止，成功猜中冠軍的你，我們將於近期內完成抽獎並發放獎品——好運也許就在你身邊，敬請期待！",
-            champions: "對答案！本屆冠軍"
+            title: "幸運抽獎・即將揭曉",
+            body: "感謝每一位參與冠軍預測的同仁！\n預測活動已於 9/10\u00A023:59 圓滿截止，成功猜中冠軍的你，\n我們將於 2026 年 9 月底前完成抽獎並發放獎品，\n敬請期待！",
+            champions: "對答案！本屆冠軍",
+            rules: {
+                toggleShow: "查看完整抽獎辦法",
+                toggleHide: "收合抽獎辦法",
+                prizeTitle: "獎品與中獎名額",
+                prizeDesc: "猜中冠軍即有機會抽中 500 元超商禮券",
+                prizeMandarinLabel: "華語組 50 名",
+                prizeForeignLabel: "外語組 50 名",
+                methodTitle: "抽獎方式",
+                methodItems: [
+                    "猜中華語組或外語組冠軍即可參加抽獎，每組各抽出 50 名，每位員工限得獎一次",
+                    "預測資料已截止並完成封存，封存後不得修改",
+                    "抽獎全程公開錄影，並於活動結束後公開抽獎影片及得獎名單，供全體同仁查閱，以確保公平、公開、公正"
+                ],
+                claimTitle: "領獎方式與資格",
+                claimItems: [
+                    "500 元超商禮券預計於 2026 年 9 月底前，由各事業體指定窗口統一發放",
+                    "得獎者於發放當時仍須具備日月光投控及相關子公司在職員工身分，否則視同放棄得獎資格"
+                ],
+                claimEligibilityNote: "活動參加資格：預測活動期間內為日月光投控及相關子公司在職員工",
+                antifraudTitle: "反詐騙提醒",
+                antifraudIntro: "本次預測冠軍活動不收取任何費用。凡收到要求付費、點擊不明連結或提供刷卡資料者，皆屬詐騙！",
+                antifraudItems: [
+                    { label: "不操作", desc: "主辦單位絕不會要求您至 ATM、網路銀行操作任何設定" },
+                    { label: "不提供", desc: "主辦單位絕不會要求您提供「銀行密碼」、「信用卡 CVV 安全碼」或「手機驗證碼」" },
+                    { label: "不付費", desc: "本活動無須支付任何手續費或押金" }
+                ]
+            }
         },
         press: {
             badge: "最新消息",
@@ -445,8 +472,35 @@ const translations = {
         predictionDraw: {
             status: "Lucky Draw in Preparation",
             title: "The Lucky Draw Is On Its Way",
-            body: "Thank you to everyone who joined the Champion Prediction! Predictions closed on Sep 10 at 23:59. If you picked the champion, we'll hold the lucky draw and hand out prizes soon — good luck, and stay tuned!",
-            champions: "Check your pick! This year's champions"
+            body: "Thank you to everyone who joined the Champion Prediction! Predictions closed on Sep 10 at 23:59. If you picked the champion, we'll complete the lucky draw and hand out prizes by the end of September 2026 — good luck, and stay tuned!",
+            champions: "Check your pick! This year's champions",
+            rules: {
+                toggleShow: "View Full Draw Rules",
+                toggleHide: "Hide Draw Rules",
+                prizeTitle: "Prizes & Number of Winners",
+                prizeDesc: "Correctly predicting the champion gives you a chance to win a NT$500 convenience store gift voucher",
+                prizeMandarinLabel: "Mandarin Group: 50 winners",
+                prizeForeignLabel: "Foreign Language Group: 50 winners",
+                methodTitle: "How the Draw Works",
+                methodItems: [
+                    "Anyone who correctly picked the champion of either group is entered into the draw; 50 winners are drawn from each group, and each employee may win at most once",
+                    "Prediction entries have been sealed since the deadline and can no longer be changed",
+                    "The draw will be conducted on camera in full, and the recording plus the winners list will be published afterward for all colleagues to review, ensuring fairness, openness, and impartiality"
+                ],
+                claimTitle: "How to Claim Your Prize",
+                claimItems: [
+                    "NT$500 gift vouchers will be distributed by each business unit's designated contact point by the end of September 2026",
+                    "Winners must still be active employees of ASE Technology Holding or its affiliated companies at the time of distribution, or the prize will be forfeited"
+                ],
+                claimEligibilityNote: "Entry eligibility: active employees of ASE Technology Holding and its affiliated companies during the prediction period",
+                antifraudTitle: "Anti-Fraud Reminder",
+                antifraudIntro: "This Champion Prediction event never charges any fee. Any request for payment, suspicious links, or your card details is a scam!",
+                antifraudItems: [
+                    { label: "No Action", desc: "The organizer will never ask you to perform any setup at an ATM or through online banking" },
+                    { label: "No Disclosure", desc: "The organizer will never ask for your banking password, credit card CVV code, or SMS verification code (OTP)" },
+                    { label: "No Payment", desc: "This event never requires any handling fee or deposit" }
+                ]
+            }
         },
         press: {
             badge: "Latest News",
@@ -783,8 +837,35 @@ const translations = {
         predictionDraw: {
             status: "Đang chuẩn bị bốc thăm",
             title: "Bốc thăm trúng thưởng sắp diễn ra",
-            body: "Cảm ơn tất cả đồng nghiệp đã tham gia Dự đoán Quán quân! Hoạt động dự đoán đã kết thúc vào 23:59 ngày 10/9. Nếu bạn đoán đúng Quán quân, chúng tôi sẽ sớm tiến hành bốc thăm và trao giải — chúc bạn may mắn và hãy đón chờ nhé!",
-            champions: "Dò kết quả! Quán quân năm nay"
+            body: "Cảm ơn tất cả đồng nghiệp đã tham gia Dự đoán Quán quân! Hoạt động dự đoán đã kết thúc vào 23:59 ngày 10/9. Nếu bạn đoán đúng Quán quân, chúng tôi sẽ hoàn tất bốc thăm và trao giải trước cuối tháng 9 năm 2026 — chúc bạn may mắn và hãy đón chờ nhé!",
+            champions: "Dò kết quả! Quán quân năm nay",
+            rules: {
+                toggleShow: "Xem đầy đủ thể lệ bốc thăm",
+                toggleHide: "Thu gọn thể lệ bốc thăm",
+                prizeTitle: "Giải thưởng & Số suất trúng thưởng",
+                prizeDesc: "Đoán đúng Quán quân, bạn sẽ có cơ hội trúng phiếu quà tặng cửa hàng tiện lợi trị giá 500 Đài tệ",
+                prizeMandarinLabel: "Bảng tiếng Hoa: 50 suất",
+                prizeForeignLabel: "Bảng tiếng nước ngoài: 50 suất",
+                methodTitle: "Cách thức bốc thăm",
+                methodItems: [
+                    "Đoán đúng Quán quân của bảng tiếng Hoa hoặc bảng tiếng nước ngoài đều được tham gia bốc thăm; mỗi bảng bốc ra 50 suất, mỗi nhân viên chỉ được trúng thưởng tối đa một lần",
+                    "Dữ liệu dự đoán đã được niêm phong kể từ khi hết hạn và không thể thay đổi",
+                    "Toàn bộ quá trình bốc thăm sẽ được quay hình công khai, video bốc thăm và danh sách trúng thưởng sẽ được công bố sau khi kết thúc để tất cả đồng nghiệp cùng theo dõi, đảm bảo công bằng, công khai, minh bạch"
+                ],
+                claimTitle: "Cách thức và điều kiện nhận thưởng",
+                claimItems: [
+                    "Phiếu quà tặng trị giá 500 Đài tệ dự kiến sẽ được các đơn vị kinh doanh phát tại quầy chỉ định trước cuối tháng 9 năm 2026",
+                    "Người trúng thưởng tại thời điểm phát thưởng vẫn phải là nhân viên đang làm việc tại ASE Technology Holding hoặc các công ty liên kết, nếu không sẽ được xem như từ bỏ quyền nhận thưởng"
+                ],
+                claimEligibilityNote: "Điều kiện tham gia: là nhân viên đang làm việc tại ASE Technology Holding và các công ty liên kết trong thời gian diễn ra hoạt động dự đoán",
+                antifraudTitle: "Cảnh báo lừa đảo",
+                antifraudIntro: "Hoạt động Dự đoán Quán quân này hoàn toàn không thu bất kỳ khoản phí nào. Mọi yêu cầu thanh toán, nhấp vào đường link lạ hoặc cung cấp thông tin thẻ đều là lừa đảo!",
+                antifraudItems: [
+                    { label: "Không thao tác", desc: "Ban tổ chức tuyệt đối không yêu cầu bạn đến cây ATM hoặc thực hiện bất kỳ thao tác nào trên ngân hàng điện tử" },
+                    { label: "Không cung cấp", desc: "Ban tổ chức tuyệt đối không yêu cầu bạn cung cấp mật khẩu ngân hàng, mã bảo mật CVV thẻ tín dụng, hoặc mã OTP" },
+                    { label: "Không thu phí", desc: "Hoạt động này không yêu cầu bất kỳ khoản phí xử lý hay tiền đặt cọc nào" }
+                ]
+            }
         },
         press: {
             badge: "Tin Mới Nhất",

@@ -1,8 +1,10 @@
 // 首頁「最新消息」新聞稿,由 ConcludedBanner 首屏的 PressReleaseCard 顯示;設為 null 即隱藏卡片。
 // 內文逐字取自 docs/2026日月光好聲音新聞稿0912-FINAL.docx(僅中文原文,三語介面皆顯示中文),
 // 唯一更動:「9月11 日」多餘空格。原稿照片集中在文末,網頁版改穿插在相關段落後。圖片放在 public/press/。
+// logo 為原稿頁首的基金會 logo(依 Word 的裁切範圍裁出);頁尾只有頁碼,網頁不使用。
 // blocks 型別:p = 段落、h = 小標、img = 照片 + 圖說
 export const pressRelease = {
+  logo: { src: "press/ase-foundation-logo.jpg", alt: "財團法人日月光文教基金會 ASE Cultural & Educational Foundation" },
   date: "2026.09.12",
   title: "從產線到舞台！2026日月光好聲音各廠區員工同台獻唱",
   cover: "press/2026-finale.jpg",

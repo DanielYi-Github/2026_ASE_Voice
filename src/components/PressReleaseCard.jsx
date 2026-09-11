@@ -49,13 +49,21 @@ const PressReleaseCard = () => {
 
       {/* 內層負責裁圓角,外層不能 overflow-hidden,否則外凸標籤會被切掉 */}
       <div className="overflow-hidden rounded-lg">
+        {/* 新聞稿抬頭:原稿頁首的基金會 logo,比照 Word 置中;白底讓 logo 維持品牌原色、與 JPEG 白背景無縫接合。
+            手機上方多留空間,避免被外凸標籤壓到 */}
+        {pressRelease.logo && (
+          <div className="bg-white border-b-[4px] border-dark flex justify-center px-5 pt-8 pb-3 md:py-3">
+            <img src={assetUrl(pressRelease.logo.src)} alt={pressRelease.logo.alt} className="h-9 md:h-14 w-auto" />
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-5">
-          {/* 封面照:手機疊在上方維持 16:9;桌機填滿左欄高度 */}
+          {/* 封面照:手機疊在上方維持 2:1(接近原圖 2.2:1,少裁切也省首屏高度);桌機填滿左欄高度 */}
           <div className="relative md:col-span-2 border-b-[4px] md:border-b-0 md:border-r-[4px] border-dark bg-dark">
             <img
               src={assetUrl(pressRelease.cover)}
               alt={pressRelease.title}
-              className="w-full aspect-[16/9] object-cover md:absolute md:inset-0 md:h-full md:aspect-auto"
+              className="w-full aspect-[2/1] object-cover md:absolute md:inset-0 md:h-full md:aspect-auto"
             />
           </div>
 
