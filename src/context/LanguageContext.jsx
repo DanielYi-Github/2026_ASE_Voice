@@ -59,7 +59,7 @@ const translations = {
             '日月光整合服務': '日月光整合服務'
         },
         prediction: {
-            slogan: "神預測！誰是本屆歌王？冠軍預測活動 8/1 - 9/10 熱血登場，猜中冠軍抽好禮 — 敬請期待！",
+            slogan: "神預測！誰是本屆歌王？冠軍預測活動 8/1 - 9/10 熱血登場，成功預測冠軍即可參加抽獎 — 敬請期待！",
             sloganLive: "冠軍預測 PK 賽火熱進行中（即日起至 9/10 截止）！你心目中的歌王是誰？快來下注你的神直覺！",
             sloganEnded: "預測活動已於 9/10 23:59 圓滿截止！感謝全集團同仁熱烈參與！",
             dateChip: "8/1 - 9/10 限時開放",
@@ -70,7 +70,7 @@ const translations = {
             eyebrow: "SPECIAL EVENT 互動企劃 (即日起至 9/10)",
             title: "日月光好聲音冠軍預測活動",
             titleEn: "CHAMPION PREDICTION",
-            subtitle: "華語組 10 位與外語組 9 位決賽選手已就位！誰能奪下兩組冠軍寶座？下滑認識決賽選手，再用你的神直覺預測冠軍（活動只到 9/10 為止），猜中就有機會把好禮抱回家！",
+            subtitle: "華語組 10 位與外語組 9 位決賽選手已就位！誰能奪下兩組冠軍寶座？下滑認識決賽選手，再預測冠軍（活動只到 9/10 為止），成功預測即可參加抽獎！",
             cta: "立即預測冠軍",
             note: "* 免費參加，本活動限全集團同仁參與！（預測截至 9/10 23:59）",
             scrollHint: "▼ 認識華語組 × 外語組決賽選手 ▼"
@@ -108,26 +108,33 @@ const translations = {
             watchOnYoutube: "在 YouTube 觀看"
         },
         predictionDraw: {
-            status: "抽獎準備中",
-            title: "幸運抽獎・即將揭曉",
-            body: "感謝每一位參與冠軍預測的同仁！\n預測活動已於 9/10\u00A023:59 圓滿截止，成功猜中冠軍的你，\n我們將於 2026 年 9 月底前完成抽獎並發放獎品，\n敬請期待！",
-            champions: "對答案！本屆冠軍",
+            status: "得獎名單公布",
+            title: "幸運得獎者公布",
+            body: "感謝每一位參與冠軍預測的同仁！抽獎已完成，華語組與外語組各抽出 50 位得獎者。",
+            champions: "預測結果！本屆冠軍",
+            watchDrawVideo: "觀看抽獎影片",
+            winnersHeading: "以下是成功預測冠軍且中獎的得獎者",
+            winnersUnit: "位",
+            predictionLabel: "預測對象",
+            deliveryTitle: "獎品發放方式",
+            deliveryByContact: "日月光中壢廠、矽品精密、環鴻科技：由各單位窗口發放獎品。",
+            deliveryByMail: "日月光高雄廠、日月光整合服務：將透過問卷收集郵寄地點，再將獎品寄給得獎同仁。",
             rules: {
                 toggleShow: "查看完整抽獎辦法",
                 toggleHide: "收合抽獎辦法",
                 prizeTitle: "獎品與中獎名額",
-                prizeDesc: "猜中冠軍即有機會抽中 500 元超商禮券",
+                prizeDesc: "成功預測冠軍即有機會抽中 500 元超商禮券",
                 prizeMandarinLabel: "華語組 50 名",
                 prizeForeignLabel: "外語組 50 名",
                 methodTitle: "抽獎方式",
                 methodItems: [
-                    "猜中華語組或外語組冠軍即可參加抽獎，每組各抽出 50 名，每位員工限得獎一次",
+                    "成功預測華語組或外語組冠軍即可參加抽獎，每組各抽出 50 名，每位員工限得獎一次",
                     "預測資料已截止並完成封存，封存後不得修改",
-                    "抽獎全程公開錄影，並於活動結束後公開抽獎影片及得獎名單，供全體同仁查閱，以確保公平、公開、公正"
+                    "抽獎全程已錄影，抽獎影片及得獎名單均已公開，供全體同仁查閱"
                 ],
                 claimTitle: "領獎方式與資格",
                 claimItems: [
-                    "500 元超商禮券預計於 2026 年 9 月底前，由各事業體指定窗口統一發放",
+                    "日月光中壢廠、矽品精密、環鴻科技由窗口發放；日月光高雄廠及日月光整合服務透過問卷收集郵寄地點後寄送",
                     "得獎者於發放當時仍須具備日月光投控及相關子公司在職員工身分，否則視同放棄得獎資格"
                 ],
                 claimEligibilityNote: "活動參加資格：預測活動期間內為日月光投控及相關子公司在職員工",
@@ -427,7 +434,7 @@ const translations = {
             eyebrow: "SPECIAL EVENT (UNTIL SEP 10)",
             title: "CHAMPION PREDICTION",
             titleEn: "WHO TAKES THE CROWN?",
-            subtitle: "10 finalists from the Mandarin group and 9 from the Foreign-language group are ready! Scroll down to meet them, then trust your instinct and predict the champions (Event ends Sep 10) — guess right for a chance to win great prizes!",
+            subtitle: "10 finalists from the Mandarin group and 9 from the Foreign-language group are ready! Scroll down to meet them, then trust your instinct and predict the champions (Event ends Sep 10) — a successful prediction enters you in the prize draw!",
             cta: "Predict the Champion",
             note: "* Free to join — open to ASE Group employees only! (Ends Sep 10, 23:59)",
             scrollHint: "▼ Meet the Finalists of Both Groups ▼"
@@ -465,10 +472,17 @@ const translations = {
             watchOnYoutube: "Watch on YouTube"
         },
         predictionDraw: {
-            status: "Lucky Draw in Preparation",
-            title: "The Lucky Draw Is On Its Way",
-            body: "Thank you to everyone who joined the Champion Prediction! Predictions closed on Sep 10 at 23:59. If you picked the champion, we'll complete the lucky draw and hand out prizes by the end of September 2026 — good luck, and stay tuned!",
+            status: "Winners Announced",
+            title: "Champion Prediction Winners",
+            body: "Thank you to everyone who joined the Champion Prediction! The draw is complete, with 50 winners in each group.",
             champions: "Check your pick! This year's champions",
+            watchDrawVideo: "Watch the draw video",
+            winnersHeading: "Winners who successfully predicted the champion and were selected in the draw",
+            winnersUnit: "winners",
+            predictionLabel: "Predicted champion",
+            deliveryTitle: "Prize delivery",
+            deliveryByContact: "ASE Chungli, SPIL and USI: prizes will be distributed through their designated contacts.",
+            deliveryByMail: "ASE Kaohsiung and GIS: we will collect mailing addresses through a questionnaire and send prizes by post.",
             rules: {
                 toggleShow: "View Full Draw Rules",
                 toggleHide: "Hide Draw Rules",
@@ -478,13 +492,13 @@ const translations = {
                 prizeForeignLabel: "Foreign Language Group: 50 winners",
                 methodTitle: "How the Draw Works",
                 methodItems: [
-                    "Anyone who correctly picked the champion of either group is entered into the draw; 50 winners are drawn from each group, and each employee may win at most once",
+                    "Anyone who successfully predicted the champion of either group was entered into the draw; 50 winners were selected from each group, and each employee may win at most once",
                     "Prediction entries have been sealed since the deadline and can no longer be changed",
-                    "The draw will be conducted on camera in full, and the recording plus the winners list will be published afterward for all colleagues to review, ensuring fairness, openness, and impartiality"
+                    "The full draw was recorded, and the video and winners list are now available for all colleagues to review"
                 ],
                 claimTitle: "How to Claim Your Prize",
                 claimItems: [
-                    "NT$500 gift vouchers will be distributed by each business unit's designated contact point by the end of September 2026",
+                    "ASE Chungli, SPIL and USI will distribute prizes through designated contacts; ASE Kaohsiung and GIS will collect mailing addresses by questionnaire and send prizes by post",
                     "Winners must still be active employees of ASE Technology Holding or its affiliated companies at the time of distribution, or the prize will be forfeited"
                 ],
                 claimEligibilityNote: "Entry eligibility: active employees of ASE Technology Holding and its affiliated companies during the prediction period",
@@ -776,7 +790,7 @@ const translations = {
             '日月光整合服務': 'GIS'
         },
         prediction: {
-            slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân diễn ra từ 1/8 đến 10/9 — đoán đúng nhà vô địch, bốc thăm trúng thưởng. Hãy đón chờ!",
+            slogan: "Ai sẽ đăng quang? Hoạt động Dự đoán Quán quân diễn ra từ 1/8 đến 10/9 — dự đoán chính xác để tham gia bốc thăm trúng thưởng. Hãy đón chờ!",
             sloganLive: "Dự đoán Quán quân đang diễn ra (Đến hết 10/9)! Bạn chọn ai? Tin vào trực giác và dự đoán ngay!",
             sloganEnded: "Hoạt động dự đoán đã kết thúc vào 23:59 ngày 10/9! Cảm ơn sự tham gia nhiệt tình của tất cả đồng nghiệp!",
             dateChip: "1/8 - 10/9",
@@ -787,7 +801,7 @@ const translations = {
             eyebrow: "SỰ KIỆN ĐẶC BIỆT (ĐẾN HẾT 10/9)",
             title: "DỰ ĐOÁN QUÁN QUÂN",
             titleEn: "CHAMPION PREDICTION",
-            subtitle: "10 thí sinh nhóm tiếng Hoa và 9 thí sinh nhóm tiếng nước ngoài đã sẵn sàng! Kéo xuống để gặp các thí sinh chung kết, rồi tin vào trực giác của bạn và dự đoán quán quân (Đến hết 10/9) — đoán đúng sẽ có cơ hội nhận quà hấp dẫn!",
+            subtitle: "10 thí sinh nhóm tiếng Hoa và 9 thí sinh nhóm tiếng nước ngoài đã sẵn sàng! Kéo xuống để gặp các thí sinh chung kết, rồi tin vào trực giác của bạn và dự đoán quán quân (Đến hết 10/9) — dự đoán chính xác sẽ được tham gia bốc thăm trúng thưởng!",
             cta: "Dự đoán Quán quân",
             note: "* Tham gia miễn phí — chỉ dành cho nhân viên Tập đoàn ASE! (Kết thúc 23:59 ngày 10/9)",
             scrollHint: "▼ Gặp gỡ thí sinh chung kết hai nhóm ▼"
@@ -825,26 +839,33 @@ const translations = {
             watchOnYoutube: "Xem trên YouTube"
         },
         predictionDraw: {
-            status: "Đang chuẩn bị bốc thăm",
-            title: "Bốc thăm trúng thưởng sắp diễn ra",
-            body: "Cảm ơn tất cả đồng nghiệp đã tham gia Dự đoán Quán quân! Hoạt động dự đoán đã kết thúc vào 23:59 ngày 10/9. Nếu bạn đoán đúng Quán quân, chúng tôi sẽ hoàn tất bốc thăm và trao giải trước cuối tháng 9 năm 2026 — chúc bạn may mắn và hãy đón chờ nhé!",
+            status: "Công bố danh sách trúng thưởng",
+            title: "Danh sách trúng thưởng dự đoán Quán quân",
+            body: "Cảm ơn tất cả đồng nghiệp đã tham gia Dự đoán Quán quân! Việc bốc thăm đã hoàn tất, mỗi bảng có 50 người trúng thưởng.",
             champions: "Dò kết quả! Quán quân năm nay",
+            watchDrawVideo: "Xem video bốc thăm",
+            winnersHeading: "Những người dự đoán chính xác Quán quân và trúng thưởng qua bốc thăm",
+            winnersUnit: "người",
+            predictionLabel: "Quán quân được dự đoán",
+            deliveryTitle: "Cách nhận giải thưởng",
+            deliveryByContact: "ASE Trung Lịch, SPIL và USI: giải thưởng sẽ được phát qua đầu mối phụ trách của từng đơn vị.",
+            deliveryByMail: "ASE Cao Hùng và GIS: chúng tôi sẽ thu thập địa chỉ nhận qua bảng khảo sát và gửi giải thưởng qua đường bưu điện.",
             rules: {
                 toggleShow: "Xem đầy đủ thể lệ bốc thăm",
                 toggleHide: "Thu gọn thể lệ bốc thăm",
                 prizeTitle: "Giải thưởng & Số suất trúng thưởng",
-                prizeDesc: "Đoán đúng Quán quân, bạn sẽ có cơ hội trúng phiếu quà tặng cửa hàng tiện lợi trị giá 500 Đài tệ",
+                prizeDesc: "Dự đoán chính xác Quán quân, bạn sẽ có cơ hội trúng phiếu quà tặng cửa hàng tiện lợi trị giá 500 Đài tệ",
                 prizeMandarinLabel: "Bảng tiếng Hoa: 50 suất",
                 prizeForeignLabel: "Bảng tiếng nước ngoài: 50 suất",
                 methodTitle: "Cách thức bốc thăm",
                 methodItems: [
-                    "Đoán đúng Quán quân của bảng tiếng Hoa hoặc bảng tiếng nước ngoài đều được tham gia bốc thăm; mỗi bảng bốc ra 50 suất, mỗi nhân viên chỉ được trúng thưởng tối đa một lần",
+                    "Dự đoán chính xác Quán quân của bảng tiếng Hoa hoặc bảng tiếng nước ngoài sẽ được tham gia bốc thăm; mỗi bảng bốc ra 50 suất, mỗi nhân viên chỉ được trúng thưởng tối đa một lần",
                     "Dữ liệu dự đoán đã được niêm phong kể từ khi hết hạn và không thể thay đổi",
-                    "Toàn bộ quá trình bốc thăm sẽ được quay hình công khai, video bốc thăm và danh sách trúng thưởng sẽ được công bố sau khi kết thúc để tất cả đồng nghiệp cùng theo dõi, đảm bảo công bằng, công khai, minh bạch"
+                    "Toàn bộ quá trình bốc thăm đã được ghi hình; video và danh sách trúng thưởng hiện đã được công bố để mọi đồng nghiệp tra cứu"
                 ],
                 claimTitle: "Cách thức và điều kiện nhận thưởng",
                 claimItems: [
-                    "Phiếu quà tặng trị giá 500 Đài tệ dự kiến sẽ được các đơn vị kinh doanh phát tại quầy chỉ định trước cuối tháng 9 năm 2026",
+                    "ASE Trung Lịch, SPIL và USI phát giải qua đầu mối phụ trách; ASE Cao Hùng và GIS sẽ thu thập địa chỉ qua bảng khảo sát rồi gửi giải qua đường bưu điện",
                     "Người trúng thưởng tại thời điểm phát thưởng vẫn phải là nhân viên đang làm việc tại ASE Technology Holding hoặc các công ty liên kết, nếu không sẽ được xem như từ bỏ quyền nhận thưởng"
                 ],
                 claimEligibilityNote: "Điều kiện tham gia: là nhân viên đang làm việc tại ASE Technology Holding và các công ty liên kết trong thời gian diễn ra hoạt động dự đoán",

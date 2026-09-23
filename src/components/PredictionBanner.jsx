@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import LiveTeaserStrip from './LiveTeaserStrip';
 
@@ -24,7 +24,7 @@ const PredictionBanner = () => {
           { icon: '👑', top: '8%', left: '55%', size: 'text-5xl', dur: 8 },
           { icon: '🎁', top: '58%', left: '75%', size: 'text-4xl', dur: 5.5 },
         ].map((item, i) => (
-          <motion.div
+          <Motion.div
             key={i}
             animate={{ y: [-16, 16, -16], rotate: [-12, 12, -12] }}
             transition={{ duration: item.dur, repeat: Infinity, ease: 'easeInOut' }}
@@ -32,35 +32,35 @@ const PredictionBanner = () => {
             style={{ top: item.top, left: item.left }}
           >
             {item.icon}
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
 
       <div className="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center gap-5 md:gap-7">
 
         {/* Eyebrow */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="bg-dark text-primary font-heading font-black text-xs md:text-sm px-4 py-1.5 border-2 border-white rounded-full uppercase tracking-[0.3em] shadow-brutal"
         >
           {tp.eyebrow || "SPECIAL EVENT 互動企劃"}
-        </motion.div>
+        </Motion.div>
 
         {/* Trophy + Title */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 80, delay: 0.15 }}
           className="flex flex-col items-center gap-3"
         >
-          <motion.span
+          <Motion.span
             animate={{ y: [-6, 6, -6] }}
             transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
             className="text-7xl md:text-8xl drop-shadow-[6px_6px_0_rgba(26,26,26,0.35)]"
           >
             🏆
-          </motion.span>
+          </Motion.span>
           <div className="bg-white border-[4px] border-dark shadow-brutal-lg px-6 md:px-12 py-4 md:py-6 transform -rotate-1">
             <h1 className="font-heading font-black text-dark text-3xl sm:text-5xl md:text-6xl tracking-wide leading-tight">
               {tp.title || "日月光好聲音冠軍預測活動"}
@@ -69,20 +69,20 @@ const PredictionBanner = () => {
               {tp.titleEn || "CHAMPION PREDICTION"}
             </p>
           </div>
-        </motion.div>
+        </Motion.div>
 
         {/* Subtitle */}
-        <motion.p
+        <Motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="max-w-2xl font-body font-bold text-dark text-sm sm:text-base md:text-xl leading-relaxed bg-light/80 border-[3px] border-dark px-4 md:px-8 py-3 md:py-4 shadow-brutal"
         >
-          {tp.subtitle || "華語組、外語組各 10 位決賽選手已就位!誰能奪下兩組冠軍寶座?下滑認識決賽選手,再用你的神直覺預測冠軍,猜中就有機會把好禮抱回家!"}
-        </motion.p>
+          {tp.subtitle || "華語組、外語組各 10 位決賽選手已就位!誰能奪下兩組冠軍寶座?下滑認識決賽選手,再預測冠軍,成功預測就有機會抽中好禮!"}
+        </Motion.p>
 
         {/* CTA */}
-        <motion.a
+        <Motion.a
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
@@ -95,30 +95,30 @@ const PredictionBanner = () => {
         >
           {tp.cta || "立即預測冠軍"}
           <span className="animate-bounce-x inline-block">→</span>
-        </motion.a>
+        </Motion.a>
         <p className="font-body font-bold text-dark/70 text-xs md:text-sm -mt-2">
           {tp.note || "* 免費參加,本活動限全集團同仁參與!"}
         </p>
 
         {/* 9/11 直播預告 */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
           className="w-full max-w-3xl"
         >
           <LiveTeaserStrip />
-        </motion.div>
+        </Motion.div>
 
         {/* 下滑看決賽名單提示 */}
-        <motion.a
+        <Motion.a
           href="#finalists"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="flex flex-col items-center gap-0.5 text-dark font-heading font-bold text-xs md:text-sm mt-1"
         >
           <span>{tp.scrollHint || "▼ 認識華語組 × 外語組決賽選手 ▼"}</span>
-        </motion.a>
+        </Motion.a>
       </div>
     </section>
   );

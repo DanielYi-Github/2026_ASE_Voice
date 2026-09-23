@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Gift, Shuffle, Store, ShieldAlert, ChevronDown } from 'lucide-react';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
+import { Gift, Shuffle, Store, ShieldAlert, ChevronDown, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { chineseGroup, foreignGroup } from '../data/finalistsData';
+import { predictionWinners } from '../data/predictionWinners';
 
-// 9/11 17:30 起接在 ConcludedBanner 下方的冠軍預測抽獎提醒。沿用 PredictionBanner 的黃色放射光、
+const DRAW_VIDEO_URL = 'https://youtu.be/C9S5-N4Hq6w';
+
+// 9/11 17:30 起接在 ConcludedBanner 下方的冠軍預測得獎公告。沿用 PredictionBanner 的黃色放射光、
 // 漂浮圖示與「冠軍預測 PK 賽」白底標題卡,讓參加過預測的同仁一眼認出是同一個活動。
 // 抽獎完成、獎項全數發放後,記得一併移除下方的抽獎辦法收合區塊與反詐騙卡,
 // 以及 LanguageContext.jsx 三語 predictionDraw.rules 整包翻譯 key。
@@ -17,7 +20,7 @@ const PredictionDrawBanner = () => {
   const [isRulesVisible, setIsRulesVisible] = useState(false);
   const labelColon = lang === 'zh' ? '：' : ': ';
 
-  // 對答案:兩組冠軍直接從名次資料取,不另外寫死;組別標籤沿用成績區配色(華語組=紅、外語組=藍綠)
+  // 兩組冠軍從名次資料取得，再依預測對象列出各組抽中的得獎者。
   const champions = [
     { group: tc.groupMandarin || "華語組", tag: 'bg-secondary', contestant: chineseGroup.find((c) => c.award === 'first') },
     { group: tc.groupForeign || "外語組", tag: 'bg-[#0E7490]', contestant: foreignGroup.find((c) => c.award === 'first') },
@@ -38,7 +41,7 @@ const PredictionDrawBanner = () => {
           { icon: '🎉', top: '74%', left: '90%', size: 'text-5xl', dur: 4.5 },
           { icon: '👑', top: '42%', left: '93%', size: 'text-4xl', dur: 8 },
         ].map((item, i) => (
-          <motion.div
+          <Motion.div
             key={i}
             animate={{ y: [-16, 16, -16], rotate: [-12, 12, -12] }}
             transition={{ duration: item.dur, repeat: Infinity, ease: 'easeInOut' }}
@@ -46,25 +49,25 @@ const PredictionDrawBanner = () => {
             style={{ top: item.top, left: item.left }}
           >
             {item.icon}
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
 
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center gap-6 md:gap-8">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center gap-6 md:gap-8">
 
         {/* 狀態標籤 */}
-        <motion.span
+        <Motion.span
           initial={{ opacity: 0, y: -16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="inline-flex items-center gap-2 bg-dark text-primary font-heading font-black text-xs md:text-sm px-4 py-1.5 border-2 border-white rounded-full uppercase tracking-[0.25em] shadow-brutal"
         >
-          <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-          🎁 {td.status || "抽獎準備中"}
-        </motion.span>
+          <span className="w-2 h-2 rounded-full bg-secondary"></span>
+          🎁 {td.status || "得獎名單公布"}
+        </Motion.span>
 
         {/* 標題卡:與 PredictionBanner 同款白底粗框 */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -75,47 +78,89 @@ const PredictionDrawBanner = () => {
             {tp.title || "日月光好聲音冠軍預測活動"}
           </h2>
           <p className="font-heading font-bold text-secondary text-base sm:text-xl md:text-2xl tracking-[0.2em] mt-1 uppercase">
-            {td.title || "幸運抽獎・即將揭曉"}
+            {td.title || "幸運得獎者公布"}
           </p>
-        </motion.div>
+        </Motion.div>
 
         {/* 說明文 */}
-        <motion.p
+        <Motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-2xl font-body font-bold text-dark text-sm sm:text-base md:text-lg leading-relaxed whitespace-pre-line break-keep bg-light/80 border-[3px] border-dark px-4 md:px-8 py-3 md:py-4 shadow-brutal"
         >
-          {td.body || "感謝每一位參與冠軍預測的同仁！預測活動已於 9/10\u00A023:59 圓滿截止，成功猜中冠軍的你，我們將於近期內完成抽獎並發放獎品——好運也許就在你身邊，敬請期待！"}
-        </motion.p>
+          {td.body || "感謝每一位參與冠軍預測的同仁！兩組各抽出 50 位得獎者，名單如下。"}
+        </Motion.p>
+
+        <a
+          href={DRAW_VIDEO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-dark text-white font-heading font-black text-sm md:text-base px-5 py-2.5 border-[3px] border-dark shadow-brutal hover:bg-secondary focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-dark transition-colors"
+        >
+          {td.watchDrawVideo || "觀看抽獎影片"}
+          <ExternalLink className="w-4 h-4" aria-hidden="true" />
+        </a>
 
         {/* 對答案:本屆兩組冠軍 */}
         {champions.length > 0 && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full max-w-3xl flex flex-col items-center gap-4"
+            className="w-full flex flex-col items-center gap-4"
           >
             <span className="font-heading font-black text-dark text-base md:text-xl tracking-wider">
               ▼ {td.champions || "對答案！本屆冠軍"} ▼
             </span>
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {champions.map(({ group, tag, contestant }) => (
-                <div key={contestant.id} className="bg-white border-[3px] border-dark shadow-brutal rounded-xl px-4 py-4 flex items-center gap-3 text-left">
-                  <span className="text-4xl md:text-5xl shrink-0">👑</span>
-                  <div className="min-w-0">
-                    <span className={`inline-block ${tag} text-white font-heading font-black text-[11px] md:text-xs px-2 py-0.5 border-2 border-dark uppercase tracking-wider`}>
-                      {group}
-                    </span>
-                    <p className="font-heading font-black text-dark text-xl md:text-2xl leading-tight mt-1.5 break-words">{contestant.name}</p>
-                    <p className="text-xs md:text-sm font-bold text-dark/60 mt-0.5">♪ {contestant.songName} - {contestant.originalArtist}</p>
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 items-start">
+              {champions.map(({ group, tag, contestant }) => {
+                const winners = predictionWinners.filter((winner) => winner.prediction === contestant.name);
+                return (
+                  <div key={contestant.id} className="min-w-0 bg-white border-[3px] border-dark shadow-brutal rounded-xl overflow-hidden text-left">
+                    <div className="px-4 sm:px-5 py-4 flex items-center gap-3 border-b-[3px] border-dark">
+                      <span className="text-4xl md:text-5xl shrink-0" aria-hidden="true">👑</span>
+                      <div className="min-w-0">
+                        <span className={`inline-block ${tag} text-white font-heading font-black text-[11px] md:text-xs px-2 py-0.5 border-2 border-dark uppercase tracking-wider`}>
+                          {group}
+                        </span>
+                        <h3 className="font-heading font-black text-dark text-xl md:text-2xl leading-tight mt-1.5 break-words">{contestant.name}</h3>
+                      </div>
+                    </div>
+                    <div className="bg-light/70 px-4 sm:px-5 py-4">
+                      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 mb-3">
+                        <h4 className="font-heading font-black text-dark text-base sm:text-lg">{td.winnersHeading || "以下是成功預測冠軍且中獎的得獎者"}</h4>
+                        <span className="font-bold text-dark/65 text-xs sm:text-sm">{winners.length} {td.winnersUnit || "位"}</span>
+                      </div>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2">
+                        {winners.map((winner) => (
+                          <li key={winner.employeeId} className="min-w-0 bg-white border-2 border-dark/20 rounded-lg px-3 py-2.5">
+                            <p className="font-bold text-dark/70 text-xs leading-snug break-words">{t.factories?.[winner.factory] || winner.factory}</p>
+                            <div className="flex flex-wrap items-baseline justify-between gap-x-2 mt-1">
+                              <span className="font-heading font-black text-dark text-base leading-snug break-words">{winner.name}</span>
+                              <span className="font-body font-bold text-dark/70 text-xs whitespace-nowrap">{winner.employeeId}</span>
+                            </div>
+                            <p className="font-medium text-dark/65 text-xs leading-snug mt-1 break-words">
+                              {td.predictionLabel || "預測對象"}{labelColon}{winner.prediction}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
-          </motion.div>
+          </Motion.div>
         )}
+
+        <div className="w-full max-w-3xl bg-white border-[3px] border-dark shadow-brutal px-5 sm:px-7 py-5 text-left">
+          <h3 className="font-heading font-black text-dark text-lg md:text-xl mb-3">{td.deliveryTitle || "獎品發放方式"}</h3>
+          <ul className="space-y-2 font-body font-bold text-dark text-sm md:text-base leading-relaxed">
+            <li>{td.deliveryByContact}</li>
+            <li>{td.deliveryByMail}</li>
+          </ul>
+        </div>
 
         {/* 抽獎辦法收合區塊:按鈕互動比照 QASection 的 press-down 陰影樣式 */}
         <div className="w-full max-w-2xl flex flex-col items-center gap-5 text-left">
@@ -133,7 +178,7 @@ const PredictionDrawBanner = () => {
 
           <AnimatePresence>
             {isRulesVisible && (
-              <motion.div
+              <Motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
@@ -195,7 +240,7 @@ const PredictionDrawBanner = () => {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </Motion.div>
             )}
           </AnimatePresence>
 
